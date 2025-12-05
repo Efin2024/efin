@@ -14,6 +14,8 @@ import ApplyPage from './pages/ApplyPage';
 import LoginPage from './pages/LoginPage';
 import InfoPage from './pages/InfoPage';
 import SmallBusinessLoanPage from './pages/SmallBusinessLoanPage';
+import EVThreeWheelerPage from './pages/EVThreeWheelerPage';
+import TwoWheelerLoanPage from './pages/TwoWheelerLoanPage';
 import landingPages from './content/landingPages';
 import PersonalLoanCalculatorPage from './pages/calculators/PersonalLoanCalculatorPage';
 import TwoThreeWheelerCalculatorPage from './pages/calculators/TwoThreeWheelerCalculatorPage';
@@ -51,6 +53,8 @@ function App() {
           <Route path="resources/check-credit-score" element={<CreditScorePage />} />
           <Route path="loans/personal-loan" element={<PersonalLoansPage />} />
           <Route path="loans/instant-cash-loan" element={<SmallBusinessLoanPage />} />
+          <Route path="loans/three-wheeler-loan" element={<EVThreeWheelerPage />} />
+          <Route path="loans/two-wheeler-loan" element={<TwoWheelerLoanPage />} />
           {Object.entries(landingPages).map(([path, page]) => {
             if (
               page.template === 'calculator' ||

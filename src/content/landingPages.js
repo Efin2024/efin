@@ -122,9 +122,9 @@ const LANDING_PAGES = {
     ctaSecondary: { label: 'Explore 2W finance', to: '/solutions/two-wheeler-finance' },
   },
   'loans/three-wheeler-loan': {
-    title: 'Three-Wheeler Loan',
+    title: 'EV 3-Wheeler Auto Loan',
     category: 'Loans',
-    excerpt: 'Finance passenger and cargo 3-wheelers with business-friendly EMIs',
+    excerpt: 'Finance electric three-wheeler auto for commercial purpose',
     description:
       'Grow your transport or delivery business with tailored financing that covers registration, insurance, and vehicle add-ons.',
     bullets: [
