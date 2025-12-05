@@ -1,32 +1,70 @@
 import { Link } from 'react-router-dom';
 
-const FOOTER_COLUMNS = [
+const footerNav = [
   {
-    title: 'Products',
+    title: 'Loans',
     links: [
-      { label: 'Short-term Personal Loan (Salaried)', to: '/loans/personal-loan' },
-      { label: 'Two-Wheeler Loan', to: '/loans/two-wheeler-loan' },
-      { label: 'Three-Wheeler Loan', to: '/loans/three-wheeler-loan' },
-      { label: 'EV 2W/3W Loan', to: '/offerings/bnpl' },
+      { path: '/loans/instant-cash-loan', label: 'Instant Cash Loan' },
+      { path: '/loans/personal-loan', label: 'Personal Loan' },
+      { path: '/loans/two-wheeler-loan', label: 'Two-Wheeler Loan' },
+      { path: '/loans/three-wheeler-loan', label: 'Three-Wheeler Loan' },
+      { path: '/offerings/medical-loan', label: 'Medical Loan' },
+      { path: '/offerings/education-loan', label: 'Education Loan' },
+    ],
+  },
+  {
+    title: 'Calculators',
+    links: [
+      { path: '/resources/personal-loan-emi-calculator', label: 'Personal Loan EMI' },
+      { path: '/resources/two-three-wheeler-emi-calculator', label: '2 & 3 Wheeler EMI' },
+      { path: '/resources/eligibility-calculator', label: 'Eligibility Calculator' },
+      { path: '/resources/check-credit-score', label: 'Credit Score Check' },
     ],
   },
   {
     title: 'Company',
     links: [
-      { label: 'About E-Fin', to: '/why-efin' },
-      { label: 'Support', to: '/support' },
-      { label: 'Apply', to: '/support/apply' },
-      { label: 'Contact', to: '/support/contact' },
+      { path: '/about', label: 'About E-Fin' },
+      { path: '/about/careers', label: 'Careers' },
+      { path: '/support/contact', label: 'Contact Us' },
+      { path: '/support', label: 'Support' },
     ],
   },
   {
-    title: 'Resources',
+    title: 'Learn',
     links: [
-      { label: 'Loan Calculators', to: '/how-it-works' },
-      { label: 'FAQs', to: '/support' },
-      { label: 'Blogs', to: '/learn/blogs' },
-      { label: 'Privacy & Terms', to: '/support' },
+      { path: '/learn/blogs', label: 'Blogs' },
+      { path: '/learn/dictionary', label: 'Financial Dictionary' },
+      { path: '/learn/quiz', label: 'Finance Quiz' },
     ],
+  },
+];
+
+const footerSocial = [
+  {
+    label: 'Facebook',
+    href: 'https://www.facebook.com/',
+    icon: 'https://img.icons8.com/color/48/facebook.png',
+  },
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/',
+    icon: 'https://img.icons8.com/color/48/linkedin.png',
+  },
+  {
+    label: 'Twitter',
+    href: 'https://twitter.com/',
+    icon: 'https://img.icons8.com/color/48/twitter--v1.png',
+  },
+  {
+    label: 'Instagram',
+    href: 'https://www.instagram.com/',
+    icon: 'https://img.icons8.com/color/48/instagram-new.png',
+  },
+  {
+    label: 'WhatsApp',
+    href: 'https://wa.me/919997842548',
+    icon: 'https://img.icons8.com/color/48/whatsapp.png',
   },
 ];
 
@@ -35,87 +73,70 @@ function Footer() {
   const logoSrc = `${process.env.PUBLIC_URL || ''}/logo.png`;
 
   return (
-    <footer className="fibe-footer">
-      <div className="footer-shell">
-        <div className="footer-brand">
-          <Link to="/" className="footer-logo">
-            <img src={logoSrc} alt="E-Fin" />
-          </Link>
-          <p>
-            E-Fin is the brand name of MLB Securities Private Limited, an RBI registered NBFC (COR
-            14.00526) incorporated in 1995. We began lending in 2025 with a sharp focus on young
-            professionals and small entrepreneurs who deserve fast, transparent, and responsible
-            access to credit.
-          </p>
-          <p>
-            CIN: U74899DL1995PTC067535 • Registered Office: 302, Pratap Chambers, Karol Bagh, New
-            Delhi-110005 • Corporate Office: C-74, Sec 63 Noida 201301
-          </p>
-        </div>
-        <div className="footer-links-grid">
-          {FOOTER_COLUMNS.map((column) => (
-            <div key={column.title}>
-              <h4>{column.title}</h4>
-              <ul>
-                {column.links.map((link) => (
-                  <li key={link.label}>
-                    <Link to={link.to}>{link.label}</Link>
-                  </li>
-                ))}
-              </ul>
+    <footer className="site-footer">
+      <div className="footer-inner">
+        <div className="footer-content">
+          <div className="footer-brand">
+            <div className="brand" aria-label="E-Fin">
+              <img className="brand-logo brand-logo--footer" src={logoSrc} alt="E-Fin logo" loading="lazy" decoding="async" />
             </div>
-          ))}
-          <div className="footer-social-links">
-            <h4>Social</h4>
-            <ul>
-              <li>
-                <a href="https://www.facebook.com/efin" target="_blank" rel="noreferrer">
-                  <span className="social-icon fb" aria-hidden="true">f</span> Facebook
+            <p>
+              India's fastest growing lending platform. We serve the community when you borrow from us.
+            </p>
+            <div className="footer-social">
+              {footerSocial.map((link) => (
+                <a key={link.label} href={link.href} target="_blank" rel="noreferrer" aria-label={link.label}>
+                  <img src={link.icon} alt={`${link.label} icon`} loading="lazy" />
                 </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/company/efin" target="_blank" rel="noreferrer">
-                  <span className="social-icon li" aria-hidden="true">in</span> LinkedIn
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/efin" target="_blank" rel="noreferrer">
-                  <span className="social-icon x" aria-hidden="true">X</span> Twitter
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/efin" target="_blank" rel="noreferrer">
-                  <span className="social-icon ig" aria-hidden="true">IG</span> Instagram
-                </a>
-              </li>
-              <li>
-                <a href="https://wa.me/919997842548" target="_blank" rel="noreferrer">
-                  <span className="social-icon wa" aria-hidden="true">WA</span> WhatsApp
-                </a>
-              </li>
-            </ul>
+              ))}
+            </div>
+          </div>
+          <div className="footer-links">
+            {footerNav.map((section) => (
+              <div key={section.title} className="footer-links-column">
+                <p className="footer-links-title">{section.title}</p>
+                <div className="footer-links-list">
+                  {section.links.map((item) => (
+                    <Link key={item.path} to={item.path} className="footer-link">
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="footer-visit">
+            <h3>Visit E-Fin</h3>
+            <p>
+              C-74, Sector 63<br />
+              Noida, Uttar Pradesh 201301, India
+            </p>
+            <div className="footer-contact">
+              <span>+91-9997842548</span>
+              <span>care@efin.co.in</span>
+            </div>
+            <Link to="/support/apply" className="footer-cta">
+              Apply for a loan
+            </Link>
           </div>
         </div>
-        <div className="footer-map-col">
-          <h4>Find us</h4>
-          <div className="footer-map-embed" aria-label="E-Fin office location map">
-            <iframe
-              title="E-Fin office map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14008.633845616866!2d77.3706301!3d28.6238324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceff26d89b9e9%3A0x8b10fba59a26d81a!2sC-74%2C%20Sector%2063%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-              loading="lazy"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
-          <div className="footer-contact">
-            <a href="tel:+919997842548">+91-9997842548</a>
-            <a href="mailto:care@efin.co.in">care@efin.co.in</a>
-            <div className="footer-address">Visit us: C-74, Sec 63 Noida 201301</div>
+        <div className="footer-map">
+          <iframe
+            title="E-Fin Office Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14008.633845616866!2d77.3706301!3d28.6238324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceff26d89b9e9%3A0x8b10fba59a26d81a!2sC-74%2C%20Sector%2063%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+        <div className="footer-bottom">
+          <span>© {currentYear} E-Fin (MLB Securities Pvt. Ltd.). All rights reserved.</span>
+          <div className="footer-bottom-links">
+            <Link to="/support">Privacy policy</Link>
+            <Link to="/support">Terms of use</Link>
+            <Link to="/support">Code of ethics</Link>
           </div>
         </div>
-      </div>
-      <div className="footer-bottom">
-        <p>© {currentYear} E-Fin (MLB Securities Pvt. Ltd.). All rights reserved.</p>
       </div>
     </footer>
   );

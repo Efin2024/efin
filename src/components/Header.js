@@ -118,15 +118,21 @@ function Header() {
             ))}
           </ul>
           <div className="drawer-actions">
-            <Link className="ghost-btn" to="/support/apply" onClick={handleClose}>
-              Download app
+            <Link className="ghost-btn" to="/login" onClick={handleClose}>
+              Login
+            </Link>
+            <Link className="primary-btn" to="/support/apply" onClick={handleClose}>
+              Apply Now
             </Link>
           </div>
         </nav>
 
         <div className="nav-actions">
-          <Link className="ghost-btn" to="/support/apply" onClick={handleClose}>
-            Download app
+          <Link className="ghost-btn" to="/login" onClick={handleClose}>
+            Login
+          </Link>
+          <Link className="primary-btn" to="/support/apply" onClick={handleClose}>
+            Apply Now
           </Link>
         </div>
       </div>

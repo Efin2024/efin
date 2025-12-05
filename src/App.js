@@ -19,7 +19,6 @@ import TwoThreeWheelerCalculatorPage from './pages/calculators/TwoThreeWheelerCa
 import EligibilityCalculatorPage from './pages/calculators/EligibilityCalculatorPage';
 import CreditScorePage from './pages/calculators/CreditScorePage';
 import CareersPage from './pages/CareersPage';
-import NewsroomPage from './pages/NewsroomPage';
 import BlogsPage from './pages/BlogsPage';
 import QuizPage from './pages/QuizPage';
 
@@ -37,10 +36,10 @@ function App() {
           <Route path="why-fibe" element={<WhyFinanceCoPage />} />
           <Route path="about" element={<WhyFinanceCoPage />} />
           <Route path="about/careers" element={<CareersPage />} />
-          <Route path="about/news" element={<NewsroomPage />} />
           <Route path="how-it-works" element={<HowItWorksPage />} />
           <Route path="support" element={<SupportPage />} />
           <Route path="support/apply" element={<ApplyPage />} />
+          <Route path="login" element={<LoginPage />} />
           <Route path="support/login" element={<LoginPage />} />
           <Route path="resources/personal-loan-emi-calculator" element={<PersonalLoanCalculatorPage />} />
           <Route
@@ -49,12 +48,12 @@ function App() {
           />
           <Route path="resources/eligibility-calculator" element={<EligibilityCalculatorPage />} />
           <Route path="resources/check-credit-score" element={<CreditScorePage />} />
+          <Route path="loans/personal-loan" element={<PersonalLoansPage />} />
           {Object.entries(landingPages).map(([path, page]) => {
             if (
               page.template === 'calculator' ||
               path === 'about' ||
-              path === 'about/careers' ||
-              path === 'about/news'
+              path === 'about/careers'
             ) {
               return null;
             }

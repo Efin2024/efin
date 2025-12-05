@@ -5,10 +5,6 @@ import appleStoreBadge from '../assets/store/apple-store.svg';
 import instantCashIcon from '../assets/product-icons/instant-cash-loan.png';
 import personalLoanIcon from '../assets/product-icons/personal-loan.png';
 import emiStoreIcon from '../assets/product-icons/emi-store.png';
-import creditScoreIcon from '../assets/offerings/credit-score.png';
-import financialWellnessIcon from '../assets/offerings/financial-wellness.png';
-import eligibilityIcon from '../assets/offerings/eligibility.png';
-import creditCardIcon from '../assets/offerings/credit-card.png';
 
 const HERO_STATS = [
   { label: 'App downloads', value: '34 Mn+' },
@@ -23,96 +19,52 @@ const PRODUCT_CARDS = [
     description: 'Get cash in your bank account within minutes.',
     to: '/loans/instant-cash-loan',
     icon: instantCashIcon,
+    amount: 'Up to ₹5 Lakhs',
   },
   {
     title: 'Personal Loan',
     description: 'Get up to ₹5 lakhs instantly with no collateral.',
     to: '/loans/personal-loan',
     icon: personalLoanIcon,
+    amount: 'Up to ₹5 Lakhs',
   },
   {
     title: '2 & 3 Wheeler Loans',
     description: 'Finance bikes, scooters, e-rickshaws, and cargo 3Ws with flexible EMIs.',
     to: '/loans/two-wheeler-loan',
     icon: instantCashIcon,
+    amount: 'Flexible EMIs',
   },
   {
     title: 'EMI Store',
     description: 'Upgrade gadgets, travel, and more in easy EMIs.',
     to: '/offerings/bnpl',
     icon: emiStoreIcon,
+    amount: '0% Interest',
   },
 ];
 
-const LOAN_STEPS = [
+const WHY_CHOOSE_US = [
   {
-    title: 'Online application',
-    copy: 'Download the E-Fin App and provide a few basic details to initiate your application.',
+    icon: '⚡',
+    title: 'Lightning Fast',
+    description: 'Get approved in minutes and money in your account instantly',
   },
   {
-    title: 'Instant approval',
-    copy: 'Upload KYC documents digitally and get an approval decision in minutes.',
+    icon: '🔒',
+    title: 'Secure & Safe',
+    description: 'Bank-grade encryption and RBI-registered NBFC',
   },
   {
-    title: 'Cash-in-bank in minutes',
-    copy: 'Choose the amount you need and receive funds directly in your bank account.',
-  },
-];
-
-const OTHER_OFFERINGS = [
-  {
-    title: 'Credit Score',
-    copy: 'Check your credit score for free in just 3 minutes.',
-    to: '/resources/check-credit-score',
-    icon: creditScoreIcon,
+    icon: '💰',
+    title: 'Transparent Pricing',
+    description: 'No hidden charges, clear terms, and competitive interest rates',
   },
   {
-    title: 'Financial Wellness',
-    copy: 'Create affordability for your employees’ every credit need.',
-    to: '/offerings/salary-advance',
-    icon: financialWellnessIcon,
+    icon: '📱',
+    title: 'Easy Process',
+    description: 'Simple online application with minimal documentation',
   },
-  {
-    title: 'Eligibility Calculator',
-    copy: 'See how much you can borrow with E-Fin.',
-    to: '/resources/eligibility-calculator',
-    icon: eligibilityIcon,
-  },
-  {
-    title: 'E-Fin Card',
-    copy: 'Go numberless with India’s coolest co-branded card.',
-    to: '/offerings/card',
-    icon: creditCardIcon,
-  },
-];
-
-const WHY_POINTS = [
-  {
-    title: 'Responsible credit',
-    copy: 'Handle all your last-minute expenses like a pro and repay at your pace.',
-    icon: '✅',
-  },
-  {
-    title: 'Transparent journey',
-    copy: 'Crystal clear pricing with repayment schedules shared upfront.',
-    icon: '🔍',
-  },
-  {
-    title: 'Always-on support',
-    copy: 'Multilingual support teams, WhatsApp assistance and in-app chat.',
-    icon: '🤝',
-  },
-  {
-    title: 'Secure by design',
-    copy: 'Bank-grade encryption and RBI-compliant processes keep you safe.',
-    icon: '🛡️',
-  },
-];
-
-const WHY_METRICS = [
-  { value: '< 2 mins', label: 'Avg approval time' },
-  { value: '8 languages', label: 'Support coverage' },
-  { value: '₹0', label: 'Pre-closure fee' },
 ];
 
 const TESTIMONIALS = [
@@ -158,153 +110,100 @@ function HomePage() {
 
   return (
     <div className="page fibe-home">
+      {/* Hero Section */}
       <section className="hero-block" id="hero">
         <div className="hero-grid">
           <div className="hero-content">
-            <span className="eyebrow">India&apos;s largest lending platform</span>
-            <h1>Lightning-fast personal loans for everyday upgrades</h1>
+            <span className="eyebrow">🏆 India's largest lending platform</span>
+            <h1>
+              <span className="highlight-text">India's fastest growing lending platform.</span>
+              We serve the community when you borrow from us.
+            </h1>
             <p>
               Handle trips, gadgets, medical needs, or sudden expenses in a tap. Transparent pricing,
-              instant approvals, and money sent straight to your bank.
+              instant approvals, and money sent straight to your bank account.
             </p>
             <div className="hero-cta">
               <Link className="primary-btn" to="/support/apply">
-                Get your loan now
+                Get your loan now →
               </Link>
               <Link className="ghost-btn" to="/solutions">
                 Explore products
               </Link>
             </div>
-            <form className="hero-form" onSubmit={handleHeroSubmit}>
-              <label htmlFor="hero-mobile">Enter your mobile number</label>
-              <div className="hero-form-row">
-                <input
-                  id="hero-mobile"
-                  type="tel"
-                  inputMode="numeric"
-                  pattern="[0-9]*"
-                  placeholder="98765 43210"
-                  value={mobile}
-                  onChange={(event) => setMobile(event.target.value)}
-                />
-                <button type="submit">Get the app link</button>
-              </div>
-              {submitted && <p className="form-success">Link sent! Check your SMS inbox.</p>}
-            </form>
             <div className="hero-badges">
-              <span>4.8 ★ on Play Store</span>
-              <span>RBI registered NBFC</span>
+              <span>⭐ 4.8 on Play Store</span>
+              <span>🏛️ RBI registered NBFC</span>
+              <span>🔒 100% Secure</span>
             </div>
-            <div className="store-badges hero-store-badges">
-              <a href="https://play.google.com/" target="_blank" rel="noreferrer" className="store-badge">
-                <img src={googlePlayBadge} alt="Get it on Google Play" />
-              </a>
-              <a href="https://www.apple.com/app-store/" target="_blank" rel="noreferrer" className="store-badge">
-                <img src={appleStoreBadge} alt="Download on the App Store" />
-              </a>
+          </div>
+
+          <div className="hero-visual">
+            <div className="hero-carousel">
+              <div className="carousel-track">
+                <img src="/3wheel.png" alt="3 Wheeler" className="carousel-image" />
+              </div>
+              <div className="carousel-track">
+                <img src="/2wheel eletric.png" alt="Electric 2 Wheeler" className="carousel-image" />
+              </div>
+              <div className="carousel-track">
+                <img src="/2 wheel.png" alt="2 Wheeler" className="carousel-image" />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="stats-bar" aria-label="Key metrics">
-        {HERO_STATS.map((stat) => (
-          <div key={stat.label}>
-            <strong>{stat.value}</strong>
-            <span>{stat.label}</span>
-          </div>
-        ))}
+      {/* Why Choose Us */}
+      <section className="section-block why-choose-section">
+        <header className="section-heading">
+          <span className="eyebrow">Why Choose E-Fin</span>
+          <h2>Built for speed, security, and simplicity</h2>
+        </header>
+        <div className="why-choose-grid">
+          {WHY_CHOOSE_US.map((item) => (
+            <div key={item.title} className="why-card">
+              <div className="why-icon">{item.icon}</div>
+              <div>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
+      {/* Products */}
       <section className="section-block" id="products">
         <header className="section-heading">
           <span className="eyebrow">Our Products</span>
-          <h2>One solution for all life’s big and small upgrades</h2>
+          <h2>One solution for all life's big and small upgrades</h2>
           <p>
-            It’s quick, safe and simple. Sort out your finances anytime, anywhere — absolutely no
+            Quick, safe, and simple. Sort out your finances anytime, anywhere — absolutely no
             questions asked.
           </p>
         </header>
         <div className="product-grid">
           {PRODUCT_CARDS.map((card) => (
-            <Link key={card.title} to={card.to} className="product-card">
+            <Link key={card.title} to={card.to} className="product-card modern">
               <img src={card.icon} alt={`${card.title} illustration`} loading="lazy" />
-              <div>
+              <div className="product-content">
+                <div className="product-badge">{card.amount}</div>
                 <h3>{card.title}</h3>
                 <p>{card.description}</p>
               </div>
-              <span aria-hidden="true">Explore →</span>
+              <span className="product-arrow" aria-hidden="true">Explore →</span>
             </Link>
           ))}
         </div>
       </section>
 
-      <section className="section-block steps-block" id="how-it-works">
-        <header className="section-heading">
-          <span className="eyebrow">How to get a personal loan from E-Fin?</span>
-          <h2>Borrow and repay on your own terms</h2>
-        </header>
-        <div className="steps-grid">
-          {LOAN_STEPS.map((step, index) => (
-            <article key={step.title}>
-              <span className="step-index">{index + 1}</span>
-              <h3>{step.title}</h3>
-              <p>{step.copy}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section-block offerings-block" id="offerings">
-        <header className="section-heading">
-          <span className="eyebrow">Our Other Offerings</span>
-          <h2>Everything else you need to keep money moving</h2>
-        </header>
-        <div className="offering-grid">
-          {OTHER_OFFERINGS.map((item) => (
-            <Link key={item.title} to={item.to} className="offering-card">
-              <img src={item.icon} alt={`${item.title} illustration`} loading="lazy" />
-              <h3>{item.title}</h3>
-              <p>{item.copy}</p>
-              <span>Explore →</span>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      <section className="section-block why-block" id="why">
-        <header className="section-heading">
-          <span className="eyebrow">Why choose E-Fin?</span>
-          <p>Handle every upgrade like a pro with instant approvals and flexible repayments.</p>
-        </header>
-        <div className="why-metrics">
-          {WHY_METRICS.map((metric) => (
-            <div key={metric.label}>
-              <strong>{metric.value}</strong>
-              <span>{metric.label}</span>
-            </div>
-          ))}
-        </div>
-        <div className="why-grid">
-          {WHY_POINTS.map((point) => (
-            <article key={point.title} className="why-card">
-              <div className="why-icon" aria-hidden="true">
-                {point.icon}
-              </div>
-              <div>
-                <h3>{point.title}</h3>
-                <p>{point.copy}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
+      {/* Testimonials */}
       <section className="section-block testimonials-block" id="stories">
         <header className="section-heading">
-          <span className="eyebrow">Here&apos;s what our customers think of us!</span>
+          <span className="eyebrow">Here's what our customers think of us!</span>
           <h2>Real stories from borrowers and partners</h2>
-          <p>Speed, transparency, and human support are our north stars. Here’s how that feels in real life.</p>
+          <p>Speed, transparency, and human support are our north stars. Here's how that feels in real life.</p>
         </header>
         <div className="testimonial-marquee">
           <div className="testimonial-track">
@@ -315,7 +214,7 @@ function HomePage() {
                 </div>
                 <div className="testimonial-text">
                   <span className="quote-tag">{testimonial.tag}</span>
-                  <p>“{testimonial.quote}”</p>
+                  <p>"{testimonial.quote}"</p>
                   <div className="testimonial-meta">
                     <strong>{testimonial.author}</strong>
                     <span>{testimonial.role}</span>
@@ -327,6 +226,21 @@ function HomePage() {
         </div>
       </section>
 
+      {/* CTA Section */}
+      <section className="cta-section">
+        <div className="cta-content">
+          <h2>Ready to get started?</h2>
+          <p>Join millions of Indians who trust E-Fin for their financial needs</p>
+          <div className="cta-buttons">
+            <Link className="primary-btn large" to="/support/apply">
+              Apply for Loan →
+            </Link>
+            <Link className="ghost-btn large" to="/login">
+              Login to Account
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

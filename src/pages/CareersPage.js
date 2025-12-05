@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 const CULTURE_VALUES = [
   {
     title: 'Ownership mindset',
@@ -39,6 +41,13 @@ const PERKS = [
 ];
 
 function CareersPage() {
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setFormSubmitted(true);
+  };
+
   return (
     <div className="page careers-page">
       <section className="page-hero">
@@ -111,6 +120,64 @@ function CareersPage() {
               Talk to People Ops
             </a>
           </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="company-card career-form-card">
+          <h2>Send us your profile</h2>
+          <p>Drop your details and our Talent team will get back to you.</p>
+          <form className="career-form" onSubmit={handleSubmit}>
+            <div className="form-grid">
+              <label htmlFor="career-name">
+                Full name
+                <input id="career-name" name="name" type="text" required placeholder="Your name" />
+              </label>
+              <label htmlFor="career-email">
+                Email
+                <input
+                  id="career-email"
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="you@example.com"
+                />
+              </label>
+              <label htmlFor="career-phone">
+                Phone
+                <input
+                  id="career-phone"
+                  name="phone"
+                  type="tel"
+                  required
+                  placeholder="+91 99999 99999"
+                />
+              </label>
+              <label htmlFor="career-resume">
+                Resume (PDF/Doc)
+                <input
+                  id="career-resume"
+                  name="resume"
+                  type="file"
+                  accept=".pdf,.doc,.docx"
+                  required
+                />
+              </label>
+            </div>
+            <label className="career-message" htmlFor="career-message">
+              Message
+              <textarea
+                id="career-message"
+                name="message"
+                rows="4"
+                placeholder="Tell us about your experience and the role you’re interested in"
+              />
+            </label>
+            <button type="submit" className="primary-btn">
+              Submit application
+            </button>
+            {formSubmitted && <p className="form-note success">Thanks! Our team will reach out shortly.</p>}
+          </form>
         </div>
       </section>
     </div>

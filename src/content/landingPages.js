@@ -411,22 +411,6 @@ const LANDING_PAGES = {
     ctaPrimary: { label: 'View roles', to: '/about/careers' },
     ctaSecondary: sharedCtas.apply,
   },
-  'about/news': {
-    title: 'Newsroom',
-    category: 'Company',
-    excerpt: 'Announcements, partnerships, and thought leadership from E-Fin',
-    description:
-      'Browse press releases, awards, and ecosystem partnerships that showcase how E-Fin is reshaping responsible lending across India.',
-    bullets: ['Media kit downloads', 'Co-lending announcements', 'Regulatory disclosures'],
-    stats: [
-      { label: 'Stories covered', value: '200+' },
-      { label: 'Awards', value: '30+' },
-      { label: 'Industry events', value: '50+ per year' },
-    ],
-    image: creditScoreIcon,
-    ctaPrimary: { label: 'Download media kit', to: '/about/news' },
-    ctaSecondary: sharedCtas.apply,
-  },
   'support/contact': {
     title: 'Contact Us',
     category: 'Support',
@@ -447,7 +431,7 @@ const LANDING_PAGES = {
 
 export const NAV_STRUCTURE = [
   {
-    label: 'Loans',
+    label: 'Our Products',
     items: [
       'loans/instant-cash-loan',
       'loans/personal-loan',
@@ -464,8 +448,7 @@ export const NAV_STRUCTURE = [
       'resources/check-credit-score',
     ],
   },
-  { label: 'Learn', items: ['learn/blogs', 'learn/dictionary', 'learn/quiz'] },
-  { label: 'About Us', items: ['about', 'about/careers', 'about/news', 'support/contact'] },
+  { label: 'About Us', items: ['about', 'about/careers', 'support/contact'] },
 ];
 
 export default LANDING_PAGES;

@@ -35,13 +35,6 @@ const supportSlides = [
 
 const contactChannels = [
   {
-    title: 'Call centre',
-    description: '24x7 helpline in 8 languages for repayments, statements, and applications.',
-    action: 'Call 1800-123-456',
-    href: 'tel:1800123456',
-    icon: '📞',
-  },
-  {
     title: 'WhatsApp',
     description: 'Instantly fetch statements, NOC, and EMI schedules with OTP verification.',
     action: 'Chat on WhatsApp',
@@ -57,11 +50,7 @@ const contactChannels = [
   },
 ];
 
-const serviceBadges = [
-  { label: 'Avg response', value: '< 30 sec' },
-  { label: 'Languages', value: '8 supported' },
-  { label: 'Resolution', value: '98% first-contact' },
-];
+const serviceBadges = [{ label: 'Avg response', value: '< 30 sec' }];
 
 const supportHighlights = [
   {
@@ -112,15 +101,6 @@ const serviceCards = [
     ],
     tone: 'amber',
   },
-];
-
-const branches = [
-  { city: 'Bengaluru', areas: 'Indiranagar, Whitefield, Koramangala, Yelahanka' },
-  { city: 'Delhi NCR', areas: 'Connaught Place, Noida Sector 18, Gurugram Cybercity' },
-  { city: 'Mumbai', areas: 'Andheri West, Thane, Navi Mumbai, BKC' },
-  { city: 'Pune', areas: 'Hinjewadi, Baner, Kothrud' },
-  { city: 'Hyderabad', areas: 'Madhapur, Gachibowli, Secunderabad' },
-  { city: 'Chennai', areas: 'OMR, T-Nagar, Anna Nagar' },
 ];
 
 const policies = [
@@ -193,20 +173,12 @@ function SupportPage() {
             Reach E-Fin support for applications, repayments, and statements. Pick your channel, share a few details, and
             we will route you to the right specialist.
           </p>
-          <div className="contact-badges">
-            {serviceBadges.map((badge) => (
-              <span key={badge.label}>
-                <strong>{badge.value}</strong>
-                <small>{badge.label}</small>
-              </span>
-            ))}
-          </div>
           <div className="contact-quick">
-            <a href="tel:1800123456" className="primary-btn">
-              Call 1800-123-456
-            </a>
             <a href="https://wa.me/911800123456" className="ghost-btn" target="_blank" rel="noreferrer">
               Chat on WhatsApp
+            </a>
+            <a href="mailto:care@e-fin.in" className="primary-btn">
+              Email care@e-fin.in
             </a>
           </div>
         </div>
@@ -222,10 +194,6 @@ function SupportPage() {
               <div>
                 <strong>24x7</strong>
                 <span>Availability</span>
-              </div>
-              <div>
-                <strong>8</strong>
-                <span>Languages</span>
               </div>
               <div>
                 <strong>0</strong>
@@ -413,24 +381,6 @@ function SupportPage() {
               <summary>{item.q}</summary>
               <p>{item.a}</p>
             </details>
-          ))}
-        </div>
-      </section>
-
-      <section className="section branch-locator" id="branch">
-        <h2>Branches &amp; partner kiosks</h2>
-        <p className="section-lead">
-          Visit any of the branches below or request a doorstep visit from your nearest city team.
-        </p>
-        <div className="branch-grid">
-          {branches.map((branch) => (
-            <article key={branch.city} className="branch-card">
-              <div className="branch-chip">{branch.city}</div>
-              <p>{branch.areas}</p>
-              <a className="primary-link" href="#contact-form">
-                Request a visit →
-              </a>
-            </article>
           ))}
         </div>
       </section>
