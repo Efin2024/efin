@@ -22,6 +22,7 @@ import TwoThreeWheelerCalculatorPage from './pages/calculators/TwoThreeWheelerCa
 import EligibilityCalculatorPage from './pages/calculators/EligibilityCalculatorPage';
 import CreditScorePage from './pages/calculators/CreditScorePage';
 import CareersPage from './pages/CareersPage';
+import PoliciesPage from './pages/PoliciesPage';
 
 
 function App() {
@@ -54,6 +55,7 @@ function App() {
           <Route path="loans/instant-cash-loan" element={<SmallBusinessLoanPage />} />
           <Route path="loans/three-wheeler-loan" element={<EVThreeWheelerPage />} />
           <Route path="loans/two-wheeler-loan" element={<TwoWheelerLoanPage />} />
+          <Route path="policies/policies" element={<PoliciesPage />} />
           {Object.entries(landingPages).map(([path, page]) => {
             if (
               page.template === 'calculator' ||

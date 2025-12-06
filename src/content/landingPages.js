@@ -433,6 +433,152 @@ const LANDING_PAGES = {
     ctaPrimary: { label: 'Raise a ticket', to: '/support' },
     ctaSecondary: sharedCtas.download,
   },
+  'policies/terms-and-conditions': {
+    title: 'Terms & Conditions',
+    category: 'Policies',
+    excerpt: 'Terms governing the use of E-Fin services',
+    description:
+      'Please read these terms and conditions carefully before using our services. By accessing or using E-Fin services, you agree to be bound by these terms.',
+    bullets: ['Service agreement', 'User responsibilities', 'Loan terms', 'Dispute resolution'],
+    stats: [
+      { label: 'Last updated', value: 'Dec 2024' },
+      { label: 'Governed by', value: 'Indian law' },
+      { label: 'Jurisdiction', value: 'New Delhi' },
+    ],
+    image: financialWellnessIcon,
+    ctaPrimary: sharedCtas.apply,
+    ctaSecondary: { label: 'Contact support', to: '/support/contact' },
+  },
+  'policies/grievance-redressal': {
+    title: 'Grievance Redressal',
+    category: 'Policies',
+    excerpt: 'How to raise and resolve your complaints',
+    description:
+      'E-Fin is committed to ensuring customer satisfaction. If you have any grievances or complaints, we have a structured grievance redressal mechanism to address your concerns promptly.',
+    bullets: ['24/7 helpline available', 'Escalation matrix', 'RBI ombudsman details', 'Fair resolution process'],
+    stats: [
+      { label: 'Resolution time', value: '< 7 days' },
+      { label: 'Customer satisfaction', value: '4.8/5' },
+      { label: 'Response time', value: '< 24 hours' },
+    ],
+    image: creditScoreIcon,
+    ctaPrimary: { label: 'Register complaint', to: '/support/contact' },
+    ctaSecondary: sharedCtas.apply,
+  },
+  'policies/disclaimer': {
+    title: 'Disclaimer',
+    category: 'Policies',
+    excerpt: 'Important disclaimers and disclosures',
+    description:
+      'This disclaimer outlines the limitations and responsibilities regarding the use of E-Fin services and information provided on our platform.',
+    bullets: ['Information accuracy', 'Loan approval subject to verification', 'Interest rates subject to change', 'No guarantee of approval'],
+    stats: [
+      { label: 'Transparency', value: '100%' },
+      { label: 'RBI registered', value: 'Yes' },
+      { label: 'Updates', value: 'Regular' },
+    ],
+    image: personalLoanIcon,
+    ctaPrimary: sharedCtas.apply,
+    ctaSecondary: { label: 'Contact support', to: '/support/contact' },
+  },
+  'policies/policies': {
+    title: 'Privacy Policy',
+    category: 'Policies',
+    excerpt: 'How we collect, use, and protect your personal information',
+    description:
+      'This Privacy Policy outlines the practices of MLB Securities Private Limited regarding the collection, use, disclosure, and protection of personal information of individuals who visit our website or mobile application or use our services. MLB is dedicated to safeguarding your privacy and ensuring the security of your personal information. By accessing our website or using our services, you are agreeing to the terms and conditions of this Privacy Policy.',
+    bullets: [
+      'Transparent data collection practices',
+      'Secure storage and protection',
+      'Your rights to access and control data',
+      'Full compliance with regulations'
+    ],
+    highlights: [
+      {
+        title: 'Information We Collect',
+        description: 'We may gather personal information from you when you willingly provide it to us, for example, by filling out forms on our website, communicating with us via email or phone, or applying for our services. The types of personal information we may collect include: Contact information (e.g., name, email address, phone number, postal address), Photographic identification or proof of address documents, Information about your financing needs or preferences, and Information about your interactions with our website and services.',
+      },
+      {
+        title: 'Use of Personal Information',
+        description: 'We may use the personal information we collect for the following purposes: To provide our services and process your financing applications, To communicate with you concerning your inquiries, applications, or account-related matters, To personalize your experience and improve our website and services, To send you marketing or promotional materials (with your consent), and To comply with legal obligations or respond to lawful requests from public authorities.',
+      },
+      {
+        title: 'Disclosure of Personal Information',
+        description: 'We may disclose your personal information to third parties in the following circumstances: With your consent or at your direction, To our affiliates, subsidiaries, or related entities for business purposes, To service providers who assist us in operating our business and providing our services, To comply with legal obligations, enforce our policies, or protect our rights, property, or safety, In connection with a merger, acquisition, or sale of all or a portion of our business. We do not sell, trade, or rent your personal information to third parties for their marketing purposes.',
+      },
+      {
+        title: 'Data Security',
+        description: 'We implement reasonable physical, technical, and administrative security measures to protect the personal information we collect. However, no method of transmission over the Internet or electronic storage is completely secure. While we strive to protect your personal information, we cannot guarantee its absolute security.',
+      },
+    ],
+    steps: [
+      {
+        title: 'Your Rights',
+        description: 'You have certain rights regarding your personal information, subject to applicable law. These rights may include: Accessing, correcting, or deleting your personal information, Restricting or objecting to the processing of your personal information, Withdrawing consent for certain processing activities, Requesting the portability of your personal information, and Filing a complaint with a supervisory authority. To exercise your rights or if you have any questions or concerns regarding our Privacy Policy, please contact us using the information provided in the Contact Us section.'
+      },
+      {
+        title: 'Cookies and Tracking Technologies',
+        description: 'Our website may use cookies and similar tracking technologies to enhance your browsing experience and collect information about how you use our site. You can manage your cookie preferences through your browser settings.'
+      },
+      {
+        title: 'Contact Us',
+        description: 'If you have any questions, concerns, or requests regarding this Privacy Policy or the processing of your personal information, please contact us at care@mlbsecurities.com or call us at +91 9997842548.'
+      },
+      {
+        title: 'Changes to This Privacy Policy',
+        description: 'We may update this Privacy Policy from time to time. Any changes will be effective upon posting the revised Privacy Policy on our website. We encourage you to review this Privacy Policy periodically to stay informed about how we collect, use, and protect your personal information. By using our website or services after any changes to this Privacy Policy, you acknowledge and agree to the revised terms.'
+      },
+    ],
+    assurance: [
+      {
+        title: 'Transparent Pricing',
+        description: 'We are committed to protecting your privacy with industry-standard security measures and full compliance with all applicable data protection regulations including RBI guidelines and the IT Act.'
+      },
+      {
+        title: 'No Third-Party Sales',
+        description: 'We do not sell, trade, or rent your personal information to third parties for their marketing purposes. Your data is used solely for providing our services and improving your experience.'
+      },
+      {
+        title: 'Your Consent',
+        description: 'By accessing our website or using our services, you acknowledge that you have read and understood this Privacy Policy and consent to the collection, use, and disclosure of your personal information as described herein.'
+      },
+    ],
+    faqs: [
+      {
+        q: 'What personal information do you collect?',
+        a: 'We collect contact information (e.g., name, email address, phone number, postal address), photographic identification or proof of address documents, information about your financing needs or preferences, and information about your interactions with our website and services.',
+      },
+      {
+        q: 'How do you use my personal information?',
+        a: 'We use your information to provide our services and process your financing applications, communicate with you concerning your inquiries and applications, personalize your experience and improve our website and services, send you marketing materials (with your consent), and comply with legal obligations.',
+      },
+      {
+        q: 'Will you share my information with third parties?',
+        a: 'We may disclose your personal information with your consent, to our affiliates and service providers for business purposes, to comply with legal obligations, or in connection with business transactions. We do not sell, trade, or rent your personal information to third parties for their marketing purposes.',
+      },
+      {
+        q: 'How do you protect my data?',
+        a: 'We implement reasonable physical, technical, and administrative security measures to protect the personal information we collect. However, no method of transmission over the Internet is completely secure, and we cannot guarantee absolute security.',
+      },
+      {
+        q: 'What are my rights regarding my personal information?',
+        a: 'You have the right to access, correct, delete, or restrict processing of your personal information, withdraw consent, request data portability, and file complaints with supervisory authorities. Contact us at care@mlbsecurities.com to exercise these rights.',
+      },
+      {
+        q: 'Do you use cookies on your website?',
+        a: 'Yes, our website may use cookies and similar tracking technologies to enhance your browsing experience and collect information about how you use our site. You can manage your cookie preferences through your browser settings.',
+      },
+    ],
+    helperNote: 'Last updated: December 2024. MLB Securities Private Limited (E-Fin) is committed to protecting your privacy and ensuring transparency in all our data practices.',
+    stats: [
+      { label: 'Data Protection', value: '100%' },
+      { label: 'RBI Compliant', value: 'Certified' },
+      { label: 'Your Rights', value: 'Protected' },
+    ],
+    image: financialWellnessIcon,
+    ctaPrimary: sharedCtas.apply,
+    ctaSecondary: { label: 'Contact support', to: '/support/contact' },
+  },
 };
 
 export const NAV_STRUCTURE = [
@@ -456,6 +602,10 @@ export const NAV_STRUCTURE = [
     ],
   },
   { label: 'About Us', items: ['about', 'about/careers', 'support/contact'] },
+  {
+    label: 'Policies',
+    items: ['policies/terms-and-conditions', 'policies/grievance-redressal', 'policies/disclaimer', 'policies/policies']
+  },
 ];
 
 
