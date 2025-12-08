@@ -1,317 +1,489 @@
 import { Link } from 'react-router-dom';
 import './SmallBusinessLoanPage.css';
-import businessLoanIcon from '../assets/product-icons/instant-cash-loan.png';
 
 function SmallBusinessLoanPage() {
     return (
-        <div className="page business-loan-page">
+        <div className="page business-loan-page-modern">
             {/* Hero Section */}
-            <section className="business-loan-hero">
-                <div className="hero-content">
-                    <span className="hero-badge">Unsecured Business Loan</span>
-                    <h1>Small Business Loan</h1>
-                    <p className="hero-description">
-                        Elevate your business with an unsecured business loan up to ₹5 lakhs with a loan tenor of 3-36 months
-                        without any collateral and empower your business journey with us.
-                    </p>
-                    <div className="hero-cta">
-                        <Link to="/support/apply" className="primary-btn">Apply Now</Link>
-                        <Link to="/support" className="ghost-btn">Check Eligibility</Link>
+            <section className="business-hero-modern">
+                <div className="business-hero-grid">
+                    <div className="business-hero-content">
+                        <span className="business-badge">💼 Unsecured Business Loan</span>
+                        <h1>
+                            Grow Your <span className="gradient-text">Business</span>
+                        </h1>
+                        <p className="business-hero-description">
+                            Elevate your business with an unsecured loan up to ₹5 lakhs. No collateral required,
+                            flexible tenure of 3-36 months, and quick approval to fuel your entrepreneurial dreams.
+                        </p>
+
+                        {/* Key Highlights */}
+                        <div className="business-highlights-grid">
+                            <div className="highlight-chip-business">
+                                <div className="chip-icon-business">💰</div>
+                                <div className="chip-content">
+                                    <strong>Up to ₹5 Lakhs</strong>
+                                    <span>Loan Amount</span>
+                                </div>
+                            </div>
+                            <div className="highlight-chip-business">
+                                <div className="chip-icon-business">📊</div>
+                                <div className="chip-content">
+                                    <strong>12-30% p.a.</strong>
+                                    <span>Interest Rate</span>
+                                </div>
+                            </div>
+                            <div className="highlight-chip-business">
+                                <div className="chip-icon-business">📅</div>
+                                <div className="chip-content">
+                                    <strong>3-36 Months</strong>
+                                    <span>Flexible Tenure</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="business-hero-cta">
+                            <Link to="/support/apply" className="primary-btn large">
+                                Apply for Business Loan →
+                            </Link>
+                            <Link to="/resources/eligibility-calculator" className="ghost-btn large">
+                                Check Eligibility
+                            </Link>
+                        </div>
+
+                        <div className="business-trust-badges">
+                            <span>🏛️ RBI Registered</span>
+                            <span>🔓 No Collateral</span>
+                            <span>⚡ Quick Disbursal</span>
+                        </div>
                     </div>
-                    <div className="hero-highlights">
-                        <div className="highlight-chip">
-                            <div className="chip-icon">₹</div>
-                            <div>
-                                <strong>Up to ₹5 Lakhs</strong>
-                                <span>Loan Amount</span>
+
+                    <div className="business-hero-visual">
+                        <div className="business-visual-card">
+                            <img src="/business-loan-hero.png" alt="Small Business Loan" className="business-hero-image" />
+                            <div className="floating-stat-business stat-1">
+                                <strong>₹5L</strong>
+                                <span>Max Loan</span>
                             </div>
-                        </div>
-                        <div className="highlight-chip">
-                            <div className="chip-icon">📅</div>
-                            <div>
-                                <strong>3-36 Months</strong>
-                                <span>Flexible Tenure</span>
+                            <div className="floating-stat-business stat-2">
+                                <strong>12%</strong>
+                                <span>Starting Rate</span>
                             </div>
-                        </div>
-                        <div className="highlight-chip">
-                            <div className="chip-icon">🔓</div>
-                            <div>
-                                <strong>No Collateral</strong>
-                                <span>Unsecured Loan</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="hero-visual">
-                    <div className="visual-card">
-                        <img src={businessLoanIcon} alt="Small Business Loan" />
-                        <div className="visual-stats">
-                            <div>
-                                <strong>12-30%</strong>
-                                <span>Interest Rate p.a.</span>
-                            </div>
-                            <div>
-                                <strong>Quick</strong>
-                                <span>Approval</span>
-                            </div>
-                            <div>
-                                <strong>100%</strong>
-                                <span>Digital Process</span>
+                            <div className="floating-stat-business stat-3">
+                                <strong>24-48h</strong>
+                                <span>Disbursal</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* What is Business Loan Section */}
-            <section className="info-section what-is-section">
+            {/* Use Cases Section */}
+            <section className="business-uses-section">
                 <div className="section-heading">
-                    <p className="eyebrow">Understanding Business Loans</p>
-                    <h2>What is Business Loan</h2>
+                    <span className="eyebrow">Power Your Business</span>
+                    <h2>What Can You Use It For?</h2>
+                    <p>Flexible business loans for every stage of your growth journey</p>
                 </div>
-                <div className="what-is-content">
-                    <p>
-                        Business loans provide funds for a variety of purposes, such as covering day-to-day expenses,
-                        purchasing inventory or new equipment, hiring employees, expanding operations, or consolidating
-                        existing business debt.
-                    </p>
-                    <div className="purpose-grid">
-                        <div className="purpose-card">
-                            <div className="purpose-icon">💼</div>
-                            <h4>Day-to-Day Expenses</h4>
-                            <p>Cover operational costs and maintain cash flow</p>
-                        </div>
-                        <div className="purpose-card">
-                            <div className="purpose-icon">📦</div>
-                            <h4>Inventory Purchase</h4>
-                            <p>Stock up inventory and equipment</p>
-                        </div>
-                        <div className="purpose-card">
-                            <div className="purpose-icon">👥</div>
-                            <h4>Hiring Employees</h4>
-                            <p>Expand your team and grow operations</p>
-                        </div>
-                        <div className="purpose-card">
-                            <div className="purpose-icon">📈</div>
-                            <h4>Business Expansion</h4>
-                            <p>Scale your business to new heights</p>
-                        </div>
+
+                <div className="business-uses-grid">
+                    <div className="business-use-card">
+                        <div className="business-use-icon">💼</div>
+                        <h3>Working Capital</h3>
+                        <p>Cover day-to-day operational expenses and maintain smooth cash flow</p>
+                    </div>
+
+                    <div className="business-use-card">
+                        <div className="business-use-icon">📦</div>
+                        <h3>Inventory Purchase</h3>
+                        <p>Stock up on inventory and raw materials for upcoming demand</p>
+                    </div>
+
+                    <div className="business-use-card">
+                        <div className="business-use-icon">🛠️</div>
+                        <h3>Equipment Purchase</h3>
+                        <p>Invest in new machinery, tools, or technology for your business</p>
+                    </div>
+
+                    <div className="business-use-card">
+                        <div className="business-use-icon">👥</div>
+                        <h3>Hire Employees</h3>
+                        <p>Expand your team and scale operations with skilled workforce</p>
+                    </div>
+
+                    <div className="business-use-card">
+                        <div className="business-use-icon">📈</div>
+                        <h3>Business Expansion</h3>
+                        <p>Open new branches, enter new markets, or launch new products</p>
+                    </div>
+
+                    <div className="business-use-card">
+                        <div className="business-use-icon">💳</div>
+                        <h3>Debt Consolidation</h3>
+                        <p>Consolidate multiple business debts into one manageable EMI</p>
+                    </div>
+
+                    <div className="business-use-card">
+                        <div className="business-use-icon">📢</div>
+                        <h3>Marketing & Promotion</h3>
+                        <p>Fund advertising campaigns and brand building activities</p>
+                    </div>
+
+                    <div className="business-use-card">
+                        <div className="business-use-icon">🏪</div>
+                        <h3>Renovation & Upgrade</h3>
+                        <p>Modernize your shop, office, or business premises</p>
                     </div>
                 </div>
             </section>
 
-            {/* Eligibility Criteria Section */}
-            <section className="info-section eligibility-section">
+            {/* Features Section - Bento Grid */}
+            <section className="business-features-section">
                 <div className="section-heading">
-                    <p className="eyebrow">Are You Eligible?</p>
+                    <span className="eyebrow">Why Choose Us</span>
+                    <h2>Benefits for Your Business</h2>
+                    <p>Experience hassle-free business lending with unmatched advantages</p>
+                </div>
+
+                <div className="business-features-bento">
+                    <div className="feature-bento-business large">
+                        <div className="feature-icon-large">🚀</div>
+                        <h3>No Collateral Required</h3>
+                        <p>Get funds without pledging any assets or property. Completely unsecured business loan designed for small businesses and MSMEs.</p>
+                        <ul className="feature-checklist">
+                            <li>✓ No security deposit needed</li>
+                            <li>✓ No guarantor required</li>
+                            <li>✓ Minimal documentation</li>
+                        </ul>
+                    </div>
+
+                    <div className="feature-bento-business">
+                        <div className="feature-icon">⚡</div>
+                        <h3>Quick Approval</h3>
+                        <p>Get approved in 24-48 hours with our streamlined process</p>
+                    </div>
+
+                    <div className="feature-bento-business">
+                        <div className="feature-icon">💰</div>
+                        <h3>Higher Loan Amount</h3>
+                        <p>Access up to ₹5 lakhs to meet substantial business needs</p>
+                    </div>
+
+                    <div className="feature-bento-business accent">
+                        <div className="feature-icon">📅</div>
+                        <h3>Flexible Tenure</h3>
+                        <p>Choose repayment period from 3-36 months that suits your cash flow</p>
+                    </div>
+
+                    <div className="feature-bento-business">
+                        <div className="feature-icon">🎯</div>
+                        <h3>Multiple Purposes</h3>
+                        <p>Use for working capital, inventory, equipment, or expansion</p>
+                    </div>
+
+                    <div className="feature-bento-business">
+                        <div className="feature-icon">📱</div>
+                        <h3>100% Digital</h3>
+                        <p>Apply online from anywhere - complete paperless process</p>
+                    </div>
+                </div>
+            </section>
+
+            {/* Eligibility Section */}
+            <section className="business-eligibility-modern">
+                <div className="section-heading">
+                    <span className="eyebrow">Who Can Apply</span>
                     <h2>Eligibility Criteria</h2>
+                    <p>Simple requirements to get your business loan approved</p>
                 </div>
-                <div className="eligibility-grid">
-                    <div className="eligibility-card">
-                        <div className="eligibility-icon">🇮🇳</div>
-                        <div>
-                            <h4>Nationality</h4>
-                            <p>Indian</p>
+
+                <div className="eligibility-business-grid">
+                    <div className="eligibility-business-card">
+                        <div className="eligibility-business-icon">🇮🇳</div>
+                        <h4>Nationality</h4>
+                        <p>Indian Citizen</p>
+                    </div>
+
+                    <div className="eligibility-business-card">
+                        <div className="eligibility-business-icon">🏢</div>
+                        <h4>Business Vintage</h4>
+                        <p>At least 3 years of business operation</p>
+                    </div>
+
+                    <div className="eligibility-business-card">
+                        <div className="eligibility-business-icon">📊</div>
+                        <h4>CIBIL Score</h4>
+                        <p>680 or higher for better rates</p>
+                    </div>
+
+                    <div className="eligibility-business-card">
+                        <div className="eligibility-business-icon">💼</div>
+                        <h4>Work Status</h4>
+                        <p>Self-Employed / Business Owner</p>
+                    </div>
+
+                    <div className="eligibility-business-card">
+                        <div className="eligibility-business-icon">🎂</div>
+                        <h4>Age Criteria</h4>
+                        <p>24 to 58 years</p>
+                    </div>
+
+                    <div className="eligibility-business-card">
+                        <div className="eligibility-business-icon">💰</div>
+                        <h4>Annual Turnover</h4>
+                        <p>Minimum ₹10 lakhs per annum</p>
+                    </div>
+                </div>
+            </section>
+
+            {/* Documents Required */}
+            <section className="business-documents-section">
+                <div className="section-heading">
+                    <span className="eyebrow">Required Documents</span>
+                    <h2>Documents Checklist</h2>
+                    <p>Keep these documents ready for quick loan processing</p>
+                </div>
+
+                <div className="business-documents-grid">
+                    <div className="document-category-business">
+                        <div className="doc-category-header-business">
+                            <div className="doc-category-icon-business">🆔</div>
+                            <h3>KYC Documents</h3>
+                        </div>
+                        <div className="doc-list-business">
+                            <div className="doc-item-business">
+                                <span className="doc-bullet-business">✓</span>
+                                <div>
+                                    <strong>Aadhaar Card</strong>
+                                    <p>For identity verification</p>
+                                </div>
+                            </div>
+                            <div className="doc-item-business">
+                                <span className="doc-bullet-business">✓</span>
+                                <div>
+                                    <strong>PAN Card</strong>
+                                    <p>Mandatory for all applicants</p>
+                                </div>
+                            </div>
+                            <div className="doc-item-business">
+                                <span className="doc-bullet-business">✓</span>
+                                <div>
+                                    <strong>Passport / Voter ID</strong>
+                                    <p>Additional ID proof</p>
+                                </div>
+                            </div>
+                            <div className="doc-item-business">
+                                <span className="doc-bullet-business">✓</span>
+                                <div>
+                                    <strong>NREGA Job Card</strong>
+                                    <p>Acceptable ID document</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div className="eligibility-card">
-                        <div className="eligibility-icon">🏢</div>
-                        <div>
-                            <h4>Business Vintage</h4>
-                            <p>At least 3 years</p>
+
+                    <div className="document-category-business highlight">
+                        <div className="doc-category-header-business">
+                            <div className="doc-category-icon-business">🏪</div>
+                            <h3>Business Proof</h3>
+                        </div>
+                        <div className="doc-list-business">
+                            <div className="doc-item-business">
+                                <span className="doc-bullet-business">✓</span>
+                                <div>
+                                    <strong>Business Registration</strong>
+                                    <p>GST, Shop Act, or Trade License</p>
+                                </div>
+                            </div>
+                            <div className="doc-item-business">
+                                <span className="doc-bullet-business">✓</span>
+                                <div>
+                                    <strong>Ownership Proof</strong>
+                                    <p>Partnership deed or proprietorship proof</p>
+                                </div>
+                            </div>
+                            <div className="doc-item-business">
+                                <span className="doc-bullet-business">✓</span>
+                                <div>
+                                    <strong>Business Address</strong>
+                                    <p>Utility bills or rent agreement</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div className="eligibility-card">
-                        <div className="eligibility-icon">📊</div>
-                        <div>
-                            <h4>CIBIL Score</h4>
-                            <p>680 or higher</p>
+
+                    <div className="document-category-business">
+                        <div className="doc-category-header-business">
+                            <div className="doc-category-icon-business">📄</div>
+                            <h3>Financial Documents</h3>
                         </div>
-                    </div>
-                    <div className="eligibility-card">
-                        <div className="eligibility-icon">💼</div>
-                        <div>
-                            <h4>Work Status</h4>
-                            <p>Self Employed</p>
-                        </div>
-                    </div>
-                    <div className="eligibility-card">
-                        <div className="eligibility-icon">🎂</div>
-                        <div>
-                            <h4>Age</h4>
-                            <p>24 to 58 Years</p>
+                        <div className="doc-list-business">
+                            <div className="doc-item-business">
+                                <span className="doc-bullet-business">✓</span>
+                                <div>
+                                    <strong>Bank Statements</strong>
+                                    <p>Last 3 months business account</p>
+                                </div>
+                            </div>
+                            <div className="doc-item-business">
+                                <span className="doc-bullet-business">✓</span>
+                                <div>
+                                    <strong>ITR Documents</strong>
+                                    <p>Last 2 years with computation</p>
+                                </div>
+                            </div>
+                            <div className="doc-item-business">
+                                <span className="doc-bullet-business">✓</span>
+                                <div>
+                                    <strong>GST Returns</strong>
+                                    <p>Latest filed returns if applicable</p>
+                                </div>
+                            </div>
+                            <div className="doc-item-business">
+                                <span className="doc-bullet-business">✓</span>
+                                <div>
+                                    <strong>Financial Statements</strong>
+                                    <p>Balance sheet and P&L statement</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Documents Required Section */}
-            <section className="info-section documents-section">
+            {/* Fees and Charges */}
+            <section className="business-fees-section">
                 <div className="section-heading">
-                    <p className="eyebrow">Keep These Ready</p>
-                    <h2>Documents Required</h2>
+                    <span className="eyebrow">Transparent Pricing</span>
+                    <h2>Fees & Charges</h2>
+                    <p>Complete clarity on all costs - no hidden charges</p>
                 </div>
-                <div className="documents-grid">
-                    <div className="document-card">
-                        <div className="document-icon">🪪</div>
-                        <div>
-                            <h4>KYC Documents</h4>
-                            <ul>
-                                <li>Aadhar Card</li>
-                                <li>Passport</li>
-                                <li>Voter's ID</li>
-                                <li>Letter from NPR</li>
-                                <li>NREGA Job card</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="document-card">
-                        <div className="document-icon">💳</div>
-                        <div>
-                            <h4>PAN Card</h4>
-                            <p>Mandatory for all applicants</p>
-                        </div>
-                    </div>
-                    <div className="document-card">
-                        <div className="document-icon">🏪</div>
-                        <div>
-                            <h4>Business Proof</h4>
-                            <p>Proof of Business ownership</p>
-                        </div>
-                    </div>
-                    <div className="document-card">
-                        <div className="document-icon">🏦</div>
-                        <div>
-                            <h4>Bank Statement</h4>
-                            <p>Last 3 months</p>
-                        </div>
-                    </div>
-                    <div className="document-card">
-                        <div className="document-icon">📄</div>
-                        <div>
-                            <h4>Financial Documents</h4>
-                            <p>ITR/other financial documents</p>
-                        </div>
-                    </div>
-                    <div className="document-card">
-                        <div className="document-icon">🤝</div>
-                        <div>
-                            <h4>Partnership/Company Docs</h4>
-                            <p>Partnership Deed/Company PAN (for Partnership, Pvt.Ltd or LLC companies)</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
-            {/* Fees and Charges Section */}
-            <section className="info-section fees-section">
-                <div className="section-heading">
-                    <p className="eyebrow">Transparent Pricing</p>
-                    <h2>Applicable Fees and Charges</h2>
+                <div className="business-fees-table">
+                    <div className="fees-row-business fees-header-business">
+                        <div className="fees-label-business">Particulars</div>
+                        <div className="fees-value-business">Charges</div>
+                    </div>
+
+                    <div className="fees-row-business">
+                        <div className="fees-label-business">
+                            <span className="fees-icon-business">📊</span>
+                            <div>
+                                <strong>Interest Rate</strong>
+                                <p>Per annum</p>
+                            </div>
+                        </div>
+                        <div className="fees-value-business">
+                            <strong>12% - 30% p.a.</strong>
+                        </div>
+                    </div>
+
+                    <div className="fees-row-business">
+                        <div className="fees-label-business">
+                            <span className="fees-icon-business">⚙️</span>
+                            <div>
+                                <strong>Processing Fee</strong>
+                                <p>One-time charge</p>
+                            </div>
+                        </div>
+                        <div className="fees-value-business">
+                            <strong>Up to 4% + GST</strong>
+                            <span>Of loan amount</span>
+                        </div>
+                    </div>
+
+                    <div className="fees-row-business">
+                        <div className="fees-label-business">
+                            <span className="fees-icon-business">💳</span>
+                            <div>
+                                <strong>Bounce Charges</strong>
+                                <p>Per repayment default</p>
+                            </div>
+                        </div>
+                        <div className="fees-value-business">
+                            <strong>₹1,500</strong>
+                            <span>Per bounce</span>
+                        </div>
+                    </div>
+
+                    <div className="fees-row-business">
+                        <div className="fees-label-business">
+                            <span className="fees-icon-business">⚠️</span>
+                            <div>
+                                <strong>Penal Charges</strong>
+                                <p>Delay in payment</p>
+                            </div>
+                        </div>
+                        <div className="fees-value-business">
+                            <strong>₹40 per day</strong>
+                            <span>Per installment</span>
+                        </div>
+                    </div>
+
+                    <div className="fees-row-business">
+                        <div className="fees-label-business">
+                            <span className="fees-icon-business">📄</span>
+                            <div>
+                                <strong>Document Processing</strong>
+                                <p>Including GST</p>
+                            </div>
+                        </div>
+                        <div className="fees-value-business">
+                            <strong>₹2,500</strong>
+                        </div>
+                    </div>
+
+                    <div className="fees-row-business">
+                        <div className="fees-label-business">
+                            <span className="fees-icon-business">🔄</span>
+                            <div>
+                                <strong>Prepayment Charges</strong>
+                                <p>Early closure</p>
+                            </div>
+                        </div>
+                        <div className="fees-value-business">
+                            <strong>Up to 4.72% + GST</strong>
+                            <span>On outstanding amount</span>
+                        </div>
+                    </div>
+
+                    <div className="fees-row-business">
+                        <div className="fees-label-business">
+                            <span className="fees-icon-business">🏛️</span>
+                            <div>
+                                <strong>Stamp Duty</strong>
+                                <p>State-wise variation</p>
+                            </div>
+                        </div>
+                        <div className="fees-value-business">
+                            <strong>As per state</strong>
+                        </div>
+                    </div>
                 </div>
-                <div className="fees-table-wrapper">
-                    <table className="fees-table">
-                        <thead>
-                            <tr>
-                                <th>Type of Fee</th>
-                                <th>Applicable Charges</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <strong>Rate of interest</strong>
-                                </td>
-                                <td>12% to 30% per annum</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Processing Fees</strong>
-                                </td>
-                                <td>Up to 4% of the loan amount (inclusive of applicable taxes)</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Bounce Charges</strong>
-                                </td>
-                                <td>In case of default of repayment instrument, Rs. 1,500 per bounce will be levied</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Penal Charges</strong>
-                                </td>
-                                <td>Delay in Payment of Installment(s) shall attract Penal charges of Rs 40 per day per installment from the respective due date until the date of receipt of full instalment(s) amount.</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Document Processing charges</strong>
-                                </td>
-                                <td>Rs. 2,500 (inclusive of applicable taxes)</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Prepayment charges</strong>
-                                </td>
-                                <td>Up to 4.72% (inclusive of applicable taxes) on the outstanding loan amount as on the date of full prepayment.</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Stamp duty</strong>
-                                </td>
-                                <td>Payable as per respective state.</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Broken Period Interest</strong>
-                                </td>
-                                <td>
-                                    <strong>Scenario 1:</strong> More than 30 days from the date of loan disbursal till the first EMI is charged: In this scenario, Broken Period interest shall be deducted from the loan disbursement.<br /><br />
-                                    <strong>Scenario 2:</strong> Less than 30 days from the date of loan disbursal till the first EMI is charged: In this scenario, interest is charged only for the actual number of days since the loan was disbursed.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Installment default charges</strong>
-                                </td>
-                                <td>Rs. 450 per month from the first instalment due date for mandates rejected by customers bank until the new mandate is registered.</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Cash collection handling charges</strong>
-                                </td>
-                                <td>Rs. 177 (inclusive of applicable taxes) will be charged if customer opts to make payment in cash when the collection is done by the collection agents. This fee is charged only once per month</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Cash deposit charges</strong>
-                                </td>
-                                <td>Customers will incur a cash deposition charge of Rs. 50 (Inclusive of Applicable taxes) when making cash payments at our branch offices</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>PG facility charges</strong>
-                                </td>
-                                <td>Rs. 11 (Inclusive of Applicable taxes) will be charged for utilizing the payment gateway to make part or full payments towards the loan through digital properties.</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Switch fees</strong>
-                                </td>
-                                <td>Up to 1.18% of the loan amount (inclusive of applicable taxes) on the outstanding loan amount</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+
+                <p className="fees-note-business">
+                    * All charges are indicative and subject to change. Final rates communicated at sanction. Terms & conditions apply.
+                </p>
             </section>
 
             {/* CTA Section */}
-            <section className="cta-section">
-                <div className="cta-card">
-                    <h2>Ready to Elevate Your Business?</h2>
-                    <p>Apply now and get your business loan approved in minutes</p>
-                    <div className="cta-buttons">
-                        <Link to="/support/apply" className="primary-btn">Apply for Loan</Link>
-                        <Link to="/support" className="ghost-btn">Contact Support</Link>
+            <section className="business-cta-section">
+                <div className="business-cta-card">
+                    <div className="cta-icon-large">💼</div>
+                    <h2>Ready to Grow Your Business?</h2>
+                    <p>Join thousands of small business owners who trust E-Fin for quick business financing</p>
+                    <div className="business-cta-buttons">
+                        <Link to="/support/apply" className="primary-btn large">
+                            Apply for Business Loan →
+                        </Link>
+                        <Link to="/support" className="ghost-btn large">
+                            Talk to Business Advisor
+                        </Link>
+                    </div>
+                    <div className="cta-features-list-business">
+                        <span>✓ No Collateral</span>
+                        <span>✓ Quick Approval</span>
+                        <span>✓ Flexible Terms</span>
                     </div>
                 </div>
             </section>

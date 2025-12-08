@@ -17,7 +17,7 @@ const PRODUCT_CARDS = [
   {
     title: 'Small Business Loan',
     description: 'Unsecured business loan up to ₹5 lakhs without collateral.',
-    to: '/loans/instant-cash-loan',
+    to: '/loans/small-business-loan',
     icon: instantCashIcon,
     amount: 'Up to ₹5 Lakhs',
   },
@@ -109,7 +109,6 @@ function HomePage() {
               </Link>
             </div>
             <div className="hero-badges">
-              <span>⭐ 4.8 on Play Store</span>
               <span>🏛️ RBI registered NBFC</span>
               <span>🔒 100% Secure</span>
             </div>

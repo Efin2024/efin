@@ -6490,3 +6490,535 @@ blockquote cite {
     justify-content: center;
   }
 }
+
+/* ============================================
+   COMPREHENSIVE MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+/* Mobile-First Product Card Background Fix */
+.product-card {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(15, 23, 42, 0.08);
+}
+
+.product-card.modern {
+  background: rgba(255, 255, 255, 0.98) !important;
+}
+
+/* Section Block Mobile Optimization */
+@media (max-width: 1024px) {
+  .section-block {
+    margin: 3rem 0;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .page {
+    width: min(1240px, 92vw);
+  }
+}
+
+/* Tablet Responsive Styles */
+@media (max-width: 768px) {
+
+  /* Hero Section */
+  .hero-block {
+    margin-top: 1rem;
+    padding: 2rem 1.5rem;
+    border-radius: 32px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .hero-cta .primary-btn,
+  .hero-cta .ghost-btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .hero-carousel {
+    height: 300px;
+  }
+
+  /* Section Headings */
+  .section-heading {
+    max-width: 100%;
+    margin: 0 auto 2rem;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+  }
+
+  .section-heading p {
+    font-size: 0.95rem;
+  }
+
+  .eyebrow {
+    font-size: 0.7rem;
+  }
+
+  /* Product Grid */
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .product-card {
+    min-height: 180px;
+    padding: 1.25rem;
+    border-radius: 20px;
+  }
+
+  .product-card img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .product-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .product-card p {
+    font-size: 0.9rem;
+  }
+
+  .product-badge {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.7rem;
+  }
+
+  /* Stats Bar */
+  .stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1.25rem;
+    gap: 0.75rem;
+    margin: 2rem 0;
+  }
+
+  .stats-bar strong {
+    font-size: 1.5rem;
+  }
+
+  /* Calculator Block */
+  .calculator-block {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .loan-calculator {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .loan-calculator__inputs,
+  .loan-calculator__summary {
+    min-width: 100%;
+  }
+
+  /* Steps Grid */
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .steps-grid article {
+    padding: 1.5rem;
+  }
+
+  /* Offerings */
+  .offerings-block {
+    padding: 2rem 1.5rem;
+    border-radius: 28px;
+  }
+
+  .offering-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .cta-buttons .primary-btn,
+  .cta-buttons .ghost-btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  /* Testimonials */
+  .testimonial-item {
+    min-width: 280px;
+    padding: 1.25rem;
+  }
+}
+
+/* Mobile Phone Responsive Styles */
+@media (max-width: 480px) {
+
+  /* Page Container */
+  .page {
+    width: min(1240px, 90vw);
+    padding-bottom: 3rem;
+  }
+
+  .fibe-home {
+    padding-top: 1rem;
+  }
+
+  /* Hero Section */
+  .hero-block {
+    padding: 1.5rem 1rem;
+    border-radius: 24px;
+    margin-top: 0.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .hero-badges {
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .hero-carousel {
+    height: 250px;
+    border-radius: 20px;
+  }
+
+  /* Buttons */
+  .primary-btn,
+  .ghost-btn {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.5rem;
+  }
+
+  .primary-btn.large,
+  .ghost-btn.large {
+    font-size: 1rem;
+    padding: 0.85rem 1.75rem;
+  }
+
+  /* Section Headings */
+  .section-block {
+    margin: 2.5rem 0;
+  }
+
+  .section-heading {
+    margin: 0 auto 1.5rem;
+  }
+
+  .section-heading h2 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+  }
+
+  .section-heading p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+  }
+
+  /* Product Cards */
+  .product-grid {
+    gap: 0.875rem;
+  }
+
+  .product-card {
+    padding: 1.125rem;
+    min-height: 160px;
+    border-radius: 18px;
+  }
+
+  .product-card img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.75rem;
+  }
+
+  .product-card h3 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .product-card p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .product-badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+  }
+
+  .product-arrow {
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+  }
+
+  /* Stats Bar */
+  .stats-bar {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 0.5rem;
+    border-radius: 20px;
+    margin: 1.5rem 0;
+  }
+
+  .stats-bar strong {
+    font-size: 1.35rem;
+  }
+
+  .stats-bar span {
+    font-size: 0.85rem;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 1.5rem 1rem;
+    margin: 2rem 0;
+  }
+
+  .cta-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-content p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Product Content Improvements */
+.product-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.product-content h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-strong);
+}
+
+.product-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.product-badge {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  background: rgba(247, 189, 32, 0.15);
+  color: var(--secondary);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  width: fit-content;
+}
+
+.product-arrow {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  font-size: 0.9rem;
+}
+
+/* Prevent horizontal scroll */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .App {
+    overflow-x: hidden;
+  }
+
+  .page {
+    overflow-x: hidden;
+    padding-top: 90px !important;
+    /* Ensure space for fixed header */
+  }
+
+  .hero-grid,
+  .product-grid,
+  .stats-bar,
+  .calculator-block,
+  .steps-grid,
+  .offering-grid {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ============================================
+   MOBILE PAGE SYNC & OPTIMIZATION
+   ============================================ */
+
+/* Ensure all pages have proper spacing for fixed header */
+.page {
+  padding-top: 100px;
+  min-height: 100vh;
+}
+
+@media (max-width: 900px) {
+  .page {
+    padding-top: 90px;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding-top: 85px;
+  }
+}
+
+/* Global mobile card & background sync */
+@media (max-width: 768px) {
+
+  /* Ensure all hero sections have consistent styling */
+  [class*="-hero"],
+  [class*="hero-"] {
+    margin: 1rem 0 2rem !important;
+    padding: 2rem 1.5rem !important;
+    border-radius: 24px !important;
+  }
+
+  /* Ensure all section cards are consistent */
+  [class*="-section"],
+  [class*="section-"] {
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+  }
+
+  /* Ensure all content cards are consistent */
+  [class*="-card"],
+  [class*="card-"] {
+    border-radius: 18px !important;
+  }
+
+  /* Full width buttons on mobile */
+  .hero-cta .primary-btn,
+  .hero-cta .ghost-btn,
+  [class*="cta"] .primary-btn,
+  [class*="cta"] .ghost-btn {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+
+  /* Consistent section heading sizes */
+  .section-heading h2,
+  [class*="-section"] h2 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem) !important;
+  }
+
+  /* Consistent eyebrow sizes */
+  .eyebrow,
+  [class*="eyebrow"] {
+    font-size: 0.75rem !important;
+  }
+
+  /* Grid mobile optimization */
+  [class*="-grid"],
+  [class*="grid-"] {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  /* Ensure no overflow on any container */
+  * {
+    max-width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 480px) {
+  .page {
+    width: min(1280px, 94vw) !important;
+    padding-top: 80px;
+  }
+
+  [class*="-hero"],
+  [class*="hero-"] {
+    padding: 1.5rem 1rem !important;
+    border-radius: 20px !important;
+  }
+
+  .section-heading h2,
+  [class*="-section"] h2 {
+    font-size: 1.5rem !important;
+  }
+
+  .primary-btn,
+  .ghost-btn {
+    font-size: 0.9rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* Ensure proper background colors everywhere */
+@media (max-width: 768px) {
+  body {
+    background: linear-gradient(135deg,
+        rgba(255, 251, 234, 0.4) 0%,
+        rgba(255, 248, 225, 0.3) 25%,
+        rgba(255, 243, 214, 0.2) 50%,
+        rgba(255, 237, 196, 0.3) 75%,
+        rgba(255, 232, 161, 0.4) 100%) !important;
+  }
+}

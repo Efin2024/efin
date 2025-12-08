@@ -1,0 +1,819 @@
+/* ========================================
+   GRIEVANCE REDRESSAL PAGE - MODERN DESIGN
+   ======================================== */
+
+/* Hero Section */
+.grievance-hero {
+    background: linear-gradient(135deg,
+            rgba(255, 251, 234, 0.95) 0%,
+            rgba(255, 248, 225, 0.85) 50%,
+            rgba(255, 243, 214, 0.75) 100%);
+    border-radius: 32px;
+    padding: 3rem 2.5rem;
+    margin: 2rem 0 3rem;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.1);
+}
+
+.grievance-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.grievance-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid rgba(247, 189, 32, 0.3);
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-strong);
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 24px rgba(247, 189, 32, 0.15);
+}
+
+.grievance-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    line-height: 1.2;
+    margin: 0 0 1rem;
+    font-weight: 700;
+    color: var(--text-strong);
+}
+
+.grievance-hero-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin: 0 0 1.5rem;
+}
+
+.grievance-meta {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Introduction Section */
+.grievance-intro-section {
+    margin: 0 0 3rem;
+}
+
+.grievance-intro-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 28px;
+    padding: 3rem;
+    border: 1px solid rgba(247, 189, 32, 0.15);
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+}
+
+.intro-icon-grievance {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+}
+
+.grievance-intro-card h2 {
+    margin: 0 0 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-strong);
+}
+
+.grievance-intro-card p {
+    margin: 0 0 1.25rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.grievance-intro-card strong {
+    color: var(--text-strong);
+    font-weight: 700;
+}
+
+/* Principles Grid */
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.principle-card {
+    background: rgba(247, 189, 32, 0.05);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid rgba(247, 189, 32, 0.15);
+    transition: all 0.3s ease;
+}
+
+.principle-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(247, 189, 32, 0.2);
+    border-color: rgba(247, 189, 32, 0.3);
+}
+
+.principle-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.principle-card strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--text-strong);
+}
+
+.principle-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* Content Section */
+.grievance-content-section {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.grievance-section-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(247, 189, 32, 0.15);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    display: flex;
+    gap: 2rem;
+}
+
+.grievance-section-card.highlight {
+    background: linear-gradient(135deg, #FFFBF0 0%, #FFF8E6 100%);
+    border-color: rgba(247, 189, 32, 0.3);
+}
+
+.grievance-section-card.rbi {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.05) 0%, rgba(76, 175, 80, 0.02) 100%);
+    border-color: rgba(76, 175, 80, 0.3);
+}
+
+.section-number-grievance {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #f7bd20 0%, #e8a91a 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    box-shadow: 0 8px 20px rgba(247, 189, 32, 0.3);
+}
+
+.section-content-grievance {
+    flex: 1;
+}
+
+.section-content-grievance h3 {
+    margin: 0 0 1.25rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-strong);
+}
+
+.section-content-grievance p {
+    margin: 0 0 1.25rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* Contact Methods Grid */
+.contact-methods-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.contact-method-card {
+    background: rgba(247, 189, 32, 0.05);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid rgba(247, 189, 32, 0.15);
+    transition: all 0.3s ease;
+}
+
+.contact-method-card.full-width {
+    grid-column: 1 / -1;
+}
+
+.contact-method-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(247, 189, 32, 0.2);
+    border-color: rgba(247, 189, 32, 0.3);
+}
+
+.method-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.contact-method-card h4 {
+    margin: 0 0 0.75rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-strong);
+}
+
+.method-link {
+    display: block;
+    color: var(--primary-dark);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(247, 189, 32, 0.3);
+    padding-bottom: 0.25rem;
+    transition: all 0.2s ease;
+}
+
+.method-link:hover {
+    color: #e8a91a;
+    border-bottom-color: #e8a91a;
+}
+
+.contact-method-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.address-text {
+    line-height: 1.6;
+    font-size: 1rem !important;
+}
+
+/* Requirements List */
+.requirements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.requirement-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: rgba(247, 189, 32, 0.05);
+    padding: 1.25rem;
+    border-radius: 12px;
+    border: 1px solid rgba(247, 189, 32, 0.15);
+}
+
+.req-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #f7bd20 0%, #e8a91a 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.requirement-item strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--text-strong);
+    font-size: 1.05rem;
+}
+
+.requirement-item p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Timeline Box */
+.timeline-box {
+    background: rgba(247, 189, 32, 0.08);
+    border-left: 4px solid var(--primary-dark);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.timeline-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.timeline-box strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-strong);
+    font-size: 1.1rem;
+}
+
+.timeline-box p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Nodal Officer Card */
+.nodal-officer-card {
+    background: linear-gradient(135deg, rgba(247, 189, 32, 0.1) 0%, rgba(247, 189, 32, 0.05) 100%);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-top: 1.5rem;
+    border: 2px solid rgba(247, 189, 32, 0.3);
+}
+
+.nodal-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(247, 189, 32, 0.2);
+}
+
+.nodal-icon {
+    font-size: 3.5rem;
+    line-height: 1;
+}
+
+.nodal-header h4 {
+    margin: 0 0 0.25rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-strong);
+}
+
+.nodal-header p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.nodal-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.nodal-detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nodal-detail-item.full {
+    grid-column: 1 / -1;
+}
+
+.detail-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.detail-value {
+    font-size: 1.05rem;
+    color: var(--text-strong);
+    font-weight: 600;
+}
+
+.detail-value.link {
+    color: var(--primary-dark);
+    text-decoration: none;
+    border-bottom: 2px solid rgba(247, 189, 32, 0.3);
+    padding-bottom: 0.25rem;
+    transition: all 0.2s ease;
+}
+
+.detail-value.link:hover {
+    color: #e8a91a;
+    border-bottom-color: #e8a91a;
+}
+
+.nodal-footer {
+    background: white;
+    padding: 1.25rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.nodal-footer p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* RBI Channels Grid */
+.rbi-channels-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.rbi-channel {
+    background: rgba(76, 175, 80, 0.08);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid rgba(76, 175, 80, 0.2);
+    transition: all 0.3s ease;
+}
+
+.rbi-channel:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.2);
+    border-color: rgba(76, 175, 80, 0.4);
+}
+
+.rbi-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.rbi-channel h4 {
+    margin: 0 0 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-strong);
+}
+
+.rbi-link {
+    display: inline-block;
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(76, 175, 80, 0.3);
+    padding-bottom: 0.25rem;
+    transition: all 0.2s ease;
+    margin-bottom: 0.5rem;
+}
+
+.rbi-link:hover {
+    color: #1b5e20;
+    border-bottom-color: #1b5e20;
+}
+
+.timing {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* RBI Address Box */
+.rbi-address-box {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.rbi-address-box strong {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--text-strong);
+}
+
+.rbi-address-box p {
+    margin: 0 0 0.75rem;
+    line-height: 1.7;
+}
+
+.note-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* Resolution Section */
+.resolution-section {
+    margin: 5rem 0;
+}
+
+.resolution-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 28px;
+    padding: 3rem;
+    text-align: center;
+    border: 1px solid rgba(247, 189, 32, 0.15);
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+}
+
+.resolution-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+}
+
+.resolution-card h2 {
+    margin: 0 0 1.5rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--text-strong);
+}
+
+.resolution-card>p {
+    margin: 0 0 2rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-size: 1.05rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resolution-highlight {
+    background: linear-gradient(135deg, rgba(247, 189, 32, 0.1) 0%, rgba(247, 189, 32, 0.05) 100%);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(247, 189, 32, 0.2);
+}
+
+.resolution-highlight h3 {
+    margin: 0 0 1rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-strong);
+}
+
+.resolution-highlight p {
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* Compliments Section */
+.compliments-section {
+    margin: 3rem 0;
+}
+
+.compliments-card {
+    background: linear-gradient(135deg,
+            rgba(247, 189, 32, 0.1) 0%,
+            rgba(247, 189, 32, 0.05) 100%);
+    border-radius: 40px;
+    padding: 4rem 3rem;
+    text-align: center;
+    border: 2px solid rgba(247, 189, 32, 0.2);
+    box-shadow: 0 20px 60px rgba(247, 189, 32, 0.15);
+}
+
+.compliments-icon {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+}
+
+.compliments-card h2 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    margin: 0 0 1rem;
+    color: var(--text-strong);
+}
+
+.compliments-card p {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.compliments-cta {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+/* ========================================
+   MOBILE RESPONSIVE STYLES
+   ======================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .grievance-hero {
+        padding: 2.5rem 2rem;
+        border-radius: 28px;
+    }
+
+    .grievance-intro-card,
+    .resolution-card {
+        padding: 2.5rem;
+        border-radius: 24px;
+    }
+
+    .grievance-section-card {
+        padding: 2rem;
+        border-radius: 20px;
+    }
+
+    .principles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-methods-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rbi-channels-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nodal-details {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .grievance-hero {
+        padding: 2rem 1.5rem;
+        border-radius: 24px;
+        margin: 1rem 0 2rem;
+    }
+
+    .grievance-hero h1 {
+        font-size: clamp(2rem, 6vw, 2.5rem);
+    }
+
+    .grievance-hero-description {
+        font-size: 1rem;
+    }
+
+    .grievance-meta {
+        flex-direction: column;
+        gap: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .grievance-intro-card,
+    .resolution-card {
+        padding: 2rem;
+        border-radius: 20px;
+    }
+
+    .intro-icon-grievance,
+    .resolution-icon {
+        font-size: 3rem;
+    }
+
+    .grievance-intro-card h2,
+    .resolution-card h2 {
+        font-size: 1.6rem;
+    }
+
+    .principles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grievance-section-card {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-radius: 18px;
+    }
+
+    .section-number-grievance {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+
+    .section-content-grievance h3 {
+        font-size: 1.3rem;
+    }
+
+    .contact-methods-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nodal-officer-card {
+        padding: 1.5rem;
+    }
+
+    .nodal-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nodal-details {
+        grid-template-columns: 1fr;
+    }
+
+    .rbi-channels-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .compliments-card {
+        padding: 3rem 2rem;
+        border-radius: 32px;
+    }
+
+    .compliments-card h2 {
+        font-size: clamp(1.75rem, 5vw, 2rem);
+    }
+
+    .compliments-card p {
+        font-size: 1rem;
+    }
+
+    .compliments-cta {
+        flex-direction: column;
+        gap: 0.875rem;
+    }
+
+    .compliments-cta .primary-btn,
+    .compliments-cta .ghost-btn {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .grievance-hero {
+        padding: 1.5rem 1rem;
+        border-radius: 20px;
+    }
+
+    .grievance-hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .grievance-intro-card,
+    .resolution-card {
+        padding: 1.5rem;
+        border-radius: 18px;
+    }
+
+    .grievance-section-card {
+        padding: 1.25rem;
+        border-radius: 16px;
+    }
+
+    .nodal-officer-card {
+        padding: 1.25rem;
+    }
+
+    .compliments-card {
+        padding: 2rem 1.5rem;
+        border-radius: 28px;
+    }
+
+    .compliments-icon {
+        font-size: 4rem;
+    }
+}
+
+/* Prevent horizontal overflow */
+@media (max-width: 768px) {
+    .grievance-page-modern {
+        overflow-x: hidden;
+    }
+}

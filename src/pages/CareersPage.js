@@ -95,7 +95,7 @@ function CareersPage() {
             </article>
           ))}
         </div>
-        <p className="section-note">Didn&apos;t find your role? Write to talent@e-fin.in with your portfolio.</p>
+        <p className="section-note">Didn&apos;t find your role? Write to Care@efin.co.in with your portfolio.</p>
       </section>
 
       <section className="section perks-section">
@@ -113,10 +113,10 @@ function CareersPage() {
             <p>Share your resume and a short note on how you plan to reshape inclusive credit.</p>
           </div>
           <div className="contact-buttons">
-            <a className="primary-btn" href="mailto:talent@e-fin.in">
-              Email talent@e-fin.in
+            <a className="primary-btn" href="mailto:Care@efin.co.in">
+              Email Care@efin.co.in
             </a>
-            <a className="ghost-btn" href="mailto:care@e-fin.in">
+            <a className="ghost-btn" href="mailto:Care@efin.co.in">
               Talk to People Ops
             </a>
           </div>

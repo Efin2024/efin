@@ -16,6 +16,7 @@ import InfoPage from './pages/InfoPage';
 import SmallBusinessLoanPage from './pages/SmallBusinessLoanPage';
 import EVThreeWheelerPage from './pages/EVThreeWheelerPage';
 import TwoWheelerLoanPage from './pages/TwoWheelerLoanPage';
+import LoanAgainstPropertyPage from './pages/LoanAgainstPropertyPage';
 import landingPages from './content/landingPages';
 import PersonalLoanCalculatorPage from './pages/calculators/PersonalLoanCalculatorPage';
 import TwoThreeWheelerCalculatorPage from './pages/calculators/TwoThreeWheelerCalculatorPage';
@@ -23,6 +24,9 @@ import EligibilityCalculatorPage from './pages/calculators/EligibilityCalculator
 import CreditScorePage from './pages/calculators/CreditScorePage';
 import CareersPage from './pages/CareersPage';
 import PoliciesPage from './pages/PoliciesPage';
+import TermsAndConditionsPage from './pages/TermsAndConditionsPage';
+import DisclaimerPage from './pages/DisclaimerPage';
+import GrievanceRedressalPage from './pages/GrievanceRedressalPage';
 
 
 function App() {
@@ -53,9 +57,14 @@ function App() {
           <Route path="resources/check-credit-score" element={<CreditScorePage />} />
           <Route path="loans/personal-loan" element={<PersonalLoansPage />} />
           <Route path="loans/instant-cash-loan" element={<SmallBusinessLoanPage />} />
+          <Route path="loans/small-business-loan" element={<SmallBusinessLoanPage />} />
           <Route path="loans/three-wheeler-loan" element={<EVThreeWheelerPage />} />
           <Route path="loans/two-wheeler-loan" element={<TwoWheelerLoanPage />} />
+          <Route path="loans/loan-against-property" element={<LoanAgainstPropertyPage />} />
           <Route path="policies/policies" element={<PoliciesPage />} />
+          <Route path="policies/terms-and-conditions" element={<TermsAndConditionsPage />} />
+          <Route path="policies/disclaimer" element={<DisclaimerPage />} />
+          <Route path="policies/grievance-redressal" element={<GrievanceRedressalPage />} />
           {Object.entries(landingPages).map(([path, page]) => {
             if (
               page.template === 'calculator' ||

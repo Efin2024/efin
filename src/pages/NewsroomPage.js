@@ -23,8 +23,8 @@ const MEDIA_KIT_LINKS = [
 ];
 
 const PRESS_CONTACTS = [
-  { label: 'Media desk', value: 'press@e-fin.in', href: 'mailto:press@e-fin.in' },
-  { label: 'Partnerships', value: 'alliances@e-fin.in', href: 'mailto:alliances@e-fin.in' },
+  { label: 'Media desk', value: 'Care@efin.co.in', href: 'mailto:Care@efin.co.in' },
+  { label: 'Partnerships', value: 'Care@efin.co.in', href: 'mailto:Care@efin.co.in' },
 ];
 
 function NewsroomPage() {

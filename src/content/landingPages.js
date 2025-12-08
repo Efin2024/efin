@@ -391,7 +391,7 @@ const LANDING_PAGES = {
     stats: [
       { label: 'Customer focus', value: 'Young professionals & MSMEs' },
       { label: 'Mission', value: 'Driving affordability at scale' },
-      { label: 'Support', value: '+91-9997842548 • care@fibe.in' },
+      { label: 'Support', value: '+91-9997842548 • Care@efin.co.in' },
     ],
     image: personalLoanIcon,
     ctaPrimary: { label: 'Discover journey', to: '/why-fibe' },
@@ -423,7 +423,7 @@ const LANDING_PAGES = {
     excerpt: 'Reach our support team via phone, email, or chat',
     description:
       'Raise tickets, schedule call-backs, or walk into the nearest kiosk for instant assistance.',
-    bullets: ['Toll-free: 020 6763 9797', 'care@fibe.in', 'WhatsApp +91 84339 97290'],
+    bullets: ['Toll-free: 020 6763 9797', 'Care@efin.co.in', 'WhatsApp +91 84339 97290'],
     stats: [
       { label: 'Support languages', value: '6' },
       { label: 'Average resolution', value: '< 24 hrs' },
@@ -522,7 +522,7 @@ const LANDING_PAGES = {
       },
       {
         title: 'Contact Us',
-        description: 'If you have any questions, concerns, or requests regarding this Privacy Policy or the processing of your personal information, please contact us at care@mlbsecurities.com or call us at +91 9997842548.'
+        description: 'If you have any questions, concerns, or requests regarding this Privacy Policy or the processing of your personal information, please contact us at Care@efin.co.in or call us at +91 9997842548.'
       },
       {
         title: 'Changes to This Privacy Policy',
@@ -562,7 +562,7 @@ const LANDING_PAGES = {
       },
       {
         q: 'What are my rights regarding my personal information?',
-        a: 'You have the right to access, correct, delete, or restrict processing of your personal information, withdraw consent, request data portability, and file complaints with supervisory authorities. Contact us at care@mlbsecurities.com to exercise these rights.',
+        a: 'You have the right to access, correct, delete, or restrict processing of your personal information, withdraw consent, request data portability, and file complaints with supervisory authorities. Contact us at Care@efin.co.in to exercise these rights.',
       },
       {
         q: 'Do you use cookies on your website?',

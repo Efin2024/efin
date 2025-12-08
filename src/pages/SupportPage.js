@@ -1,56 +1,30 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import SupportIllustration from '../components/illustrations/SupportIllustration';
-import ImageCarousel from '../components/ImageCarousel';
-
-const supportSlides = [
-  {
-    badge: '24x7 helpline',
-    title: 'Talk to a real human anytime',
-    description:
-      'Our multilingual advisors are available round-the-clock for queries on applications, repayments, and statements.',
-    list: ['Support in 8 languages', 'Average response under 30 seconds'],
-    background: 'linear-gradient(135deg, #6dd5fa, #2980b9)',
-    imageLabel: 'Call',
-  },
-  {
-    badge: 'Self-serve hub',
-    title: 'Manage loans with E-Fin Hub',
-    description:
-      'Download statements, update auto-debit mandates, raise service requests, and view personalised upgrade offers.',
-    list: ['One place for all products', 'Instant ticket tracking'],
-    background: 'linear-gradient(135deg, #bdc3c7, #2c3e50)',
-    imageLabel: 'Hub',
-  },
-  {
-    badge: 'WhatsApp & app chat',
-    title: 'Get answers in your favourite channel',
-    description:
-      'Access quick actions such as NOC download, EMI calendar, and payment reminders right from WhatsApp or the app chat.',
-    list: ['Secure OTP verification', 'Human hand-off within 2 minutes'],
-    background: 'linear-gradient(135deg, #11998e, #38ef7d)',
-    imageLabel: 'Chat',
-  },
-];
+import './SupportPage.css';
 
 const contactChannels = [
+  {
+    title: 'Phone Support',
+    description: 'Talk to our support team 24x7 for immediate assistance',
+    action: 'Call +91-9997842548',
+    href: 'tel:+919997842548',
+    icon: '📞',
+  },
   {
     title: 'WhatsApp',
     description: 'Instantly fetch statements, NOC, and EMI schedules with OTP verification.',
     action: 'Chat on WhatsApp',
-    href: 'https://wa.me/911800123456',
+    href: 'https://wa.me/919997842548',
     icon: '💬',
   },
   {
     title: 'Email',
     description: 'Write to us with your registered mobile number and loan ID for a tracked reply.',
-    action: 'care@e-fin.in',
-    href: 'mailto:care@e-fin.in',
+    action: 'Care@efin.co.in',
+    href: 'mailto:Care@efin.co.in',
     icon: '✉️',
   },
 ];
-
-const serviceBadges = [{ label: 'Avg response', value: '< 30 sec' }];
 
 const supportHighlights = [
   {
@@ -75,52 +49,28 @@ const serviceCards = [
     title: 'Service SLAs',
     icon: '⏱️',
     points: [
-      'Loan application queries resolved within 30 minutes.',
-      'Statement & NOC requests delivered instantly via email.',
-      'Escalations assigned to senior managers within 4 working hours.',
+      'Loan application queries resolved within 30 minutes',
+      'Statement & NOC requests delivered instantly via email',
+      'Escalations assigned to senior managers within 4 working hours',
     ],
-    tone: 'blue',
   },
   {
-    title: 'Escalation matrix',
+    title: 'Escalation Matrix',
     icon: '🚦',
     points: [
-      'Level 1: Customer success manager via app or helpline.',
-      'Level 2: Zonal grievance officer (response within 48 hours).',
-      'Level 3: Nodal officer and RBI CMS integration for escalations.',
+      'Level 1: Customer success manager via app or helpline',
+      'Level 2: Zonal grievance officer (response within 48 hours)',
+      'Level 3: Nodal officer and RBI CMS integration for escalations',
     ],
-    tone: 'teal',
   },
   {
-    title: 'Payment support',
+    title: 'Payment Support',
     icon: '💳',
     points: [
-      'Auto-debit retry within 2 days of failure.',
-      'UPI and netbanking options for instant repayment.',
-      'Hardship assistance with EMI moratorium assessment.',
+      'Auto-debit retry within 2 days of failure',
+      'UPI and netbanking options for instant repayment',
+      'Hardship assistance with EMI moratorium assessment',
     ],
-    tone: 'amber',
-  },
-];
-
-const policies = [
-  {
-    title: 'Privacy policy',
-    description: 'Learn how E-Fin collects, processes, and secures your personal data.',
-    href: '/',
-    tag: 'Data safety',
-  },
-  {
-    title: 'Terms & conditions',
-    description: 'Understand the framework governing your relationship with E-Fin.',
-    href: '/',
-    tag: 'Customer charter',
-  },
-  {
-    title: 'Regulatory disclosures',
-    description: 'Co-lending, grievance redressal, and RBI-mandated documents.',
-    href: '/',
-    tag: 'Compliance',
   },
 ];
 
@@ -164,271 +114,300 @@ function SupportPage() {
   };
 
   return (
-    <div className="page support-page" id="support">
-      <section className="contact-hero">
-        <div className="contact-hero-copy">
-          <span className="info-pill">Contact us</span>
-          <h1>Talk to a human in under a minute</h1>
-          <p>
-            Reach E-Fin support for applications, repayments, and statements. Pick your channel, share a few details, and
-            we will route you to the right specialist.
+    <div className="page support-page-modern">
+      {/* Hero Section */}
+      <section className="support-hero-modern">
+        <div className="support-hero-content">
+          <span className="support-badge">💬 Customer Support</span>
+          <h1>
+            We're Here to <span className="gradient-text">Help You</span>
+          </h1>
+          <p className="support-hero-description">
+            Reach E-Fin support for applications, repayments, and statements. Talk to a real human in under a minute.
+            Our multilingual advisors are available 24x7 to assist you.
           </p>
-          <div className="contact-quick">
-            <a href="https://wa.me/911800123456" className="ghost-btn" target="_blank" rel="noreferrer">
-              Chat on WhatsApp
-            </a>
-            <a href="mailto:care@e-fin.in" className="primary-btn">
-              Email care@e-fin.in
-            </a>
-          </div>
-        </div>
-        <div className="contact-hero-visual">
-          <SupportIllustration className="page-hero-illustration" />
-          <div className="contact-hero-card">
-            <p className="eyebrow">Support promise</p>
-            <h3>Real humans. Real quick.</h3>
-            <p className="contact-hero-note">
-              No bots roadblocks. You get a named advisor with clear next steps and follow-ups.
-            </p>
-            <div className="hero-mini-stats">
+
+          <div className="support-stats-grid">
+            <div className="stat-card-support">
+              <div className="stat-icon-support">⚡</div>
+              <div>
+                <strong>&lt; 30 sec</strong>
+                <span>Avg Response Time</span>
+              </div>
+            </div>
+            <div className="stat-card-support">
+              <div className="stat-icon-support">🌍</div>
+              <div>
+                <strong>8 Languages</strong>
+                <span>Support Available</span>
+              </div>
+            </div>
+            <div className="stat-card-support">
+              <div className="stat-icon-support">🕒</div>
               <div>
                 <strong>24x7</strong>
-                <span>Availability</span>
-              </div>
-              <div>
-                <strong>0</strong>
-                <span>Escalation fees</span>
+                <span>Available Always</span>
               </div>
             </div>
+          </div>
+
+          <div className="support-hero-cta">
+            <a href="tel:+919997842548" className="primary-btn large">
+              Call Us Now →
+            </a>
+            <a href="https://wa.me/919997842548" className="ghost-btn large" target="_blank" rel="noreferrer">
+              Chat on WhatsApp
+            </a>
           </div>
         </div>
       </section>
 
-      <section className="section slim">
-        <ImageCarousel slides={supportSlides} interval={6000} />
-      </section>
+      {/* Support Highlights */}
+      <section className="support-highlights-section">
+        <div className="section-heading">
+          <span className="eyebrow">Why Choose Our Support</span>
+          <h2>Human-First Customer Service</h2>
+          <p>Experience support that actually cares about solving your problems</p>
+        </div>
 
-      <section className="support-highlight-grid">
-        {supportHighlights.map((item) => (
-          <article key={item.title} className="support-highlight-card">
-            <div className="contact-icon" aria-hidden="true">
-              {item.icon}
-            </div>
-            <div>
+        <div className="support-highlights-grid">
+          {supportHighlights.map((item) => (
+            <div key={item.title} className="support-highlight-card">
+              <div className="highlight-icon-support">{item.icon}</div>
               <h3>{item.title}</h3>
               <p>{item.description}</p>
             </div>
-          </article>
-        ))}
+          ))}
+        </div>
       </section>
 
-      <section className="contact-stack" id="contact">
-        <div className="contact-stack__left">
-          <div className="contact-stack-head">
-            <p className="eyebrow">Choose a channel</p>
-            <h2>Get support the way you want</h2>
-            <p className="contact-stack-lead">
-              Call, chat, or email—every request is tracked and assigned to a specialist. Prefer a callback? Use the form
-              and we will dial you within minutes.
-            </p>
-          </div>
-          <div className="contact-channel-grid">
-            {contactChannels.map((channel) => (
-              <article key={channel.title} className="contact-channel">
-                <div className="contact-icon" aria-hidden="true">
-                  {channel.icon}
-                </div>
-                <div>
-                  <h3>{channel.title}</h3>
-                  <p>{channel.description}</p>
-                  <a
-                    className="primary-link"
-                    href={channel.href}
-                    target={channel.href.startsWith('http') ? '_blank' : undefined}
-                    rel="noreferrer"
-                  >
-                    {channel.action} →
-                  </a>
-                </div>
-              </article>
-            ))}
-          </div>
-          <div className="contact-assurance">
-            {serviceBadges.map((badge) => (
-              <span key={badge.label}>
-                <strong>{badge.value}</strong>
-                <small>{badge.label}</small>
-              </span>
-            ))}
-          </div>
+      {/* Contact Channels */}
+      <section className="contact-channels-section">
+        <div className="section-heading">
+          <span className="eyebrow">Get In Touch</span>
+          <h2>Choose Your Preferred Channel</h2>
+          <p>Multiple ways to reach us - pick what works best for you</p>
         </div>
-        <div className="contact-stack__right" id="contact-form">
-          <div className="contact-form-card">
-            <p className="eyebrow">Raise a request</p>
-            <h2>Share your details, we&apos;ll call back</h2>
-            <form className="contact-form-grid" onSubmit={handleSubmit}>
-              <label>
-                Full name
-                <input
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Enter your name"
-                  required
-                />
-              </label>
-              <label>
-                Mobile number
-                <input
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  placeholder="+91"
-                  required
-                />
-              </label>
-              <label>
-                Topic
-                <select name="topic" value={formData.topic} onChange={handleChange}>
-                  <option>Repayment issue</option>
-                  <option>Statement or NOC</option>
-                  <option>Application status</option>
-                  <option>Update auto-debit</option>
-                  <option>General query</option>
-                </select>
-              </label>
-              <label className="span-2">
-                Details
-                <textarea
-                  name="message"
-                  rows="3"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Add context to speed up resolution"
-                />
-              </label>
-              <button type="submit" className="primary-btn">
-                Submit request
-              </button>
-              {submitted && <p className="form-note success">Request received! We&apos;ll reach out shortly.</p>}
-            </form>
-          </div>
-          <div className="contact-info-card">
-            <h3>What happens next?</h3>
-            <ul>
-              <li>We confirm your identity and assign a named advisor.</li>
-              <li>You get updates via SMS, email, and WhatsApp.</li>
-              <li>Unresolved? We move it to the escalation desk within 4 hours.</li>
-            </ul>
-            <div className="contact-quick-links">
-              <Link className="ghost-btn" to="/support/login">
-                Go to customer login
-              </Link>
-              <a className="primary-link" href="#privacy">
-                View policies →
+
+        <div className="contact-channels-grid">
+          {contactChannels.map((channel) => (
+            <div key={channel.title} className="contact-channel-card">
+              <div className="channel-icon-large">{channel.icon}</div>
+              <h3>{channel.title}</h3>
+              <p>{channel.description}</p>
+              <a
+                className="primary-link-support"
+                href={channel.href}
+                target={channel.href.startsWith('http') ? '_blank' : undefined}
+                rel="noreferrer"
+              >
+                {channel.action} →
               </a>
             </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="support-form-section">
+        <div className="support-form-container">
+          <div className="form-left">
+            <span className="eyebrow">Request Callback</span>
+            <h2>Share Your Details, We'll Call Back</h2>
+            <p className="form-description">
+              Fill out the form below and our support team will reach out to you within minutes.
+              We're committed to resolving your queries quickly and efficiently.
+            </p>
+
+            <div className="form-benefits">
+              <div className="form-benefit-item">
+                <span className="benefit-icon">✓</span>
+                <div>
+                  <strong>Identity confirmation and advisor assignment</strong>
+                  <p>We verify your details and assign a dedicated specialist</p>
+                </div>
+              </div>
+              <div className="form-benefit-item">
+                <span className="benefit-icon">✓</span>
+                <div>
+                  <strong>Multi-channel updates</strong>
+                  <p>Track progress via SMS, email, and WhatsApp</p>
+                </div>
+              </div>
+              <div className="form-benefit-item">
+                <span className="benefit-icon">✓</span>
+                <div>
+                  <strong>Quick escalation if needed</strong>
+                  <p>Unresolved issues moved to senior desk within 4 hours</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="form-right">
+            <div className="contact-form-card-modern">
+              <form className="support-form" onSubmit={handleSubmit}>
+                <div className="form-group">
+                  <label>Full Name</label>
+                  <input
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Enter your full name"
+                    required
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label>Mobile Number</label>
+                  <input
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="+91 XXXXX XXXXX"
+                    required
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label>What can we help you with?</label>
+                  <select name="topic" value={formData.topic} onChange={handleChange}>
+                    <option>Repayment issue</option>
+                    <option>Statement or NOC</option>
+                    <option>Application status</option>
+                    <option>Update auto-debit</option>
+                    <option>General query</option>
+                  </select>
+                </div>
+
+                <div className="form-group">
+                  <label>Additional Details</label>
+                  <textarea
+                    name="message"
+                    rows="4"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Add any context to help us serve you better..."
+                  />
+                </div>
+
+                <button type="submit" className="primary-btn large full-width">
+                  Submit Request →
+                </button>
+
+                {submitted && (
+                  <div className="form-success">
+                    <span className="success-icon">✓</span>
+                    <p>Request received! We'll reach out to you shortly.</p>
+                  </div>
+                )}
+              </form>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="support-cta-band" id="login">
-        <div>
-          <p className="eyebrow">Self-serve hub</p>
-          <h2>Resolve most things in minutes with E-Fin Hub</h2>
-          <p>
-            Update mandates, download statements or NOCs, and raise service requests without waiting on a call. Log in
-            with your registered mobile number to get started.
-          </p>
+      {/* Service Cards */}
+      <section className="service-cards-section">
+        <div className="section-heading">
+          <span className="eyebrow">Our Commitments</span>
+          <h2>Service Standards & Policies</h2>
+          <p>Transparent timelines and clear escalation paths</p>
         </div>
-        <div className="support-cta-actions">
-          <Link className="primary-btn" to="/support/login">
-            Go to E-Fin Hub
-          </Link>
-          <a className="ghost-btn" href="#contact-form">
-            Request a callback
-          </a>
-        </div>
-      </section>
 
-      <section className="support-info-cards">
-        {serviceCards.map((card) => (
-          <article key={card.title} className={`support-info-card ${card.tone}`}>
-            <div className="contact-icon" aria-hidden="true">
-              {card.icon}
-            </div>
-            <div>
+        <div className="service-cards-grid">
+          {serviceCards.map((card) => (
+            <div key={card.title} className="service-card-modern">
+              <div className="service-card-icon">{card.icon}</div>
               <h3>{card.title}</h3>
               <ul>
-                {card.points.map((point) => (
-                  <li key={point}>{point}</li>
+                {card.points.map((point, index) => (
+                  <li key={index}>{point}</li>
                 ))}
               </ul>
             </div>
-          </article>
-        ))}
+          ))}
+        </div>
       </section>
 
-      <section className="support-faqs">
-        <div>
-          <p className="eyebrow">Instant answers</p>
-          <h2>Skip the queue with quick fixes</h2>
-          <p className="contact-stack-lead">Common actions you can complete yourself in minutes.</p>
+      {/* FAQ Section */}
+      <section className="support-faq-section">
+        <div className="section-heading">
+          <span className="eyebrow">Quick Answers</span>
+          <h2>Frequently Asked Questions</h2>
+          <p>Common questions answered - skip the queue with instant solutions</p>
         </div>
-        <div className="faq-card-grid">
-          {quickAnswers.map((item) => (
-            <details key={item.q} className="faq-card">
-              <summary>{item.q}</summary>
-              <p>{item.a}</p>
+
+        <div className="faq-grid-modern">
+          {quickAnswers.map((item, index) => (
+            <details key={index} className="faq-item-modern">
+              <summary>
+                <span className="faq-question">{item.q}</span>
+                <span className="faq-icon">+</span>
+              </summary>
+              <p className="faq-answer">{item.a}</p>
             </details>
           ))}
         </div>
       </section>
 
-      <section className="section policy-grid" id="privacy">
-        <h2>Policies &amp; disclosures</h2>
-        <div className="policy-card-grid">
-          {policies.map((policy) => (
-            <article key={policy.title} className="policy-card">
-              <span className="policy-tag">{policy.tag}</span>
-              <h3>{policy.title}</h3>
-              <p>{policy.description}</p>
-              <a className="primary-link" href={policy.href}>
-                Download →
-              </a>
-            </article>
-          ))}
+      {/* Timeline Section */}
+      <section className="support-timeline-section">
+        <div className="section-heading">
+          <span className="eyebrow">Our Process</span>
+          <h2>How We Resolve Your Request</h2>
+          <p>Every request is tracked and closed with complete clarity</p>
         </div>
-      </section>
 
-      <section className="support-timeline">
-        <div className="timeline-head">
-          <p className="eyebrow">How we resolve your request</p>
-          <h2>Every request gets tracked and closed with clarity</h2>
-        </div>
-        <div className="timeline-flow">
-          <div className="timeline-node">
-            <span className="step-number">1</span>
-            <div>
-              <h3>Log the request</h3>
+        <div className="timeline-modern">
+          <div className="timeline-item-modern">
+            <div className="timeline-number">1</div>
+            <div className="timeline-content">
+              <h3>Log the Request</h3>
               <p>Select a category and share details through app, hub, or helpline. You receive an acknowledgement instantly.</p>
             </div>
           </div>
-          <div className="timeline-connector" aria-hidden="true" />
-          <div className="timeline-node">
-            <span className="step-number">2</span>
-            <div>
-              <h3>Get updates</h3>
+
+          <div className="timeline-connector-modern" />
+
+          <div className="timeline-item-modern">
+            <div className="timeline-number">2</div>
+            <div className="timeline-content">
+              <h3>Get Updates</h3>
               <p>Track status in real time. We send proactive alerts if additional information is required.</p>
             </div>
           </div>
-          <div className="timeline-connector" aria-hidden="true" />
-          <div className="timeline-node">
-            <span className="step-number">3</span>
-            <div>
-              <h3>Resolution &amp; feedback</h3>
+
+          <div className="timeline-connector-modern" />
+
+          <div className="timeline-item-modern">
+            <div className="timeline-number">3</div>
+            <div className="timeline-content">
+              <h3>Resolution & Feedback</h3>
               <p>Receive a closure summary with resolution details and share feedback to help us improve.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="support-cta-section">
+        <div className="support-cta-card">
+          <div className="cta-icon-large">🎯</div>
+          <h2>Still Need Help?</h2>
+          <p>Our support team is ready to assist you 24x7. Choose your preferred method to get in touch.</p>
+          <div className="support-cta-buttons">
+            <a href="tel:+919997842548" className="primary-btn large">
+              Call Support →
+            </a>
+            <a href="mailto:Care@efin.co.in" className="ghost-btn large">
+              Email Us
+            </a>
+          </div>
+          <div className="cta-assurance-support">
+            <span>✓ 24x7 Available</span>
+            <span>✓ No Hidden Charges</span>
+            <span>✓ Multilingual Support</span>
           </div>
         </div>
       </section>

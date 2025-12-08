@@ -63,7 +63,7 @@ const OFFICES = [
 
 const CONTACT_LINKS = [
   { label: 'Phone', value: '+91-9997842548', href: 'tel:+919997842548' },
-  { label: 'Email', value: 'care@e-fin.in', href: 'mailto:care@e-fin.in' },
+  { label: 'Email', value: 'Care@efin.co.in', href: 'mailto:Care@efin.co.in' },
 ];
 
 const TIMELINE = [
@@ -160,7 +160,7 @@ function WhyFinanceCoPage() {
         </li>
         <li>
           <strong>+91-9997842548</strong>
-          <span>care@e-fin.in</span>
+          <span>Care@efin.co.in</span>
         </li>
       </ul>
 
@@ -323,7 +323,7 @@ function WhyFinanceCoPage() {
           <p>Connect with our partnerships desk to embed lending, co-lend, or roll out regional support desks.</p>
         </div>
         <div className="about-cta-actions">
-          <a className="primary-btn" href="mailto:care@e-fin.in">
+          <a className="primary-btn" href="mailto:Care@efin.co.in">
             Write to partnerships
           </a>
           <a className="ghost-btn" href="tel:+919997842548">
@@ -431,8 +431,8 @@ function WhyFinanceCoPage() {
           <a className="primary-btn" href="tel:+919997842548">
             Call +91-9997842548
           </a>
-          <a className="ghost-btn" href="mailto:care@e-fin.in">
-            Email care@e-fin.in
+          <a className="ghost-btn" href="mailto:Care@efin.co.in">
+            Email Care@efin.co.in
           </a>
         </div>
       </section>

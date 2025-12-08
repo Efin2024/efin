@@ -1,15 +1,15 @@
 /* ========================================
-   SMALL BUSINESS LOAN PAGE - MODERN DESIGN
+   LOAN AGAINST PROPERTY PAGE STYLES
    ======================================== */
 
-/* Hero Section */
-.business-hero-modern {
+/* Hero Section - Modern Design */
+.property-hero-modern {
     background: linear-gradient(135deg,
-            rgba(255, 251, 234, 0.95) 0%,
-            rgba(255, 248, 225, 0.85) 25%,
-            rgba(255, 243, 214, 0.75) 50%,
-            rgba(255, 237, 196, 0.65) 75%,
-            rgba(255, 232, 161, 0.5) 100%);
+        rgba(255, 251, 234, 0.95) 0%,
+        rgba(255, 248, 225, 0.85) 25%,
+        rgba(255, 243, 214, 0.75) 50%,
+        rgba(255, 237, 196, 0.65) 75%,
+        rgba(255, 232, 161, 0.5) 100%);
     border-radius: 40px;
     padding: 4rem 3rem;
     margin: 2rem 0 4rem;
@@ -18,38 +18,38 @@
     box-shadow: 0 30px 90px rgba(15, 23, 42, 0.12);
 }
 
-.business-hero-modern::before {
+.property-hero-modern::before {
     content: '';
     position: absolute;
-    top: -10%;
-    right: -5%;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(247, 189, 32, 0.15) 0%, transparent 70%);
+    top: 0;
+    right: 0;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(247, 189, 32, 0.1) 0%, transparent 70%);
     pointer-events: none;
 }
 
-.business-hero-grid {
+.property-hero-grid {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: center;
     position: relative;
     z-index: 1;
 }
 
-.business-hero-content {
+.property-hero-content {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.business-badge {
+.property-badge {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 1.25rem;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.9);
     border: 2px solid rgba(247, 189, 32, 0.3);
     border-radius: 50px;
     font-weight: 600;
@@ -59,7 +59,7 @@
     box-shadow: 0 8px 24px rgba(247, 189, 32, 0.15);
 }
 
-.business-hero-content h1 {
+.property-hero-content h1 {
     font-size: clamp(2.5rem, 5vw, 4rem);
     line-height: 1.1;
     margin: 0;
@@ -67,21 +67,28 @@
     color: var(--text-strong);
 }
 
-.business-hero-description {
-    font-size: 1.1rem;
+.gradient-text {
+    background: linear-gradient(135deg, #f7bd20 0%, #e8a91a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.property-hero-description {
+    font-size: 1.15rem;
     line-height: 1.7;
     color: var(--text-muted);
     margin: 0;
 }
 
-.business-highlights-grid {
+.property-highlights-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
     margin: 1rem 0;
 }
 
-.highlight-chip-business {
+.highlight-chip-modern {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
     padding: 1.25rem 1.5rem;
@@ -93,24 +100,43 @@
     box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 
-.highlight-chip-business:hover {
+.highlight-chip-modern:hover {
     transform: translateY(-3px);
     box-shadow: 0 12px 32px rgba(247, 189, 32, 0.2);
     border-color: rgba(247, 189, 32, 0.4);
 }
 
-.chip-icon-business {
+.chip-icon-modern {
     font-size: 2rem;
     line-height: 1;
 }
 
-.business-hero-cta {
+.chip-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.chip-content strong {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-strong);
+    line-height: 1;
+}
+
+.chip-content span {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1;
+}
+
+.property-hero-cta {
     display: flex;
     gap: 1rem;
     margin-top: 0.5rem;
 }
 
-.business-trust-badges {
+.property-trust-badges {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
@@ -120,27 +146,27 @@
 }
 
 /* Hero Visual */
-.business-hero-visual {
+.property-hero-visual {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.business-visual-card {
+.property-visual-card {
     position: relative;
     width: 100%;
-    max-width: 500px;
+    max-width: 550px;
 }
 
-.business-hero-image {
+.property-hero-image {
     width: 100%;
     height: auto;
     border-radius: 32px;
     box-shadow: 0 25px 70px rgba(15, 23, 42, 0.15);
 }
 
-.floating-stat-business {
+.floating-stat {
     position: absolute;
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
@@ -151,116 +177,61 @@
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
-    animation: floatBusiness 3s ease-in-out infinite;
-    text-align: center;
+    animation: float 3s ease-in-out infinite;
 }
 
-.floating-stat-business strong {
+.floating-stat strong {
     font-size: 1.35rem;
     font-weight: 700;
     color: var(--primary-dark);
     line-height: 1;
 }
 
-.floating-stat-business span {
+.floating-stat span {
     font-size: 0.75rem;
     color: var(--text-muted);
     line-height: 1;
 }
 
 .stat-1 {
-    top: 5%;
-    left: -5%;
+    top: 10%;
+    left: -10%;
     animation-delay: 0s;
 }
 
 .stat-2 {
-    top: 45%;
+    top: 50%;
     right: -8%;
     animation-delay: 1s;
 }
 
 .stat-3 {
-    bottom: 15%;
-    left: 0%;
+    bottom: 10%;
+    left: 5%;
     animation-delay: 2s;
 }
 
-@keyframes floatBusiness {
-
-    0%,
-    100% {
+@keyframes float {
+    0%, 100% {
         transform: translateY(0px);
     }
-
     50% {
-        transform: translateY(-12px);
+        transform: translateY(-15px);
     }
-}
-
-/* Use Cases Section */
-.business-uses-section {
-    margin: 5rem 0;
-}
-
-.business-uses-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.5rem;
-}
-
-.business-use-card {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-radius: 24px;
-    padding: 2rem;
-    border: 1px solid rgba(247, 189, 32, 0.15);
-    transition: all 0.3s ease;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-}
-
-.business-use-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(247, 189, 32, 0.2);
-    border-color: rgba(247, 189, 32, 0.3);
-}
-
-.business-use-icon {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    line-height: 1;
-}
-
-.business-use-card h3 {
-    margin: 0 0 0.75rem;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--text-strong);
-}
-
-.business-use-card p {
-    margin: 0;
-    color: var(--text-muted);
-    line-height: 1.5;
-    font-size: 0.95rem;
 }
 
 /* Features Section - Bento Grid */
-.business-features-section {
+.property-features-section {
     margin: 5rem 0;
-    padding: 4rem 3rem;
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 40px;
 }
 
-.business-features-bento {
+.features-bento-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
 }
 
-.feature-bento-business {
+.feature-bento {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-radius: 28px;
@@ -273,47 +244,141 @@
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
 }
 
-.feature-bento-business:hover {
+.feature-bento:hover {
     transform: translateY(-5px);
     box-shadow: 0 20px 50px rgba(247, 189, 32, 0.2);
     border-color: rgba(247, 189, 32, 0.3);
 }
 
-.feature-bento-business.large {
+.feature-bento.large-card {
     grid-column: span 2;
     background: linear-gradient(135deg, #FFFBF0 0%, #FFF8E6 100%);
 }
 
-.feature-bento-business.accent {
+.feature-bento.accent-card {
     background: linear-gradient(135deg, rgba(247, 189, 32, 0.1) 0%, rgba(247, 189, 32, 0.05) 100%);
 }
 
-.feature-bento-business h3 {
+.feature-icon,
+.feature-icon-large {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.feature-icon-large {
+    font-size: 4rem;
+}
+
+.feature-bento h3 {
     margin: 0;
     font-size: 1.4rem;
     font-weight: 700;
     color: var(--text-strong);
 }
 
-.feature-bento-business p {
+.feature-bento p {
     margin: 0;
     color: var(--text-muted);
     line-height: 1.6;
     font-size: 0.95rem;
 }
 
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.feature-list li {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Property Types Section */
+.property-types-section {
+    margin: 5rem 0;
+    padding: 4rem 3rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 40px;
+}
+
+.property-types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.property-type-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 24px;
+    padding: 2rem;
+    border: 1px solid rgba(247, 189, 32, 0.15);
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.property-type-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(247, 189, 32, 0.2);
+    border-color: rgba(247, 189, 32, 0.3);
+}
+
+.property-type-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.property-type-card h3 {
+    margin: 0 0 1.25rem;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-strong);
+}
+
+.property-type-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.property-type-card li {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.property-type-card li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-dark);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
 /* Eligibility Section */
-.business-eligibility-modern {
+.property-eligibility-modern {
     margin: 5rem 0;
 }
 
-.eligibility-business-grid {
+.eligibility-cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
 }
 
-.eligibility-business-card {
+.eligibility-card-modern {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-radius: 24px;
@@ -324,26 +389,26 @@
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
 }
 
-.eligibility-business-card:hover {
+.eligibility-card-modern:hover {
     transform: translateY(-5px);
     box-shadow: 0 20px 50px rgba(247, 189, 32, 0.2);
     border-color: rgba(247, 189, 32, 0.3);
 }
 
-.eligibility-business-icon {
+.eligibility-icon-modern {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     line-height: 1;
 }
 
-.eligibility-business-card h4 {
+.eligibility-card-modern h4 {
     margin: 0 0 0.75rem;
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--text-strong);
 }
 
-.eligibility-business-card p {
+.eligibility-card-modern p {
     margin: 0;
     color: var(--text-muted);
     line-height: 1.5;
@@ -351,17 +416,17 @@
 }
 
 /* Documents Section */
-.business-documents-section {
+.property-documents-section {
     margin: 5rem 0;
 }
 
-.business-documents-grid {
+.documents-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
 }
 
-.document-category-business {
+.document-category {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-radius: 28px;
@@ -371,16 +436,16 @@
     transition: all 0.3s ease;
 }
 
-.document-category-business:hover {
+.document-category:hover {
     box-shadow: 0 20px 50px rgba(247, 189, 32, 0.15);
 }
 
-.document-category-business.highlight {
+.document-category.highlight-category {
     background: linear-gradient(135deg, #FFFBF0 0%, #FFF8E6 100%);
     border-color: rgba(247, 189, 32, 0.3);
 }
 
-.doc-category-header-business {
+.category-header {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -389,31 +454,31 @@
     border-bottom: 2px solid rgba(247, 189, 32, 0.15);
 }
 
-.doc-category-icon-business {
+.category-icon {
     font-size: 2.5rem;
     line-height: 1;
 }
 
-.doc-category-header-business h3 {
+.category-header h3 {
     margin: 0;
     font-size: 1.35rem;
     font-weight: 700;
     color: var(--text-strong);
 }
 
-.doc-list-business {
+.document-list {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
 }
 
-.doc-item-business {
+.document-item {
     display: flex;
     gap: 1rem;
     align-items: flex-start;
 }
 
-.doc-bullet-business {
+.doc-check {
     flex-shrink: 0;
     width: 28px;
     height: 28px;
@@ -427,14 +492,14 @@
     font-size: 0.85rem;
 }
 
-.doc-item-business strong {
+.document-item strong {
     display: block;
     margin-bottom: 0.25rem;
     color: var(--text-strong);
     font-size: 0.95rem;
 }
 
-.doc-item-business p {
+.document-item p {
     margin: 0;
     color: var(--text-muted);
     font-size: 0.85rem;
@@ -442,11 +507,14 @@
 }
 
 /* Fees Section */
-.business-fees-section {
+.property-fees-section {
     margin: 5rem 0;
+    padding: 4rem 3rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 40px;
 }
 
-.business-fees-table {
+.fees-table-modern {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 28px;
     overflow: hidden;
@@ -454,7 +522,7 @@
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
 }
 
-.fees-row-business {
+.fees-row {
     display: grid;
     grid-template-columns: 2fr 1fr;
     padding: 1.75rem 2rem;
@@ -464,74 +532,74 @@
     transition: background 0.2s ease;
 }
 
-.fees-row-business:hover {
+.fees-row:hover {
     background: rgba(247, 189, 32, 0.04);
 }
 
-.fees-row-business:last-child {
+.fees-row:last-child {
     border-bottom: none;
 }
 
-.fees-header-business {
+.fees-header {
     background: linear-gradient(135deg, #f7bd20 0%, #e8a91a 100%);
     color: white;
     font-weight: 700;
     font-size: 1.1rem;
 }
 
-.fees-header-business:hover {
+.fees-header:hover {
     background: linear-gradient(135deg, #f7bd20 0%, #e8a91a 100%);
 }
 
-.fees-label-business {
+.fees-label {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.fees-icon-business {
+.fees-icon {
     font-size: 2rem;
     line-height: 1;
 }
 
-.fees-label-business strong {
+.fees-label strong {
     display: block;
     margin-bottom: 0.25rem;
     color: var(--text-strong);
     font-size: 1.05rem;
 }
 
-.fees-header-business .fees-label-business strong,
-.fees-header-business .fees-value-business {
+.fees-header .fees-label strong,
+.fees-header .fees-value strong {
     color: white;
 }
 
-.fees-label-business p {
+.fees-label p {
     margin: 0;
     color: var(--text-muted);
     font-size: 0.85rem;
     line-height: 1.3;
 }
 
-.fees-value-business {
+.fees-value {
     text-align: right;
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
 }
 
-.fees-value-business strong {
+.fees-value strong {
     font-size: 1.15rem;
     font-weight: 700;
     color: var(--text-strong);
 }
 
-.fees-value-business span {
+.fees-value span {
     font-size: 0.8rem;
     color: var(--text-muted);
 }
 
-.fees-note-business {
+.fees-note {
     margin-top: 1.5rem;
     padding: 1.25rem;
     background: rgba(247, 189, 32, 0.08);
@@ -543,14 +611,14 @@
 }
 
 /* CTA Section */
-.business-cta-section {
+.property-cta-section {
     margin: 5rem 0 3rem;
 }
 
-.business-cta-card {
+.property-cta-card {
     background: linear-gradient(135deg,
-            rgba(247, 189, 32, 0.1) 0%,
-            rgba(247, 189, 32, 0.05) 100%);
+        rgba(247, 189, 32, 0.1) 0%,
+        rgba(247, 189, 32, 0.05) 100%);
     border-radius: 40px;
     padding: 4rem 3rem;
     text-align: center;
@@ -558,13 +626,19 @@
     box-shadow: 0 20px 60px rgba(247, 189, 32, 0.15);
 }
 
-.business-cta-card h2 {
+.cta-icon-large {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+}
+
+.property-cta-card h2 {
     font-size: clamp(2rem, 4vw, 3rem);
     margin: 0 0 1rem;
     color: var(--text-strong);
 }
 
-.business-cta-card p {
+.property-cta-card p {
     font-size: 1.1rem;
     color: var(--text-muted);
     max-width: 700px;
@@ -572,14 +646,14 @@
     line-height: 1.7;
 }
 
-.business-cta-buttons {
+.property-cta-buttons {
     display: flex;
     justify-content: center;
     gap: 1.25rem;
     margin-bottom: 2rem;
 }
 
-.cta-features-list-business {
+.cta-assurance {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -595,29 +669,29 @@
 
 /* Tablet */
 @media (max-width: 1024px) {
-    .business-hero-modern {
+    .property-hero-modern {
         padding: 3rem 2rem;
         border-radius: 32px;
     }
 
-    .business-hero-grid {
+    .property-hero-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
     }
 
-    .business-features-bento {
+    .features-bento-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .feature-bento-business.large {
+    .feature-bento.large-card {
         grid-column: span 2;
     }
 
-    .floating-stat-business {
+    .floating-stat {
         padding: 0.75rem 1rem;
     }
 
-    .floating-stat-business strong {
+    .floating-stat strong {
         font-size: 1.1rem;
     }
 
@@ -629,178 +703,191 @@
         animation: none;
     }
 
-    .business-visual-card {
+    .property-visual-card {
         display: flex;
         flex-direction: column;
         gap: 1rem;
         align-items: center;
     }
 
-    .business-uses-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.25rem;
-    }
-
-    .fees-row-business {
+    .fees-row {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
 
-    .fees-value-business {
+    .fees-value {
         text-align: left;
     }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-    .business-hero-modern {
+    .property-hero-modern {
         padding: 2rem 1.5rem;
         border-radius: 28px;
         margin: 1rem 0 3rem;
     }
 
-    .business-hero-content h1 {
+    .property-hero-content h1 {
         font-size: clamp(2rem, 6vw, 2.5rem);
     }
 
-    .business-hero-description {
+    .property-hero-description {
         font-size: 1rem;
     }
 
-    .business-highlights-grid {
+    .property-highlights-grid {
         grid-template-columns: 1fr;
         gap: 0.875rem;
     }
 
-    .highlight-chip-business {
+    .highlight-chip-modern {
         padding: 1rem 1.25rem;
     }
 
-    .business-hero-cta {
+    .property-hero-cta {
         flex-direction: column;
         gap: 0.75rem;
     }
 
-    .business-hero-cta .primary-btn,
-    .business-hero-cta .ghost-btn {
+    .property-hero-cta .primary-btn,
+    .property-hero-cta .ghost-btn {
         width: 100%;
         justify-content: center;
         display: flex;
     }
 
-    .business-trust-badges {
+    .property-trust-badges {
         flex-direction: column;
         gap: 0.75rem;
         font-size: 0.85rem;
     }
 
-    .business-uses-grid {
+    .features-bento-grid {
         grid-template-columns: 1fr;
         gap: 1.25rem;
     }
 
-    .business-use-card {
-        padding: 1.5rem;
-        border-radius: 20px;
-    }
-
-    .business-use-icon {
-        font-size: 3rem;
-    }
-
-    .business-features-section {
-        padding: 3rem 2rem;
-        border-radius: 32px;
-    }
-
-    .business-features-bento {
-        grid-template-columns: 1fr;
-        gap: 1.25rem;
-    }
-
-    .feature-bento-business.large {
+    .feature-bento.large-card {
         grid-column: span 1;
     }
 
-    .feature-bento-business {
+    .feature-bento {
         padding: 1.5rem;
         border-radius: 24px;
     }
 
-    .eligibility-business-grid {
-        grid-template-columns: 1fr;
-        gap: 1.25rem;
+    .feature-icon,
+    .feature-icon-large {
+        font-size: 2.5rem;
     }
 
-    .eligibility-business-card {
-        padding: 1.5rem;
-        border-radius: 20px;
+    .feature-bento h3 {
+        font-size: 1.2rem;
     }
 
-    .eligibility-business-icon {
-        font-size: 3rem;
+    .property-types-section {
+        padding: 3rem 2rem;
+        border-radius: 32px;
     }
 
-    .business-documents-grid {
+    .property-types-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 
-    .document-category-business {
+    .property-type-card {
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+
+    .property-type-icon {
+        font-size: 3rem;
+    }
+
+    .eligibility-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .eligibility-card-modern {
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+
+    .eligibility-icon-modern {
+        font-size: 3rem;
+    }
+
+    .documents-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .document-category {
         padding: 1.5rem;
         border-radius: 24px;
     }
 
-    .doc-category-icon-business {
+    .category-icon {
         font-size: 2rem;
     }
 
-    .doc-category-header-business h3 {
+    .category-header h3 {
         font-size: 1.2rem;
     }
 
-    .fees-row-business {
-        padding: 1.5rem 1.5rem;
-    }
-
-    .fees-icon-business {
-        font-size: 1.75rem;
-    }
-
-    .fees-label-business strong {
-        font-size: 0.95rem;
-    }
-
-    .fees-value-business strong {
-        font-size: 1rem;
-    }
-
-    .business-cta-card {
+    .property-fees-section {
         padding: 3rem 2rem;
         border-radius: 32px;
     }
 
-    .business-cta-card h2 {
-        font-size: clamp(1.75rem, 5vw, 2.5rem);
+    .fees-row {
+        padding: 1.5rem 1.5rem;
     }
 
-    .business-cta-card p {
+    .fees-icon {
+        font-size: 1.75rem;
+    }
+
+    .fees-label strong {
+        font-size: 0.95rem;
+    }
+
+    .fees-value strong {
         font-size: 1rem;
     }
 
-    .business-cta-buttons {
+    .property-cta-card {
+        padding: 3rem 2rem;
+        border-radius: 32px;
+    }
+
+    .cta-icon-large {
+        font-size: 4rem;
+    }
+
+    .property-cta-card h2 {
+        font-size: clamp(1.75rem, 5vw, 2.5rem);
+    }
+
+    .property-cta-card p {
+        font-size: 1rem;
+    }
+
+    .property-cta-buttons {
         flex-direction: column;
         gap: 0.875rem;
     }
 
-    .business-cta-buttons .primary-btn,
-    .business-cta-buttons .ghost-btn {
+    .property-cta-buttons .primary-btn,
+    .property-cta-buttons .ghost-btn {
         width: 100%;
         justify-content: center;
         display: flex;
     }
 
-    .cta-features-list-business {
+    .cta-assurance {
         flex-direction: column;
         gap: 0.75rem;
         font-size: 0.85rem;
@@ -809,16 +896,16 @@
 
 /* Small Mobile */
 @media (max-width: 480px) {
-    .business-hero-modern {
+    .property-hero-modern {
         padding: 1.5rem 1rem;
         border-radius: 24px;
     }
 
-    .business-hero-content h1 {
+    .property-hero-content h1 {
         font-size: 1.75rem;
     }
 
-    .business-hero-description {
+    .property-hero-description {
         font-size: 0.9rem;
     }
 
@@ -830,28 +917,33 @@
         font-size: 0.75rem;
     }
 
-    .highlight-chip-business {
+    .highlight-chip-modern {
         padding: 0.875rem 1rem;
     }
 
-    .business-features-section {
+    .property-types-section,
+    .property-fees-section {
         padding: 2rem 1.5rem;
         border-radius: 24px;
     }
 
-    .feature-bento-business,
-    .business-use-card,
-    .eligibility-business-card,
-    .document-category-business {
+    .feature-bento {
+        padding: 1.25rem;
+        border-radius: 20px;
+    }
+
+    .property-type-card,
+    .eligibility-card-modern,
+    .document-category {
         padding: 1.25rem;
         border-radius: 18px;
     }
 
-    .fees-row-business {
+    .fees-row {
         padding: 1.25rem 1.25rem;
     }
 
-    .business-cta-card {
+    .property-cta-card {
         padding: 2rem 1.5rem;
         border-radius: 28px;
     }
@@ -863,15 +955,15 @@
 
 /* Prevent horizontal overflow */
 @media (max-width: 768px) {
-    .business-loan-page-modern {
+    .property-loan-page {
         overflow-x: hidden;
     }
 
-    .business-hero-grid,
-    .business-features-bento,
-    .business-uses-grid,
-    .eligibility-business-grid,
-    .business-documents-grid {
+    .property-hero-grid,
+    .features-bento-grid,
+    .property-types-grid,
+    .eligibility-cards-grid,
+    .documents-container {
         width: 100%;
         max-width: 100%;
     }

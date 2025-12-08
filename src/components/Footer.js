@@ -104,7 +104,7 @@ function Footer() {
             </p>
             <div className="footer-contact">
               <span>+91-9997842548</span>
-              <span>care@efin.co.in</span>
+              <span>Care@efin.co.in</span>
             </div>
             <Link to="/support/apply" className="footer-cta">
               Apply for a loan

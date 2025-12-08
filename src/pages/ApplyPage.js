@@ -30,7 +30,7 @@ function ApplyPage() {
           <h3>Get in touch with us</h3>
           <p>Talk to our advisors for faster onboarding or custom loan structures.</p>
           <a href="tel:+919997842548">+91-9997842548</a>
-          <a href="mailto:care@e-fin.in">care@e-fin.in</a>
+          <a href="mailto:Care@efin.co.in">Care@efin.co.in</a>
         </div>
       </section>
     </div>
