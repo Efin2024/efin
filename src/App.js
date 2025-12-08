@@ -27,6 +27,7 @@ import PoliciesPage from './pages/PoliciesPage';
 import TermsAndConditionsPage from './pages/TermsAndConditionsPage';
 import DisclaimerPage from './pages/DisclaimerPage';
 import GrievanceRedressalPage from './pages/GrievanceRedressalPage';
+import ContactPage from './pages/ContactPage';
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
           <Route path="about/careers" element={<CareersPage />} />
           <Route path="how-it-works" element={<HowItWorksPage />} />
           <Route path="support" element={<SupportPage />} />
+          <Route path="support/contact" element={<ContactPage />} />
           <Route path="support/apply" element={<ApplyPage />} />
           <Route path="login" element={<LoginPage />} />
           <Route path="support/login" element={<LoginPage />} />

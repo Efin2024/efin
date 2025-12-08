@@ -1,17 +1,9 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import googlePlayBadge from '../assets/store/google-play.svg';
-import appleStoreBadge from '../assets/store/apple-store.svg';
 import instantCashIcon from '../assets/product-icons/instant-cash-loan.png';
 import personalLoanIcon from '../assets/product-icons/personal-loan.png';
 import emiStoreIcon from '../assets/product-icons/emi-store.png';
 
-const HERO_STATS = [
-  { label: 'App downloads', value: '34 Mn+' },
-  { label: 'Loans given', value: '8 Mn+' },
-  { label: 'Money disbursed', value: '₹33,000 Cr+' },
-  { label: 'Partner tie-ups', value: '8,000+' },
-];
+
 
 const PRODUCT_CARDS = [
   {
@@ -72,18 +64,6 @@ const TESTIMONIALS = [
 ];
 
 function HomePage() {
-  const [mobile, setMobile] = useState('');
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleHeroSubmit = (event) => {
-    event.preventDefault();
-    if (!mobile.trim()) {
-      return;
-    }
-    setSubmitted(true);
-    setMobile('');
-    window.setTimeout(() => setSubmitted(false), 2600);
-  };
 
   return (
     <div className="page fibe-home">

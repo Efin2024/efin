@@ -7028,3 +7028,209 @@ blockquote cite {
         rgba(255, 232, 161, 0.4) 100%) !important;
   }
 }
+
+/* ============================================
+   COMPREHENSIVE DEVICE OPTIMIZATION
+   ============================================ */
+
+/* Tablet Specific (iPad, tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .page {
+    width: min(1280px, 92vw);
+  }
+
+  /* Optimize grids for tablet */
+  [class*="-grid"]:not(.form-grid),
+  [class*="grid-"]:not(.form-grid) {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Form grids stay single column on tablet for better UX */
+  .form-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Large Mobile / Small Tablet (iPhone Pro Max, small tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .page {
+    width: min(1280px, 90vw);
+  }
+
+  /* Ensure touch targets are at least 44px */
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    min-height: 44px;
+  }
+}
+
+/* Small Mobile (iPhone SE, small phones) */
+@media (max-width: 480px) {
+
+  /* Reduce font sizes slightly for small screens */
+  html {
+    font-size: 15px;
+  }
+
+  /* Ensure buttons are easily tappable */
+  .primary-btn,
+  .ghost-btn,
+  button {
+    min-height: 48px;
+    padding: 0.875rem 1.75rem;
+  }
+}
+
+/* Landscape Mode Optimization */
+@media (max-height: 500px) and (orientation: landscape) {
+  .page {
+    padding-top: 70px;
+  }
+
+  [class*="-hero"],
+  [class*="hero-"] {
+    padding: 1.5rem 2rem !important;
+  }
+
+  /* Reduce vertical spacing in landscape */
+  section {
+    margin: 2rem 0;
+  }
+}
+
+/* High DPI / Retina Displays */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
+  /* Ensure images are sharp on retina displays */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Touch Device Optimization */
+@media (hover: none) and (pointer: coarse) {
+
+  /* Larger touch targets for touch devices */
+  a,
+  button,
+  input,
+  select {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Remove hover effects on touch devices */
+  *:hover {
+    transform: none !important;
+  }
+
+  /* But keep active states */
+  *:active {
+    opacity: 0.8;
+  }
+}
+
+/* Safe Area for Devices with Notches (iPhone X, etc.) */
+@supports (padding: max(0px)) {
+  .page {
+    padding-left: max(1.5rem, env(safe-area-inset-left));
+    padding-right: max(1.5rem, env(safe-area-inset-right));
+  }
+
+  .fibe-header {
+    padding-left: max(2rem, env(safe-area-inset-left));
+    padding-right: max(2rem, env(safe-area-inset-right));
+  }
+}
+
+/* Prevent zoom on input focus (iOS) */
+@media (max-width: 768px) {
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="date"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Ensure smooth scrolling on all devices */
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Optimize for print */
+@media print {
+
+  .fibe-header,
+  .site-footer,
+  .primary-btn,
+  .ghost-btn,
+  nav,
+  [class*="cta"] {
+    display: none !important;
+  }
+
+  .page {
+    padding-top: 0 !important;
+  }
+
+  * {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Final Overflow Prevention */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.page,
+section,
+div {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* Ensure all images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ensure iframes are responsive */
+iframe {
+  max-width: 100%;
+}
