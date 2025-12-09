@@ -1,4 +1,5 @@
 import './App.css';
+import './performance-optimizations.css';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
 import ScrollToTop from './components/ScrollToTop';
@@ -28,6 +29,8 @@ import TermsAndConditionsPage from './pages/TermsAndConditionsPage';
 import DisclaimerPage from './pages/DisclaimerPage';
 import GrievanceRedressalPage from './pages/GrievanceRedressalPage';
 import ContactPage from './pages/ContactPage';
+import DashboardPage from './pages/DashboardPage';
+import DashboardLayout from './components/DashboardLayout';
 
 
 function App() {
@@ -35,6 +38,7 @@ function App() {
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
+        {/* Main website routes with header and footer */}
         <Route element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="solutions" element={<SolutionsPage />} />
@@ -78,6 +82,11 @@ function App() {
             return <Route key={path} path={path} element={<InfoPage page={page} />} />;
           })}
           <Route path="*" element={<Navigate to="/" replace />} />
+        </Route>
+
+        {/* Dashboard routes with separate layout (no footer) */}
+        <Route element={<DashboardLayout />}>
+          <Route path="dashboard" element={<DashboardPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
