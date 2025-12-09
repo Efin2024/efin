@@ -76,7 +76,7 @@ function DashboardPage() {
     ]);
 
     const totalDisbursed = disbursements.reduce((sum, d) => {
-        return sum + parseInt(d.amount.replace(',', ''));
+        return sum + parseInt(d.amount.replace(/,/g, ''));
     }, 0);
 
     const handleApplyLoan = (loanType) => {
