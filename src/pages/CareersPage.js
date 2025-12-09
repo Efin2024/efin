@@ -15,24 +15,6 @@ const CULTURE_VALUES = [
   },
 ];
 
-const OPEN_ROLES = [
-  {
-    title: 'Senior Credit Analyst',
-    location: 'Noida • Risk',
-    tags: ['NBFC', 'Underwriting', 'Policy'],
-  },
-  {
-    title: 'Growth Product Manager',
-    location: 'Bengaluru • Product',
-    tags: ['Lifecycle', 'Martech', 'CX'],
-  },
-  {
-    title: 'Lead Android Engineer',
-    location: 'Hybrid • Engineering',
-    tags: ['Kotlin', 'Jetpack', 'Payments'],
-  },
-];
-
 const PERKS = [
   'Market-leading health cover for families & parents',
   'ESOP program across mid-senior roles',
@@ -70,32 +52,6 @@ function CareersPage() {
             </article>
           ))}
         </div>
-      </section>
-
-      <section className="section roles-section">
-        <header className="section-heading">
-          <span className="eyebrow">Open roles</span>
-          <h2>We&apos;re hiring across risk, product, and tech</h2>
-        </header>
-        <div className="roles-grid">
-          {OPEN_ROLES.map((role) => (
-            <article key={role.title} className="role-card">
-              <div>
-                <h3>{role.title}</h3>
-                <p>{role.location}</p>
-              </div>
-              <div className="tag-row">
-                {role.tags.map((tag) => (
-                  <span key={tag}>{tag}</span>
-                ))}
-              </div>
-              <button type="button" className="ghost-btn">
-                View details
-              </button>
-            </article>
-          ))}
-        </div>
-        <p className="section-note">Didn&apos;t find your role? Write to Care@efin.co.in with your portfolio.</p>
       </section>
 
       <section className="section perks-section">
