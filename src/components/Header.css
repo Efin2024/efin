@@ -385,6 +385,11 @@
     overflow: hidden;
     transition: max-height 0.3s ease;
     padding: 0;
+    min-width: unset;
+    /* Reset min-width for mobile */
+    width: 100%;
+    /* Ensure full width */
+    border: none;
   }
 
   .primary-nav li.expanded .mega-menu {

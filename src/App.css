@@ -7099,7 +7099,9 @@ blockquote cite {
 /* Large Mobile / Small Tablet (iPhone Pro Max, small tablets) */
 @media (min-width: 481px) and (max-width: 768px) {
   .page {
-    width: min(1280px, 90vw);
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   /* Ensure touch targets are at least 44px */
@@ -7114,10 +7116,27 @@ blockquote cite {
 
 /* Small Mobile (iPhone SE, small phones) */
 @media (max-width: 480px) {
+  .page {
+    width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    padding-top: 80px;
+  }
 
   /* Reduce font sizes slightly for small screens */
   html {
     font-size: 15px;
+  }
+
+  /* Adjust Hero Spacing */
+  [class*="-hero"],
+  [class*="hero-"] {
+    padding: 1.5rem 1rem !important;
+    border-radius: 20px !important;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem !important;
   }
 
   /* Ensure buttons are easily tappable */
@@ -7125,7 +7144,18 @@ blockquote cite {
   .ghost-btn,
   button {
     min-height: 48px;
-    padding: 0.875rem 1.75rem;
+    padding: 0.875rem 1.5rem;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Full width tables with scroll */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 }
 
@@ -7183,13 +7213,13 @@ blockquote cite {
 /* Safe Area for Devices with Notches (iPhone X, etc.) */
 @supports (padding: max(0px)) {
   .page {
-    padding-left: max(1.5rem, env(safe-area-inset-left));
-    padding-right: max(1.5rem, env(safe-area-inset-right));
+    padding-left: max(1rem, env(safe-area-inset-left)) !important;
+    padding-right: max(1rem, env(safe-area-inset-right)) !important;
   }
 
   .fibe-header {
-    padding-left: max(2rem, env(safe-area-inset-left));
-    padding-right: max(2rem, env(safe-area-inset-right));
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
   }
 }
 
