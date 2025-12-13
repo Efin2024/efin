@@ -115,6 +115,98 @@
   box-sizing: border-box;
 }
 
+/* ===== Global responsive utilities ===== */
+html,
+body,
+.App {
+  overflow-x: hidden;
+}
+
+img,
+picture,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* prevent very long words or unbroken content from causing horizontal scroll */
+* {
+  word-wrap: break-word;
+  -ms-word-break: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* ===== Generic card/grid/container fixes (improve mobile layout) ===== */
+.container,
+.page,
+.footer-inner,
+.header-shell,
+.main-content {
+  box-sizing: border-box;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.card,
+.value-card,
+.stat-card-new,
+.document-card,
+.feature-bento-card,
+.product-card,
+.office-card,
+.step-card,
+.calc-side-card,
+.feature-bento-business {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* make common grids more fluid by default */
+[class*="-grid"],
+.grid,
+.cards-grid,
+.feature-grid,
+.offering-grid,
+.testimonial-track {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+/* Modals and overlays should be responsive */
+.modal,
+.dialog,
+.drawer {
+  max-width: 95vw;
+}
+
+/* Inputs - prevent iOS zoom and ensure legible size */
+input,
+textarea,
+select,
+button {
+  font-size: 16px;
+}
+
+/* small screens: ensure stacked layout for complex grids */
+@media (max-width: 900px) {
+
+  [class*="-grid"],
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .header-shell,
+  .footer-inner {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
+
 html {
   background: linear-gradient(to right, #FFF9E6 0%, #FFE082 35%, #D4A017 100%);
   background-attachment: fixed;
@@ -788,6 +880,57 @@ a {
   margin: 0;
 }
 
+/* Loan calculator - responsive tweaks */
+@media (max-width: 900px) {
+  .loan-calculator {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .loan-calculator__inputs,
+  .loan-calculator__summary {
+    min-width: auto;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .slider-field {
+    padding: 0.9rem 1rem;
+    border-radius: 14px;
+  }
+
+  .slider-heading label {
+    font-size: 0.95rem;
+  }
+
+  .emi-highlight strong {
+    font-size: 1.6rem;
+  }
+
+  .loan-calculator__summary {
+    border-radius: 18px;
+  }
+
+  .loan-calculator__summary .primary-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .loan-calculator {
+    padding: 0.75rem;
+  }
+
+  .slider-heading label {
+    font-size: 0.9rem;
+  }
+
+  .emi-highlight strong {
+    font-size: 1.4rem;
+  }
+}
+
 .offerings-block {
   background: linear-gradient(to right, #FFF9E6 0%, #FFE082 35%, #D4A017 100%);
   border-radius: 34px;
@@ -1331,14 +1474,14 @@ blockquote cite {
 }
 
 .cta-section h2 {
-  color: #000000;
+  color: #000000 !important;
   font-size: clamp(2rem, 4vw, 3rem);
   margin: 0 0 1rem;
   font-weight: 800;
 }
 
 .cta-section p {
-  color: #000000;
+  color: #000000 !important;
   font-size: 1.2rem;
   margin: 0 0 2rem;
 }
@@ -1350,21 +1493,28 @@ blockquote cite {
   flex-wrap: wrap;
 }
 
+.cta-section .primary-btn,
+.cta-section .ghost-btn {
+  color: #000000 !important;
+}
+
 .primary-btn.large,
 .ghost-btn.large {
   padding: 1rem 2.5rem;
   font-size: 1.1rem;
+  color: #000000 !important;
 }
 
 .ghost-btn.large {
   background: rgba(255, 255, 255, 0.15);
-  color: #f7bd20;
-  border-color: rgba(247, 189, 32, 0.5);
+  color: #000000 !important;
+  border-color: rgba(0, 0, 0, 0.3);
 }
 
 .ghost-btn.large:hover {
-  background: rgba(255, 255, 255, 0.25);
-  border-color: #f7bd20;
+  background: rgba(255, 255, 255, 0.3);
+  border-color: #000000;
+  color: #000000 !important;
 }
 
 
@@ -4079,14 +4229,31 @@ blockquote cite {
   .calculator-hero {
     padding: 2rem;
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .calculator-hero.credit-hero {
     grid-template-columns: 1fr;
+    padding: 1.5rem;
+    border-radius: 24px;
+  }
+
+  .calc-hero-copy {
+    order: 1;
   }
 
   .credit-hero-card {
     width: 100%;
+    max-width: 100%;
+    order: 2;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .hero-mini-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
   }
 
   .credit-score-widget {
@@ -4129,6 +4296,28 @@ blockquote cite {
   .calc-side-card,
   .eligibility-calculator {
     padding: 1.5rem;
+  }
+
+  .calculator-hero.credit-hero {
+    padding: 1.25rem;
+  }
+
+  .credit-hero-card {
+    padding: 1.25rem;
+  }
+
+  .calc-hero-copy {
+    gap: 0.5rem;
+  }
+
+  .calc-chip-row {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .calc-chip {
+    flex: 1 1 calc(50% - 0.5rem);
+    min-width: calc(50% - 0.5rem);
   }
 
   .credit-form {
@@ -7321,6 +7510,75 @@ blockquote cite {
   .carousel-track {
     width: 100%;
     height: 100%;
+  }
+
+  /* ===== Landing hero - responsive adjustments ===== */
+  @media (max-width: 900px) {
+    .hero-block {
+      padding: 1.5rem;
+      border-radius: 20px;
+    }
+
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      align-items: start;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(1.6rem, 6vw, 2.4rem);
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-content p {
+      font-size: 0.98rem;
+    }
+
+    .hero-visual {
+      order: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-carousel {
+      height: auto !important;
+      min-height: 180px;
+    }
+
+    .carousel-image {
+      max-width: 420px;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .hero-cta {
+      justify-content: center;
+    }
+
+    .hero-badges {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-block {
+      padding: 1rem;
+      border-radius: 14px;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(1.4rem, 7.5vw, 1.9rem);
+    }
+
+    .carousel-image {
+      max-width: 320px;
+    }
   }
 }
 

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import landingPages, { NAV_STRUCTURE } from '../content/landingPages';
 import './Header.css';
@@ -25,6 +25,16 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const headerRef = useRef(null);
+  const location = useLocation();
+
+  // Close menu on any route/navigation change (use location.key to catch search/hash changes)
+  useEffect(() => {
+    if (menuOpen) {
+      setMenuOpen(false);
+    }
+    setActiveDropdown(null);
+    document.body.classList.remove('nav-open');
+  }, [location.key]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,6 +52,25 @@ function Header() {
     return () => document.body.classList.remove('nav-open');
   }, [menuOpen]);
 
+  // Close mobile nav when any link inside the header is clicked (safety for links without onClick)
+  useEffect(() => {
+    const handleDocumentClick = (e) => {
+      if (!menuOpen) return;
+      const anchor = e.target.closest && e.target.closest('a');
+      if (anchor && headerRef.current && headerRef.current.contains(anchor)) {
+        // small delay to allow navigation to start, then close menu
+        setTimeout(() => {
+          setActiveDropdown(null);
+          setMenuOpen(false);
+          document.body.classList.remove('nav-open');
+        }, 0);
+      }
+    };
+
+    document.addEventListener('click', handleDocumentClick);
+    return () => document.removeEventListener('click', handleDocumentClick);
+  }, [menuOpen]);
+
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
     if (menuOpen) {
@@ -53,13 +82,17 @@ function Header() {
     setActiveDropdown((prev) => (prev === label ? null : label));
   };
 
-  const handleClose = () => {
-    // Close dropdown immediately
+  const closeMenu = () => {
     setActiveDropdown(null);
-    // Close menu with slight delay to ensure smooth navigation
-    setTimeout(() => {
-      setMenuOpen(false);
-    }, 100);
+    setMenuOpen(false);
+    document.body.classList.remove('nav-open');
+  };
+
+  const handleLinkClick = () => {
+    // Immediately close menu and remove body class
+    setActiveDropdown(null);
+    setMenuOpen(false);
+    document.body.classList.remove('nav-open');
   };
 
   const handleFocusOut = (event) => {
@@ -73,7 +106,7 @@ function Header() {
   return (
     <header className="fibe-header" ref={headerRef}>
       <div className="header-shell">
-        <Link to="/" className="brand-mark" onClick={handleClose}>
+        <Link to="/" className="brand-mark" onClick={handleLinkClick}>
           <img src={logoSrc} alt="E-Fin" className="brand-logo" />
         </Link>
 
@@ -89,7 +122,7 @@ function Header() {
           <span />
         </button>
 
-        <div className={`nav-overlay${menuOpen ? ' show' : ''}`} onClick={handleClose} />
+        <div className={`nav-overlay${menuOpen ? ' show' : ''}`} onClick={closeMenu} />
 
         <nav className={`primary-nav${menuOpen ? ' is-visible' : ''}`} aria-label="Primary">
           <ul>
@@ -109,7 +142,12 @@ function Header() {
                 </button>
                 <div className={`mega-menu${activeDropdown === section.label ? ' show' : ''}`}>
                   {section.items.map((item) => (
-                    <Link key={item.label} to={item.to} className="mega-card" onClick={handleClose}>
+                    <Link
+                      key={item.label}
+                      to={item.to}
+                      className="mega-card"
+                      onClick={handleLinkClick}
+                    >
                       <div className="card-text">
                         <h4>{item.label}</h4>
                         <p>{item.description}</p>
@@ -122,20 +160,20 @@ function Header() {
             ))}
           </ul>
           <div className="drawer-actions">
-            <Link className="ghost-btn" to="/login" onClick={handleClose}>
+            <Link className="ghost-btn" to="/login" onClick={handleLinkClick}>
               Login
             </Link>
-            <Link className="primary-btn" to="/support/apply" onClick={handleClose}>
+            <Link className="primary-btn" to="/support/apply" onClick={handleLinkClick}>
               Apply Now
             </Link>
           </div>
         </nav>
 
         <div className="nav-actions">
-          <Link className="ghost-btn" to="/login" onClick={handleClose}>
+          <Link className="ghost-btn" to="/login" onClick={handleLinkClick}>
             Login
           </Link>
-          <Link className="primary-btn" to="/support/apply" onClick={handleClose}>
+          <Link className="primary-btn" to="/support/apply" onClick={handleLinkClick}>
             Apply Now
           </Link>
         </div>
