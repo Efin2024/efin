@@ -68,15 +68,48 @@ const TESTIMONIALS = [
     role: 'Retail partner',
     image: '/testimonial-meghna.png',
   },
+  {
+    quote:
+      'I needed funds to expand my shop and E-Fin approved my business loan in just 2 days. No hassle, no hidden charges!',
+    author: 'Rajesh Kumar',
+    tag: 'Business growth made easy',
+    role: 'Small business owner',
+    image: '/testimonial-rajesh.png',
+  },
+  {
+    quote:
+      'The customer support team guided me through every step. I got my two-wheeler loan approved within hours!',
+    author: 'Priya Sharma',
+    tag: 'Excellent customer service',
+    role: 'Two-wheeler loan customer',
+    image: '/testimonial-priya.png',
+  },
+  {
+    quote:
+      'E-Fin made my dream of buying a home possible. The loan against property process was transparent and quick.',
+    author: 'Amit Desai',
+    tag: 'Transparent & reliable',
+    role: 'Property loan customer',
+    image: '/testimonial-amit.png',
+  },
 ];
 
 function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % CAROUSEL_IMAGES.length);
     }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % TESTIMONIALS.length);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
@@ -167,10 +200,13 @@ function HomePage() {
           <h2>Real stories from borrowers and partners</h2>
           <p>Speed, transparency, and human support are our north stars. Here's how that feels in real life.</p>
         </header>
-        <div className="testimonial-marquee">
-          <div className="testimonial-track">
-            {[...TESTIMONIALS, ...TESTIMONIALS].map((testimonial, index) => (
-              <article key={`${testimonial.author}-${index}`} className="testimonial-item">
+        <div className="testimonials-carousel">
+          <div className="testimonials-carousel-track">
+            {TESTIMONIALS.map((testimonial, index) => (
+              <article
+                key={index}
+                className={`testimonial-card ${index === currentTestimonial ? 'active' : ''}`}
+              >
                 <div className="testimonial-avatar round">
                   <img src={testimonial.image} alt={testimonial.author} loading="lazy" />
                 </div>
@@ -183,6 +219,16 @@ function HomePage() {
                   </div>
                 </div>
               </article>
+            ))}
+          </div>
+          <div className="testimonials-carousel-dots">
+            {TESTIMONIALS.map((_, index) => (
+              <button
+                key={index}
+                className={`dot ${index === currentTestimonial ? 'active' : ''}`}
+                onClick={() => setCurrentTestimonial(index)}
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
             ))}
           </div>
         </div>

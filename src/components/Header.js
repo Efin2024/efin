@@ -54,8 +54,12 @@ function Header() {
   };
 
   const handleClose = () => {
-    setMenuOpen(false);
+    // Close dropdown immediately
     setActiveDropdown(null);
+    // Close menu with slight delay to ensure smooth navigation
+    setTimeout(() => {
+      setMenuOpen(false);
+    }, 100);
   };
 
   const handleFocusOut = (event) => {
