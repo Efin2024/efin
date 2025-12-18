@@ -1,0 +1,272 @@
+.coming-soon-container {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.coming-soon-bg-blobs {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.blob {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 214, 0, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    filter: blur(60px);
+}
+
+.blob-1 {
+    top: -100px;
+    right: -100px;
+    animation: float-blob 20s infinite alternate;
+}
+
+.blob-2 {
+    bottom: -100px;
+    left: -100px;
+    animation: float-blob 25s infinite alternate-reverse;
+}
+
+@keyframes float-blob {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(50px, 50px) scale(1.1);
+    }
+}
+
+.coming-soon-content {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.coming-soon-icon {
+    margin-bottom: 2rem;
+    color: #ffd600;
+}
+
+.coming-soon-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.coming-soon-text {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+}
+
+.waitlist-form {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 24px;
+    border: 1px solid rgba(247, 189, 32, 0.2);
+    margin: 0 auto 3rem;
+    max-width: 500px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.waitlist-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.waitlist-inputs input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    border: 2px solid #eee;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.waitlist-inputs input:focus {
+    border-color: #ffd600;
+    box-shadow: 0 0 0 4px rgba(255, 214, 0, 0.1);
+}
+
+.waitlist-inputs button {
+    background: #ffd600;
+    color: #1a1a1a;
+    border: none;
+    padding: 1rem;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.waitlist-inputs button:hover {
+    background: #e6c200;
+    transform: translateY(-2px);
+}
+
+.waitlist-success {
+    background: rgba(255, 214, 0, 0.05);
+    padding: 2rem;
+    border-radius: 24px;
+    margin-bottom: 3rem;
+    animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.waitlist-success .success-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.waitlist-success h3 {
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.coming-soon-actions {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.btn-back-home {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #1a1a1a;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-back-home:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    background: #000;
+}
+
+.btn-contact-us {
+    background: white;
+    color: #1a1a1a;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.btn-contact-us:hover {
+    background: #f8f8f8;
+    border-color: #ffd600;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #fdf8e6;
+    color: #d4ac0d;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: #d4ac0d;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+}
+
+@media (max-width: 768px) {
+    .coming-soon-title {
+        font-size: 2.2rem;
+    }
+
+    .coming-soon-actions {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btn-back-home,
+    .btn-contact-us {
+        width: 100%;
+        justify-content: center;
+    }
+}

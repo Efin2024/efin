@@ -161,7 +161,7 @@ function Header() {
           </ul>
           <div className="drawer-actions">
             <Link className="ghost-btn" to="/login" onClick={handleLinkClick}>
-              Login
+              Login <span className="soon-badge">Soon</span>
             </Link>
             <Link className="primary-btn" to="/support/apply" onClick={handleLinkClick}>
               Apply Now
@@ -171,7 +171,7 @@ function Header() {
 
         <div className="nav-actions">
           <Link className="ghost-btn" to="/login" onClick={handleLinkClick}>
-            Login
+            Login <span className="soon-badge">Soon</span>
           </Link>
           <Link className="primary-btn" to="/support/apply" onClick={handleLinkClick}>
             Apply Now

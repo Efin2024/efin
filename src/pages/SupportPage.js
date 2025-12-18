@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './SupportPage.css';
+import { useLeadCapture } from '../hooks/useLeadCapture';
 
 const contactChannels = [
   {
@@ -93,23 +94,37 @@ const quickAnswers = [
 ];
 
 function SupportPage() {
+  const { captureLead, isLoading, isSuccess } = useLeadCapture();
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
     topic: 'Repayment issue',
     message: '',
   });
-  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setSubmitted(false);
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    setSubmitted(true);
+    await captureLead({
+      name: formData.name,
+      phone: formData.phone,
+      source: 'Support Callback',
+      message: `Topic: ${formData.topic}\n\n${formData.message}`,
+      additionalData: { topic: formData.topic }
+    });
+
+    if (!isLoading) {
+      setFormData({
+        name: '',
+        phone: '',
+        topic: 'Repayment issue',
+        message: '',
+      });
+    }
   };
 
   return (
@@ -290,11 +305,11 @@ function SupportPage() {
                   />
                 </div>
 
-                <button type="submit" className="primary-btn large full-width">
-                  Submit Request →
+                <button type="submit" className="primary-btn large full-width" disabled={isLoading}>
+                  {isLoading ? 'Submitting...' : 'Submit Request →'}
                 </button>
 
-                {submitted && (
+                {isSuccess && (
                   <div className="form-success">
                     <span className="success-icon">✓</span>
                     <p>Request received! We'll reach out to you shortly.</p>

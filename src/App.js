@@ -12,6 +12,7 @@ import HowItWorksPage from './pages/HowItWorksPage';
 import SupportPage from './pages/SupportPage';
 import ApplyPage from './pages/ApplyPage';
 import LoginPage from './pages/LoginPage';
+import ComingSoonPage from './pages/ComingSoonPage';
 import InfoPage from './pages/InfoPage';
 import SmallBusinessLoanPage from './pages/SmallBusinessLoanPage';
 import EVThreeWheelerPage from './pages/EVThreeWheelerPage';
@@ -55,9 +56,9 @@ function App() {
           <Route path="how-it-works" element={<HowItWorksPage />} />
           <Route path="support" element={<SupportPage />} />
           <Route path="support/contact" element={<ContactPage />} />
-          <Route path="support/apply" element={<ApplyPage />} />
-          <Route path="login" element={<LoginPage />} />
-          <Route path="support/login" element={<LoginPage />} />
+          <Route path="support/apply" element={<ComingSoonPage type="portal" />} />
+          <Route path="login" element={<ComingSoonPage type="portal" />} />
+          <Route path="support/login" element={<ComingSoonPage type="portal" />} />
           <Route path="resources/personal-loan-emi-calculator" element={<PersonalLoanCalculatorPage />} />
           <Route
             path="resources/two-three-wheeler-emi-calculator"

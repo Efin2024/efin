@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { useLeadCapture } from '../hooks/useLeadCapture';
 
 const scoreRanges = [
   { label: 'Excellent', min: 780 },
@@ -8,6 +9,7 @@ const scoreRanges = [
 ];
 
 function CreditScoreWidget() {
+  const { captureLead } = useLeadCapture();
   const [formData, setFormData] = useState({
     fullName: '',
     pan: '',
@@ -45,9 +47,26 @@ function CreditScoreWidget() {
     setHasChecked(false);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     setIsChecking(true);
+
+    // Capture the lead
+    await captureLead({
+      name: formData.fullName,
+      email: formData.email,
+      phone: formData.phone,
+      source: 'Credit Score Simulator',
+      message: `User simulated a credit score of ${derivedScore} (${scoreLabel}).`,
+      additionalData: {
+        pan: formData.pan,
+        dob: formData.dob,
+        simulatedScore: derivedScore,
+        creditCards: formData.creditCards,
+        loans: formData.loans
+      }
+    });
+
     window.setTimeout(() => {
       setIsChecking(false);
       setSubmitted(true);

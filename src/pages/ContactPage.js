@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ContactPage.css';
+import { useLeadCapture } from '../hooks/useLeadCapture';
 
 function ContactPage() {
+    const { captureLead, isLoading, isSuccess } = useLeadCapture();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -10,18 +12,32 @@ function ContactPage() {
         subject: 'General Inquiry',
         message: '',
     });
-    const [submitted, setSubmitted] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Contact form submitted:', formData);
-        setSubmitted(true);
-        setTimeout(() => setSubmitted(false), 5000);
+        await captureLead({
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            source: 'Contact Page',
+            message: `Subject: ${formData.subject}\n\n${formData.message}`,
+            additionalData: { subject: formData.subject }
+        });
+
+        if (!isLoading) {
+            setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                subject: 'General Inquiry',
+                message: '',
+            });
+        }
     };
 
     return (
@@ -204,11 +220,11 @@ function ContactPage() {
                                     />
                                 </div>
 
-                                <button type="submit" className="contact-submit-btn">
-                                    Send Message →
+                                <button type="submit" className="contact-submit-btn" disabled={isLoading}>
+                                    {isLoading ? 'Sending...' : 'Send Message →'}
                                 </button>
 
-                                {submitted && (
+                                {isSuccess && (
                                     <div className="form-success-contact">
                                         <span className="success-icon-contact">✓</span>
                                         <p>Thank you! Your message has been sent successfully. We'll get back to you soon.</p>

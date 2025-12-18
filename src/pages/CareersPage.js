@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { useLeadCapture } from '../hooks/useLeadCapture';
 
 const CULTURE_VALUES = [
   {
@@ -23,11 +24,42 @@ const PERKS = [
 ];
 
 function CareersPage() {
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  const { captureLead, isLoading, isSuccess } = useLeadCapture();
+  const [formSubmitted, setFormSubmitted] = useState(false); // Keep existing state for now, though new handleSubmit doesn't update it
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+    resume: null,
+  });
 
-  const handleSubmit = (event) => {
+  const handleChange = (e) => {
+    const { name, value, type, files } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: type === 'file' ? files[0] : value
+    }));
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    setFormSubmitted(true);
+    const dataToSubmit = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      source: 'Career Application',
+      message: formData.message,
+      additionalData: { type: 'Job Application' }
+    };
+    if (formData.resume) {
+      dataToSubmit.additionalData.resumeFileName = formData.resume.name;
+    }
+    await captureLead(dataToSubmit);
+    if (!isLoading && isSuccess) {
+      setFormData({ name: '', email: '', phone: '', message: '', resume: null });
+      setFormSubmitted(true); // Update existing state if submission is successful
+    }
   };
 
   return (
@@ -87,7 +119,15 @@ function CareersPage() {
             <div className="form-grid">
               <label htmlFor="career-name">
                 Full name
-                <input id="career-name" name="name" type="text" required placeholder="Your name" />
+                <input
+                  id="career-name"
+                  name="name"
+                  type="text"
+                  required
+                  placeholder="Your name"
+                  value={formData.name}
+                  onChange={handleChange}
+                />
               </label>
               <label htmlFor="career-email">
                 Email
@@ -97,6 +137,8 @@ function CareersPage() {
                   type="email"
                   required
                   placeholder="you@example.com"
+                  value={formData.email}
+                  onChange={handleChange}
                 />
               </label>
               <label htmlFor="career-phone">
@@ -107,6 +149,8 @@ function CareersPage() {
                   type="tel"
                   required
                   placeholder="+91 99999 99999"
+                  value={formData.phone}
+                  onChange={handleChange}
                 />
               </label>
               <label htmlFor="career-resume">
@@ -117,6 +161,7 @@ function CareersPage() {
                   type="file"
                   accept=".pdf,.doc,.docx"
                   required
+                  onChange={handleChange}
                 />
               </label>
             </div>
@@ -127,10 +172,12 @@ function CareersPage() {
                 name="message"
                 rows="4"
                 placeholder="Tell us about your experience and the role you’re interested in"
+                value={formData.message}
+                onChange={handleChange}
               />
             </label>
-            <button type="submit" className="primary-btn">
-              Submit application
+            <button type="submit" className="primary-btn" disabled={isLoading}>
+              {isLoading ? 'Submitting...' : 'Submit application'}
             </button>
             {formSubmitted && <p className="form-note success">Thanks! Our team will reach out shortly.</p>}
           </form>
