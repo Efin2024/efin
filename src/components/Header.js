@@ -27,14 +27,12 @@ function Header() {
   const headerRef = useRef(null);
   const location = useLocation();
 
-  // Close menu on any route/navigation change (use location.key to catch search/hash changes)
+  // Close menu on any route/navigation change
   useEffect(() => {
-    if (menuOpen) {
-      setMenuOpen(false);
-    }
+    setMenuOpen(false);
     setActiveDropdown(null);
     document.body.classList.remove('nav-open');
-  }, [location.key]);
+  }, [location.pathname, location.search]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,33 +45,38 @@ function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Sync body scroll lock with menu state
   useEffect(() => {
-    document.body.classList.toggle('nav-open', menuOpen);
+    if (menuOpen) {
+      document.body.classList.add('nav-open');
+    } else {
+      document.body.classList.remove('nav-open');
+    }
     return () => document.body.classList.remove('nav-open');
   }, [menuOpen]);
 
-  // Close mobile nav when any link inside the header is clicked (safety for links without onClick)
+  // Global click listener to catch hits on any link inside the navigation drawer
   useEffect(() => {
-    const handleDocumentClick = (e) => {
+    const handleLinkDiscovery = (e) => {
       if (!menuOpen) return;
-      const anchor = e.target.closest && e.target.closest('a');
-      if (anchor && headerRef.current && headerRef.current.contains(anchor)) {
-        // small delay to allow navigation to start, then close menu
+
+      const link = e.target.closest('a');
+      if (link && headerRef.current && headerRef.current.contains(link)) {
+        // Small delay to ensure the link click is processed by the browser/router
         setTimeout(() => {
-          setActiveDropdown(null);
           setMenuOpen(false);
-          document.body.classList.remove('nav-open');
-        }, 0);
+          setActiveDropdown(null);
+        }, 150);
       }
     };
 
-    document.addEventListener('click', handleDocumentClick);
-    return () => document.removeEventListener('click', handleDocumentClick);
+    document.addEventListener('click', handleLinkDiscovery);
+    return () => document.removeEventListener('click', handleLinkDiscovery);
   }, [menuOpen]);
 
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
-    if (menuOpen) {
+    if (!menuOpen) {
       setActiveDropdown(null);
     }
   };
@@ -83,15 +86,14 @@ function Header() {
   };
 
   const closeMenu = () => {
-    setActiveDropdown(null);
     setMenuOpen(false);
-    document.body.classList.remove('nav-open');
+    setActiveDropdown(null);
   };
 
   const handleLinkClick = () => {
-    // Immediately close menu and remove body class
-    setActiveDropdown(null);
+    // Immediate closure attempt
     setMenuOpen(false);
+    setActiveDropdown(null);
     document.body.classList.remove('nav-open');
   };
 

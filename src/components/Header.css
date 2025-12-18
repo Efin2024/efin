@@ -340,6 +340,8 @@
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow-y: auto;
     border-left: 1px solid rgba(247, 189, 32, 0.2);
+    z-index: 1001;
+    /* Above overlay (999) */
   }
 
   .primary-nav.is-visible {
