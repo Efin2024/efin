@@ -147,8 +147,8 @@ iframe {
 .header-shell,
 .main-content {
   box-sizing: border-box;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .card,
@@ -166,7 +166,7 @@ iframe {
 }
 
 /* make common grids more fluid by default */
-[class*="-grid"],
+[class*="-grid"], .grid, [class*="grid-"],
 .grid,
 .cards-grid,
 .feature-grid,
@@ -190,14 +190,25 @@ textarea,
 select,
 button {
   font-size: 16px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
 }
 
 /* small screens: ensure stacked layout for complex grids */
 @media (max-width: 900px) {
 
-  [class*="-grid"],
-  .grid {
+  [class*="-grid"], .grid, [class*="grid-"],
+  .grid,
+  .form-grid {
     grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .header-shell,
@@ -273,8 +284,8 @@ a {
   max-width: 1240px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 3vw;
-  padding-right: 3vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
 .fibe-home {
@@ -296,8 +307,8 @@ a {
   max-width: 1240px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 3vw;
-  padding-right: 3vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
 .eyebrow {
@@ -891,14 +902,17 @@ a {
 
   .loan-calculator__inputs,
   .loan-calculator__summary {
-    min-width: auto;
+    min-width: 0;
     width: 100%;
     padding: 1rem;
+    box-sizing: border-box;
   }
 
   .slider-field {
     padding: 0.9rem 1rem;
     border-radius: 14px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .slider-heading label {
@@ -3271,7 +3285,8 @@ blockquote cite {
 
 .credit-form button {
   grid-column: 1 / -1;
-  width: fit-content;
+  width: 100%;
+  justify-content: center;
 }
 
 .credit-score-result {
@@ -7277,7 +7292,7 @@ blockquote cite {
   }
 
   /* Grid mobile optimization */
-  [class*="-grid"],
+  [class*="-grid"], .grid, [class*="grid-"],
   [class*="grid-"] {
     grid-template-columns: 1fr !important;
     gap: 1.25rem !important;
@@ -7670,4 +7685,63 @@ img {
 /* Ensure iframes are responsive */
 iframe {
   max-width: 100%;
+}
+/* ============================================
+   GLOBAL MOBILE FORM & CARD OVERFLOW FIXES
+   ============================================ */
+@media (max-width: 768px) {
+  /* Prevent any container from exceeding viewport width */
+  .page, .fibe-home, .container, .main-content {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+  }
+
+  /* Force all forms and grids to collapse and fit */
+  form, .form-grid, .contact-form-main, .support-form, .career-form, .eligibility-grid, .credit-form {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 1.25rem !important;
+  }
+
+  /* Ensure all inputs and textareas stay within their cards */
+  input, textarea, select {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Fix background cards (containers for forms) */
+  .contact-form-card-main, 
+  .contact-form-card-modern, 
+  .career-form-card, 
+  .calculator-main-card, 
+  .credit-score-widget,
+  .waitlist-form,
+  .company-card {
+    padding: 1.25rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    border-radius: 20px !important;
+  }
+
+  /* Handle specific overlapping elements */
+  .hero-form-row {
+     flex-direction: column !important;
+  }
+  
+  .hero-form input {
+     width: 100% !important;
+     margin-bottom: 0.75rem !important;
+  }
+
+  /* Prevent long placeholders or text from stretching containers */
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
 }
