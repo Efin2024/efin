@@ -55,25 +55,6 @@ function Header() {
     return () => document.body.classList.remove('nav-open');
   }, [menuOpen]);
 
-  // Global click listener to catch hits on any link inside the navigation drawer
-  useEffect(() => {
-    const handleLinkDiscovery = (e) => {
-      if (!menuOpen) return;
-
-      const link = e.target.closest('a');
-      if (link && headerRef.current && headerRef.current.contains(link)) {
-        // Small delay to ensure the link click is processed by the browser/router
-        setTimeout(() => {
-          setMenuOpen(false);
-          setActiveDropdown(null);
-        }, 150);
-      }
-    };
-
-    document.addEventListener('click', handleLinkDiscovery);
-    return () => document.removeEventListener('click', handleLinkDiscovery);
-  }, [menuOpen]);
-
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
     if (!menuOpen) {
@@ -88,13 +69,15 @@ function Header() {
   const closeMenu = () => {
     setMenuOpen(false);
     setActiveDropdown(null);
+    document.body.classList.remove('nav-open');
   };
 
   const handleLinkClick = () => {
-    // Immediate closure attempt
+    // Force close everything
     setMenuOpen(false);
     setActiveDropdown(null);
     document.body.classList.remove('nav-open');
+    // Ensure scroll to top on navigation if needed, though ScrollToTop component exists
   };
 
   const handleFocusOut = (event) => {
