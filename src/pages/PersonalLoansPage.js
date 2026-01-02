@@ -43,7 +43,7 @@ function PersonalLoansPage() {
             </div>
 
             <div className="personal-hero-cta">
-              <Link to="/support/apply" className="primary-btn large">
+              <Link to="/support/contact" className="primary-btn large">
                 Apply Now →
               </Link>
               <Link to="/resources/personal-loan-emi-calculator" className="ghost-btn large">
@@ -487,7 +487,7 @@ function PersonalLoansPage() {
           <h2>Ready to Get Your Personal Loan?</h2>
           <p>Join thousands of satisfied customers who trust E-Fin for instant personal loans</p>
           <div className="personal-cta-buttons">
-            <Link to="/support/apply" className="primary-btn large">
+            <Link to="/support/contact" className="primary-btn large">
               Apply for Loan →
             </Link>
             <Link to="/support" className="ghost-btn large">

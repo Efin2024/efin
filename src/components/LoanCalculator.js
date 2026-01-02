@@ -43,7 +43,7 @@ const DEFAULT_SLIDERS = {
 function LoanCalculator({
   sliders = {},
   ctaLabel = 'Apply now',
-  ctaTo = '/support/apply',
+  ctaTo = '/support/contact',
   note = 'Estimates are indicative and subject to final credit approval. Representative APR varies based on applicant profile and lender policies.',
 }) {
   const mergedSliders = {

@@ -130,7 +130,7 @@ function HomePage() {
               instant approvals, and money sent straight to your bank account.
             </p>
             <div className="hero-cta">
-              <Link className="primary-btn" to="/support/apply">
+              <Link className="primary-btn" to="/support/contact">
                 Get your loan now →
               </Link>
               <Link className="ghost-btn" to="/about">
@@ -240,12 +240,12 @@ function HomePage() {
           <h2>Ready to get started?</h2>
           <p>Join millions of Indians who trust E-Fin for their financial needs</p>
           <div className="cta-buttons">
-            <Link className="primary-btn large" to="/support/apply">
+            <Link className="primary-btn large" to="/support/contact">
               Apply for Loan →
             </Link>
-            <Link className="ghost-btn large" to="/login">
+            <a className="ghost-btn large" href="https://login.efin.co.in/">
               Login to Account
-            </Link>
+            </a>
           </div>
         </div>
       </section>

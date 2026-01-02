@@ -61,7 +61,7 @@ function SmallBusinessLoanPage() {
                         </div>
 
                         <div className="business-hero-cta">
-                            <Link to="/support/apply" className="primary-btn large">
+                            <Link to="/support/contact" className="primary-btn large">
                                 Apply for Business Loan →
                             </Link>
                             <Link to="/resources/eligibility-calculator" className="ghost-btn large">
@@ -496,7 +496,7 @@ function SmallBusinessLoanPage() {
                     <h2>Ready to Grow Your Business?</h2>
                     <p>Join thousands of small business owners who trust E-Fin for quick business financing</p>
                     <div className="business-cta-buttons">
-                        <Link to="/support/apply" className="primary-btn large">
+                        <Link to="/support/contact" className="primary-btn large">
                             Apply for Business Loan →
                         </Link>
                         <Link to="/support" className="ghost-btn large">

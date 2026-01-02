@@ -104,7 +104,7 @@ function AboutPage() {
                         and secure credit solutions.
                     </p>
                     <div className="hero-cta-group">
-                        <Link to="/support/apply" className="primary-btn large">
+                        <Link to="/support/contact" className="primary-btn large">
                             Apply for Loan →
                         </Link>
                         <Link to="/support/contact" className="ghost-btn large">
@@ -298,7 +298,7 @@ function AboutPage() {
                     <h2>Ready to Experience Transparent Lending?</h2>
                     <p>Join 400+ Indians who trust E-Fin for their financial needs</p>
                     <div className="cta-buttons">
-                        <Link className="primary-btn large" to="/support/apply">
+                        <Link className="primary-btn large" to="/support/contact">
                             Apply for Loan →
                         </Link>
                         <Link className="ghost-btn large" to="/about/careers">

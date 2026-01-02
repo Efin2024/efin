@@ -19,7 +19,7 @@ function EVThreeWheelerPage() {
                         monthly installments over the loan tenure of up to <strong>36 months</strong>.
                     </p>
                     <div className="ev-hero-cta">
-                        <Link to="/support/apply" className="primary-btn">Apply for Loan</Link>
+                        <Link to="/support/contact" className="primary-btn">Apply for Loan</Link>
                         <Link to="/support" className="ghost-btn">Check Eligibility</Link>
                     </div>
                     <div className="ev-key-features">
@@ -339,7 +339,7 @@ function EVThreeWheelerPage() {
                     <h2>Ready to Drive Your Own EV Auto?</h2>
                     <p>Apply now and get on the road to success with your electric three-wheeler</p>
                     <div className="ev-cta-buttons">
-                        <Link to="/support/apply" className="primary-btn">Apply Now</Link>
+                        <Link to="/support/contact" className="primary-btn">Apply Now</Link>
                         <Link to="/support" className="ghost-btn">Contact Support</Link>
                     </div>
                 </div>

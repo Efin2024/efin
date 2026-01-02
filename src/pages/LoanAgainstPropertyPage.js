@@ -63,7 +63,7 @@ function LoanAgainstPropertyPage() {
                         </div>
 
                         <div className="property-hero-cta">
-                            <Link to="/support/apply" className="primary-btn large">
+                            <Link to="/support/contact" className="primary-btn large">
                                 Apply for LAP →
                             </Link>
                             <Link to="/resources/eligibility-calculator" className="ghost-btn large">
@@ -519,7 +519,7 @@ function LoanAgainstPropertyPage() {
                     <h2>Ready to Unlock Your Property's Value?</h2>
                     <p>Get instant approval and competitive interest rates. Apply now or talk to our expert advisors.</p>
                     <div className="property-cta-buttons">
-                        <Link to="/support/apply" className="primary-btn large">
+                        <Link to="/support/contact" className="primary-btn large">
                             Apply Now →
                         </Link>
                         <Link to="/support" className="ghost-btn large">

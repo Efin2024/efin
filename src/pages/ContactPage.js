@@ -240,7 +240,7 @@ function ContactPage() {
             <section className="contact-quick-links-section">
                 <h3>Looking for Something Specific?</h3>
                 <div className="quick-links-grid">
-                    <Link to="/support/apply" className="quick-link-card">
+                    <Link to="/support/contact" className="quick-link-card">
                         <div className="quick-link-icon">📝</div>
                         <strong>Apply for a Loan</strong>
                         <p>Start your loan application process</p>

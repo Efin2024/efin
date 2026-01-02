@@ -145,20 +145,20 @@ function Header() {
             ))}
           </ul>
           <div className="drawer-actions">
-            <Link className="ghost-btn" to="/login" onClick={handleLinkClick}>
-              Login <span className="soon-badge">Soon</span>
-            </Link>
-            <Link className="primary-btn" to="/support/apply" onClick={handleLinkClick}>
+            <a className="ghost-btn" href="https://login.efin.co.in/">
+              Login
+            </a>
+            <Link className="primary-btn" to="/support/contact" onClick={handleLinkClick}>
               Apply Now
             </Link>
           </div>
         </nav>
 
         <div className="nav-actions">
-          <Link className="ghost-btn" to="/login" onClick={handleLinkClick}>
-            Login <span className="soon-badge">Soon</span>
-          </Link>
-          <Link className="primary-btn" to="/support/apply" onClick={handleLinkClick}>
+          <a className="ghost-btn" href="https://login.efin.co.in/">
+            Login
+          </a>
+          <Link className="primary-btn" to="/support/contact" onClick={handleLinkClick}>
             Apply Now
           </Link>
         </div>

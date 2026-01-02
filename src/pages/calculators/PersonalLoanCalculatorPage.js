@@ -68,7 +68,7 @@ function PersonalLoanCalculatorPage() {
             <a className="ghost-btn" href="#emi-planner">
               Start planning
             </a>
-            <Link className="primary-btn" to="/support/apply">
+            <Link className="primary-btn" to="/support/contact">
               Apply with this plan
             </Link>
           </div>

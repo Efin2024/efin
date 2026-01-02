@@ -66,7 +66,7 @@ function TwoThreeWheelerCalculatorPage() {
             <a className="ghost-btn" href="#two-wheeler-planner">
               Start planning
             </a>
-            <Link className="primary-btn" to="/support/apply">
+            <Link className="primary-btn" to="/support/contact">
               Apply with this EMI
             </Link>
           </div>

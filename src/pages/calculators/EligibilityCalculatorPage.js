@@ -67,7 +67,7 @@ function EligibilityCalculatorPage() {
             <a className="ghost-btn" href="#eligibility-planner">
               Start calculating
             </a>
-            <Link className="primary-btn" to="/support/apply">
+            <Link className="primary-btn" to="/support/contact">
               Apply with this eligibility
             </Link>
           </div>

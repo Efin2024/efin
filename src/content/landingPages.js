@@ -7,9 +7,9 @@ import eligibilityIcon from '../assets/offerings/eligibility.png';
 import creditCardIcon from '../assets/offerings/credit-card.png';
 
 const sharedCtas = {
-  apply: { label: 'Apply now', to: '/support/apply' },
+  apply: { label: 'Apply now', to: '/support/contact' },
   eligibility: { label: 'Check eligibility', to: '/support' },
-  download: { label: 'Download the app', to: '/support/apply' },
+  download: { label: 'Download the app', to: '/support/contact' },
 };
 
 const LANDING_PAGES = {

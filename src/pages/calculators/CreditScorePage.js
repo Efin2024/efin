@@ -69,7 +69,7 @@ function CreditScorePage() {
             <a className="ghost-btn" href="#credit-planner">
               Start now
             </a>
-            <Link className="primary-btn" to="/support/apply">
+            <Link className="primary-btn" to="/support/contact">
               Apply with confidence
             </Link>
           </div>

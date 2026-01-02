@@ -1,9 +1,13 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './LoginPage.css';
 
 function LoginPage() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.location.href = 'https://login.efin.co.in/';
+  }, []);
 
   // Login method state
   const [loginMethod, setLoginMethod] = useState('password'); // 'password' or 'otp'
@@ -406,7 +410,7 @@ function LoginPage() {
           </div>
 
           <p className="login-footer">
-            New to E-Fin? <Link to="/support/apply">Create an account</Link>
+            New to E-Fin? <Link to="/support/contact">Create an account</Link>
           </p>
         </div>
 

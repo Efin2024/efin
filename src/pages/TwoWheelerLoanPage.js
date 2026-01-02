@@ -18,7 +18,7 @@ function TwoWheelerLoanPage() {
                         documentation support. Loan up to <strong>₹5 Lakh</strong> with tenure of up to <strong>48 months</strong>.
                     </p>
                     <div className="tw-hero-cta">
-                        <Link to="/support/apply" className="primary-btn">Apply for Loan</Link>
+                        <Link to="/support/contact" className="primary-btn">Apply for Loan</Link>
                         <Link to="/support" className="ghost-btn">Check Eligibility</Link>
                     </div>
                     <div className="tw-key-features">
@@ -425,7 +425,7 @@ function TwoWheelerLoanPage() {
                     <h2>Ready to Ride Your Dream Bike?</h2>
                     <p>Apply now and get on the road with your new two-wheeler in no time</p>
                     <div className="tw-cta-buttons">
-                        <Link to="/support/apply" className="primary-btn">Apply Now</Link>
+                        <Link to="/support/contact" className="primary-btn">Apply Now</Link>
                         <Link to="/support" className="ghost-btn">Contact Support</Link>
                     </div>
                 </div>
