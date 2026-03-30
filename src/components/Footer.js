@@ -9,6 +9,7 @@ const footerNav = [
       { path: '/loans/loan-against-property', label: 'Loan Against Property' },
       { path: '/loans/two-wheeler-loan', label: 'Two-Wheeler Loan' },
       { path: '/loans/three-wheeler-loan', label: 'Three-Wheeler Loan' },
+      { path: '/loans/payday-loan', label: 'Pay-day Loan' },
     ],
   },
   {
@@ -66,6 +67,15 @@ function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-inner">
+        <div className="footer-map">
+          <iframe
+            title="E-Fin Office Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14008.633845616866!2d77.3706301!3d28.6238324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceff26d89b9e9%3A0x8b10fba59a26d81a!2sC-74%2C%20Sector%2063%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
         <div className="footer-content">
           <div className="footer-brand">
             <div className="brand" aria-label="E-Fin">
@@ -114,15 +124,6 @@ function Footer() {
               Apply for a loan
             </Link>
           </div>
-        </div>
-        <div className="footer-map">
-          <iframe
-            title="E-Fin Office Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14008.633845616866!2d77.3706301!3d28.6238324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceff26d89b9e9%3A0x8b10fba59a26d81a!2sC-74%2C%20Sector%2063%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-            loading="lazy"
-            allowFullScreen
-            referrerPolicy="no-referrer-when-downgrade"
-          />
         </div>
         <div className="footer-bottom">
           <span>© {currentYear} E-Fin (MLB Securities Pvt. Ltd.). All rights reserved.</span>

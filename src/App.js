@@ -17,6 +17,7 @@ import SmallBusinessLoanPage from './pages/SmallBusinessLoanPage';
 import EVThreeWheelerPage from './pages/EVThreeWheelerPage';
 import TwoWheelerLoanPage from './pages/TwoWheelerLoanPage';
 import LoanAgainstPropertyPage from './pages/LoanAgainstPropertyPage';
+import PayDayLoanPage from './pages/PayDayLoanPage';
 import landingPages from './content/landingPages';
 import PersonalLoanCalculatorPage from './pages/calculators/PersonalLoanCalculatorPage';
 import TwoThreeWheelerCalculatorPage from './pages/calculators/TwoThreeWheelerCalculatorPage';
@@ -66,6 +67,7 @@ function App() {
           <Route path="resources/eligibility-calculator" element={<EligibilityCalculatorPage />} />
           <Route path="resources/check-credit-score" element={<CreditScorePage />} />
           <Route path="loans/personal-loan" element={<PersonalLoansPage />} />
+          <Route path="loans/payday-loan" element={<PayDayLoanPage />} />
           <Route path="loans/instant-cash-loan" element={<SmallBusinessLoanPage />} />
           <Route path="loans/small-business-loan" element={<SmallBusinessLoanPage />} />
           <Route path="loans/three-wheeler-loan" element={<EVThreeWheelerPage />} />
@@ -79,7 +81,8 @@ function App() {
             if (
               page.template === 'calculator' ||
               path === 'about' ||
-              path === 'about/careers'
+              path === 'about/careers' ||
+              path === 'loans/payday-loan'
             ) {
               return null;
             }

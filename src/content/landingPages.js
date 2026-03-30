@@ -101,6 +101,22 @@ const LANDING_PAGES = {
     ctaPrimary: sharedCtas.apply,
     ctaSecondary: sharedCtas.download,
   },
+  'loans/payday-loan': {
+    title: 'PayDay Loan',
+    category: 'Loans',
+    excerpt: 'Short-term salary-backed loan for urgent monthly cash gaps',
+    description:
+      'Bridge the gap before payday with a fast digital loan designed for salaried customers who need quick access to cash.',
+    bullets: ['Short tenure repayment', 'Fast approval journey', 'Transparent charges'],
+    stats: [
+      { label: 'Loan amount', value: 'Up to ₹50,000' },
+      { label: 'Approval speed', value: 'Minutes' },
+      { label: 'Repayment', value: 'Aligned to salary cycle' },
+    ],
+    image: personalLoanIcon,
+    ctaPrimary: sharedCtas.apply,
+    ctaSecondary: sharedCtas.eligibility,
+  },
   'loans/loan-against-property': {
     title: 'Loan Against Property',
     category: 'Loans',
@@ -587,6 +603,7 @@ export const NAV_STRUCTURE = [
     items: [
       'loans/instant-cash-loan',
       'loans/personal-loan',
+      'loans/payday-loan',
       'loans/loan-against-property',
       'loans/two-wheeler-loan',
       'loans/three-wheeler-loan',
