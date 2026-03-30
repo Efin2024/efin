@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const footerNav = [
   {
@@ -61,8 +61,15 @@ const footerSocial = [
 ];
 
 function Footer() {
+  const location = useLocation();
   const currentYear = new Date().getFullYear();
   const logoSrc = `${process.env.PUBLIC_URL || ''}/Png-01.png`;
+
+  const handleFooterLinkClick = (path) => {
+    if (path === '/loans/payday-loan' && location.pathname === path) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
   return (
     <footer className="site-footer">
@@ -98,7 +105,12 @@ function Footer() {
                 <p className="footer-links-title">{section.title}</p>
                 <div className="footer-links-list">
                   {section.links.map((item) => (
-                    <Link key={item.path} to={item.path} className="footer-link">
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      className="footer-link"
+                      onClick={() => handleFooterLinkClick(item.path)}
+                    >
                       {item.label}
                     </Link>
                   ))}
