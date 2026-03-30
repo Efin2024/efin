@@ -1,19 +1,17 @@
-import { Outlet, useNavigate, useLocation } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import './DashboardLayout.css';
 
+const INACTIVITY_TIMEOUT = 15 * 60 * 1000; // 15 minutes
+const MAX_SESSION_TIME = 30 * 60 * 1000; // 30 minutes
+
 function DashboardLayout() {
-    const navigate = useNavigate();
     const location = useLocation();
     const [showLogoutWarning, setShowLogoutWarning] = useState(false);
     const [showNotifications, setShowNotifications] = useState(false);
     const [showProfile, setShowProfile] = useState(false);
     const [lastActivity, setLastActivity] = useState(Date.now());
     const [sessionStart] = useState(Date.now());
-
-    // Session timeout settings
-    const INACTIVITY_TIMEOUT = 15 * 60 * 1000; // 15 minutes
-    const MAX_SESSION_TIME = 30 * 60 * 1000; // 30 minutes
 
     const [notifications] = useState([
         {

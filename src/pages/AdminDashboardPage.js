@@ -5,7 +5,7 @@ import './AdminDashboardPage.css';
 function AdminDashboardPage() {
     const navigate = useNavigate();
     const [adminSession, setAdminSession] = useState(null);
-    const [stats, setStats] = useState({
+    const [stats] = useState({
         totalUsers: 1247,
         activeLoans: 342,
         pendingApprovals: 28,

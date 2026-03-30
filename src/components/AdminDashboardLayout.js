@@ -1,10 +1,8 @@
-import { Outlet, useNavigate, useLocation } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import './AdminDashboardLayout.css';
 
 function AdminDashboardLayout() {
-    const navigate = useNavigate();
-    const location = useLocation();
     const [showLogoutWarning, setShowLogoutWarning] = useState(false);
     const [showProfile, setShowProfile] = useState(false);
     const [adminSession, setAdminSession] = useState(null);

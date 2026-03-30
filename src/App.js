@@ -11,7 +11,6 @@ import AboutPage from './pages/AboutPage';
 import HowItWorksPage from './pages/HowItWorksPage';
 import SupportPage from './pages/SupportPage';
 import LoginPage from './pages/LoginPage';
-import ComingSoonPage from './pages/ComingSoonPage';
 import InfoPage from './pages/InfoPage';
 import SmallBusinessLoanPage from './pages/SmallBusinessLoanPage';
 import EVThreeWheelerPage from './pages/EVThreeWheelerPage';
