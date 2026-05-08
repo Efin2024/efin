@@ -87,7 +87,7 @@ const TEAM = [
     {
         initial: 'A',
         name: 'Anjali Tomar',
-        role: 'Sr Software Engineer',
+        role: 'Software Engineer',
         focus: 'Platform Architecture & Engineering',
     },
 ];

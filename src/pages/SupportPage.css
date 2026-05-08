@@ -5,9 +5,9 @@
 /* Hero Section */
 .support-hero-modern {
     background: linear-gradient(135deg,
-            rgba(255, 251, 234, 0.95) 0%,
-            rgba(255, 248, 225, 0.85) 50%,
-            rgba(255, 243, 214, 0.75) 100%);
+            rgba(244, 249, 253, 0.95) 0%,
+            rgba(233, 241, 247, 0.85) 50%,
+            rgba(220, 232, 241, 0.75) 100%);
     border-radius: 40px;
     padding: 4rem 3rem;
     margin: 2rem 0 4rem;
@@ -24,7 +24,7 @@
     right: -5%;
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(247, 189, 32, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(96, 121, 145, 0.15) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -41,13 +41,13 @@
     gap: 0.5rem;
     padding: 0.5rem 1.25rem;
     background: rgba(255, 255, 255, 0.95);
-    border: 2px solid rgba(247, 189, 32, 0.3);
+    border: 2px solid rgba(96, 121, 145, 0.3);
     border-radius: 50px;
     font-weight: 600;
     font-size: 0.9rem;
     color: var(--text-strong);
     margin-bottom: 1.5rem;
-    box-shadow: 0 8px 24px rgba(247, 189, 32, 0.15);
+    box-shadow: 0 8px 24px rgba(96, 121, 145, 0.15);
 }
 
 .support-hero-content h1 {
@@ -85,14 +85,14 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    border: 1px solid rgba(247, 189, 32, 0.2);
+    border: 1px solid rgba(96, 121, 145, 0.2);
     transition: all 0.3s ease;
     box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 
 .stat-card-support:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(247, 189, 32, 0.2);
+    box-shadow: 0 12px 32px rgba(96, 121, 145, 0.2);
 }
 
 .stat-icon-support {
@@ -138,7 +138,7 @@
     backdrop-filter: blur(10px);
     border-radius: 24px;
     padding: 2.5rem;
-    border: 1px solid rgba(247, 189, 32, 0.15);
+    border: 1px solid rgba(96, 121, 145, 0.15);
     text-align: center;
     transition: all 0.3s ease;
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
@@ -146,8 +146,8 @@
 
 .support-highlight-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(247, 189, 32, 0.2);
-    border-color: rgba(247, 189, 32, 0.3);
+    box-shadow: 0 20px 50px rgba(96, 121, 145, 0.2);
+    border-color: rgba(96, 121, 145, 0.3);
 }
 
 .highlight-icon-support {
@@ -189,7 +189,7 @@
     backdrop-filter: blur(10px);
     border-radius: 28px;
     padding: 2.5rem;
-    border: 1px solid rgba(247, 189, 32, 0.15);
+    border: 1px solid rgba(96, 121, 145, 0.15);
     text-align: center;
     transition: all 0.3s ease;
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
@@ -197,8 +197,8 @@
 
 .contact-channel-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(247, 189, 32, 0.2);
-    border-color: rgba(247, 189, 32, 0.3);
+    box-shadow: 0 20px 50px rgba(96, 121, 145, 0.2);
+    border-color: rgba(96, 121, 145, 0.3);
 }
 
 .channel-icon-large {
@@ -226,14 +226,14 @@
     text-decoration: none;
     font-weight: 600;
     font-size: 1.05rem;
-    border-bottom: 2px solid rgba(247, 189, 32, 0.3);
+    border-bottom: 2px solid rgba(96, 121, 145, 0.3);
     transition: all 0.2s ease;
     display: inline-block;
 }
 
 .primary-link-support:hover {
-    color: #e8a91a;
-    border-bottom-color: #e8a91a;
+    color: #36424f;
+    border-bottom-color: #36424f;
 }
 
 /* Contact Form Section */
@@ -285,7 +285,7 @@
     flex-shrink: 0;
     width: 32px;
     height: 32px;
-    background: linear-gradient(135deg, #f7bd20 0%, #e8a91a 100%);
+    background: linear-gradient(135deg, #0f1419 0%, #36424f 100%);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -313,7 +313,7 @@
     backdrop-filter: blur(10px);
     border-radius: 28px;
     padding: 3rem;
-    border: 1px solid rgba(247, 189, 32, 0.15);
+    border: 1px solid rgba(96, 121, 145, 0.15);
     box-shadow: 0 15px 40px rgba(15, 23, 42, 0.1);
     width: 100%;
     box-sizing: border-box;
@@ -341,7 +341,7 @@
 .form-group select,
 .form-group textarea {
     padding: 0.875rem 1.25rem;
-    border: 2px solid rgba(247, 189, 32, 0.2);
+    border: 2px solid rgba(96, 121, 145, 0.2);
     border-radius: 12px;
     font-size: 1rem;
     font-family: inherit;
@@ -354,7 +354,7 @@
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-dark);
-    box-shadow: 0 0 0 3px rgba(247, 189, 32, 0.1);
+    box-shadow: 0 0 0 3px rgba(96, 121, 145, 0.1);
 }
 
 .form-group textarea {
@@ -411,15 +411,15 @@
     backdrop-filter: blur(10px);
     border-radius: 28px;
     padding: 2.5rem;
-    border: 1px solid rgba(247, 189, 32, 0.15);
+    border: 1px solid rgba(96, 121, 145, 0.15);
     transition: all 0.3s ease;
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
 }
 
 .service-card-modern:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(247, 189, 32, 0.2);
-    border-color: rgba(247, 189, 32, 0.3);
+    box-shadow: 0 20px 50px rgba(96, 121, 145, 0.2);
+    border-color: rgba(96, 121, 145, 0.3);
 }
 
 .service-card-icon {
@@ -475,7 +475,7 @@
 .faq-item-modern {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 16px;
-    border: 1px solid rgba(247, 189, 32, 0.15);
+    border: 1px solid rgba(96, 121, 145, 0.15);
     transition: all 0.3s ease;
 }
 
@@ -507,7 +507,7 @@
     flex-shrink: 0;
     width: 28px;
     height: 28px;
-    background: rgba(247, 189, 32, 0.1);
+    background: rgba(96, 121, 145, 0.1);
     color: var(--primary-dark);
     border-radius: 50%;
     display: flex;
@@ -520,7 +520,7 @@
 
 .faq-item-modern[open] .faq-icon {
     transform: rotate(45deg);
-    background: linear-gradient(135deg, #f7bd20 0%, #e8a91a 100%);
+    background: linear-gradient(135deg, #0f1419 0%, #36424f 100%);
     color: white;
 }
 
@@ -554,7 +554,7 @@
     flex-shrink: 0;
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #f7bd20 0%, #e8a91a 100%);
+    background: linear-gradient(135deg, #0f1419 0%, #36424f 100%);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -562,7 +562,7 @@
     justify-content: center;
     font-weight: 700;
     font-size: 1.5rem;
-    box-shadow: 0 8px 20px rgba(247, 189, 32, 0.3);
+    box-shadow: 0 8px 20px rgba(96, 121, 145, 0.3);
 }
 
 .timeline-content {
@@ -587,7 +587,7 @@
 .timeline-connector-modern {
     width: 3px;
     height: 40px;
-    background: linear-gradient(to bottom, rgba(247, 189, 32, 0.5), rgba(247, 189, 32, 0.1));
+    background: linear-gradient(to bottom, rgba(96, 121, 145, 0.5), rgba(96, 121, 145, 0.1));
     margin-left: 28.5px;
 }
 
@@ -598,13 +598,13 @@
 
 .support-cta-card {
     background: linear-gradient(135deg,
-            rgba(247, 189, 32, 0.1) 0%,
-            rgba(247, 189, 32, 0.05) 100%);
+            rgba(96, 121, 145, 0.1) 0%,
+            rgba(96, 121, 145, 0.05) 100%);
     border-radius: 40px;
     padding: 4rem 3rem;
     text-align: center;
-    border: 2px solid rgba(247, 189, 32, 0.2);
-    box-shadow: 0 20px 60px rgba(247, 189, 32, 0.15);
+    border: 2px solid rgba(96, 121, 145, 0.2);
+    box-shadow: 0 20px 60px rgba(96, 121, 145, 0.15);
 }
 
 .support-cta-card h2 {

@@ -2,7 +2,7 @@
 
 .two-wheeler-page {
     padding-top: 3rem;
-    background: linear-gradient(to right, #fef3c7 0%, #fde68a 50%, #fbbf24 100%);
+    background: linear-gradient(to right, #eef5fb 0%, #d4e2ec 50%, #c4d4e0 100%);
     background-attachment: fixed;
     min-height: 100vh;
 }
@@ -30,14 +30,14 @@
     width: fit-content;
     padding: 0.5rem 1.2rem;
     border-radius: 999px;
-    background: linear-gradient(135deg, rgba(247, 189, 32, 0.15), rgba(245, 166, 35, 0.15));
-    border: 1px solid rgba(247, 189, 32, 0.4);
+    background: linear-gradient(135deg, rgba(223, 234, 242, 0.96), rgba(233, 241, 247, 0.96));
+    border: 1px solid rgba(96, 121, 145, 0.4);
     color: #1a1a1a;
     font-weight: 700;
     font-size: 0.9rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    box-shadow: 0 4px 12px rgba(247, 189, 32, 0.2);
+    box-shadow: 0 4px 12px rgba(96, 121, 145, 0.2);
 }
 
 .tw-hero-content h1 {
@@ -61,8 +61,8 @@
     color: var(--text-muted);
     margin: 0;
     padding: 1.25rem;
-    background: linear-gradient(135deg, #fffef7, #fff8df);
-    border-left: 4px solid #f7bd20;
+    background: linear-gradient(135deg, #f7fbfe, #eaf2f8);
+    border-left: 4px solid #0f1419;
     border-radius: 12px;
 }
 
@@ -86,34 +86,34 @@
 }
 
 .tw-feature-badge {
-    background: linear-gradient(135deg, #ffffff, #fff6ed);
-    border: 1px solid rgba(247, 189, 32, 0.2);
+    background: linear-gradient(135deg, #ffffff, #edf4f9);
+    border: 1px solid rgba(96, 121, 145, 0.2);
     border-radius: 16px;
     padding: 1rem;
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    box-shadow: 0 8px 24px rgba(247, 189, 32, 0.08);
+    box-shadow: 0 8px 24px rgba(96, 121, 145, 0.08);
     transition: all 0.3s ease;
 }
 
 .tw-feature-badge:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(247, 189, 32, 0.15);
-    border-color: #f7bd20;
+    box-shadow: 0 12px 32px rgba(96, 121, 145, 0.15);
+    border-color: #0f1419;
 }
 
 .tw-feature-icon {
     width: 48px;
     height: 48px;
     border-radius: 12px;
-    background: linear-gradient(135deg, #f7bd20, #f5a623);
+    background: linear-gradient(135deg, #0f1419, #20262d);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
     flex-shrink: 0;
-    box-shadow: 0 8px 16px rgba(247, 189, 32, 0.3);
+    box-shadow: 0 8px 16px rgba(96, 121, 145, 0.3);
 }
 
 .tw-feature-badge strong {
@@ -138,11 +138,11 @@
 }
 
 .tw-visual-card {
-    background: linear-gradient(145deg, #fffef7, #fff8df);
+    background: linear-gradient(145deg, #f7fbfe, #eaf2f8);
     border-radius: 32px;
     padding: 2.5rem;
-    border: 2px solid rgba(247, 189, 32, 0.2);
-    box-shadow: 0 24px 60px rgba(247, 189, 32, 0.15);
+    border: 2px solid rgba(96, 121, 145, 0.2);
+    box-shadow: 0 24px 60px rgba(96, 121, 145, 0.15);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -155,7 +155,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 30% 30%, rgba(247, 189, 32, 0.15) 0%, transparent 60%);
+    background: radial-gradient(circle at 30% 30%, rgba(96, 121, 145, 0.15) 0%, transparent 60%);
     pointer-events: none;
 }
 
@@ -172,7 +172,7 @@
 .tw-glow-effect {
     position: absolute;
     inset: -20px;
-    background: radial-gradient(circle, rgba(247, 189, 32, 0.3), transparent 70%);
+    background: radial-gradient(circle, rgba(96, 121, 145, 0.3), transparent 70%);
     border-radius: 50%;
     animation: twPulse 3s ease-in-out infinite;
 }
@@ -195,7 +195,7 @@
     width: 100%;
     max-width: 300px;
     height: auto;
-    filter: drop-shadow(0 20px 40px rgba(247, 189, 32, 0.3));
+    filter: drop-shadow(0 20px 40px rgba(96, 121, 145, 0.3));
     position: relative;
     z-index: 2;
     animation: float 4s ease-in-out infinite;
@@ -224,11 +224,11 @@
 
 .tw-stat {
     background: #ffffff;
-    border: 1px solid rgba(247, 189, 32, 0.2);
+    border: 1px solid rgba(96, 121, 145, 0.2);
     border-radius: 14px;
     padding: 1rem 0.75rem;
     text-align: center;
-    box-shadow: 0 8px 20px rgba(247, 189, 32, 0.08);
+    box-shadow: 0 8px 20px rgba(96, 121, 145, 0.08);
 }
 
 .tw-stat strong {
@@ -259,38 +259,38 @@
 }
 
 .tw-benefit-card {
-    background: linear-gradient(135deg, #ffffff, #fff6ed);
-    border: 1px solid rgba(247, 189, 32, 0.2);
+    background: linear-gradient(135deg, #ffffff, #edf4f9);
+    border: 1px solid rgba(96, 121, 145, 0.2);
     border-radius: 24px;
     padding: 2rem;
     text-align: center;
     transition: all 0.3s ease;
-    box-shadow: 0 12px 32px rgba(247, 189, 32, 0.08);
+    box-shadow: 0 12px 32px rgba(96, 121, 145, 0.08);
 }
 
 .tw-benefit-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 48px rgba(247, 189, 32, 0.15);
-    border-color: #f7bd20;
+    box-shadow: 0 20px 48px rgba(96, 121, 145, 0.15);
+    border-color: #0f1419;
 }
 
 .tw-benefit-icon {
     width: 72px;
     height: 72px;
     border-radius: 18px;
-    background: linear-gradient(135deg, #f7bd20, #f5a623);
+    background: linear-gradient(135deg, #0f1419, #20262d);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2.25rem;
     margin: 0 auto 1.25rem;
-    box-shadow: 0 12px 28px rgba(247, 189, 32, 0.35);
+    box-shadow: 0 12px 28px rgba(96, 121, 145, 0.35);
 }
 
 .tw-benefit-card h3 {
     margin: 0 0 0.75rem;
     font-size: 1.3rem;
-    color: #D4A017;
+    color: #9fb7c9;
 }
 
 .tw-benefit-card p {
@@ -302,11 +302,11 @@
 
 /* Eligibility Section */
 .tw-eligibility-section {
-    background: linear-gradient(135deg, #fffef7, #fff8df);
+    background: linear-gradient(135deg, #f7fbfe, #eaf2f8);
     border-radius: 32px;
     padding: 3rem 2.5rem;
-    border: 2px solid rgba(247, 189, 32, 0.2);
-    box-shadow: 0 24px 60px rgba(247, 189, 32, 0.1);
+    border: 2px solid rgba(96, 121, 145, 0.2);
+    box-shadow: 0 24px 60px rgba(96, 121, 145, 0.1);
     margin: 4rem 0;
 }
 
@@ -324,28 +324,28 @@
 
 .tw-eligibility-card {
     background: #ffffff;
-    border: 1px solid rgba(247, 189, 32, 0.2);
+    border: 1px solid rgba(96, 121, 145, 0.2);
     border-radius: 20px;
     padding: 1.75rem;
     display: flex;
     align-items: center;
     gap: 1.25rem;
-    box-shadow: 0 12px 32px rgba(247, 189, 32, 0.1);
+    box-shadow: 0 12px 32px rgba(96, 121, 145, 0.1);
     transition: all 0.3s ease;
 }
 
 .tw-eligibility-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 16px 40px rgba(247, 189, 32, 0.15);
-    border-color: #f7bd20;
+    box-shadow: 0 16px 40px rgba(96, 121, 145, 0.15);
+    border-color: #0f1419;
 }
 
 .tw-eligibility-icon {
     width: 60px;
     height: 60px;
     border-radius: 16px;
-    background: linear-gradient(135deg, rgba(247, 189, 32, 0.15), rgba(245, 166, 35, 0.15));
-    border: 1px solid rgba(247, 189, 32, 0.3);
+    background: linear-gradient(135deg, rgba(223, 234, 242, 0.92), rgba(233, 241, 247, 0.92));
+    border: 1px solid rgba(96, 121, 145, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -367,8 +367,8 @@
 }
 
 .tw-eligibility-note {
-    background: rgba(247, 189, 32, 0.1);
-    border: 1px solid rgba(247, 189, 32, 0.3);
+    background: rgba(96, 121, 145, 0.1);
+    border: 1px solid rgba(96, 121, 145, 0.3);
     border-radius: 16px;
     padding: 1.25rem 1.5rem;
     display: flex;
@@ -380,7 +380,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #f7bd20, #f5a623);
+    background: linear-gradient(135deg, #0f1419, #20262d);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -416,8 +416,8 @@
 }
 
 .tw-document-card.highlighted {
-    background: linear-gradient(135deg, #fffef7, #fff8df);
-    border-color: rgba(247, 189, 32, 0.4);
+    background: linear-gradient(135deg, #f7fbfe, #eaf2f8);
+    border-color: rgba(96, 121, 145, 0.4);
 }
 
 .tw-document-card:hover {
@@ -436,13 +436,13 @@
     width: 52px;
     height: 52px;
     border-radius: 14px;
-    background: linear-gradient(135deg, #f7bd20, #f5a623);
+    background: linear-gradient(135deg, #0f1419, #20262d);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
     flex-shrink: 0;
-    box-shadow: 0 8px 20px rgba(247, 189, 32, 0.3);
+    box-shadow: 0 8px 20px rgba(96, 121, 145, 0.3);
 }
 
 .tw-doc-header h4 {
@@ -469,18 +469,18 @@
     content: "✓";
     position: absolute;
     left: -1.5rem;
-    color: #f7bd20;
+    color: #0f1419;
     font-weight: 700;
     font-size: 1rem;
 }
 
 /* Fees Section */
 .tw-fees-section {
-    background: linear-gradient(135deg, #ffffff, #fff6ed);
+    background: linear-gradient(135deg, #ffffff, #edf4f9);
     border-radius: 32px;
     padding: 3rem 2.5rem;
-    border: 1px solid rgba(247, 189, 32, 0.2);
-    box-shadow: 0 24px 60px rgba(247, 189, 32, 0.1);
+    border: 1px solid rgba(96, 121, 145, 0.2);
+    box-shadow: 0 24px 60px rgba(96, 121, 145, 0.1);
     margin: 4rem 0;
 }
 
@@ -498,7 +498,7 @@
 }
 
 .tw-fees-table thead {
-    background: linear-gradient(135deg, #f7bd20, #f5a623);
+    background: linear-gradient(135deg, #0f1419, #20262d);
     color: #ffffff;
 }
 
@@ -517,15 +517,15 @@
 }
 
 .tw-fees-table tbody tr:hover {
-    background: linear-gradient(135deg, #f9fafb, #fff6ed);
+    background: linear-gradient(135deg, #f9fafb, #edf4f9);
 }
 
 .tw-fees-table tbody tr.tw-zero-fee {
-    background: linear-gradient(135deg, #fffef7, #fff8df);
+    background: linear-gradient(135deg, #f7fbfe, #eaf2f8);
 }
 
 .tw-fees-table tbody tr.tw-zero-fee:hover {
-    background: linear-gradient(135deg, #fff8df, #ffedbe);
+    background: linear-gradient(135deg, #eaf2f8, #dce9f2);
 }
 
 .tw-fees-table tbody tr:last-child {
@@ -552,8 +552,8 @@
 .tw-highlight-rate {
     display: inline-block;
     padding: 0.35rem 0.85rem;
-    background: linear-gradient(135deg, #fff8df, #ffedbe);
-    border: 1px solid #f7bd20;
+    background: linear-gradient(135deg, #eaf2f8, #dce9f2);
+    border: 1px solid #0f1419;
     border-radius: 8px;
     color: #1a1a1a;
     font-weight: 700;
@@ -579,7 +579,7 @@
 .tw-zero-badge {
     display: inline-block;
     padding: 0.4rem 1rem;
-    background: linear-gradient(135deg, #f7bd20, #f5a623);
+    background: linear-gradient(135deg, #0f1419, #20262d);
     color: #ffffff;
     border-radius: 999px;
     font-weight: 700;
@@ -605,28 +605,28 @@
 }
 
 .tw-process-step {
-    background: linear-gradient(135deg, #ffffff, #fff6ed);
-    border: 1px solid rgba(247, 189, 32, 0.2);
+    background: linear-gradient(135deg, #ffffff, #edf4f9);
+    border: 1px solid rgba(96, 121, 145, 0.2);
     border-radius: 20px;
     padding: 1.75rem;
     display: flex;
     align-items: flex-start;
     gap: 1.25rem;
-    box-shadow: 0 14px 36px rgba(247, 189, 32, 0.08);
+    box-shadow: 0 14px 36px rgba(96, 121, 145, 0.08);
     transition: all 0.3s ease;
 }
 
 .tw-process-step:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 48px rgba(247, 189, 32, 0.15);
-    border-color: #f7bd20;
+    box-shadow: 0 20px 48px rgba(96, 121, 145, 0.15);
+    border-color: #0f1419;
 }
 
 .tw-step-number {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #f7bd20, #f5a623);
+    background: linear-gradient(135deg, #0f1419, #20262d);
     color: #ffffff;
     display: flex;
     align-items: center;
@@ -634,7 +634,7 @@
     font-weight: 800;
     font-size: 1.5rem;
     flex-shrink: 0;
-    box-shadow: 0 10px 24px rgba(247, 189, 32, 0.35);
+    box-shadow: 0 10px 24px rgba(96, 121, 145, 0.35);
 }
 
 .tw-step-content h3 {
@@ -656,14 +656,14 @@
 }
 
 .tw-calculator-card {
-    background: linear-gradient(135deg, #D4A017, #f7bd20);
+    background: linear-gradient(135deg, #9fb7c9, #0f1419);
     border-radius: 32px;
     padding: 3rem 2.5rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     align-items: center;
-    box-shadow: 0 24px 60px rgba(247, 189, 32, 0.3);
+    box-shadow: 0 24px 60px rgba(96, 121, 145, 0.3);
     position: relative;
     overflow: hidden;
 }
@@ -734,12 +734,12 @@
 }
 
 .tw-cta-card {
-    background: linear-gradient(135deg, #f5a623, #f7bd20);
+    background: linear-gradient(135deg, #20262d, #0f1419);
     color: #ffffff;
     border-radius: 32px;
     padding: 3.5rem 2.5rem;
     text-align: center;
-    box-shadow: 0 24px 60px rgba(247, 189, 32, 0.3);
+    box-shadow: 0 24px 60px rgba(96, 121, 145, 0.3);
     position: relative;
     overflow: hidden;
 }

@@ -5,11 +5,11 @@
 /* Hero Section */
 .personal-hero-modern {
     background: linear-gradient(135deg,
-            rgba(255, 251, 234, 0.95) 0%,
-            rgba(255, 248, 225, 0.85) 25%,
-            rgba(255, 243, 214, 0.75) 50%,
-            rgba(255, 237, 196, 0.65) 75%,
-            rgba(255, 232, 161, 0.5) 100%);
+            rgba(244, 249, 253, 0.95) 0%,
+            rgba(233, 241, 247, 0.85) 25%,
+            rgba(220, 232, 241, 0.75) 50%,
+            rgba(212, 226, 236, 0.65) 75%,
+            rgba(206, 221, 233, 0.5) 100%);
     border-radius: 40px;
     padding: 4rem 3rem;
     margin: 2rem 0 4rem;
@@ -25,7 +25,7 @@
     right: -5%;
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(247, 189, 32, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(96, 121, 145, 0.15) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -50,13 +50,13 @@
     gap: 0.5rem;
     padding: 0.5rem 1.25rem;
     background: rgba(255, 255, 255, 0.95);
-    border: 2px solid rgba(247, 189, 32, 0.3);
+    border: 2px solid rgba(96, 121, 145, 0.3);
     border-radius: 50px;
     font-weight: 600;
     font-size: 0.9rem;
     color: var(--text-strong);
     width: fit-content;
-    box-shadow: 0 8px 24px rgba(247, 189, 32, 0.15);
+    box-shadow: 0 8px 24px rgba(96, 121, 145, 0.15);
 }
 
 .personal-hero-content h1 {
@@ -88,15 +88,15 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    border: 1px solid rgba(247, 189, 32, 0.2);
+    border: 1px solid rgba(96, 121, 145, 0.2);
     transition: all 0.3s ease;
     box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 
 .highlight-chip-personal:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(247, 189, 32, 0.2);
-    border-color: rgba(247, 189, 32, 0.4);
+    box-shadow: 0 12px 32px rgba(96, 121, 145, 0.2);
+    border-color: rgba(96, 121, 145, 0.4);
 }
 
 .chip-icon-personal {
@@ -147,7 +147,7 @@
     border-radius: 16px;
     padding: 1rem 1.5rem;
     box-shadow: 0 15px 40px rgba(15, 23, 42, 0.15);
-    border: 1px solid rgba(247, 189, 32, 0.2);
+    border: 1px solid rgba(96, 121, 145, 0.2);
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
@@ -214,7 +214,7 @@
     backdrop-filter: blur(10px);
     border-radius: 24px;
     padding: 2rem;
-    border: 1px solid rgba(247, 189, 32, 0.15);
+    border: 1px solid rgba(96, 121, 145, 0.15);
     transition: all 0.3s ease;
     text-align: center;
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
@@ -222,8 +222,8 @@
 
 .use-case-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(247, 189, 32, 0.2);
-    border-color: rgba(247, 189, 32, 0.3);
+    box-shadow: 0 20px 50px rgba(96, 121, 145, 0.2);
+    border-color: rgba(96, 121, 145, 0.3);
 }
 
 .use-case-icon {
@@ -265,7 +265,7 @@
     backdrop-filter: blur(10px);
     border-radius: 28px;
     padding: 2rem;
-    border: 1px solid rgba(247, 189, 32, 0.15);
+    border: 1px solid rgba(96, 121, 145, 0.15);
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -275,17 +275,17 @@
 
 .feature-bento-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(247, 189, 32, 0.2);
-    border-color: rgba(247, 189, 32, 0.3);
+    box-shadow: 0 20px 50px rgba(96, 121, 145, 0.2);
+    border-color: rgba(96, 121, 145, 0.3);
 }
 
 .feature-bento-card.large {
     grid-column: span 2;
-    background: linear-gradient(135deg, #FFFBF0 0%, #FFF8E6 100%);
+    background: linear-gradient(135deg, #f7fbfe 0%, #FFF8E6 100%);
 }
 
 .feature-bento-card.accent {
-    background: linear-gradient(135deg, rgba(247, 189, 32, 0.1) 0%, rgba(247, 189, 32, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(96, 121, 145, 0.1) 0%, rgba(96, 121, 145, 0.05) 100%);
 }
 
 .feature-icon {
@@ -343,7 +343,7 @@
     backdrop-filter: blur(10px);
     border-radius: 24px;
     padding: 2rem;
-    border: 1px solid rgba(247, 189, 32, 0.15);
+    border: 1px solid rgba(96, 121, 145, 0.15);
     transition: all 0.3s ease;
     text-align: center;
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
@@ -351,8 +351,8 @@
 
 .eligibility-modern-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(247, 189, 32, 0.2);
-    border-color: rgba(247, 189, 32, 0.3);
+    box-shadow: 0 20px 50px rgba(96, 121, 145, 0.2);
+    border-color: rgba(96, 121, 145, 0.3);
 }
 
 .eligibility-modern-icon {
@@ -395,18 +395,18 @@
     backdrop-filter: blur(10px);
     border-radius: 28px;
     padding: 2rem;
-    border: 1px solid rgba(247, 189, 32, 0.15);
+    border: 1px solid rgba(96, 121, 145, 0.15);
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
     transition: all 0.3s ease;
 }
 
 .document-category-modern:hover {
-    box-shadow: 0 20px 50px rgba(247, 189, 32, 0.15);
+    box-shadow: 0 20px 50px rgba(96, 121, 145, 0.15);
 }
 
 .document-category-modern.highlight {
-    background: linear-gradient(135deg, #FFFBF0 0%, #FFF8E6 100%);
-    border-color: rgba(247, 189, 32, 0.3);
+    background: linear-gradient(135deg, #f7fbfe 0%, #FFF8E6 100%);
+    border-color: rgba(96, 121, 145, 0.3);
 }
 
 .doc-category-header {
@@ -415,7 +415,7 @@
     gap: 1rem;
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
-    border-bottom: 2px solid rgba(247, 189, 32, 0.15);
+    border-bottom: 2px solid rgba(96, 121, 145, 0.15);
 }
 
 .doc-category-icon {
@@ -446,7 +446,7 @@
     flex-shrink: 0;
     width: 28px;
     height: 28px;
-    background: linear-gradient(135deg, #f7bd20 0%, #e8a91a 100%);
+    background: linear-gradient(135deg, #0f1419 0%, #36424f 100%);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -490,7 +490,7 @@
     backdrop-filter: blur(10px);
     border-radius: 28px;
     padding: 2.5rem 2rem;
-    border: 1px solid rgba(247, 189, 32, 0.15);
+    border: 1px solid rgba(96, 121, 145, 0.15);
     text-align: center;
     position: relative;
     transition: all 0.3s ease;
@@ -499,8 +499,8 @@
 
 .step-modern-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(247, 189, 32, 0.2);
-    border-color: rgba(247, 189, 32, 0.3);
+    box-shadow: 0 20px 50px rgba(96, 121, 145, 0.2);
+    border-color: rgba(96, 121, 145, 0.3);
 }
 
 .step-number-modern {
@@ -510,7 +510,7 @@
     transform: translateX(-50%);
     width: 40px;
     height: 40px;
-    background: linear-gradient(135deg, #f7bd20 0%, #e8a91a 100%);
+    background: linear-gradient(135deg, #0f1419 0%, #36424f 100%);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -518,7 +518,7 @@
     justify-content: center;
     font-weight: 700;
     font-size: 1.2rem;
-    box-shadow: 0 8px 20px rgba(247, 189, 32, 0.3);
+    box-shadow: 0 8px 20px rgba(96, 121, 145, 0.3);
 }
 
 .step-icon-modern {
@@ -556,7 +556,7 @@
     background: rgba(255, 255, 255, 0.95);
     border-radius: 28px;
     overflow: hidden;
-    border: 1px solid rgba(247, 189, 32, 0.15);
+    border: 1px solid rgba(96, 121, 145, 0.15);
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
 }
 
@@ -564,14 +564,14 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     padding: 1.75rem 2rem;
-    border-bottom: 1px solid rgba(247, 189, 32, 0.1);
+    border-bottom: 1px solid rgba(96, 121, 145, 0.1);
     gap: 2rem;
     align-items: center;
     transition: background 0.2s ease;
 }
 
 .fees-row-modern:hover {
-    background: rgba(247, 189, 32, 0.04);
+    background: rgba(96, 121, 145, 0.04);
 }
 
 .fees-row-modern:last-child {
@@ -579,14 +579,14 @@
 }
 
 .fees-header-modern {
-    background: linear-gradient(135deg, #f7bd20 0%, #e8a91a 100%);
+    background: linear-gradient(135deg, #0f1419 0%, #36424f 100%);
     color: white;
     font-weight: 700;
     font-size: 1.1rem;
 }
 
 .fees-header-modern:hover {
-    background: linear-gradient(135deg, #f7bd20 0%, #e8a91a 100%);
+    background: linear-gradient(135deg, #0f1419 0%, #36424f 100%);
 }
 
 .fees-label-modern {
@@ -644,7 +644,7 @@
 .fees-note-modern {
     margin-top: 1.5rem;
     padding: 1.25rem;
-    background: rgba(247, 189, 32, 0.08);
+    background: rgba(96, 121, 145, 0.08);
     border-left: 4px solid var(--primary-dark);
     border-radius: 8px;
     font-size: 0.85rem;
@@ -659,13 +659,13 @@
 
 .personal-cta-card {
     background: linear-gradient(135deg,
-            rgba(247, 189, 32, 0.1) 0%,
-            rgba(247, 189, 32, 0.05) 100%);
+            rgba(96, 121, 145, 0.1) 0%,
+            rgba(96, 121, 145, 0.05) 100%);
     border-radius: 40px;
     padding: 4rem 3rem;
     text-align: center;
-    border: 2px solid rgba(247, 189, 32, 0.2);
-    box-shadow: 0 20px 60px rgba(247, 189, 32, 0.15);
+    border: 2px solid rgba(96, 121, 145, 0.2);
+    box-shadow: 0 20px 60px rgba(96, 121, 145, 0.15);
 }
 
 .personal-cta-card h2 {

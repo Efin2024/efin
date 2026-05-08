@@ -1,108 +1,82 @@
 /* Fonts imported in public/index.html */
 
 :root {
-  /* Unity Bank Color Scheme - Changed to Black */
-  --primary: #000000;
-  --primary-dark: #000000;
+  --primary: #0a0a0a;
+  --primary-dark: #050505;
   --primary-darker: #000000;
-  --primary-light: #000000;
-  --primary-lighter: #000000;
+  --primary-light: #20262d;
+  --primary-lighter: #36424f;
 
-  /* Secondary Colors */
-  --secondary: #111111;
-  --secondary-dark: #000000;
+  --secondary: #0f1419;
+  --secondary-dark: #050709;
 
-  /* Accent Colors */
-  --accent-gold: #000000;
+  --accent-gold: #0a0a0a;
   --accent-gold-dark: #000000;
 
-  /* Text Colors */
-  --text-strong: #0b0b0b;
-  --text-muted: #4a4a4a;
+  --text-strong: #0f1720;
+  --text-muted: #5b6773;
 
-  /* Surface Colors */
-  --surface: #ffffff;
-  --surface-alt: #fff8e6;
-  --surface-soft: #fffdf5;
-  --surface-dark: #111111;
+  --surface: #f7fbfe;
+  --surface-alt: #edf4f9;
+  --surface-soft: #e7f0f6;
+  --surface-dark: #0f1419;
 
-  /* Borders */
-  --border-soft: rgba(17, 17, 17, 0.08);
-  --border-strong: rgba(17, 17, 17, 0.16);
+  --border-soft: rgba(73, 98, 124, 0.14);
+  --border-strong: rgba(40, 57, 74, 0.2);
 
-  /* Shadows */
-  --shadow-soft: 0 25px 65px rgba(17, 17, 17, 0.12);
-  --shadow-gold: 0 20px 50px rgba(247, 189, 32, 0.25);
+  --shadow-soft: 0 24px 60px rgba(30, 44, 58, 0.12);
+  --shadow-gold: 0 20px 50px rgba(112, 145, 173, 0.22);
 
-  /* Premium Multi-Tone Gradients */
-
-  /* Main Background Gradient - Visible Yellow (Light to Dark) */
   --gradient-background: linear-gradient(135deg,
-      #fef3c7 0%,
-      #fde68a 35%,
-      #fbbf24 85%,
-      #d97706 100%);
+      #eef5fb 0%,
+      #e4eef6 36%,
+      #d4e2ec 72%,
+      #c4d4e0 100%);
 
-  /* Hero Section - Warm yellow glow */
   --gradient-hero: linear-gradient(135deg,
-      rgba(254, 243, 199, 0.45) 0%,
-      rgba(253, 230, 138, 0.45) 50%,
-      rgba(251, 191, 36, 0.45) 100%);
+      rgba(244, 249, 253, 0.92) 0%,
+      rgba(231, 240, 247, 0.9) 52%,
+      rgba(214, 227, 237, 0.88) 100%);
 
-  /* Primary Gradient - Warm orange to peachy coral */
   --gradient-primary: linear-gradient(135deg,
-      #f7bd20 0%,
-      #f5a623 25%,
-      #f39c21 50%,
-      #f18e1f 75%,
-      #e8a91a 100%);
+      #0a0a0a 0%,
+      #10161c 55%,
+      #161f27 100%);
 
-  /* Accent Gradient - Orange with subtle rose gold */
   --gradient-accent: linear-gradient(120deg,
-      #f7bd20 0%,
-      #f4ad26 20%,
-      #f19d2b 40%,
-      #ed8f30 60%,
-      #e88132 80%,
-      #d89515 100%);
+      #f7fbfe 0%,
+      #e8f1f7 45%,
+      #d6e4ee 100%);
 
-  /* Sophisticated Dark - Deep blacks with subtle blue undertone */
   --gradient-dark: linear-gradient(135deg,
-      #1a1a1a 0%,
-      #111111 50%,
-      #0a0a0a 100%);
+      #0a0a0a 0%,
+      #101418 50%,
+      #171d24 100%);
 
-  /* New Premium Gradients */
-
-  /* Radial glow for cards and highlights */
   --gradient-glow: radial-gradient(circle at top right,
-      rgba(247, 189, 32, 0.15) 0%,
-      rgba(247, 189, 32, 0.05) 40%,
-      rgba(247, 189, 32, 0) 70%);
+      rgba(196, 214, 228, 0.45) 0%,
+      rgba(214, 228, 238, 0.18) 42%,
+      rgba(214, 228, 238, 0) 72%);
 
-  /* Mesh gradient for modern backgrounds */
   --gradient-mesh: linear-gradient(135deg,
-      rgba(247, 189, 32, 0.1) 0%,
-      rgba(255, 255, 255, 0) 30%,
-      rgba(238, 174, 50, 0.08) 60%,
+      rgba(213, 227, 237, 0.2) 0%,
+      rgba(255, 255, 255, 0) 35%,
+      rgba(190, 208, 223, 0.16) 68%,
       rgba(255, 255, 255, 0) 100%);
 
-  /* Button hover - more vibrant */
   --gradient-button-hover: linear-gradient(135deg,
-      #faca3d 0%,
-      #f7bd20 50%,
-      #e8a91a 100%);
+      #171d24 0%,
+      #0f1419 55%,
+      #050709 100%);
 
-  /* Subtle card background */
   --gradient-card: linear-gradient(135deg,
-      #FFF9E6 0%,
-      #FFE082 50%,
-      #f7bd20 100%);
+      #f7fbfe 0%,
+      #edf4f9 50%,
+      #dce9f2 100%);
 
-  /* Premium overlay for sections */
   --gradient-overlay: linear-gradient(180deg,
       rgba(255, 255, 255, 0) 0%,
-      rgba(247, 189, 32, 0.03) 50%,
+      rgba(203, 218, 230, 0.12) 50%,
       rgba(255, 255, 255, 0) 100%);
 
   /* Typography - Poppins as primary font (matching Unity Bank) */
@@ -338,7 +312,7 @@ a {
 
 .primary-btn {
   background: var(--gradient-primary);
-  color: var(--secondary);
+  color: #f6fbff;
   box-shadow: var(--shadow-gold);
   text-decoration: none;
 }
@@ -346,19 +320,19 @@ a {
 .primary-btn:hover {
   transform: translateY(-2px);
   background: var(--gradient-button-hover);
-  box-shadow: 0 25px 60px rgba(246, 183, 9, 0.928);
+  box-shadow: 0 25px 60px rgba(31, 45, 58, 0.3);
 }
 
 .ghost-btn {
-  background: transparent;
+  background: rgba(247, 251, 254, 0.45);
   color: var(--secondary);
-  border: 2px solid rgba(247, 189, 32, 0.4);
+  border: 2px solid rgba(88, 111, 133, 0.24);
   text-decoration: none;
 }
 
 .ghost-btn:hover {
   transform: translateY(-2px);
-  background: rgba(247, 189, 32, 0.08);
+  background: rgba(223, 234, 242, 0.65);
   border-color: var(--primary);
 }
 
@@ -409,7 +383,7 @@ a {
 }
 
 .hero-form {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(247, 251, 254, 0.68);
   backdrop-filter: blur(10px);
   padding: 1.5rem;
   border-radius: 24px;
@@ -532,7 +506,7 @@ a {
 }
 
 .hero-insight {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(243, 249, 253, 0.55);
   border-radius: 32px;
   padding: 1.75rem;
   box-shadow: 0 35px 65px rgba(15, 23, 42, 0.12);
@@ -541,14 +515,14 @@ a {
 }
 
 .hero-insight.primary {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(237, 245, 250, 0.72);
 }
 
 .hero-pill {
   display: inline-flex;
   padding: 0.35rem 0.9rem;
   border-radius: 999px;
-  background: rgba(247, 189, 32, 0.18);
+  background: rgba(216, 228, 237, 0.95);
   color: var(--secondary);
   font-weight: 600;
   font-size: 0.9rem;
@@ -677,7 +651,7 @@ a {
 }
 
 .product-card:hover {
-  border-color: rgba(247, 189, 32, 0.4);
+  border-color: rgba(96, 121, 145, 0.4);
   transform: translateY(-4px);
   box-shadow: var(--shadow-soft);
 }
@@ -711,7 +685,7 @@ a {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: rgba(247, 189, 32, 0.18);
+  background: rgba(96, 121, 145, 0.18);
   color: var(--secondary);
   font-weight: 700;
   display: inline-flex;
@@ -751,7 +725,7 @@ a {
 }
 
 .tool-card:hover {
-  border-color: rgba(247, 189, 32, 0.45);
+  border-color: rgba(96, 121, 145, 0.45);
   transform: translateY(-3px);
 }
 
@@ -834,7 +808,7 @@ a {
   border-radius: 28px;
   border: 1px solid var(--border-soft);
   padding: 2rem;
-  background: linear-gradient(180deg, #fffef7 0%, #fff8df 100%);
+  background: linear-gradient(180deg, #f7fbfe 0%, #eaf2f8 100%);
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -983,7 +957,7 @@ a {
 }
 
 .offering-card:hover {
-  border-color: rgba(247, 189, 32, 0.4);
+  border-color: rgba(96, 121, 145, 0.4);
   transform: translateY(-2px);
 }
 
@@ -1029,7 +1003,7 @@ a {
 }
 
 .why-metrics div {
-  background: linear-gradient(135deg, #fffdf5, #fff6d6);
+  background: linear-gradient(135deg, #f7fbfe, #eaf2f8);
   border: 1px solid var(--border-soft);
   border-radius: 18px;
   padding: 1rem;
@@ -1049,7 +1023,7 @@ a {
   align-items: flex-start;
   padding: 1.5rem;
   border-radius: 24px;
-  background: linear-gradient(135deg, #ffffff, #fff7da);
+  background: linear-gradient(135deg, #ffffff, #edf4f9);
   border: 1px solid var(--border-soft);
   box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
 }
@@ -1131,8 +1105,8 @@ a {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: rgba(247, 189, 32, 0.3);
-  border: 2px solid rgba(247, 189, 32, 0.5);
+  background: rgba(96, 121, 145, 0.3);
+  border: 2px solid rgba(96, 121, 145, 0.5);
   cursor: pointer;
   transition: all 0.3s ease;
   padding: 0;
@@ -1143,11 +1117,11 @@ a {
   border-color: var(--primary-dark);
   width: 14px;
   height: 14px;
-  box-shadow: 0 4px 12px rgba(247, 189, 32, 0.4);
+  box-shadow: 0 4px 12px rgba(96, 121, 145, 0.4);
 }
 
 .testimonials-carousel-dots .dot:hover {
-  background: rgba(247, 189, 32, 0.6);
+  background: rgba(96, 121, 145, 0.6);
   transform: scale(1.15);
 }
 
@@ -1294,7 +1268,7 @@ blockquote cite {
   border-radius: 24px;
   padding: 2rem;
   box-shadow: var(--shadow-soft);
-  border: 1px solid rgba(247, 189, 32, 0.2);
+  border: 1px solid rgba(96, 121, 145, 0.2);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -1307,7 +1281,7 @@ blockquote cite {
   padding: 1rem;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 16px;
-  border: 1px solid rgba(247, 189, 32, 0.15);
+  border: 1px solid rgba(96, 121, 145, 0.15);
 }
 
 .stat-icon {
@@ -1319,7 +1293,7 @@ blockquote cite {
   justify-content: center;
   background: var(--gradient-primary);
   border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(247, 189, 32, 0.3);
+  box-shadow: 0 8px 20px rgba(96, 121, 145, 0.3);
 }
 
 .stat-item-hero strong {
@@ -1395,7 +1369,7 @@ blockquote cite {
 .why-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-soft);
-  border-color: rgba(247, 189, 32, 0.3);
+  border-color: rgba(96, 121, 145, 0.3);
 }
 
 .why-icon {
@@ -1470,7 +1444,7 @@ blockquote cite {
   left: -20%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(247, 189, 32, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(96, 121, 145, 0.15) 0%, transparent 70%);
   border-radius: 50%;
 }
 
@@ -1513,15 +1487,13 @@ blockquote cite {
 }
 
 .cta-section .primary-btn,
-.cta-section .ghost-btn {
-  color: #000000 !important;
+.primary-btn.large {
+  color: #f6fbff !important;
 }
 
-.primary-btn.large,
 .ghost-btn.large {
   padding: 1rem 2.5rem;
   font-size: 1.1rem;
-  color: #000000 !important;
 }
 
 .ghost-btn.large {
@@ -1574,7 +1546,7 @@ blockquote cite {
 
 .blogs-hero {
   background:
-    radial-gradient(circle at 0% 0% 0%, rgba(247, 189, 32, 0.18), transparent 50%),
+    radial-gradient(circle at 0% 0% 0%, rgba(96, 121, 145, 0.18), transparent 50%),
     radial-gradient(circle at 90% 10% 0%, rgba(232, 169, 26, 0.18), transparent 50%),
     linear-gradient(120deg, #ffffff, #fff8e0);
   color: var(--secondary);
@@ -1719,7 +1691,7 @@ blockquote cite {
 }
 
 .calculator-hero {
-  background: linear-gradient(135deg, #f7f3ff, #e9ffff, #fff2e1);
+  background: linear-gradient(135deg, #eef5fb, #e9ffff, #edf4f9);
   border-radius: 36px;
   padding: 2.5rem;
   display: grid;
@@ -1729,9 +1701,9 @@ blockquote cite {
 
 .calculator-hero.enhanced {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  background: radial-gradient(circle at 0% 0% 0%, rgba(247, 189, 32, 0.18), transparent 50%),
-    radial-gradient(circle at 80% 20% 0%, rgba(232, 169, 26, 0.12), transparent 45%),
-    linear-gradient(120deg, #ffffff, #fff7da);
+  background: radial-gradient(circle at 0% 0% 0%, rgba(96, 121, 145, 0.18), transparent 50%),
+    radial-gradient(circle at 80% 20% 0%, rgba(196, 214, 228, 0.2), transparent 45%),
+    linear-gradient(120deg, #ffffff, #edf4f9);
   color: var(--secondary);
   box-shadow: var(--shadow-soft);
   position: relative;
@@ -1842,7 +1814,7 @@ blockquote cite {
 }
 
 .contact-stack {
-  background: linear-gradient(135deg, #ffffff, #fff8df);
+  background: linear-gradient(135deg, #ffffff, #edf4f9);
   border-radius: 32px;
   border: 1px solid var(--border-soft);
   padding: 1.5rem;
@@ -1887,9 +1859,9 @@ blockquote cite {
 
 .contact-hero {
   background:
-    radial-gradient(circle at 0% 0% 0%, rgba(247, 189, 32, 0.2), transparent 45%),
+    radial-gradient(circle at 0% 0% 0%, rgba(96, 121, 145, 0.2), transparent 45%),
     radial-gradient(circle at 80% 20% 0%, rgba(17, 17, 17, 0.12), transparent 55%),
-    linear-gradient(120deg, #ffffff, #fff7da);
+    linear-gradient(120deg, #ffffff, #edf4f9);
   color: var(--secondary);
   border-radius: 36px;
   padding: 2.5rem;
@@ -2006,7 +1978,7 @@ blockquote cite {
   color: var(--secondary);
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #ffffff, #fff7da);
+  background: linear-gradient(135deg, #ffffff, #edf4f9);
   border: 1px solid var(--border-soft);
 }
 
@@ -2019,15 +1991,15 @@ blockquote cite {
 }
 
 .support-info-card.blue {
-  background: linear-gradient(135deg, #ffffff, #fff7da);
+  background: linear-gradient(135deg, #ffffff, #edf4f9);
 }
 
 .support-info-card.teal {
-  background: linear-gradient(135deg, #ffffff, #fff7da);
+  background: linear-gradient(135deg, #ffffff, #edf4f9);
 }
 
 .support-info-card.amber {
-  background: linear-gradient(135deg, #ffffff, #fff7da);
+  background: linear-gradient(135deg, #ffffff, #edf4f9);
 }
 
 .support-info-card ul {
@@ -2077,9 +2049,9 @@ blockquote cite {
 
 .calculator-hero.eligibility-hero {
   background:
-    radial-gradient(circle at 0% 0% 0%, rgba(247, 189, 32, 0.2), transparent 50%),
-    radial-gradient(circle at 80% 20% 0%, rgba(232, 169, 26, 0.16), transparent 55%),
-    linear-gradient(120deg, #ffffff, #fff8e0);
+    radial-gradient(circle at 0% 0% 0%, rgba(96, 121, 145, 0.2), transparent 50%),
+    radial-gradient(circle at 80% 20% 0%, rgba(196, 214, 228, 0.22), transparent 55%),
+    linear-gradient(120deg, #ffffff, #edf4f9);
   color: var(--secondary);
   position: relative;
   overflow: hidden;
@@ -2087,9 +2059,9 @@ blockquote cite {
 
 .calculator-hero.credit-hero {
   background:
-    radial-gradient(circle at 0% 0% 0%, rgba(247, 189, 32, 0.2), transparent 55%),
+    radial-gradient(circle at 0% 0% 0%, rgba(96, 121, 145, 0.2), transparent 55%),
     radial-gradient(circle at 80% 20% 0%, rgba(17, 17, 17, 0.12), transparent 55%),
-    linear-gradient(120deg, #ffffff, #fff7da);
+    linear-gradient(120deg, #ffffff, #edf4f9);
   color: var(--secondary);
   position: relative;
   overflow: hidden;
@@ -2138,7 +2110,7 @@ blockquote cite {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(247, 189, 32, 0.26), transparent 70%);
+  background: radial-gradient(circle, rgba(96, 121, 145, 0.26), transparent 70%);
   top: 12%;
   right: 18%;
 }
@@ -2155,9 +2127,9 @@ blockquote cite {
 
 .calculator-hero.two-wheeler-hero {
   background:
-    radial-gradient(circle at 0% 0%, rgba(247, 189, 32, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at 0% 0%, rgba(96, 121, 145, 0.22) 0%, transparent 45%),
     radial-gradient(circle at 80% 20%, rgba(17, 17, 17, 0.12) 0%, transparent 50%),
-    linear-gradient(120deg, #ffffff, #fff8df);
+    linear-gradient(120deg, #ffffff, #edf4f9);
   color: var(--secondary);
   overflow: hidden;
   position: relative;
@@ -2215,7 +2187,7 @@ blockquote cite {
 .bubble-a {
   width: 160px;
   height: 160px;
-  background: radial-gradient(circle, rgba(247, 189, 32, 0.26), transparent 70%);
+  background: radial-gradient(circle, rgba(96, 121, 145, 0.26), transparent 70%);
   top: 10%;
   right: 12%;
 }
@@ -2419,7 +2391,7 @@ blockquote cite {
 .carousel-doodle .doodle-line {
   position: absolute;
   display: inline-block;
-  background: linear-gradient(135deg, rgba(247, 189, 32, 0.28), rgba(17, 17, 17, 0.12));
+  background: linear-gradient(135deg, rgba(96, 121, 145, 0.28), rgba(17, 17, 17, 0.12));
   filter: blur(0);
   opacity: 0.8;
 }
@@ -2441,7 +2413,7 @@ blockquote cite {
 }
 
 .calc-side-card.tinted {
-  background: linear-gradient(180deg, #fffdf5, #fff);
+  background: linear-gradient(180deg, #f7fbfe, #ffffff);
 }
 
 .calc-side-card.compact ul {
@@ -2940,7 +2912,7 @@ blockquote cite {
 }
 
 .contact-cta .ghost-btn {
-  border-color: rgba(247, 189, 32, 0.5);
+  border-color: rgba(96, 121, 145, 0.5);
   color: var(--secondary);
 }
 
@@ -3025,7 +2997,7 @@ blockquote cite {
 
 .contact-info-card .ghost-btn,
 .support-cta-band .ghost-btn {
-  border-color: rgba(247, 189, 32, 0.5);
+  border-color: rgba(96, 121, 145, 0.5);
   color: var(--secondary);
 }
 
@@ -3126,7 +3098,7 @@ blockquote cite {
   display: inline-flex;
   padding: 0.3rem 0.75rem;
   border-radius: 12px;
-  background: rgba(247, 189, 32, 0.16);
+  background: rgba(96, 121, 145, 0.16);
   border: 1px solid rgba(17, 17, 17, 0.08);
   font-weight: 700;
   font-size: 0.85rem;
@@ -3187,7 +3159,7 @@ blockquote cite {
   display: grid;
   place-items: center;
   font-weight: 800;
-  box-shadow: 0 12px 28px rgba(247, 189, 32, 0.35);
+  box-shadow: 0 12px 28px rgba(96, 121, 145, 0.35);
 }
 
 @media (min-width: 900px) {
@@ -3308,7 +3280,7 @@ blockquote cite {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  border: 6px solid rgba(247, 189, 32, 0.45);
+  border: 6px solid rgba(96, 121, 145, 0.45);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3321,7 +3293,7 @@ blockquote cite {
 }
 
 .success-banner {
-  background: rgba(247, 189, 32, 0.2);
+  background: rgba(96, 121, 145, 0.2);
   border-radius: 999px;
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
@@ -3482,7 +3454,7 @@ blockquote cite {
 
 .info-hero.theme-cash .info-hero-card {
   background: linear-gradient(135deg, #fffdf5, #fff7da);
-  border: 1px solid rgba(247, 189, 32, 0.35);
+  border: 1px solid rgba(96, 121, 145, 0.35);
 }
 
 .info-hero.theme-cash .info-visual-card {
@@ -3492,7 +3464,7 @@ blockquote cite {
 
 .info-hero.theme-cash .info-speed-row div {
   background: rgba(255, 255, 255, 0.9);
-  border-color: rgba(247, 189, 32, 0.35);
+  border-color: rgba(96, 121, 145, 0.35);
 }
 
 .info-visual-stats {
@@ -3635,7 +3607,7 @@ blockquote cite {
   align-items: center;
   justify-content: center;
   font-weight: 800;
-  box-shadow: 0 10px 20px rgba(247, 189, 32, 0.35);
+  box-shadow: 0 10px 20px rgba(96, 121, 145, 0.35);
 }
 
 .info-step h3 {
@@ -3798,8 +3770,8 @@ blockquote cite {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: rgba(247, 189, 32, 0.1);
-  border: 1px solid rgba(247, 189, 32, 0.3);
+  background: rgba(96, 121, 145, 0.1);
+  border: 1px solid rgba(96, 121, 145, 0.3);
   transition: transform 0.2s ease, background 0.2s ease;
   text-decoration: none;
   font-size: 1.1rem;
@@ -3854,14 +3826,14 @@ blockquote cite {
 
 .footer-link:hover,
 .footer-link.active {
-  color: var(--primary-dark, #e8a91a);
+  color: var(--primary-dark, #36424f);
 }
 
 .footer-map {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(247, 189, 32, 0.2);
+  border: 1px solid rgba(96, 121, 145, 0.2);
   min-height: 320px;
   height: clamp(280px, 35vw, 360px);
   width: 100%;
@@ -3887,7 +3859,7 @@ blockquote cite {
 .footer-address-secondary {
   margin-top: 1.25rem !important;
   padding-top: 1.25rem;
-  border-top: 1px solid rgba(247, 189, 32, 0.2);
+  border-top: 1px solid rgba(96, 121, 145, 0.2);
 }
 
 .footer-map iframe {
@@ -3912,16 +3884,16 @@ blockquote cite {
   padding: 0.65rem 1.6rem;
   border-radius: 999px;
   background: var(--gradient-primary);
-  color: var(--secondary, #111);
+  color: #f6fbff;
   font-weight: 700;
-  box-shadow: 0 16px 36px rgba(247, 189, 32, 0.35);
+  box-shadow: 0 16px 36px rgba(31, 45, 58, 0.24);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-decoration: none;
 }
 
 .footer-cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 22px 44px rgba(247, 189, 32, 0.45);
+  box-shadow: 0 22px 44px rgba(31, 45, 58, 0.3);
 }
 
 .footer-bottom {
@@ -3952,7 +3924,7 @@ blockquote cite {
 }
 
 .footer-bottom-links a:hover {
-  color: var(--primary-dark, #e8a91a);
+  color: var(--primary-dark, #36424f);
 }
 
 /* Responsive */
@@ -4024,7 +3996,7 @@ blockquote cite {
 }
 
 .audience-pills button.selected {
-  border-color: rgba(247, 189, 32, 0.6);
+  border-color: rgba(96, 121, 145, 0.6);
   background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   color: var(--secondary);
   font-weight: 700;
@@ -4531,7 +4503,7 @@ blockquote cite {
 
 .quiz-hero {
   background:
-    radial-gradient(circle at 0% 0% 0%, rgba(247, 189, 32, 0.18), transparent 50%),
+    radial-gradient(circle at 0% 0% 0%, rgba(96, 121, 145, 0.18), transparent 50%),
     radial-gradient(circle at 90% 10% 0%, rgba(232, 169, 26, 0.16), transparent 50%),
     linear-gradient(120deg, #ffffff, #fff8e0);
   color: var(--secondary);
@@ -4637,7 +4609,7 @@ blockquote cite {
   display: grid;
   place-items: center;
   font-weight: 800;
-  box-shadow: 0 12px 28px rgba(247, 189, 32, 0.35);
+  box-shadow: 0 12px 28px rgba(96, 121, 145, 0.35);
 }
 
 .quiz-options {
@@ -5014,7 +4986,7 @@ blockquote cite {
 
 /* Hero Section */
 .personal-loan-hero {
-  background: linear-gradient(135deg, #fffef9 0%, #fff7e6 50%, #ffffff 100%);
+  background: linear-gradient(135deg, #f7fbfe 0%, #edf4f9 50%, #ffffff 100%);
   padding: 5rem 0 6rem;
   position: relative;
   overflow: hidden;
@@ -5028,7 +5000,7 @@ blockquote cite {
   right: -15%;
   width: 800px;
   height: 800px;
-  background: radial-gradient(circle, rgba(247, 189, 32, 0.12) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(96, 121, 145, 0.12) 0%, transparent 60%);
   border-radius: 50%;
   animation: float 20s ease-in-out infinite;
 }
@@ -5059,7 +5031,7 @@ blockquote cite {
 .hero-badge {
   display: inline-block;
   padding: 0.6rem 1.5rem;
-  background: linear-gradient(135deg, #f7bd20, #ffed4e);
+  background: linear-gradient(135deg, #0f1419, #d6e4ee);
   color: var(--secondary);
   font-weight: 800;
   font-size: 0.85rem;
@@ -5067,7 +5039,7 @@ blockquote cite {
   margin-bottom: 1.75rem;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  box-shadow: 0 4px 15px rgba(247, 189, 32, 0.3);
+  box-shadow: 0 4px 15px rgba(96, 121, 145, 0.3);
   animation: pulse 2s ease-in-out infinite;
 }
 
@@ -5113,7 +5085,7 @@ blockquote cite {
   gap: 0.65rem;
   padding: 0.75rem 1.5rem;
   background: #fff;
-  border: 2px solid rgba(247, 189, 32, 0.25);
+  border: 2px solid rgba(96, 121, 145, 0.25);
   border-radius: 999px;
   font-weight: 700;
   font-size: 0.95rem;
@@ -5124,7 +5096,7 @@ blockquote cite {
 
 .feature-pill:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(247, 189, 32, 0.2);
+  box-shadow: 0 6px 20px rgba(96, 121, 145, 0.2);
   border-color: var(--primary);
 }
 
@@ -5143,7 +5115,7 @@ blockquote cite {
   padding: 3rem 2.5rem;
   border-radius: 28px;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
-  border: 2px solid rgba(247, 189, 32, 0.15);
+  border: 2px solid rgba(96, 121, 145, 0.15);
   position: relative;
   overflow: hidden;
 }
@@ -5161,7 +5133,7 @@ blockquote cite {
 .highlight-amount {
   font-size: 3.5rem;
   font-weight: 900;
-  background: linear-gradient(135deg, #f7bd20, #ffa500);
+  background: linear-gradient(135deg, #0f1419, #b8cddd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -5181,13 +5153,13 @@ blockquote cite {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   padding-top: 2rem;
-  border-top: 2px solid rgba(247, 189, 32, 0.2);
+  border-top: 2px solid rgba(96, 121, 145, 0.2);
 }
 
 .stat-item {
   text-align: center;
   padding: 1rem;
-  background: rgba(247, 189, 32, 0.05);
+  background: rgba(96, 121, 145, 0.05);
   border-radius: 12px;
 }
 
@@ -5233,7 +5205,7 @@ blockquote cite {
 
 /* Eligibility Section */
 .eligibility-section {
-  background: linear-gradient(to bottom, #fff 0%, #fffef9 100%);
+  background: linear-gradient(to bottom, #fff 0%, #f7fbfe 100%);
 }
 
 .eligibility-grid {
@@ -5248,7 +5220,7 @@ blockquote cite {
   padding: 2rem 1.75rem;
   background: #fff;
   border-radius: 20px;
-  border: 2px solid rgba(247, 189, 32, 0.15);
+  border: 2px solid rgba(96, 121, 145, 0.15);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -5269,7 +5241,7 @@ blockquote cite {
 
 .eligibility-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(247, 189, 32, 0.15);
+  box-shadow: 0 16px 40px rgba(96, 121, 145, 0.15);
   border-color: var(--primary);
 }
 
@@ -5295,7 +5267,7 @@ blockquote cite {
 
 /* Documents Section */
 .documents-section {
-  background: linear-gradient(135deg, #fffef9 0%, #fff7e6 100%);
+  background: linear-gradient(135deg, #f7fbfe 0%, #edf4f9 100%);
 }
 
 .documents-grid {
@@ -5318,7 +5290,7 @@ blockquote cite {
 .document-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
-  border-color: rgba(247, 189, 32, 0.3);
+  border-color: rgba(96, 121, 145, 0.3);
 }
 
 .document-icon {
@@ -5372,7 +5344,7 @@ blockquote cite {
   overflow-x: auto;
   border-radius: 20px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
-  border: 2px solid rgba(247, 189, 32, 0.15);
+  border: 2px solid rgba(96, 121, 145, 0.15);
 }
 
 .fees-table {
@@ -5382,7 +5354,7 @@ blockquote cite {
 }
 
 .fees-table thead {
-  background: linear-gradient(135deg, #f7bd20, #ffed4e);
+  background: linear-gradient(135deg, #0f1419, #d6e4ee);
 }
 
 .fees-table th {
@@ -5421,12 +5393,12 @@ blockquote cite {
 }
 
 .fees-table tbody tr:hover {
-  background: rgba(247, 189, 32, 0.04);
+  background: rgba(96, 121, 145, 0.04);
 }
 
 /* Apply Steps Section */
 .apply-steps-section {
-  background: linear-gradient(to bottom, #fffef9 0%, #fff 100%);
+  background: linear-gradient(to bottom, #f7fbfe 0%, #fff 100%);
 }
 
 .steps-timeline {
@@ -5441,7 +5413,7 @@ blockquote cite {
   padding: 2.5rem 2rem;
   background: #fff;
   border-radius: 20px;
-  border: 2px solid rgba(247, 189, 32, 0.15);
+  border: 2px solid rgba(96, 121, 145, 0.15);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
   position: relative;
   transition: all 0.3s ease;
@@ -5449,13 +5421,13 @@ blockquote cite {
 
 .step-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(247, 189, 32, 0.2);
+  box-shadow: 0 16px 40px rgba(96, 121, 145, 0.2);
 }
 
 .step-number {
   width: 56px;
   height: 56px;
-  background: linear-gradient(135deg, #f7bd20, #ffed4e);
+  background: linear-gradient(135deg, #0f1419, #d6e4ee);
   color: var(--secondary);
   border-radius: 50%;
   display: flex;
@@ -5464,7 +5436,7 @@ blockquote cite {
   font-weight: 900;
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 6px 20px rgba(247, 189, 32, 0.3);
+  box-shadow: 0 6px 20px rgba(96, 121, 145, 0.3);
 }
 
 .step-card h3 {
@@ -5483,7 +5455,7 @@ blockquote cite {
 
 /* CTA Section */
 .personal-loan-cta {
-  background: linear-gradient(135deg, #fffef9 0%, #fff7e6 50%, #ffffff 100%);
+  background: linear-gradient(135deg, #f7fbfe 0%, #edf4f9 50%, #ffffff 100%);
   text-align: center;
   padding: 5rem 2rem;
   position: relative;
@@ -5498,7 +5470,7 @@ blockquote cite {
   transform: translateX(-50%);
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(247, 189, 32, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(96, 121, 145, 0.1) 0%, transparent 70%);
   border-radius: 50%;
 }
 
@@ -5513,12 +5485,12 @@ blockquote cite {
   font-size: clamp(2rem, 4vw, 3rem);
   margin: 0 0 1rem;
   font-weight: 800;
-  color: #f7bd20;
+  color: #0f1419;
 }
 
 .cta-content p {
   font-size: 1.2rem;
-  color: #f7bd20;
+  color: #0f1419;
   margin: 0 0 2.5rem;
   line-height: 1.7;
 }
@@ -5537,13 +5509,13 @@ blockquote cite {
   font-size: 1.1rem;
   font-weight: 700;
   border-radius: 999px;
-  box-shadow: 0 6px 24px rgba(247, 189, 32, 0.25);
+  box-shadow: 0 6px 24px rgba(96, 121, 145, 0.25);
   transition: all 0.3s ease;
 }
 
 .primary-btn.large:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 32px rgba(247, 189, 32, 0.35);
+  box-shadow: 0 12px 32px rgba(96, 121, 145, 0.35);
 }
 
 .ghost-btn.large:hover {
@@ -5637,7 +5609,7 @@ blockquote cite {
   right: -20%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(247, 189, 32, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(96, 121, 145, 0.15) 0%, transparent 70%);
   border-radius: 50%;
 }
 
@@ -5687,8 +5659,8 @@ blockquote cite {
   align-items: center;
   gap: 0.5rem;
   padding: 0.65rem 1.25rem;
-  background: rgba(247, 189, 32, 0.1);
-  border: 1px solid rgba(247, 189, 32, 0.3);
+  background: rgba(96, 121, 145, 0.1);
+  border: 1px solid rgba(96, 121, 145, 0.3);
   border-radius: 999px;
   font-weight: 600;
   font-size: 0.9rem;
@@ -5709,7 +5681,7 @@ blockquote cite {
   padding: 2.5rem;
   border-radius: 24px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(247, 189, 32, 0.2);
+  border: 1px solid rgba(96, 121, 145, 0.2);
 }
 
 .highlight-amount {
@@ -5764,7 +5736,7 @@ blockquote cite {
   padding: 1.75rem;
   background: linear-gradient(135deg, #ffffff, #fff7da);
   border-radius: 16px;
-  border: 1px solid rgba(247, 189, 32, 0.2);
+  border: 1px solid rgba(96, 121, 145, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -5886,7 +5858,7 @@ blockquote cite {
 }
 
 .fees-table tbody tr:hover {
-  background: rgba(247, 189, 32, 0.05);
+  background: rgba(96, 121, 145, 0.05);
 }
 
 /* Apply Steps Section */
@@ -5904,7 +5876,7 @@ blockquote cite {
   padding: 2rem;
   background: #fff;
   border-radius: 16px;
-  border: 1px solid rgba(247, 189, 32, 0.2);
+  border: 1px solid rgba(96, 121, 145, 0.2);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   position: relative;
 }
@@ -6015,7 +5987,7 @@ blockquote cite {
 
 .cta-content p {
   font-size: 1.1rem;
-  color: #f7bd20;
+  color: #0f1419;
   margin: 0 0 2rem;
 }
 
@@ -6024,7 +5996,7 @@ blockquote cite {
   font-size: 4rem;
   text-align: center;
   margin-bottom: 1.5rem;
-  filter: drop-shadow(0 4px 8px rgba(247, 189, 32, 0.3));
+  filter: drop-shadow(0 4px 8px rgba(96, 121, 145, 0.3));
   animation: float-icon 3s ease-in-out infinite;
 }
 
@@ -6050,7 +6022,7 @@ blockquote cite {
   gap: 1rem;
   margin-top: 2rem;
   padding-top: 2rem;
-  border-top: 2px solid rgba(247, 189, 32, 0.2);
+  border-top: 2px solid rgba(96, 121, 145, 0.2);
 }
 
 .badge-item {
@@ -6069,7 +6041,7 @@ blockquote cite {
 .section-icon {
   font-size: 3.5rem;
   margin-bottom: 1rem;
-  filter: drop-shadow(0 4px 8px rgba(247, 189, 32, 0.2));
+  filter: drop-shadow(0 4px 8px rgba(96, 121, 145, 0.2));
 }
 
 .card-number {
@@ -6078,7 +6050,7 @@ blockquote cite {
   right: 20px;
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, #f7bd20, #ffed4e);
+  background: linear-gradient(135deg, #0f1419, #d6e4ee);
   color: var(--secondary);
   border-radius: 50%;
   display: flex;
@@ -6086,7 +6058,7 @@ blockquote cite {
   justify-content: center;
   font-weight: 900;
   font-size: 1.1rem;
-  box-shadow: 0 4px 12px rgba(247, 189, 32, 0.4);
+  box-shadow: 0 4px 12px rgba(96, 121, 145, 0.4);
 }
 
 /* Improve fees table visual */
@@ -6126,7 +6098,7 @@ blockquote cite {
   max-width: 400px;
   height: auto;
   border-radius: 20px;
-  box-shadow: 0 12px 40px rgba(247, 189, 32, 0.2);
+  box-shadow: 0 12px 40px rgba(96, 121, 145, 0.2);
   animation: float-illustration 4s ease-in-out infinite;
 }
 
@@ -6151,7 +6123,7 @@ blockquote cite {
   width: 100%;
   max-width: 280px;
   height: auto;
-  filter: drop-shadow(0 8px 24px rgba(247, 189, 32, 0.15));
+  filter: drop-shadow(0 8px 24px rgba(96, 121, 145, 0.15));
   animation: subtle-float 6s ease-in-out infinite;
 }
 
@@ -6194,9 +6166,9 @@ blockquote cite {
   padding: 4rem 3rem;
   border-radius: 40px;
   background: linear-gradient(135deg,
-      rgba(255, 251, 234, 0.95) 0%,
-      rgba(255, 248, 225, 0.85) 50%,
-      rgba(255, 243, 214, 0.75) 100%);
+      rgba(244, 249, 253, 0.95) 0%,
+      rgba(233, 241, 247, 0.85) 50%,
+      rgba(220, 232, 241, 0.75) 100%);
   box-shadow: 0 26px 80px rgba(15, 23, 42, 0.12);
   position: relative;
   overflow: hidden;
@@ -6213,7 +6185,7 @@ blockquote cite {
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1.25rem;
-  background: rgba(247, 189, 32, 0.2);
+  background: rgba(96, 121, 145, 0.2);
   border-radius: 999px;
   font-weight: 600;
   font-size: 0.9rem;
@@ -6261,7 +6233,7 @@ blockquote cite {
 }
 
 .stat-card {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(244, 249, 253, 0.84);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 1.5rem;
@@ -6271,7 +6243,7 @@ blockquote cite {
   justify-content: center;
   gap: 0.5rem;
   text-align: center;
-  border: 1px solid rgba(247, 189, 32, 0.2);
+  border: 1px solid rgba(96, 121, 145, 0.14);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -6306,7 +6278,7 @@ blockquote cite {
 }
 
 .value-card {
-  background: white;
+  background: rgba(247, 251, 254, 0.92);
   border-radius: 24px;
   padding: 2rem;
   border: 1px solid var(--border-soft);
@@ -6331,7 +6303,7 @@ blockquote cite {
 .value-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-soft);
-  border-color: rgba(247, 189, 32, 0.4);
+  border-color: rgba(84, 108, 131, 0.26);
 }
 
 .value-card:hover::before {
@@ -6387,7 +6359,7 @@ blockquote cite {
   height: 20px;
   border-radius: 50%;
   background: var(--gradient-primary);
-  border: 4px solid rgba(247, 189, 32, 0.2);
+  border: 4px solid rgba(179, 198, 214, 0.4);
   z-index: 2;
   flex-shrink: 0;
 }
@@ -6395,13 +6367,13 @@ blockquote cite {
 .timeline-line {
   width: 2px;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(247, 189, 32, 0.3), rgba(247, 189, 32, 0.1));
+  background: linear-gradient(to bottom, rgba(153, 177, 197, 0.45), rgba(153, 177, 197, 0.12));
   margin-top: 0.5rem;
   flex-grow: 1;
 }
 
 .timeline-content {
-  background: white;
+  background: rgba(247, 251, 254, 0.94);
   border-radius: 20px;
   padding: 1.75rem 2rem;
   border: 1px solid var(--border-soft);
@@ -6417,7 +6389,7 @@ blockquote cite {
   display: inline-block;
   padding: 0.35rem 1rem;
   background: var(--gradient-primary);
-  color: var(--secondary);
+  color: #f6fbff;
   border-radius: 999px;
   font-weight: 700;
   font-size: 0.85rem;
@@ -6449,7 +6421,7 @@ blockquote cite {
 
 .mission-card.modern,
 .vision-card.modern {
-  background: linear-gradient(135deg, #ffffff 0%, #fff9e6 100%);
+  background: linear-gradient(135deg, #f9fcff 0%, #eaf2f8 100%);
   border-radius: 32px;
   padding: 3rem 2.5rem;
   border: 1px solid var(--border-soft);
@@ -6467,7 +6439,7 @@ blockquote cite {
 .vision-card .card-badge {
   display: inline-block;
   padding: 0.4rem 1rem;
-  background: rgba(247, 189, 32, 0.15);
+  background: rgba(216, 228, 237, 0.95);
   border-radius: 999px;
   font-weight: 600;
   font-size: 0.85rem;
@@ -6504,7 +6476,7 @@ blockquote cite {
 }
 
 .team-card {
-  background: white;
+  background: rgba(247, 251, 254, 0.94);
   border-radius: 24px;
   padding: 2rem;
   border: 1px solid var(--border-soft);
@@ -6517,7 +6489,7 @@ blockquote cite {
 .team-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-soft);
-  border-color: rgba(247, 189, 32, 0.4);
+  border-color: rgba(84, 108, 131, 0.26);
 }
 
 .team-avatar {
@@ -6530,7 +6502,7 @@ blockquote cite {
   justify-content: center;
   font-size: 2rem;
   font-weight: 700;
-  color: var(--secondary);
+  color: #f6fbff;
   flex-shrink: 0;
 }
 
@@ -6565,7 +6537,7 @@ blockquote cite {
 }
 
 .legal-card {
-  background: white;
+  background: rgba(247, 251, 254, 0.94);
   border-radius: 24px;
   padding: 2.5rem;
   border: 1px solid var(--border-soft);
@@ -6646,7 +6618,7 @@ blockquote cite {
 }
 
 .office-card.modern {
-  background: white;
+  background: rgba(247, 251, 254, 0.94);
   border-radius: 24px;
   padding: 2.5rem;
   border: 1px solid var(--border-soft);
@@ -6657,7 +6629,7 @@ blockquote cite {
 .office-card.modern:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-soft);
-  border-color: rgba(247, 189, 32, 0.4);
+  border-color: rgba(84, 108, 131, 0.26);
 }
 
 .office-icon {
@@ -6684,7 +6656,7 @@ blockquote cite {
 }
 
 .contact-info-section {
-  background: linear-gradient(135deg, #fff 0%, #fff9e6 100%);
+  background: linear-gradient(135deg, #fff 0%, #f7fbfe 100%);
   border-radius: 24px;
   padding: 2.5rem;
   display: grid;
@@ -6740,7 +6712,7 @@ blockquote cite {
 }
 
 .about-cta .cta-content h2 {
-  color: #f7bd20;
+  color: #f6fbff;
   font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 1rem;
 }
@@ -7179,7 +7151,7 @@ blockquote cite {
     font-size: 0.8rem;
     padding: 0.35rem 0.85rem;
     margin: 0 auto 0.75rem;
-    background: rgba(247, 189, 32, 0.2);
+    background: rgba(96, 121, 145, 0.2);
     color: #1a1a1a;
     width: fit-content;
   }
@@ -7190,7 +7162,7 @@ blockquote cite {
     color: var(--primary-dark);
     font-size: 0.95rem;
     padding: 0.65rem 1.25rem;
-    border: 1.5px solid rgba(247, 189, 32, 0.3);
+    border: 1.5px solid rgba(96, 121, 145, 0.3);
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.4);
     width: 100%;
@@ -7254,7 +7226,7 @@ blockquote cite {
 .product-badge {
   display: inline-block;
   padding: 0.35rem 0.85rem;
-  background: rgba(247, 189, 32, 0.15);
+  background: rgba(96, 121, 145, 0.15);
   color: var(--secondary);
   border-radius: 8px;
   font-size: 0.85rem;
@@ -7414,11 +7386,11 @@ blockquote cite {
 @media (max-width: 768px) {
   body {
     background: linear-gradient(135deg,
-        rgba(255, 251, 234, 0.4) 0%,
-        rgba(255, 248, 225, 0.3) 25%,
-        rgba(255, 243, 214, 0.2) 50%,
-        rgba(255, 237, 196, 0.3) 75%,
-        rgba(255, 232, 161, 0.4) 100%) !important;
+        rgba(244, 249, 253, 0.4) 0%,
+        rgba(233, 241, 247, 0.3) 25%,
+        rgba(220, 232, 241, 0.2) 50%,
+        rgba(212, 226, 236, 0.3) 75%,
+        rgba(206, 221, 233, 0.4) 100%) !important;
   }
 }
 
@@ -7692,7 +7664,7 @@ blockquote cite {
 html {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  background: #D4A017;
+  background: var(--gradient-background);
   min-height: 100vh;
 }
 
