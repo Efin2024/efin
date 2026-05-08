@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 
 const STATS = [
     { value: '30+', label: 'Years of Trust' },
-    { value: '400k+', label: 'Lives Empowered' },
-    { value: '₹100 Cr+', label: 'Loans Disbursed' },
+    { value: '40 M+', label: 'Lives Empowered' },
+    { value: '₹700 Cr+', label: 'Loans Disbursed' },
     { value: '40+', label: 'Cities Served' },
 ];
 
@@ -56,8 +56,14 @@ const JOURNEY = [
 const TEAM = [
     {
         initial: 'R',
+        name: 'Ravi Shekhar',
+        role: 'CEO',
+        focus: 'Business Strategy & Leadership',
+    },
+    {
+        initial: 'R',
         name: 'Rahul Sharma',
-        role: 'CEO & Director',
+        role: 'Director',
         focus: 'Strategic Growth & Governance',
     },
     {
@@ -71,6 +77,18 @@ const TEAM = [
         name: 'Praveen Sharma',
         role: 'Promoter',
         focus: 'Growth',
+    },
+    {
+        initial: 'A',
+        name: 'Anant Sharma',
+        role: 'Software Engineer',
+        focus: 'Product Development & Engineering',
+    },
+    {
+        initial: 'A',
+        name: 'Anjali Tomar',
+        role: 'Sr Software Engineer',
+        focus: 'Platform Architecture & Engineering',
     },
 ];
 
