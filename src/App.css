@@ -6703,31 +6703,48 @@ blockquote cite {
 }
 
 /* About Page CTA */
-.about-cta {
+.page.about-page .cta-section.about-cta {
   margin-top: 5rem;
   padding: 4rem 3rem;
   background: var(--gradient-dark);
   border-radius: 40px;
   text-align: center;
+  color: #ffffff;
 }
 
-.about-cta .cta-content h2 {
-  color: #f6fbff;
+.page.about-page .cta-section.about-cta .cta-content {
+  color: #ffffff;
+}
+
+.page.about-page .cta-section.about-cta h2,
+.page.about-page .cta-section.about-cta .cta-content h2 {
+  color: #ffffff !important;
   font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 1rem;
 }
 
-.about-cta .cta-content p {
-  color: rgba(255, 255, 255, 0.8);
+.page.about-page .cta-section.about-cta p,
+.page.about-page .cta-section.about-cta .cta-content p {
+  color: rgba(255, 255, 255, 0.92) !important;
   font-size: 1.1rem;
   margin-bottom: 2rem;
 }
 
-.about-cta .cta-buttons {
+.page.about-page .cta-section.about-cta .cta-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+}
+
+.page.about-page .cta-section.about-cta .ghost-btn.large {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.page.about-page .cta-section.about-cta .ghost-btn.large:hover {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.55);
 }
 
 /* Responsive Adjustments */
