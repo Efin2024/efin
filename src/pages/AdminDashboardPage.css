@@ -2,6 +2,7 @@
 
 .admin-dashboard-page {
     animation: fadeIn 0.5s ease;
+    width: 100%;
 }
 
 @keyframes fadeIn {
@@ -21,7 +22,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1.5rem;
     margin-bottom: 2rem;
+}
+
+.admin-welcome-header>div:first-child {
+    min-width: 0;
 }
 
 .admin-welcome-header h1 {
@@ -40,6 +46,7 @@
 /* Quick Actions */
 .admin-quick-actions {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
@@ -54,10 +61,11 @@
     gap: 0.5rem;
     border: none;
     font-size: 0.95rem;
+    white-space: nowrap;
 }
 
 .quick-action-btn.primary {
-    background: linear-gradient(135deg, #667eea 0%, #764 ba2 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
 }
 
@@ -90,6 +98,7 @@
     border-radius: 16px;
     padding: 1.5rem;
     display: flex;
+    align-items: flex-start;
     gap: 1.25rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
@@ -162,6 +171,7 @@
     font-weight: 700;
     color: #1a202c;
     margin: 0 0 0.25rem 0;
+    line-height: 1.1;
 }
 
 .stat-content p {
@@ -199,6 +209,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
 }
 
 .admin-card-header h2 {
@@ -225,11 +236,13 @@
 /* Table Styles */
 .admin-table-container {
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .admin-table {
     width: 100%;
     border-collapse: collapse;
+    min-width: 720px;
 }
 
 .admin-table thead {
@@ -325,6 +338,8 @@
 
     .quick-action-btn {
         flex: 1;
+        justify-content: center;
+        min-width: 180px;
     }
 
     .admin-stats-grid {
@@ -333,11 +348,17 @@
 
     .stat-card {
         padding: 1.25rem;
+        align-items: center;
     }
 
     .stat-icon {
         width: 56px;
         height: 56px;
+    }
+
+    .stat-icon svg {
+        width: 28px;
+        height: 28px;
     }
 
     .stat-content h3 {
@@ -346,6 +367,7 @@
 
     .admin-card-header {
         padding: 1.25rem;
+        flex-wrap: wrap;
     }
 
     .admin-table th,
@@ -356,6 +378,10 @@
 }
 
 @media (max-width: 480px) {
+    .admin-dashboard-page {
+        overflow-x: hidden;
+    }
+
     .admin-welcome-header h1 {
         font-size: 1.5rem;
     }
@@ -364,13 +390,47 @@
         font-size: 0.9rem;
     }
 
+    .admin-quick-actions {
+        flex-direction: column;
+    }
+
     .quick-action-btn {
+        width: 100%;
+        min-width: 0;
         padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .stat-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .stat-icon {
+        width: 52px;
+        height: 52px;
+    }
+
+    .stat-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .stat-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .admin-card-header h2 {
+        font-size: 1.05rem;
+    }
+
+    .view-all-btn {
         font-size: 0.85rem;
     }
 
     .admin-table {
         font-size: 0.8rem;
+        min-width: 640px;
     }
 
     .admin-table th,
