@@ -170,7 +170,7 @@ function DisclaimerPage() {
                     <h2>Questions About This Disclaimer?</h2>
                     <p>If you have any questions or concerns regarding this disclaimer, please don't hesitate to contact us.</p>
                     <div className="contact-buttons-disclaimer">
-                        <a href="mailto:Care@efin.co.in" className="primary-btn large">
+                        <a href="mailto:rahulsharma@efin.co.in" className="primary-btn large">
                             Email Us →
                         </a>
                         <Link to="/support" className="ghost-btn large">

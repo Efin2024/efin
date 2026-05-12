@@ -94,14 +94,9 @@ const TEAM = [
 
 const OFFICES = [
     {
-        type: 'Registered Office',
-        address: '302, Pratap Chambers, Karol Bagh',
-        city: 'New Delhi - 110005',
-    },
-    {
-        type: 'Corporate Office',
-        address: 'C-74, Sector 63',
-        city: 'Noida - 201301',
+        type: 'Office Address',
+        address: 'Plot No. 88, 3rd Floor, BLK-B PKT-8',
+        city: 'Rohini Sector 3, Near NDPL, New Delhi - 110085',
     },
 ];
 
@@ -297,7 +292,7 @@ function AboutPage() {
                         <span className="contact-icon">✉️</span>
                         <div>
                             <span className="contact-label">Email</span>
-                            <a href="mailto:Care@efin.co.in" className="contact-value">Care@efin.co.in</a>
+                            <a href="mailto:rahulsharma@efin.co.in" className="contact-value">rahulsharma@efin.co.in</a>
                         </div>
                     </div>
                     <div className="contact-item">

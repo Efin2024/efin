@@ -77,7 +77,7 @@ function Footer() {
         <div className="footer-map">
           <iframe
             title="E-Fin Office Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14008.633845616866!2d77.3706301!3d28.6238324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceff26d89b9e9%3A0x8b10fba59a26d81a!2sC-74%2C%20Sector%2063%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+            src="https://www.google.com/maps?q=Plot%20No%2088,%203rd%20Floor,%20BLK-B%20PKT-8,%20Rohini%20Sector%203,%20Near%20NDPL,%20New%20Delhi%20110085&output=embed"
             loading="lazy"
             allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"
@@ -121,16 +121,12 @@ function Footer() {
           <div className="footer-visit">
             <h3>Visit E-Fin</h3>
             <p>
-              C-74, Sector 63<br />
-              Noida, Uttar Pradesh 201301, India
-            </p>
-            <p className="footer-address-secondary">
-              302, Pratap Chambers, Karol Bagh<br />
-              New Delhi - 110005
+              Plot No. 88, 3rd Floor, BLK-B PKT-8<br />
+              Rohini Sector 3, Near NDPL, New Delhi - 110085
             </p>
             <div className="footer-contact">
               <span>+91-9997842548</span>
-              <span>Care@efin.co.in</span>
+              <span>rahulsharma@efin.co.in</span>
             </div>
             <Link to="/support/contact" className="footer-cta">
               Apply for a loan

@@ -101,10 +101,10 @@ function CareersPage() {
             <p>Share your resume and a short note on how you plan to reshape inclusive credit.</p>
           </div>
           <div className="contact-buttons">
-            <a className="primary-btn" href="mailto:Care@efin.co.in">
-              Email Care@efin.co.in
+            <a className="primary-btn" href="mailto:rahulsharma@efin.co.in">
+              Email rahulsharma@efin.co.in
             </a>
-            <a className="ghost-btn" href="mailto:Care@efin.co.in">
+            <a className="ghost-btn" href="mailto:rahulsharma@efin.co.in">
               Talk to People Ops
             </a>
           </div>

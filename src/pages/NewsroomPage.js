@@ -23,8 +23,8 @@ const MEDIA_KIT_LINKS = [
 ];
 
 const PRESS_CONTACTS = [
-  { label: 'Media desk', value: 'Care@efin.co.in', href: 'mailto:Care@efin.co.in' },
-  { label: 'Partnerships', value: 'Care@efin.co.in', href: 'mailto:Care@efin.co.in' },
+  { label: 'Media desk', value: 'rahulsharma@efin.co.in', href: 'mailto:rahulsharma@efin.co.in' },
+  { label: 'Partnerships', value: 'rahulsharma@efin.co.in', href: 'mailto:rahulsharma@efin.co.in' },
 ];
 
 function NewsroomPage() {

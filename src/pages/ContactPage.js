@@ -79,7 +79,7 @@ function ContactPage() {
                                     <div className="method-icon-contact">✉️</div>
                                     <div className="method-details">
                                         <strong>Email</strong>
-                                        <a href="mailto:Care@efin.co.in">Care@efin.co.in</a>
+                                        <a href="mailto:rahulsharma@efin.co.in">rahulsharma@efin.co.in</a>
                                         <span className="method-note">We'll respond within 24 hours</span>
                                     </div>
                                 </div>
@@ -102,21 +102,10 @@ function ContactPage() {
                                 <div className="office-card">
                                     <div className="office-icon">📍</div>
                                     <div>
-                                        <strong>Corporate Office</strong>
+                                        <strong>Office Address</strong>
                                         <p>
-                                            C-74, Sector 63<br />
-                                            Noida, Uttar Pradesh 201301
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="office-card">
-                                    <div className="office-icon">📍</div>
-                                    <div>
-                                        <strong>Registerd Office</strong>
-                                        <p>
-                                            302, Pratap Chambers, Karol Bagh<br />
-                                            New Delhi - 110005
+                                            Plot No. 88, 3rd Floor, BLK-B PKT-8<br />
+                                            Rohini Sector 3, Near NDPL, New Delhi - 110085
                                         </p>
                                     </div>
                                 </div>
@@ -272,7 +261,7 @@ function ContactPage() {
                 <div className="map-container">
                     <iframe
                         title="E-Fin Office Location"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14008.633845616866!2d77.3706301!3d28.6238324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceff26d89b9e9%3A0x8b10fba59a26d81a!2sC-74%2C%20Sector%2063%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                        src="https://www.google.com/maps?q=Plot%20No%2088,%203rd%20Floor,%20BLK-B%20PKT-8,%20Rohini%20Sector%203,%20Near%20NDPL,%20New%20Delhi%20110085&output=embed"
                         loading="lazy"
                         allowFullScreen
                         referrerPolicy="no-referrer-when-downgrade"

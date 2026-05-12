@@ -20,8 +20,8 @@ const contactChannels = [
   {
     title: 'Email',
     description: 'Write to us with your registered mobile number and loan ID for a tracked reply.',
-    action: 'Care@efin.co.in',
-    href: 'mailto:Care@efin.co.in',
+    action: 'rahulsharma@efin.co.in',
+    href: 'mailto:rahulsharma@efin.co.in',
     icon: '✉️',
   },
 ];
@@ -414,7 +414,7 @@ function SupportPage() {
             <a href="tel:+919997842548" className="primary-btn large">
               Call Support →
             </a>
-            <a href="mailto:Care@efin.co.in" className="ghost-btn large">
+            <a href="mailto:rahulsharma@efin.co.in" className="ghost-btn large">
               Email Us
             </a>
           </div>

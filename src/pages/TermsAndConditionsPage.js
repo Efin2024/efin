@@ -376,7 +376,7 @@ function TermsAndConditionsPage() {
                                 <span className="list-number">d.</span>
                                 <div>
                                     <strong>Notices</strong>
-                                    <p>All notices, requests, demands, and determinations for the Company under these Terms (other than routine operational communications) shall be sent to <a href="mailto:Care@efin.co.in">Care@efin.co.in</a></p>
+                                    <p>All notices, requests, demands, and determinations for the Company under these Terms (other than routine operational communications) shall be sent to <a href="mailto:rahulsharma@efin.co.in">rahulsharma@efin.co.in</a></p>
                                 </div>
                             </div>
                             <div className="list-item">
@@ -398,7 +398,7 @@ function TermsAndConditionsPage() {
                     <h2>Questions About These Terms?</h2>
                     <p>If you have any questions or concerns regarding these Terms and Conditions, please don't hesitate to contact us.</p>
                     <div className="contact-buttons">
-                        <a href="mailto:Care@efin.co.in" className="primary-btn large">
+                        <a href="mailto:rahulsharma@efin.co.in" className="primary-btn large">
                             Email Us →
                         </a>
                         <Link to="/support" className="ghost-btn large">

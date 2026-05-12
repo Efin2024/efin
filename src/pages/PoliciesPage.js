@@ -100,7 +100,7 @@ function PoliciesPage() {
                         <div className="policies-contact">
                             <div className="contact-item">
                                 <span className="contact-label">Email:</span>
-                                <a href="mailto:Care@efin.co.in">Care@efin.co.in</a>
+                                <a href="mailto:rahulsharma@efin.co.in">rahulsharma@efin.co.in</a>
                             </div>
                             <div className="contact-item">
                                 <span className="contact-label">Phone:</span>

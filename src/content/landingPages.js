@@ -401,13 +401,12 @@ const LANDING_PAGES = {
       'E-Fin is the brand name of MLB Securities Private Limited, an RBI registered NBFC (COR 14.00526) incorporated in 1995. We began lending in 2025 to empower young professionals and small entrepreneurs.',
     bullets: [
       'CIN: U74899DL1995PTC067535',
-      'Registered Office: 302, Pratap Chambers, Karol Bagh, New Delhi-110005',
-      'Corporate Office: C-74, Sec 63 Noida 201301',
+      'Office Address: Plot No. 88, 3rd Floor, BLK-B PKT-8, Rohini Sector 3, Near NDPL, New Delhi - 110085',
     ],
     stats: [
       { label: 'Customer focus', value: 'Young professionals & MSMEs' },
       { label: 'Mission', value: 'Driving affordability at scale' },
-      { label: 'Support', value: '+91-9997842548 • Care@efin.co.in' },
+      { label: 'Support', value: '+91-9997842548 • rahulsharma@efin.co.in' },
     ],
     image: personalLoanIcon,
     ctaPrimary: { label: 'Discover journey', to: '/why-fibe' },
@@ -439,7 +438,7 @@ const LANDING_PAGES = {
     excerpt: 'Reach our support team via phone, email, or chat',
     description:
       'Raise tickets, schedule call-backs, or walk into the nearest kiosk for instant assistance.',
-    bullets: ['Toll-free: 020 6763 9797', 'Care@efin.co.in', 'WhatsApp +91 84339 97290'],
+    bullets: ['Toll-free: 020 6763 9797', 'rahulsharma@efin.co.in', 'WhatsApp +91 84339 97290'],
     stats: [
       { label: 'Support languages', value: '6' },
       { label: 'Average resolution', value: '< 24 hrs' },
@@ -538,7 +537,7 @@ const LANDING_PAGES = {
       },
       {
         title: 'Contact Us',
-        description: 'If you have any questions, concerns, or requests regarding this Privacy Policy or the processing of your personal information, please contact us at Care@efin.co.in or call us at +91 9997842548.'
+        description: 'If you have any questions, concerns, or requests regarding this Privacy Policy or the processing of your personal information, please contact us at rahulsharma@efin.co.in or call us at +91 9997842548.'
       },
       {
         title: 'Changes to This Privacy Policy',
@@ -578,7 +577,7 @@ const LANDING_PAGES = {
       },
       {
         q: 'What are my rights regarding my personal information?',
-        a: 'You have the right to access, correct, delete, or restrict processing of your personal information, withdraw consent, request data portability, and file complaints with supervisory authorities. Contact us at Care@efin.co.in to exercise these rights.',
+        a: 'You have the right to access, correct, delete, or restrict processing of your personal information, withdraw consent, request data portability, and file complaints with supervisory authorities. Contact us at rahulsharma@efin.co.in to exercise these rights.',
       },
       {
         q: 'Do you use cookies on your website?',
@@ -603,7 +602,6 @@ export const NAV_STRUCTURE = [
     items: [
       'loans/instant-cash-loan',
       'loans/personal-loan',
-      'loans/payday-loan',
       'loans/loan-against-property',
       'loans/two-wheeler-loan',
       'loans/three-wheeler-loan',

@@ -532,11 +532,11 @@ function ApplyPage() {
                   <span>+91-9997842548</span>
                 </div>
               </a>
-              <a href="mailto:Care@efin.co.in" className="help-link">
+              <a href="mailto:rahulsharma@efin.co.in" className="help-link">
                 <span className="help-icon">✉️</span>
                 <div>
                   <strong>Email Us</strong>
-                  <span>Care@efin.co.in</span>
+                  <span>rahulsharma@efin.co.in</span>
                 </div>
               </a>
             </div>
