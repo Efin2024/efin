@@ -3,7 +3,7 @@ import './performance-optimizations.css';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
 import ScrollToTop from './components/ScrollToTop';
-import HomePage from './pages/HomePage';
+// import HomePage from './pages/HomePage';
 import PersonalLoansPage from './pages/PersonalLoansPage';
 
 import TwoWheelerPage from './pages/TwoWheelerPage';
@@ -45,7 +45,7 @@ function App() {
       <Routes>
         {/* Main website routes with header and footer */}
         <Route element={<Layout />}>
-          <Route index element={<HomePage />} />
+          <Route index element={<PayDayLoanPage />} />
           <Route path="solutions/personal-loans" element={<PersonalLoansPage />} />
 
           <Route path="solutions/two-wheeler-finance" element={<TwoWheelerPage />} />

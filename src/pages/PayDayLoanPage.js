@@ -4,7 +4,7 @@ import './PayDayLoanPage.css';
 const trustPoints = ['Instant approval flow', '100% digital journey', 'Salary-linked repayment'];
 
 const snapshotMetrics = [
-  { value: 'Up to ₹50,000', label: 'Flexible loan amount' },
+  { value: 'Up to ₹1,00,000', label: 'Flexible loan amount' },
   { value: 'Minutes', label: 'Approval can move quickly' },
   { value: 'No collateral', label: 'Unsecured short-term loan' },
   { value: 'Salary-linked plan', label: 'Repayment built around payday' },
@@ -17,7 +17,7 @@ const snapshotBullets = [
 ];
 
 const statCards = [
-  { value: '₹50,000', label: 'Flexible loan amount for urgent needs' },
+  { value: '₹1,00,000', label: 'Flexible loan amount for urgent needs' },
   { value: 'Minutes', label: 'Approval and review can move quickly' },
   { value: 'Custom plan', label: 'Short-term repayment around salary timing' },
 ];
