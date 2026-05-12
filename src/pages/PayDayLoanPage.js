@@ -3,6 +3,19 @@ import './PayDayLoanPage.css';
 
 const trustPoints = ['Instant approval flow', '100% digital journey', 'Salary-linked repayment'];
 
+const snapshotMetrics = [
+  { value: 'Up to ₹50,000', label: 'Flexible loan amount' },
+  { value: 'Minutes', label: 'Approval can move quickly' },
+  { value: 'No collateral', label: 'Unsecured short-term loan' },
+  { value: 'Salary-linked plan', label: 'Repayment built around payday' },
+];
+
+const snapshotBullets = [
+  'Quick digital process from application to approval',
+  'Minimal documentation and simple online verification',
+  'Short-term support for urgent salary-cycle needs',
+];
+
 const statCards = [
   { value: '₹50,000', label: 'Flexible loan amount for urgent needs' },
   { value: 'Minutes', label: 'Approval and review can move quickly' },
@@ -126,47 +139,52 @@ function PayDayLoanPage() {
           </div>
         </div>
 
-        <aside className="payday-sa-offer-card">
-          <div className="payday-sa-offer-content">
-            <div className="payday-sa-offer-header">
-              <span className="payday-sa-offer-kicker">Quick loan snapshot</span>
-              <h2>E-Fin Payday Loan</h2>
-              <p>Fast approval, digital processing, and short-term repayment support for salaried customers.</p>
-            </div>
+        <div className="payday-sa-hero-side">
+          <div className="payday-sa-hero-visual">
+            <img
+              src="/illustration one.png"
+              alt="E-Fin payday loan illustration"
+              className="payday-sa-hero-image"
+            />
+          </div>
+        </div>
+      </section>
 
-            <div className="payday-sa-offer-grid">
-              <div className="payday-sa-offer-metric">
-                <strong>Up to ₹50,000</strong>
-                <span>Flexible loan amount</span>
-              </div>
-              <div className="payday-sa-offer-metric">
-                <strong>Minutes</strong>
-                <span>Approval can move quickly</span>
-              </div>
-              <div className="payday-sa-offer-metric">
-                <strong>No collateral</strong>
-                <span>Unsecured short-term loan</span>
-              </div>
-              <div className="payday-sa-offer-metric">
-                <strong>Salary-linked plan</strong>
-                <span>Repayment built around payday</span>
-              </div>
-            </div>
+      <section className="payday-sa-snapshot-section">
+        <div className="payday-sa-snapshot-card">
+          <div className="payday-sa-snapshot-copy">
+            <span className="payday-sa-snapshot-kicker">Quick loan snapshot</span>
+            <h2>E-Fin Payday Loan</h2>
+            <p>
+              Fast approval, digital processing, and short-term repayment support for salaried
+              customers.
+            </p>
+          </div>
 
-            <div className="payday-sa-offer-note">
+          <div className="payday-sa-snapshot-grid">
+            {snapshotMetrics.map((item) => (
+              <article key={item.value} className="payday-sa-snapshot-metric">
+                <strong>{item.value}</strong>
+                <span>{item.label}</span>
+              </article>
+            ))}
+          </div>
+
+          <div className="payday-sa-snapshot-footer">
+            <div className="payday-sa-snapshot-note">
               <h3>Why E-Fin works</h3>
               <ul>
-                <li>Quick digital process from application to approval</li>
-                <li>Minimal documentation and simple online verification</li>
-                <li>Short-term support for urgent salary-cycle needs</li>
+                {snapshotBullets.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
               </ul>
             </div>
 
-            <Link to="/support/contact" className="payday-sa-offer-button">
+            <Link to="/support/contact" className="payday-sa-snapshot-button">
               Start Application
             </Link>
           </div>
-        </aside>
+        </div>
       </section>
 
       <section className="payday-sa-stats">
