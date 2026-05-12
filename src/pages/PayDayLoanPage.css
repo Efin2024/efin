@@ -1,435 +1,491 @@
-.payday-page {
+.payday-page--salaryadda {
+  --payday-deep: #0f1720;
+  --payday-deep-2: #36424f;
+  --payday-sage: #607991;
+  --payday-sage-soft: #dce8f1;
+  --payday-cream: #f4f9fd;
+  --payday-text: #1b263b;
   display: flex;
   flex-direction: column;
-  gap: 4.5rem;
+  gap: 2rem;
+  color: var(--payday-text);
 }
 
-.payday-hero {
-  background: linear-gradient(
-    135deg,
-    rgba(244, 249, 253, 0.98) 0%,
-    rgba(233, 241, 247, 0.94) 38%,
-    rgba(214, 227, 237, 0.86) 100%
-  );
-  border-radius: 40px;
-  padding: 4rem 3rem;
-  margin-top: 2rem;
-  box-shadow: 0 30px 90px rgba(15, 23, 42, 0.12);
+.payday-sa-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 430px);
+  gap: 2rem;
+  align-items: stretch;
+  background:
+    radial-gradient(circle at top left, rgba(96, 121, 145, 0.18), transparent 32%),
+    linear-gradient(135deg, rgba(244, 249, 253, 0.98), rgba(220, 232, 241, 0.78)),
+    #fff;
+  border-radius: 36px;
+  padding: 2.5rem;
+  border: 1px solid rgba(96, 121, 145, 0.12);
+  box-shadow: 0 28px 70px rgba(15, 23, 42, 0.1);
+}
+
+.payday-sa-hero-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.35rem;
+  min-width: 0;
+}
+
+.payday-sa-badge,
+.payday-sa-section-heading span,
+.payday-sa-offer-kicker,
+.payday-sa-qualify-card > span,
+.payday-sa-bottom-cta span {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(96, 121, 145, 0.22);
+  color: var(--payday-deep);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  box-shadow: 0 10px 24px rgba(96, 121, 145, 0.12);
+}
+
+.payday-sa-hero-copy h1 {
+  margin: 0;
+  font-size: clamp(2.7rem, 6vw, 5rem);
+  line-height: 0.98;
+  color: var(--payday-deep);
+  font-weight: 800;
+}
+
+.payday-sa-hero-copy h1 span {
+  display: block;
+  color: var(--payday-sage);
+}
+
+.payday-sa-subcopy {
+  max-width: 680px;
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: rgba(27, 38, 59, 0.86);
+}
+
+.payday-sa-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.payday-sa-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.payday-sa-trust span {
+  padding: 0.8rem 1rem;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(96, 121, 145, 0.14);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.06);
+  font-weight: 600;
+}
+
+.payday-sa-offer-card {
+  background:
+    linear-gradient(180deg, rgba(249, 252, 255, 0.97), rgba(233, 241, 247, 0.94)),
+    radial-gradient(circle at top right, rgba(190, 208, 223, 0.24), transparent 50%);
+  color: var(--payday-text);
+  border-radius: 32px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  border: 1px solid rgba(96, 121, 145, 0.16);
+  box-shadow: 0 24px 55px rgba(15, 23, 42, 0.14);
+}
+
+.payday-sa-offer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.payday-sa-offer-header h2,
+.payday-sa-section-heading h2,
+.payday-sa-qualify-card h2,
+.payday-sa-bottom-cta h2 {
+  margin: 0.4rem 0 0.8rem;
+  line-height: 1.1;
+}
+
+.payday-sa-offer-header h2 {
+  font-size: 2rem;
+}
+
+.payday-sa-offer-header p,
+.payday-sa-section-heading p,
+.payday-sa-feature-card p,
+.payday-sa-use-card p,
+.payday-sa-step-card p,
+.payday-sa-qualify-card p,
+.payday-sa-faq-item p,
+.payday-sa-bottom-cta p {
+  margin: 0;
+  line-height: 1.65;
+}
+
+.payday-sa-offer-header p,
+.payday-sa-offer-note li {
+  color: var(--text-muted, #5b6773);
+}
+
+.payday-sa-offer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.payday-sa-offer-metric {
+  padding: 1rem;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(96, 121, 145, 0.14);
+}
+
+.payday-sa-offer-metric strong,
+.payday-sa-stat-card strong {
+  display: block;
+  font-size: 1.05rem;
+}
+
+.payday-sa-offer-metric span,
+.payday-sa-stat-card span {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--text-muted, #5b6773);
+  font-size: 0.9rem;
+}
+
+.payday-sa-offer-note {
+  padding: 1.15rem 1.2rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(96, 121, 145, 0.12);
+}
+
+.payday-sa-offer-note h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1rem;
+  color: var(--text-strong, #0f1720);
+}
+
+.payday-sa-offer-note ul,
+.payday-sa-qualify-card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.payday-sa-offer-note li,
+.payday-sa-qualify-card li {
   position: relative;
-  overflow: hidden;
+  padding-left: 1.45rem;
 }
 
-.payday-hero::before,
-.payday-hero::after {
+.payday-sa-offer-note li::before,
+.payday-sa-qualify-card li::before {
   content: '';
   position: absolute;
+  left: 0;
+  top: 0.58rem;
+  width: 0.55rem;
+  height: 0.55rem;
   border-radius: 50%;
-  pointer-events: none;
+  background: rgba(96, 121, 145, 0.88);
 }
 
-.payday-hero::before {
-  width: 420px;
-  height: 420px;
-  top: -120px;
-  right: -90px;
-  background: radial-gradient(circle, rgba(190, 208, 223, 0.32) 0%, transparent 72%);
-}
-
-.payday-hero::after {
-  width: 300px;
-  height: 300px;
-  bottom: -120px;
-  left: -60px;
-  background: radial-gradient(circle, rgba(248, 252, 255, 0.98) 0%, transparent 70%);
-}
-
-.payday-hero-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.9fr);
-  gap: 2rem;
+.payday-sa-offer-button {
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
-  position: relative;
-  z-index: 1;
+  padding: 1rem 1.35rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--primary, #607991), var(--primary-dark, #050505));
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.payday-hero-copy {
+.payday-sa-offer-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.18);
+}
+
+.payday-sa-stats,
+.payday-sa-feature-grid,
+.payday-sa-use-grid,
+.payday-sa-steps,
+.payday-sa-faq-grid,
+.payday-sa-qualify {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.payday-sa-stats {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.payday-sa-stat-card,
+.payday-sa-feature-card,
+.payday-sa-use-card,
+.payday-sa-step-card,
+.payday-sa-qualify-card,
+.payday-sa-faq-item {
+  border-radius: 28px;
+  background: #fff;
+  border: 1px solid rgba(96, 121, 145, 0.12);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+.payday-sa-stat-card {
+  padding: 1.35rem 1.4rem;
+  background: linear-gradient(135deg, rgba(247, 251, 254, 0.98), rgba(226, 237, 245, 0.92));
+}
+
+.payday-sa-section {
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
 }
 
-.payday-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  width: fit-content;
-  padding: 0.6rem 1.2rem;
-  border-radius: 999px;
-  background: rgba(248, 252, 255, 0.94);
-  border: 1px solid rgba(96, 121, 145, 0.18);
-  box-shadow: 0 12px 28px rgba(98, 124, 147, 0.12);
-  font-weight: 600;
-}
-
-.payday-hero-copy h1 {
-  margin: 0;
-  font-size: clamp(2.5rem, 5vw, 4.15rem);
-  line-height: 1.08;
-  color: var(--text-strong);
-}
-
-.payday-description {
-  margin: 0;
-  max-width: 640px;
-  font-size: 1.08rem;
-  line-height: 1.75;
-  color: var(--text-muted);
-}
-
-.payday-highlight-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.payday-highlight-card,
-.payday-stat-card,
-.payday-use-card,
-.payday-benefit-card,
-.payday-eligibility-card,
-.payday-step-card,
-.payday-pricing-card,
-.payday-faq-item {
-  background: rgba(248, 252, 255, 0.92);
-  border: 1px solid rgba(96, 121, 145, 0.14);
-  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-
-.payday-highlight-card:hover,
-.payday-stat-card:hover,
-.payday-use-card:hover,
-.payday-benefit-card:hover,
-.payday-eligibility-card:hover,
-.payday-step-card:hover,
-.payday-pricing-card:hover,
-.payday-faq-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 24px 56px rgba(15, 23, 42, 0.14);
-  border-color: rgba(96, 121, 145, 0.24);
-}
-
-.payday-highlight-card {
-  padding: 1.2rem 1.1rem;
-  border-radius: 22px;
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.payday-highlight-card strong,
-.payday-pricing-card span,
-.payday-stat-card strong {
-  color: var(--text-strong);
-  font-size: 1.1rem;
-}
-
-.payday-highlight-card span,
-.payday-pricing-card strong,
-.payday-stat-card span {
-  color: var(--text-muted);
-  font-size: 0.92rem;
-}
-
-.payday-cta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.payday-trust-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem 1.5rem;
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  font-weight: 600;
-}
-
-.payday-hero-visual {
-  display: flex;
-  justify-content: center;
-}
-
-.payday-visual-card {
-  width: 100%;
+.payday-sa-section--accent {
+  background: linear-gradient(135deg, rgba(244, 249, 253, 0.95), rgba(233, 241, 247, 0.82));
   border-radius: 34px;
   padding: 2rem;
-  background:
-    linear-gradient(180deg, rgba(249, 252, 255, 0.97), rgba(233, 241, 247, 0.92)),
-    radial-gradient(circle at top right, rgba(190, 208, 223, 0.26), transparent 50%);
-  border: 1px solid rgba(96, 121, 145, 0.16);
-  box-shadow: 0 28px 70px rgba(15, 23, 42, 0.14);
+}
+
+.payday-sa-section-heading {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 0.55rem;
+  max-width: 760px;
 }
 
-.payday-visual-top h3 {
-  margin: 0.7rem 0 0.6rem;
-  font-size: 1.9rem;
-  line-height: 1.2;
+.payday-sa-section-heading h2,
+.payday-sa-bottom-cta h2,
+.payday-sa-qualify-card h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--payday-deep);
 }
 
-.payday-visual-top p {
-  margin: 0;
-  color: var(--text-muted);
-  line-height: 1.65;
+.payday-sa-feature-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.payday-visual-chip {
+.payday-sa-feature-card,
+.payday-sa-use-card,
+.payday-sa-step-card,
+.payday-sa-qualify-card,
+.payday-sa-faq-item {
+  padding: 1.5rem;
+}
+
+.payday-sa-feature-highlight {
   display: inline-flex;
-  align-items: center;
-  padding: 0.45rem 0.85rem;
+  margin-bottom: 0.9rem;
+  padding: 0.45rem 0.8rem;
   border-radius: 999px;
-  background: rgba(223, 234, 242, 0.92);
-  color: var(--text-strong);
-  font-size: 0.85rem;
+  background: var(--payday-sage-soft);
+  color: var(--payday-deep);
+  font-size: 0.8rem;
   font-weight: 700;
 }
 
-.payday-stat-stack {
-  display: grid;
-  gap: 1rem;
+.payday-sa-feature-card h3,
+.payday-sa-use-card h3,
+.payday-sa-step-card h3 {
+  margin: 0 0 0.6rem;
+  color: var(--payday-deep);
+  font-size: 1.25rem;
 }
 
-.payday-stat-card {
-  border-radius: 22px;
-  padding: 1.1rem 1.2rem;
-}
-
-.payday-stat-card.accent {
-  background: linear-gradient(135deg, rgba(223, 234, 242, 0.96), rgba(248, 252, 255, 0.98));
-}
-
-.payday-section {
-  display: flex;
-  flex-direction: column;
-  gap: 1.75rem;
-}
-
-.payday-card-grid,
-.payday-eligibility-grid,
-.payday-process-grid,
-.payday-pricing-grid,
-.payday-faq-grid {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.payday-card-grid,
-.payday-pricing-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.payday-benefit-grid {
-  display: grid;
+.payday-sa-use-grid,
+.payday-sa-steps,
+.payday-sa-qualify {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem;
 }
 
-.payday-use-card,
-.payday-benefit-card,
-.payday-eligibility-card,
-.payday-step-card,
-.payday-pricing-card,
-.payday-faq-item {
-  border-radius: 24px;
-  padding: 1.6rem;
-}
-
-.payday-card-icon {
+.payday-sa-use-index,
+.payday-sa-step-number {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 3rem;
   height: 3rem;
-  border-radius: 16px;
   margin-bottom: 1rem;
-  background: rgba(223, 234, 242, 0.9);
-  font-size: 1.4rem;
-}
-
-.payday-use-card h3,
-.payday-benefit-card h3,
-.payday-eligibility-card h3,
-.payday-step-card h3 {
-  margin: 0 0 0.6rem;
-  color: var(--text-strong);
-}
-
-.payday-use-card p,
-.payday-benefit-card p,
-.payday-eligibility-card p,
-.payday-step-card p,
-.payday-pricing-panel p,
-.payday-faq-item p,
-.payday-bottom-cta p {
-  margin: 0;
-  line-height: 1.65;
-  color: var(--text-muted);
-}
-
-.payday-feature-panel,
-.payday-process,
-.payday-bottom-cta {
-  background: rgba(240, 247, 252, 0.72);
-  border-radius: 38px;
-  padding: 3rem;
-}
-
-.payday-benefit-card {
-  position: relative;
-  min-height: 210px;
-}
-
-.payday-benefit-card.wide {
-  grid-column: span 2;
-  background: linear-gradient(135deg, rgba(247, 251, 254, 0.98), rgba(226, 237, 245, 0.94));
-}
-
-.payday-benefit-index,
-.payday-step-number {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.75rem;
-  height: 2.75rem;
-  border-radius: 999px;
-  margin-bottom: 1rem;
+  border-radius: 50%;
   background: rgba(223, 234, 242, 0.92);
-  color: var(--text-strong);
+  color: var(--text-strong, #0f1720);
   font-weight: 700;
 }
 
-.payday-eligibility-grid,
-.payday-process-grid {
+.payday-sa-steps {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.payday-eligibility-card {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
+.payday-sa-step-card {
+  position: relative;
+  overflow: hidden;
 }
 
-.payday-pricing-panel {
+.payday-sa-step-card::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--payday-sage), rgba(190, 208, 223, 0.95));
+}
+
+.payday-sa-qualify-card {
+  padding: 1.8rem;
+}
+
+.payday-sa-qualify {
+  grid-template-columns: repeat(2, minmax(320px, 460px));
+  justify-content: center;
+}
+
+.payday-sa-qualify-card ul {
+  margin-top: 1.1rem;
+}
+
+.payday-sa-qualify-card--dark {
+  background: linear-gradient(135deg, var(--text-strong, #0f1720), var(--payday-deep-2));
+  color: #fff;
+}
+
+.payday-sa-qualify-card--dark h2 {
+  color: #fff;
+}
+
+.payday-sa-qualify-card--dark p,
+.payday-sa-bottom-cta p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.payday-sa-mini-points {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
-  gap: 2rem;
-  padding: 2.5rem;
-  border-radius: 34px;
-  background: linear-gradient(135deg, rgba(247, 251, 254, 0.96), rgba(231, 240, 247, 0.92));
-  border: 1px solid rgba(96, 121, 145, 0.16);
+  gap: 0.75rem;
+  margin-top: 1.2rem;
 }
 
-.payday-pricing-panel h2,
-.payday-bottom-cta h2 {
-  margin: 0.35rem 0 0.85rem;
+.payday-sa-mini-points strong {
+  display: block;
+  padding: 0.95rem 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.1);
 }
 
-.payday-pricing-card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  min-width: 0;
-  word-break: normal;
-  overflow-wrap: normal;
-  hyphens: manual;
+.payday-sa-faq-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.payday-pricing-card strong,
-.payday-pricing-card span {
-  word-break: normal;
-  overflow-wrap: normal;
-  hyphens: manual;
-}
-
-@media (min-width: 1101px) {
-  .payday-pricing-grid {
-    grid-template-columns: repeat(2, minmax(260px, 1fr));
-  }
-}
-
-.payday-faq-item summary {
+.payday-sa-faq-item summary {
   cursor: pointer;
-  font-weight: 600;
-  color: var(--text-strong);
   list-style: none;
+  color: var(--payday-deep);
+  font-weight: 700;
 }
 
-.payday-faq-item summary::-webkit-details-marker {
+.payday-sa-faq-item summary::-webkit-details-marker {
   display: none;
 }
 
-.payday-faq-item summary::after {
+.payday-sa-faq-item summary::after {
   content: '+';
   float: right;
-  font-size: 1.2rem;
+  color: var(--payday-sage);
+  font-size: 1.3rem;
   line-height: 1;
 }
 
-.payday-faq-item[open] summary::after {
+.payday-sa-faq-item[open] summary::after {
   content: '-';
 }
 
-.payday-faq-item p {
+.payday-sa-faq-item p {
   margin-top: 1rem;
 }
 
-.payday-bottom-cta {
+.payday-sa-bottom-cta {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  padding: 2rem 2.2rem;
+  border-radius: 34px;
+  background: linear-gradient(135deg, var(--text-strong, #0f1720), var(--payday-deep-2));
+  box-shadow: 0 24px 55px rgba(15, 23, 42, 0.2);
+}
+
+.payday-sa-bottom-cta h2 {
+  color: #fff;
 }
 
 @media (max-width: 1100px) {
-  .payday-card-grid,
-  .payday-pricing-grid,
-  .payday-eligibility-grid,
-  .payday-process-grid,
-  .payday-benefit-grid,
-  .payday-pricing-panel,
-  .payday-hero-grid {
+  .payday-sa-hero,
+  .payday-sa-feature-grid,
+  .payday-sa-use-grid,
+  .payday-sa-steps,
+  .payday-sa-qualify,
+  .payday-sa-faq-grid {
     grid-template-columns: 1fr;
   }
 
-  .payday-benefit-card.wide {
-    grid-column: span 1;
+  .payday-sa-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .payday-sa-bottom-cta {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
 @media (max-width: 768px) {
-  .payday-page {
-    gap: 3rem;
+  .payday-page--salaryadda {
+    gap: 1.5rem;
   }
 
-  .payday-hero,
-  .payday-feature-panel,
-  .payday-process,
-  .payday-bottom-cta,
-  .payday-pricing-panel {
-    padding: 2rem 1.4rem;
+  .payday-sa-hero,
+  .payday-sa-section--accent,
+  .payday-sa-bottom-cta {
+    padding: 1.5rem;
     border-radius: 28px;
   }
 
-  .payday-highlight-grid {
+  .payday-sa-stats,
+  .payday-sa-offer-grid,
+  .payday-sa-faq-grid {
     grid-template-columns: 1fr;
   }
 
-  .payday-bottom-cta {
-    align-items: flex-start;
+  .payday-sa-cta,
+  .payday-sa-trust {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .payday-sa-hero-copy h1 {
+    font-size: clamp(2.25rem, 11vw, 3.8rem);
   }
 }
