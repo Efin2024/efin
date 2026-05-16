@@ -56,15 +56,15 @@ const JOURNEY = [
 const TEAM = [
     {
         initial: 'R',
-        name: 'Ravi Shekhar',
-        role: 'CEO',
-        focus: 'Business Strategy & Leadership',
+        name: 'Rahul Sharma',
+        role: 'Promoter & Director',
+        focus: 'Strategic Growth & Governance',
     },
     {
         initial: 'R',
-        name: 'Rahul Sharma',
-        role: 'Director',
-        focus: 'Strategic Growth & Governance',
+        name: 'Ravi Shekhar',
+        role: 'CEO',
+        focus: 'Business Strategy & Leadership',
     },
     {
         initial: 'S',
