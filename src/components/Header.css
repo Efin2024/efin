@@ -296,6 +296,7 @@
   pointer-events: none;
   transition: opacity 0.3s ease;
   z-index: 999;
+  touch-action: manipulation;
 }
 
 .nav-overlay.show {
@@ -372,6 +373,8 @@
     z-index: 2;
     -webkit-appearance: none;
     appearance: none;
+    pointer-events: auto;
+    touch-action: manipulation;
   }
 
   .primary-nav.is-visible {

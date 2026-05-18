@@ -62,7 +62,7 @@ function Header() {
       return undefined;
     }
 
-    const handlePointerDown = (event) => {
+    const handleOutsideInteraction = (event) => {
       const target = event.target;
 
       if (navRef.current?.contains(target) || toggleRef.current?.contains(target)) {
@@ -72,10 +72,20 @@ function Header() {
       closeMenu();
     };
 
-    document.addEventListener('pointerdown', handlePointerDown);
+    const handleEscape = (event) => {
+      if (event.key === 'Escape') {
+        closeMenu();
+      }
+    };
+
+    document.addEventListener('mousedown', handleOutsideInteraction, true);
+    document.addEventListener('touchstart', handleOutsideInteraction, true);
+    document.addEventListener('keydown', handleEscape);
 
     return () => {
-      document.removeEventListener('pointerdown', handlePointerDown);
+      document.removeEventListener('mousedown', handleOutsideInteraction, true);
+      document.removeEventListener('touchstart', handleOutsideInteraction, true);
+      document.removeEventListener('keydown', handleEscape);
     };
   }, [menuOpen]);
 
@@ -132,7 +142,11 @@ function Header() {
           <span />
         </button>
 
-        <div className={`nav-overlay${menuOpen ? ' show' : ''}`} onClick={closeMenu} />
+        <div
+          className={`nav-overlay${menuOpen ? ' show' : ''}`}
+          onClick={closeMenu}
+          onTouchStart={closeMenu}
+        />
 
         <nav
           ref={navRef}
@@ -144,6 +158,7 @@ function Header() {
             className="nav-drawer-close"
             aria-label="Close navigation"
             onClick={closeMenu}
+            onTouchStart={closeMenu}
           >
             ×
           </button>
