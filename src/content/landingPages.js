@@ -620,12 +620,12 @@ export const NAV_STRUCTURE = [
   {
     label: 'Our Products',
     items: [
+      'solutions/payment-collection-merchant-settlement',
       'loans/instant-cash-loan',
       'loans/personal-loan',
       'loans/loan-against-property',
       'loans/two-wheeler-loan',
       'loans/three-wheeler-loan',
-      'solutions/payment-collection-merchant-settlement',
     ],
   },
   {
