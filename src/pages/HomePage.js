@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import instantCashIcon from '../assets/product-icons/instant-cash-loan.png';
 import personalLoanIcon from '../assets/product-icons/personal-loan.png';
 import emiStoreIcon from '../assets/product-icons/emi-store.png';
+import creditCardIcon from '../assets/offerings/credit-card.png';
 
 const CAROUSEL_IMAGES = [
   { src: '/carousel-1.png', alt: 'Three Wheeler Loan' },
@@ -40,6 +41,13 @@ const PRODUCT_CARDS = [
     to: '/loans/loan-against-property',
     icon: emiStoreIcon,
     amount: 'Up to ₹10 Cr',
+  },
+  {
+    title: 'Payment Collection & Settlement',
+    description: 'API-led collections, automated reconciliation, and merchant payout support for digital businesses.',
+    to: '/solutions/payment-collection-merchant-settlement',
+    icon: creditCardIcon,
+    amount: 'API Infrastructure',
   },
 ];
 

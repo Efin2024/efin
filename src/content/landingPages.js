@@ -229,6 +229,26 @@ const LANDING_PAGES = {
     ctaPrimary: sharedCtas.apply,
     ctaSecondary: sharedCtas.eligibility,
   },
+  'solutions/payment-collection-merchant-settlement': {
+    title: 'Payment Collection & Merchant Settlement',
+    category: 'Solutions',
+    excerpt: 'API-based collection, reconciliation, and merchant payout workflows for online businesses',
+    description:
+      'Help your platform streamline customer collections, automated reconciliation, and merchant settlement operations through partner-led payment infrastructure.',
+    bullets: [
+      'Supports UPI, virtual accounts, and bank transfer collections',
+      'Automated reconciliation and settlement visibility',
+      'Merchant payout processing through regulated partners',
+    ],
+    stats: [
+      { label: 'Model', value: 'API based' },
+      { label: 'Collections', value: 'Multi-rail' },
+      { label: 'Settlement', value: 'Managed workflows' },
+    ],
+    image: creditCardIcon,
+    ctaPrimary: sharedCtas.apply,
+    ctaSecondary: { label: 'View solution', to: '/solutions/payment-collection-merchant-settlement' },
+  },
   'offerings/fixed-deposit': {
     title: 'Fixed Deposit',
     category: 'Our Offerings',
@@ -605,6 +625,7 @@ export const NAV_STRUCTURE = [
       'loans/loan-against-property',
       'loans/two-wheeler-loan',
       'loans/three-wheeler-loan',
+      'solutions/payment-collection-merchant-settlement',
     ],
   },
   {
