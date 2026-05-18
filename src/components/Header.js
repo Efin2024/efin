@@ -25,6 +25,8 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const headerRef = useRef(null);
+  const navRef = useRef(null);
+  const toggleRef = useRef(null);
   const location = useLocation();
 
   // Close menu on any route/navigation change
@@ -53,6 +55,28 @@ function Header() {
       document.body.classList.remove('nav-open');
     }
     return () => document.body.classList.remove('nav-open');
+  }, [menuOpen]);
+
+  useEffect(() => {
+    if (!menuOpen) {
+      return undefined;
+    }
+
+    const handlePointerDown = (event) => {
+      const target = event.target;
+
+      if (navRef.current?.contains(target) || toggleRef.current?.contains(target)) {
+        return;
+      }
+
+      closeMenu();
+    };
+
+    document.addEventListener('pointerdown', handlePointerDown);
+
+    return () => {
+      document.removeEventListener('pointerdown', handlePointerDown);
+    };
   }, [menuOpen]);
 
   const toggleMenu = () => {
@@ -96,6 +120,7 @@ function Header() {
         </Link>
 
         <button
+          ref={toggleRef}
           className={`nav-toggle${menuOpen ? ' is-active' : ''}`}
           type="button"
           aria-label="Toggle navigation"
@@ -109,7 +134,11 @@ function Header() {
 
         <div className={`nav-overlay${menuOpen ? ' show' : ''}`} onClick={closeMenu} />
 
-        <nav className={`primary-nav${menuOpen ? ' is-visible' : ''}`} aria-label="Primary">
+        <nav
+          ref={navRef}
+          className={`primary-nav${menuOpen ? ' is-visible' : ''}`}
+          aria-label="Primary"
+        >
           <button
             type="button"
             className="nav-drawer-close"
