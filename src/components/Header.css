@@ -245,6 +245,10 @@
   display: none;
 }
 
+.nav-drawer-close {
+  display: none;
+}
+
 .ghost-btn,
 .primary-btn {
   display: inline-flex;
@@ -344,6 +348,25 @@
     /* Above overlay (999) */
   }
 
+  .nav-drawer-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid rgba(96, 121, 145, 0.2);
+    background: rgba(244, 249, 253, 0.96);
+    color: var(--secondary, #111);
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  }
+
   .primary-nav.is-visible {
     transform: translateX(0);
   }
@@ -441,6 +464,14 @@
 
   .nav-toggle span {
     height: 2.5px;
+  }
+
+  .nav-drawer-close {
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.65rem;
   }
 }
 

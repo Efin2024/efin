@@ -110,6 +110,14 @@ function Header() {
         <div className={`nav-overlay${menuOpen ? ' show' : ''}`} onClick={closeMenu} />
 
         <nav className={`primary-nav${menuOpen ? ' is-visible' : ''}`} aria-label="Primary">
+          <button
+            type="button"
+            className="nav-drawer-close"
+            aria-label="Close navigation"
+            onClick={closeMenu}
+          >
+            ×
+          </button>
           <ul>
             {NAV_LINKS.map((section) => (
               <li
