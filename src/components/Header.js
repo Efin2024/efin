@@ -106,6 +106,12 @@ function Header() {
     document.body.classList.remove('nav-open');
   };
 
+  const handleCloseMenuInteraction = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    closeMenu();
+  };
+
   const handleLinkClick = () => {
     // Force close everything
     setMenuOpen(false);
@@ -144,7 +150,7 @@ function Header() {
 
         <div
           className={`nav-overlay${menuOpen ? ' show' : ''}`}
-          onClick={closeMenu}
+          onClick={handleCloseMenuInteraction}
         />
 
         <nav
@@ -156,7 +162,7 @@ function Header() {
             type="button"
             className="nav-drawer-close"
             aria-label="Close navigation"
-            onClick={closeMenu}
+            onClick={handleCloseMenuInteraction}
           >
             ×
           </button>
