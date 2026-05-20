@@ -145,7 +145,6 @@ function Header() {
         <div
           className={`nav-overlay${menuOpen ? ' show' : ''}`}
           onClick={closeMenu}
-          onTouchStart={closeMenu}
         />
 
         <nav
@@ -158,7 +157,6 @@ function Header() {
             className="nav-drawer-close"
             aria-label="Close navigation"
             onClick={closeMenu}
-            onTouchStart={closeMenu}
           >
             ×
           </button>

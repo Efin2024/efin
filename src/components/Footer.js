@@ -134,8 +134,16 @@ function Footer() {
           <div className="footer-visit">
             <h3>Visit E-Fin</h3>
             <p>
-              Plot No. 88, 3rd Floor, BLK-B PKT-8<br />
+              <strong>Registered Office:</strong><br />
+               Plot No. 88, 3rd Floor, BLK-B PKT-8,<br />
               Rohini Sector 3, Near NDPL, New Delhi - 110085
+              <br />
+              <br />
+              <strong>Branch Office:</strong><br />
+               MLB Securities Private Limited, 5th Floor, RDB Boulevard,<br />
+              Plot K1, Block EP & GP, Sector V, Bidhan Nagar,<br />
+              CK Market, North 24 Parganas, Salt Lake,<br />
+              Kolkata, West Bengal - 700019, India
             </p>
             <div className="footer-contact">
               <span>+91-9997842548</span>
