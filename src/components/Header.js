@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import landingPages, { NAV_STRUCTURE } from '../content/landingPages';
 import './Header.css';
@@ -28,6 +28,7 @@ function Header() {
   const navRef = useRef(null);
   const toggleRef = useRef(null);
   const location = useLocation();
+  const navigate = useNavigate();
 
   // Close menu on any route/navigation change
   useEffect(() => {
@@ -118,6 +119,11 @@ function Header() {
     // Ensure scroll to top on navigation if needed, though ScrollToTop component exists
   };
 
+  const handleMenuItemClick = (to) => {
+    handleLinkClick();
+    navigate(to);
+  };
+
   const handleFocusOut = (event) => {
     if (headerRef.current && !headerRef.current.contains(event.relatedTarget)) {
       setActiveDropdown(null);
@@ -186,7 +192,10 @@ function Header() {
                       key={item.label}
                       to={item.to}
                       className="mega-card"
-                      onClick={handleLinkClick}
+                      onClick={(event) => {
+                        event.preventDefault();
+                        handleMenuItemClick(item.to);
+                      }}
                     >
                       <div className="card-text">
                         <h4>{item.label}</h4>

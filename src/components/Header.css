@@ -416,26 +416,31 @@
   .mega-menu {
     display: grid;
     position: static;
-    opacity: 1;
-    visibility: visible;
+    opacity: 0;
+    visibility: hidden;
     transform: none;
     box-shadow: none;
     background: rgba(96, 121, 145, 0.05);
     border-radius: 12px;
     margin-top: 0.35rem;
     grid-template-columns: 1fr;
-    max-height: none;
-    overflow: visible;
+    max-height: 0;
+    overflow: hidden;
     transition: none;
-    padding: 0.45rem;
+    padding: 0;
     min-width: unset;
     width: 100%;
     border: none;
+    pointer-events: none;
   }
 
   .primary-nav li.expanded .mega-menu {
+    opacity: 1;
+    visibility: visible;
     max-height: none;
     padding: 0.45rem;
+    overflow: visible;
+    pointer-events: auto;
   }
 
   .mega-card {
