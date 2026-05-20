@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { flushSync } from 'react-dom';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
@@ -32,11 +32,11 @@ function Header() {
   const navigate = useNavigate();
 
   // Close menu on any route/navigation change
-  useEffect(() => {
+  useLayoutEffect(() => {
     setMenuOpen(false);
     setActiveDropdown(null);
     document.body.classList.remove('nav-open');
-  }, [location.pathname, location.search]);
+  }, [location.key, location.pathname, location.search]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -124,7 +124,9 @@ function Header() {
     flushSync(() => {
       handleLinkClick();
     });
-    navigate(to);
+    requestAnimationFrame(() => {
+      navigate(to);
+    });
   };
 
   const handleFocusOut = (event) => {
@@ -191,21 +193,18 @@ function Header() {
                 </button>
                 <div className={`mega-menu${activeDropdown === section.label ? ' show' : ''}`}>
                   {section.items.map((item) => (
-                    <Link
+                    <button
                       key={item.label}
-                      to={item.to}
+                      type="button"
                       className="mega-card"
-                      onClick={(event) => {
-                        event.preventDefault();
-                        closeMenuAndNavigate(item.to);
-                      }}
+                      onClick={() => closeMenuAndNavigate(item.to)}
                     >
                       <div className="card-text">
                         <h4>{item.label}</h4>
                         <p>{item.description}</p>
                       </div>
                       <span aria-hidden="true">→</span>
-                    </Link>
+                    </button>
                   ))}
                 </div>
               </li>
