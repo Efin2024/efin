@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { flushSync } from 'react-dom';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import landingPages, { NAV_STRUCTURE } from '../content/landingPages';
@@ -119,8 +120,10 @@ function Header() {
     // Ensure scroll to top on navigation if needed, though ScrollToTop component exists
   };
 
-  const handleMenuItemClick = (to) => {
-    handleLinkClick();
+  const closeMenuAndNavigate = (to) => {
+    flushSync(() => {
+      handleLinkClick();
+    });
     navigate(to);
   };
 
@@ -194,7 +197,7 @@ function Header() {
                       className="mega-card"
                       onClick={(event) => {
                         event.preventDefault();
-                        handleMenuItemClick(item.to);
+                        closeMenuAndNavigate(item.to);
                       }}
                     >
                       <div className="card-text">
@@ -212,7 +215,14 @@ function Header() {
             <a className="ghost-btn" href="https://login.efin.co.in/">
               Login
             </a>
-            <Link className="primary-btn" to="/support/contact" onClick={handleLinkClick}>
+            <Link
+              className="primary-btn"
+              to="/support/contact"
+              onClick={(event) => {
+                event.preventDefault();
+                closeMenuAndNavigate('/support/contact');
+              }}
+            >
               Apply Now
             </Link>
           </div>
