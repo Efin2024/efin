@@ -78,13 +78,11 @@ function Header() {
       }
     };
 
-    document.addEventListener('mousedown', handleOutsideInteraction, true);
-    document.addEventListener('touchstart', handleOutsideInteraction, true);
+    document.addEventListener('pointerdown', handleOutsideInteraction, true);
     document.addEventListener('keydown', handleEscape);
 
     return () => {
-      document.removeEventListener('mousedown', handleOutsideInteraction, true);
-      document.removeEventListener('touchstart', handleOutsideInteraction, true);
+      document.removeEventListener('pointerdown', handleOutsideInteraction, true);
       document.removeEventListener('keydown', handleEscape);
     };
   }, [menuOpen]);
@@ -163,6 +161,7 @@ function Header() {
             className="nav-drawer-close"
             aria-label="Close navigation"
             onClick={handleCloseMenuInteraction}
+            onPointerUp={handleCloseMenuInteraction}
           >
             ×
           </button>
