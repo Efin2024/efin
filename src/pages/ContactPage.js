@@ -96,21 +96,6 @@ function ContactPage() {
                                 </div>
                             </div>
 
-                            <div className="office-locations">
-                                <h3>Our Offices</h3>
-
-                                <div className="office-card">
-                                    <div className="office-icon">📍</div>
-                                    <div>
-                                        <strong>Office Address</strong>
-                                        <p>
-                                            Plot No. 88, 3rd Floor, BLK-B PKT-8<br />
-                                            Rohini Sector 3, Near NDPL, New Delhi - 110085
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
                             <div className="social-connect">
                                 <h3>Connect With Us</h3>
                                 <div className="social-links-contact">

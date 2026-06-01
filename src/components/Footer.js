@@ -40,7 +40,6 @@ const footerNav = [
       { path: '/about', label: 'About E-Fin' },
       { path: '/about/careers', label: 'Careers' },
       { path: '/support/contact', label: 'Contact Us' },
-      { path: '/support', label: 'Support' },
     ],
   },
 ];

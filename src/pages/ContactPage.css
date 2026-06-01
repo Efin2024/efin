@@ -142,50 +142,6 @@
     font-style: italic;
 }
 
-/* Office Locations */
-.office-locations {
-    padding-top: 2rem;
-    border-top: 1px solid rgba(96, 121, 145, 0.15);
-    margin-bottom: 2rem;
-}
-
-.office-locations h3 {
-    margin: 0 0 1.5rem;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--text-strong);
-}
-
-.office-card {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1.25rem;
-    align-items: flex-start;
-}
-
-.office-card:last-child {
-    margin-bottom: 0;
-}
-
-.office-icon {
-    font-size: 2rem;
-    line-height: 1;
-}
-
-.office-card strong {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: var(--text-strong);
-    font-size: 1.05rem;
-}
-
-.office-card p {
-    margin: 0;
-    color: var(--text-muted);
-    line-height: 1.6;
-    font-size: 0.95rem;
-}
-
 /* Social Connect */
 .social-connect {
     padding-top: 2rem;
@@ -520,26 +476,9 @@
         font-size: 0.8rem;
     }
 
-    .office-locations h3,
     .social-connect h3 {
         font-size: 1.15rem;
         margin-bottom: 1.25rem;
-    }
-
-    .office-icon {
-        font-size: 1.75rem;
-    }
-
-    .office-card {
-        gap: 0.85rem;
-    }
-
-    .office-card strong {
-        font-size: 1rem;
-    }
-
-    .office-card p {
-        font-size: 0.9rem;
     }
 
     .social-links-contact {
@@ -692,27 +631,9 @@
         font-size: 0.9rem;
     }
 
-    .office-locations h3,
     .social-connect h3 {
         font-size: 1.1rem;
         margin-bottom: 1rem;
-    }
-
-    .office-icon {
-        font-size: 1.5rem;
-    }
-
-    .office-card {
-        gap: 0.75rem;
-    }
-
-    .office-card strong {
-        font-size: 0.95rem;
-    }
-
-    .office-card p {
-        font-size: 0.85rem;
-        line-height: 1.5;
     }
 
     .social-links-contact img {
