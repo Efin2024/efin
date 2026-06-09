@@ -1,4 +1,5 @@
 import BrandLogo from './BrandLogo';
+import './BrandCarousel.css';
 
 function BrandCarousel({ brands = [] }) {
   if (!brands.length) {

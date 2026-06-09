@@ -5,8 +5,8 @@ function BrandLogo({ name, initials, colors, accent }) {
       : colors?.[0] ?? '#0f172a';
 
   return (
-    <figure className="brand-logo" aria-label={name}>
-      <div className="brand-logo-mark" style={{ background: gradient, color: accent ?? '#ffffff' }}>
+    <figure className="partner-brand-logo" aria-label={name}>
+      <div className="partner-brand-logo-mark" style={{ background: gradient, color: accent ?? '#ffffff' }}>
         {initials}
       </div>
       <figcaption>{name}</figcaption>

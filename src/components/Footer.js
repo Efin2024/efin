@@ -72,6 +72,25 @@ const footerSocial = [
   },
 ];
 
+const officeLocations = [
+  {
+    label: 'Delhi Rohini Office',
+    type: 'Registered Office',
+    address:
+      'Plot No. 88, 3rd Floor, BLK-B PKT-8, Rohini Sector 3, Near NDPL, New Delhi - 110085',
+    mapsUrl:
+      'https://www.google.com/maps/dir/?api=1&destination=Plot%20No.%2088%2C%203rd%20Floor%2C%20BLK-B%20PKT-8%2C%20Rohini%20Sector%203%2C%20Near%20NDPL%2C%20New%20Delhi%20-%20110085&travelmode=driving',
+  },
+  {
+    label: 'Kolkata West Bengal Office',
+    type: 'Branch Office',
+    address:
+      'MLB Securities Private Limited, 5th Floor, RDB Boulevard, Plot K1, Block EP & GP, Sector V, Bidhan Nagar, CK Market, North 24 Parganas, Salt Lake, Kolkata, West Bengal - 700019, India',
+    mapsUrl:
+      'https://www.google.com/maps/dir/?api=1&destination=MLB%20Securities%20Private%20Limited%2C%205th%20Floor%2C%20RDB%20Boulevard%2C%20Plot%20K1%2C%20Block%20EP%20%26%20GP%2C%20Sector%20V%2C%20Bidhan%20Nagar%2C%20CK%20Market%2C%20North%2024%20Parganas%2C%20Salt%20Lake%2C%20Kolkata%2C%20West%20Bengal%20-%20700019%2C%20India&travelmode=driving',
+  },
+];
+
 function Footer() {
   const location = useLocation();
   const currentYear = new Date().getFullYear();
@@ -86,14 +105,30 @@ function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-inner">
-        <div className="footer-map">
-          <iframe
-            title="E-Fin Office Location"
-            src="https://www.google.com/maps?q=Plot%20No%2088,%203rd%20Floor,%20BLK-B%20PKT-8,%20Rohini%20Sector%203,%20Near%20NDPL,%20New%20Delhi%20110085&output=embed"
-            loading="lazy"
-            allowFullScreen
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+        <div className="footer-location-picker" aria-labelledby="footer-location-title">
+          <div className="footer-location-copy">
+            <span className="footer-location-eyebrow">Office Locations</span>
+            <h2 id="footer-location-title">Choose an E-Fin office</h2>
+            <p>Select a location to start directions in Google Maps.</p>
+          </div>
+          <div className="footer-location-options">
+            {officeLocations.map((office) => (
+              <a
+                key={office.label}
+                href={office.mapsUrl}
+                className="footer-location-card"
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Open ${office.label} in Google Maps`}
+              >
+                <span className="footer-location-icon" aria-hidden="true">⌖</span>
+                <span className="footer-location-type">{office.type}</span>
+                <strong>{office.label}</strong>
+                <span>{office.address}</span>
+                <span className="footer-location-action">Start journey</span>
+              </a>
+            ))}
+          </div>
         </div>
         <div className="footer-content">
           <div className="footer-brand">
