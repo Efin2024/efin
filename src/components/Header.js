@@ -211,7 +211,7 @@ function Header() {
             ))}
           </ul>
           <div className="drawer-actions">
-            <a className="ghost-btn" href="https://login.efin.co.in/">
+            <a className="ghost-btn" href="https://payday.efin.co.in/login">
               Login
             </a>
             <Link
@@ -228,7 +228,7 @@ function Header() {
         </nav>
 
         <div className="nav-actions">
-          <a className="ghost-btn" href="https://login.efin.co.in/">
+          <a className="ghost-btn" href="https://payday.efin.co.in/login">
             Login
           </a>
           <Link className="primary-btn" to="/support/contact" onClick={handleLinkClick}>
