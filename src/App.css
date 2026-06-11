@@ -3970,6 +3970,13 @@ blockquote cite {
   color: var(--text-muted, #4a4a4a);
 }
 
+.footer-address-divider {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+  border-top: 1px solid rgba(96, 121, 145, 0.28);
+}
+
 .footer-address-secondary {
   margin-top: 1.25rem !important;
   padding-top: 1.25rem;

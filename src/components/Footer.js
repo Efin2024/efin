@@ -89,6 +89,14 @@ const officeLocations = [
     mapsUrl:
       'https://www.google.com/maps/dir/?api=1&destination=MLB%20Securities%20Private%20Limited%2C%205th%20Floor%2C%20RDB%20Boulevard%2C%20Plot%20K1%2C%20Block%20EP%20%26%20GP%2C%20Sector%20V%2C%20Bidhan%20Nagar%2C%20CK%20Market%2C%20North%2024%20Parganas%2C%20Salt%20Lake%2C%20Kolkata%2C%20West%20Bengal%20-%20700019%2C%20India&travelmode=driving',
   },
+  {
+    label: 'Gurugram Haryana Office',
+    type: 'Branch Office',
+    address:
+      'MLB Securities Private Limited, Unit No. 557, 5th Floor, Tower-B1, Spaze ITech Park, Sector-49, Sohna Road, Gurugram, Haryana - 122018, India',
+    mapsUrl:
+      'https://www.google.com/maps/dir/?api=1&destination=MLB%20Securities%20Private%20Limited%2C%20Unit%20No.%20557%2C%205th%20Floor%2C%20Tower-B1%2C%20Spaze%20ITech%20Park%2C%20Sector-49%2C%20Sohna%20Road%2C%20Gurugram%2C%20Haryana%20-%20122018%2C%20India&travelmode=driving',
+  },
 ];
 
 function Footer() {
@@ -178,6 +186,10 @@ function Footer() {
               Plot K1, Block EP & GP, Sector V, Bidhan Nagar,<br />
               CK Market, North 24 Parganas, Salt Lake,<br />
               Kolkata, West Bengal - 700019, India
+              <span className="footer-address-divider" aria-hidden="true" />
+               MLB Securities Private Limited, Unit No. 557, 5th Floor,
+              Tower-B1, Spaze ITech Park, Sector-49, Sohna Road, Gurugram,<br />
+              Haryana - 122018, India
             </p>
             <div className="footer-contact">
               <span>+91-9997842548</span>
