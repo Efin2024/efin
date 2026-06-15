@@ -117,9 +117,9 @@ function AboutPage() {
                         and secure credit solutions.
                     </p>
                     <div className="hero-cta-group">
-                        <Link to="/support/contact" className="primary-btn large">
+                        <a href="https://payday.efin.co.in/login" className="primary-btn large">
                             Apply for Loan →
-                        </Link>
+                        </a>
                         <Link to="/support/contact" className="ghost-btn large">
                             Contact Us
                         </Link>
