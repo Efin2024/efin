@@ -59,7 +59,7 @@ const OFFICES = [
 
 const CONTACT_LINKS = [
   { label: 'Phone', value: '+91-9997842548', href: 'tel:+919997842548' },
-  { label: 'Email', value: 'rahulsharma@efin.co.in', href: 'mailto:rahulsharma@efin.co.in' },
+  { label: 'Email', value: 'care@mlbsecurities.com', href: 'mailto:care@mlbsecurities.com' },
 ];
 
 const TIMELINE = [
@@ -156,7 +156,7 @@ function WhyFinanceCoPage() {
         </li>
         <li>
           <strong>+91-9997842548</strong>
-          <span>rahulsharma@efin.co.in</span>
+          <span>care@mlbsecurities.com</span>
         </li>
       </ul>
 
@@ -319,7 +319,7 @@ function WhyFinanceCoPage() {
           <p>Connect with our partnerships desk to embed lending, co-lend, or roll out regional support desks.</p>
         </div>
         <div className="about-cta-actions">
-          <a className="primary-btn" href="mailto:rahulsharma@efin.co.in">
+          <a className="primary-btn" href="mailto:care@mlbsecurities.com">
             Write to partnerships
           </a>
           <a className="ghost-btn" href="tel:+919997842548">
@@ -427,8 +427,8 @@ function WhyFinanceCoPage() {
           <a className="primary-btn" href="tel:+919997842548">
             Call +91-9997842548
           </a>
-          <a className="ghost-btn" href="mailto:rahulsharma@efin.co.in">
-            Email rahulsharma@efin.co.in
+          <a className="ghost-btn" href="mailto:care@mlbsecurities.com">
+            Email care@mlbsecurities.com
           </a>
         </div>
       </section>

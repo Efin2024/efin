@@ -30,7 +30,6 @@ const footerNav = [
       { path: '/resources/personal-loan-emi-calculator', label: 'Personal Loan EMI' },
       { path: '/resources/two-three-wheeler-emi-calculator', label: '2 & 3 Wheeler EMI' },
       { path: '/resources/eligibility-calculator', label: 'Eligibility Calculator' },
-      { path: '/resources/check-credit-score', label: 'Credit Score Check' },
     ],
   },
   {
@@ -116,7 +115,7 @@ function Footer() {
           <div className="footer-location-picker" aria-labelledby="footer-location-title">
             <div className="footer-location-copy">
               <span className="footer-location-eyebrow">Office Locations</span>
-              <h2 id="footer-location-title">Choose an E-Fin office</h2>
+              <h2 id="footer-location-title">E-Fin offices</h2>
               <p>Select a location to start directions in Google Maps.</p>
             </div>
             <div className="footer-location-options">
@@ -160,10 +159,10 @@ function Footer() {
               <span className="iso-bot">CERTIFIED</span>
             </div>
             <div className="pci-dss-badge" style={{ marginTop: '1rem', marginLeft: '1rem', display: 'flex', alignItems: 'center' }}>
-              <img 
+              <img
                 src="https://cdn.goinfinito.com/fm/4349/root/0c1718dc4148f986763371b4d839f735.png"
-                alt="PCI DSS Certified" 
-                style={{ maxHeight: '55px', maxWidth: '100%', width: 'auto', height: 'auto', objectFit: 'contain' }} 
+                alt="PCI DSS Certified"
+                style={{ maxHeight: '55px', maxWidth: '100%', width: 'auto', height: 'auto', objectFit: 'contain' }}
               />
             </div>
           </div>

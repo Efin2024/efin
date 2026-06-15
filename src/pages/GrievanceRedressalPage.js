@@ -79,7 +79,7 @@ function GrievanceRedressalPage() {
                             <div className="contact-method-card">
                                 <div className="method-icon">✉️</div>
                                 <h4>Email</h4>
-                                <a href="mailto:rahulsharma@efin.co.in" className="method-link">rahulsharma@efin.co.in</a>
+                                <a href="mailto:care@mlbsecurities.com" className="method-link">care@mlbsecurities.com</a>
                                 <p>Write to us</p>
                             </div>
 
@@ -269,7 +269,7 @@ function GrievanceRedressalPage() {
                         "We aim to provide excellent service to all our customers. Let us know if we did something special or if you were happy with our service. Your feedback will help us serve you better in the future."
                     </p>
                     <div className="compliments-cta">
-                        <a href="mailto:rahulsharma@efin.co.in" className="primary-btn large">
+                        <a href="mailto:care@mlbsecurities.com" className="primary-btn large">
                             Share Your Feedback →
                         </a>
                         <Link to="/support" className="ghost-btn large">

@@ -23,8 +23,8 @@ const MEDIA_KIT_LINKS = [
 ];
 
 const PRESS_CONTACTS = [
-  { label: 'Media desk', value: 'rahulsharma@efin.co.in', href: 'mailto:rahulsharma@efin.co.in' },
-  { label: 'Partnerships', value: 'rahulsharma@efin.co.in', href: 'mailto:rahulsharma@efin.co.in' },
+  { label: 'Media desk', value: 'care@mlbsecurities.com', href: 'mailto:care@mlbsecurities.com' },
+  { label: 'Partnerships', value: 'care@mlbsecurities.com', href: 'mailto:care@mlbsecurities.com' },
 ];
 
 function NewsroomPage() {

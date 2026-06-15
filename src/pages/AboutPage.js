@@ -292,7 +292,7 @@ function AboutPage() {
                         <span className="contact-icon">✉️</span>
                         <div>
                             <span className="contact-label">Email</span>
-                            <a href="mailto:rahulsharma@efin.co.in" className="contact-value">rahulsharma@efin.co.in</a>
+                            <a href="mailto:care@mlbsecurities.com" className="contact-value">care@mlbsecurities.com</a>
                         </div>
                     </div>
                     <div className="contact-item">

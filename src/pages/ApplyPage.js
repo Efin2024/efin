@@ -532,11 +532,11 @@ function ApplyPage() {
                   <span>+91-9997842548</span>
                 </div>
               </a>
-              <a href="mailto:rahulsharma@efin.co.in" className="help-link">
+              <a href="mailto:care@mlbsecurities.com" className="help-link">
                 <span className="help-icon">✉️</span>
                 <div>
                   <strong>Email Us</strong>
-                  <span>rahulsharma@efin.co.in</span>
+                  <span>care@mlbsecurities.com</span>
                 </div>
               </a>
             </div>

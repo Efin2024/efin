@@ -834,12 +834,12 @@ a {
 .emi-highlight p {
   margin: 0 0 0.4rem;
   font-weight: 600;
-  color: var(--surface);
+  color: #fff;
 }
 
 .emi-highlight strong {
   font-size: 2rem;
-  color: var(--primary);
+  color: #fff;
 }
 
 .summary-grid {
@@ -3840,7 +3840,7 @@ blockquote cite {
 
 .footer-location-picker {
   display: grid;
-  grid-template-columns: minmax(220px, 0.65fr) minmax(0, 1.35fr);
+  grid-template-columns: minmax(300px, 0.85fr) minmax(0, 1.15fr);
   gap: clamp(1rem, 2vw, 1.4rem);
   align-items: stretch;
   width: 100%;
@@ -3874,6 +3874,7 @@ blockquote cite {
   font-size: clamp(1.45rem, 3vw, 2.25rem);
   line-height: 1.12;
   letter-spacing: 0;
+  white-space: nowrap;
 }
 
 .footer-location-copy p {

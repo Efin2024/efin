@@ -376,7 +376,7 @@ function TermsAndConditionsPage() {
                                 <span className="list-number">d.</span>
                                 <div>
                                     <strong>Notices</strong>
-                                    <p>All notices, requests, demands, and determinations for the Company under these Terms (other than routine operational communications) shall be sent to <a href="mailto:rahulsharma@efin.co.in">rahulsharma@efin.co.in</a></p>
+                                    <p>All notices, requests, demands, and determinations for the Company under these Terms (other than routine operational communications) shall be sent to <a href="mailto:care@mlbsecurities.com">care@mlbsecurities.com</a></p>
                                 </div>
                             </div>
                             <div className="list-item">
