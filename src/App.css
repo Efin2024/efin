@@ -8065,3 +8065,15 @@ iframe {
     margin-top: 1rem !important;
   }
 }
+
+/* CSS Marquee animation for Coming Soon banner */
+.css-marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee-scroll 15s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(100vw); }
+  100% { transform: translateX(-100%); }
+}
