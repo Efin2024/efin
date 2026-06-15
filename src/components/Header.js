@@ -214,21 +214,27 @@ function Header() {
             ))}
           </ul>
           <div className="drawer-actions">
-            <a className="ghost-btn" href="https://payday.efin.co.in/login">
+            <a className="primary-btn" href="https://payday.efin.co.in/login">
               Login
             </a>
             <a className="primary-btn" href="https://payday.efin.co.in/login">
               Apply Now
             </a>
+            <a className="primary-btn" href="#">
+              Repay
+            </a>
           </div>
         </nav>
 
         <div className="nav-actions">
-          <a className="ghost-btn" href="https://payday.efin.co.in/login">
+          <a className="primary-btn" href="https://payday.efin.co.in/login">
             Login
           </a>
           <a className="primary-btn" href="https://payday.efin.co.in/login">
             Apply Now
+          </a>
+          <a className="primary-btn" href="#">
+            Repay
           </a>
         </div>
       </div>
