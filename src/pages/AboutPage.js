@@ -92,13 +92,13 @@ const TEAM = [
     },
 ];
 
-const OFFICES = [
-    {
-        type: 'Office Address',
-        address: 'Plot No. 88, 3rd Floor, BLK-B PKT-8',
-        city: 'Rohini Sector 3, Near NDPL, New Delhi - 110085',
-    },
-];
+// const OFFICES = [
+//     {
+//         type: 'Office Address',
+//         address: 'Plot No. 88, 3rd Floor, BLK-B PKT-8',
+//         city: 'Rohini Sector 3, Near NDPL, New Delhi - 110085',
+//     },
+// ];
 
 function AboutPage() {
     return (
