@@ -210,7 +210,7 @@ function PersonalLoansPage() {
           <div className="eligibility-modern-card">
             <div className="eligibility-modern-icon">💰</div>
             <h4>Monthly Salary</h4>
-            <p>Starting from ₹25,000 based on city</p>
+            <p>Starting from ₹50,000 based on city</p>
           </div>
 
           <div className="eligibility-modern-card">

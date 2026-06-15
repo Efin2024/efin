@@ -10,12 +10,11 @@ const personalLoanSliders = {
 const quickFacts = [
   { label: 'Ticket size', value: '₹50K – ₹5L' },
   { label: 'Tenure', value: '6 – 60 months' },
-  { label: 'Pre-closure fee', value: '₹0' },
   { label: 'APR range', value: '14% – 26%' },
 ];
 
 const guardrails = [
-  'Aim to keep EMIs within 45% of your monthly income for healthy FOIR.',
+  'Aim to keep EMIs within 40% of your monthly income for healthy FOIR.',
   'Pick shorter tenures when you can to reduce total interest outgo.',
   'You can prepay early without foreclosure charges on E-Fin personal loans.',
 ];

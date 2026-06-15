@@ -154,6 +154,18 @@ function Footer() {
                 </a>
               ))}
             </div>
+            <div className="iso-badge-circle footer-badge">
+              <span className="iso-top">ISO</span>
+              <span className="iso-mid">9001 & 27001</span>
+              <span className="iso-bot">CERTIFIED</span>
+            </div>
+            <div className="pci-dss-badge" style={{ marginTop: '1rem', marginLeft: '1rem', display: 'flex', alignItems: 'center' }}>
+              <img 
+                src="https://cdn.goinfinito.com/fm/4349/root/0c1718dc4148f986763371b4d839f735.png"
+                alt="PCI DSS Certified" 
+                style={{ maxHeight: '55px', maxWidth: '100%', width: 'auto', height: 'auto', objectFit: 'contain' }} 
+              />
+            </div>
           </div>
           <div className="footer-links">
             {footerNav.map((section) => (
@@ -194,7 +206,7 @@ function Footer() {
             </p>
             <div className="footer-contact">
               <span>+91-9997842548</span>
-              <span>rahulsharma@efin.co.in</span>
+              <span>care@mlbsecurities.com</span>
             </div>
             <a href="https://payday.efin.co.in/login" className="footer-cta">
               Apply for a loan
