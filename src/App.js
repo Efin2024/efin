@@ -47,7 +47,7 @@ function App() {
       <Routes>
         {/* Main website routes with header and footer */}
         <Route element={<Layout />}>
-          <Route index element={<PayDayLoanPage />} />
+          <Route index element={<PersonalLoansPage />} />
           <Route path="solutions/personal-loans" element={<PersonalLoansPage />} />
 
           <Route path="solutions/two-wheeler-finance" element={<TwoWheelerPage />} />

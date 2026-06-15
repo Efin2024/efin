@@ -9,7 +9,7 @@ const footerNav = [
       { path: '/loans/loan-against-property', label: 'Loan Against Property' },
       { path: '/loans/two-wheeler-loan', label: 'Two-Wheeler Loan' },
       { path: '/loans/three-wheeler-loan', label: 'Three-Wheeler Loan' },
-      { path: '/loans/payday-loan', label: 'Pay-day Loan' },
+      // { path: '/loans/payday-loan', label: 'Pay-day Loan' },
       {
         path: '/solutions/payment-collection-merchant-settlement',
         label: 'Payment Collection & Settlement',
@@ -179,17 +179,17 @@ function Footer() {
             <h3>Visit E-Fin</h3>
             <p>
               <strong>Registered Office:</strong><br />
-               Plot No. 88, 3rd Floor, BLK-B PKT-8,<br />
+              Plot No. 88, 3rd Floor, BLK-B PKT-8,<br />
               Rohini Sector 3, Near NDPL, New Delhi - 110085
               <br />
               <br />
               <strong>Branch Office:</strong><br />
-               MLB Securities Private Limited, 5th Floor, RDB Boulevard,<br />
+              MLB Securities Private Limited, 5th Floor, RDB Boulevard,<br />
               Plot K1, Block EP & GP, Sector V, Bidhan Nagar,<br />
               CK Market, North 24 Parganas, Salt Lake,<br />
               Kolkata, West Bengal - 700019, India
               <span className="footer-address-divider" aria-hidden="true" />
-               MLB Securities Private Limited, Unit No. 557, 5th Floor,
+              MLB Securities Private Limited, Unit No. 557, 5th Floor,
               Tower-B1, Spaze ITech Park, Sector-49, Sohna Road, Gurugram,<br />
               Haryana - 122018, India
             </p>
