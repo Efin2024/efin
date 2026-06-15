@@ -140,7 +140,7 @@ function Header() {
   return (
     <header className="fibe-header" ref={headerRef}>
       <div className="header-shell">
-        <Link to="/" className="brand-mark" onClick={handleLinkClick}>
+        <Link to="/loans/personal-loan" className="brand-mark" onClick={handleLinkClick}>
           <img src={logoSrc} alt="E-Fin" className="brand-logo" />
         </Link>
 
@@ -220,9 +220,12 @@ function Header() {
             <a className="primary-btn" href="https://payday.efin.co.in/login">
               Apply Now
             </a>
-            <a className="primary-btn" href="#">
+            <Link className="primary-btn" to="/repay" onClick={(e) => {
+              e.preventDefault();
+              closeMenuAndNavigate('/repay');
+            }}>
               Repay
-            </a>
+            </Link>
           </div>
         </nav>
 
@@ -233,9 +236,9 @@ function Header() {
           <a className="primary-btn" href="https://payday.efin.co.in/login">
             Apply Now
           </a>
-          <a className="primary-btn" href="#">
+          <Link className="primary-btn" to="/repay">
             Repay
-          </a>
+          </Link>
         </div>
       </div>
     </header>

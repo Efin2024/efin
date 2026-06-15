@@ -113,31 +113,33 @@ function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-inner">
-        <div className="footer-location-picker" aria-labelledby="footer-location-title">
-          <div className="footer-location-copy">
-            <span className="footer-location-eyebrow">Office Locations</span>
-            <h2 id="footer-location-title">Choose an E-Fin office</h2>
-            <p>Select a location to start directions in Google Maps.</p>
+        {location.pathname !== '/repay' && (
+          <div className="footer-location-picker" aria-labelledby="footer-location-title">
+            <div className="footer-location-copy">
+              <span className="footer-location-eyebrow">Office Locations</span>
+              <h2 id="footer-location-title">Choose an E-Fin office</h2>
+              <p>Select a location to start directions in Google Maps.</p>
+            </div>
+            <div className="footer-location-options">
+              {officeLocations.map((office) => (
+                <a
+                  key={office.label}
+                  href={office.mapsUrl}
+                  className="footer-location-card"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Open ${office.label} in Google Maps`}
+                >
+                  <span className="footer-location-icon" aria-hidden="true">⌖</span>
+                  <span className="footer-location-type">{office.type}</span>
+                  <strong>{office.label}</strong>
+                  <span>{office.address}</span>
+                  <span className="footer-location-action">Start journey</span>
+                </a>
+              ))}
+            </div>
           </div>
-          <div className="footer-location-options">
-            {officeLocations.map((office) => (
-              <a
-                key={office.label}
-                href={office.mapsUrl}
-                className="footer-location-card"
-                target="_blank"
-                rel="noreferrer"
-                aria-label={`Open ${office.label} in Google Maps`}
-              >
-                <span className="footer-location-icon" aria-hidden="true">⌖</span>
-                <span className="footer-location-type">{office.type}</span>
-                <strong>{office.label}</strong>
-                <span>{office.address}</span>
-                <span className="footer-location-action">Start journey</span>
-              </a>
-            ))}
-          </div>
-        </div>
+        )}
         <div className="footer-content">
           <div className="footer-brand">
             <div className="brand" aria-label="E-Fin">
