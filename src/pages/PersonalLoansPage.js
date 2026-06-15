@@ -10,7 +10,7 @@ function PersonalLoansPage() {
           <div className="personal-hero-content">
             <span className="personal-badge">💳 Personal Loan for Salaried</span>
             <h1>
-              Get up to <span className="gradient-text">₹2 Lakhs</span> Instantly
+              Get up to <span className="gradient-text">₹5 Lakhs</span> Instantly
             </h1>
             <p className="personal-hero-description">
               Quick online Personal Loan to fulfill your financial needs with flexible tenure of 3-12 months.
@@ -22,7 +22,7 @@ function PersonalLoansPage() {
               <div className="highlight-chip-personal">
                 <div className="chip-icon-personal">💰</div>
                 <div className="chip-content">
-                  <strong>Up to ₹2 Lakhs</strong>
+                  <strong>Up to ₹5 Lakhs</strong>
                   <span>Loan Amount</span>
                 </div>
               </div>
@@ -62,7 +62,7 @@ function PersonalLoansPage() {
             <div className="personal-visual-card">
               <img src="/personal-loan-hero.png" alt="Personal Loan" className="personal-hero-image" />
               <div className="floating-badge badge-1">
-                <strong>₹2 Lakh</strong>
+                <strong>₹5 Lakh</strong>
                 <span>Max Amount</span>
               </div>
 
