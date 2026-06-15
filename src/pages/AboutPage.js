@@ -265,7 +265,7 @@ function AboutPage() {
             </section>
 
             {/* Office Locations */}
-            <section className="section-block office-section">
+            {/* <section className="section-block office-section">
                 <header className="section-heading">
                     <span className="eyebrow">Our Offices</span>
                     <h2>Find Us Here</h2>
@@ -303,10 +303,10 @@ function AboutPage() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Final CTA */}
-            <section className="cta-section about-cta">
+            {/* <section className="cta-section about-cta">
                 <div className="cta-content">
                     <h2>Ready to Experience Transparent Lending?</h2>
                     <p>Join 400+ Indians who trust E-Fin for their financial needs</p>
@@ -319,7 +319,7 @@ function AboutPage() {
                         </Link>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </div>
     );
 }
