@@ -65,10 +65,7 @@ function PersonalLoansPage() {
                 <strong>₹2 Lakh</strong>
                 <span>Max Amount</span>
               </div>
-              <div className="floating-badge badge-2">
-                <strong>18-30%</strong>
-                <span>Interest p.a.</span>
-              </div>
+
               <div className="floating-badge badge-3">
                 <strong>5 Mins</strong>
                 <span>Approval</span>

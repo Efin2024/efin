@@ -242,7 +242,7 @@ function Header() {
           </Link>
           <div className="iso-badge-circle" style={{ marginLeft: '10px', marginRight: 0 }}>
             <span className="iso-top">ISO</span>
-            <span className="iso-mid">9001:2007</span>
+            <span className="iso-mid">9001 & 27001</span>
             <span className="iso-bot">CERTIFIED</span>
           </div>
         </div>
