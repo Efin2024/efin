@@ -5,6 +5,13 @@ import evThreeWheeler from '../assets/ev-auto-purchase.png';
 function EVThreeWheelerPage() {
     return (
         <div className="page ev-three-wheeler-page">
+            <div style={{ backgroundColor: 'transparent', color: 'black', padding: '10px 0', fontWeight: 'bold', fontSize: '1.2rem', textTransform: 'uppercase', letterSpacing: '2px', width: '100%', maxWidth: '100%', margin: '0 0 3rem 0', zIndex: 10 }}>
+                <marquee direction="left" scrollamount="10">
+                    <span style={{ margin: '0 4rem' }}>Coming Soon</span>
+                    <span style={{ margin: '0 4rem' }}>Coming Soon</span>
+                    <span style={{ margin: '0 4rem' }}>Coming Soon</span>
+                </marquee>
+            </div>
             {/* Hero Section */}
             <section className="ev-hero">
                 <div className="ev-hero-content">
@@ -339,7 +346,7 @@ function EVThreeWheelerPage() {
                     <h2>Ready to Drive Your Own EV Auto?</h2>
                     <p>Apply now and get on the road to success with your electric three-wheeler</p>
                     <div className="ev-cta-buttons">
-                        <Link to="/support/contact" className="primary-btn">Apply Now</Link>
+                        <a href="https://payday.efin.co.in/login" className="primary-btn">Apply Now</a>
                         <Link to="/support" className="ghost-btn">Contact Support</Link>
                     </div>
                 </div>

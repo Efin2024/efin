@@ -248,7 +248,7 @@
 .contact-submit-btn {
     grid-column: 1 / -1;
     background: linear-gradient(135deg, #0f1419 0%, #36424f 100%);
-    color: var(--secondary, #111);
+    color: white;
     border: none;
     padding: 1.125rem 3rem;
     border-radius: 999px;

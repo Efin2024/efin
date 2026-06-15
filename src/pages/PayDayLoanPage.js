@@ -124,9 +124,9 @@ function PayDayLoanPage() {
           </p>
 
           <div className="payday-sa-cta">
-            <Link to="/support/contact" className="primary-btn large">
+            <a href="https://payday.efin.co.in/login" className="primary-btn large">
               Apply Now
-            </Link>
+            </a>
             <Link to="/resources/eligibility-calculator" className="ghost-btn large">
               Check Eligibility
             </Link>

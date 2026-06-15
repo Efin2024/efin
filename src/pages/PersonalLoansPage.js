@@ -43,9 +43,9 @@ function PersonalLoansPage() {
             </div>
 
             <div className="personal-hero-cta">
-              <Link to="/support/contact" className="primary-btn large">
+              <a href="https://payday.efin.co.in/login" className="primary-btn large">
                 Apply Now →
-              </Link>
+              </a>
               <Link to="/resources/personal-loan-emi-calculator" className="ghost-btn large">
                 Calculate EMI
               </Link>

@@ -202,6 +202,9 @@ function Header() {
                       <div className="card-text">
                         <h4>{item.label}</h4>
                         <p>{item.description}</p>
+                        {section.label === 'Our Products' && item.label !== 'Personal Loan' && (
+                          <div className="coming-soon-animated">Coming Soon</div>
+                        )}
                       </div>
                       <span aria-hidden="true">→</span>
                     </button>
@@ -214,16 +217,9 @@ function Header() {
             <a className="ghost-btn" href="https://payday.efin.co.in/login">
               Login
             </a>
-            <Link
-              className="primary-btn"
-              to="/support/contact"
-              onClick={(event) => {
-                event.preventDefault();
-                closeMenuAndNavigate('/support/contact');
-              }}
-            >
+            <a className="primary-btn" href="https://payday.efin.co.in/login">
               Apply Now
-            </Link>
+            </a>
           </div>
         </nav>
 
@@ -231,9 +227,9 @@ function Header() {
           <a className="ghost-btn" href="https://payday.efin.co.in/login">
             Login
           </a>
-          <Link className="primary-btn" to="/support/contact" onClick={handleLinkClick}>
+          <a className="primary-btn" href="https://payday.efin.co.in/login">
             Apply Now
-          </Link>
+          </a>
         </div>
       </div>
     </header>

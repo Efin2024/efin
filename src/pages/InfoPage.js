@@ -36,14 +36,26 @@ function InfoPage({ page }) {
           <p>{description}</p>
           <div className="info-cta">
             {ctaPrimary && (
-              <Link to={ctaPrimary.to} className="primary-btn">
-                {ctaPrimary.label}
-              </Link>
+              ctaPrimary.to.startsWith('http') ? (
+                <a href={ctaPrimary.to} className="primary-btn">
+                  {ctaPrimary.label}
+                </a>
+              ) : (
+                <Link to={ctaPrimary.to} className="primary-btn">
+                  {ctaPrimary.label}
+                </Link>
+              )
             )}
             {ctaSecondary && (
-              <Link to={ctaSecondary.to} className="ghost-btn">
-                {ctaSecondary.label}
-              </Link>
+              ctaSecondary.to.startsWith('http') ? (
+                <a href={ctaSecondary.to} className="ghost-btn">
+                  {ctaSecondary.label}
+                </a>
+              ) : (
+                <Link to={ctaSecondary.to} className="ghost-btn">
+                  {ctaSecondary.label}
+                </Link>
+              )
             )}
           </div>
           {displayHighlights.length > 0 && (

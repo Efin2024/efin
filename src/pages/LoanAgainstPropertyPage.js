@@ -24,6 +24,13 @@ function LoanAgainstPropertyPage() {
     return (
 
         <div className="page property-loan-page">
+            <div style={{ backgroundColor: 'transparent', color: 'black', padding: '10px 0', fontWeight: 'bold', fontSize: '1.2rem', textTransform: 'uppercase', letterSpacing: '2px', width: '100%', maxWidth: '100%', margin: '0 0 3rem 0', zIndex: 10 }}>
+                <marquee direction="left" scrollamount="10">
+                    <span style={{ margin: '0 4rem' }}>Coming Soon</span>
+                    <span style={{ margin: '0 4rem' }}>Coming Soon</span>
+                    <span style={{ margin: '0 4rem' }}>Coming Soon</span>
+                </marquee>
+            </div>
             {/* Hero Section with Illustration */}
             <section className="property-hero-modern">
                 <div className="property-hero-grid">
@@ -519,9 +526,9 @@ function LoanAgainstPropertyPage() {
                     <h2>Ready to Unlock Your Property's Value?</h2>
                     <p>Get instant approval and competitive interest rates. Apply now or talk to our expert advisors.</p>
                     <div className="property-cta-buttons">
-                        <Link to="/support/contact" className="primary-btn large">
+                        <a href="https://payday.efin.co.in/login" className="primary-btn large">
                             Apply Now →
-                        </Link>
+                        </a>
                         <Link to="/support" className="ghost-btn large">
                             Talk to Expert
                         </Link>
