@@ -204,9 +204,8 @@ function Footer() {
         <div className="footer-bottom">
           <span>© {currentYear} E-Fin (MLB Securities Pvt. Ltd.). All rights reserved.</span>
           <div className="footer-bottom-links">
-            <Link to="/support">Privacy policy</Link>
-            <Link to="/support">Terms of use</Link>
-            <Link to="/support">Code of ethics</Link>
+            <Link to="/policies/policies">Privacy policy</Link>
+            <Link to="/policies/terms-and-conditions">Terms of use</Link>
           </div>
         </div>
       </div>
