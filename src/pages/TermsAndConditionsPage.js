@@ -398,12 +398,9 @@ function TermsAndConditionsPage() {
                     <h2>Questions About These Terms?</h2>
                     <p>If you have any questions or concerns regarding these Terms and Conditions, please don't hesitate to contact us.</p>
                     <div className="contact-buttons">
-                        <a href="mailto:rahulsharma@efin.co.in" className="primary-btn large">
+                        <a href="mailto:care@mlbsecurities.com" className="primary-btn large">
                             Email Us →
                         </a>
-                        <Link to="/support" className="ghost-btn large">
-                            Support Center
-                        </Link>
                     </div>
                 </div>
             </section>
