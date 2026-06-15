@@ -196,9 +196,9 @@ function Footer() {
               <span>+91-9997842548</span>
               <span>rahulsharma@efin.co.in</span>
             </div>
-            <Link to="/support/contact" className="footer-cta">
+            <a href="https://payday.efin.co.in/login" className="footer-cta">
               Apply for a loan
-            </Link>
+            </a>
           </div>
         </div>
         <div className="footer-bottom">
