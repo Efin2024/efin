@@ -76,7 +76,7 @@
 
 .personal-highlights-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 1rem;
     margin: 1rem 0;
 }
@@ -102,6 +102,24 @@
 .chip-icon-personal {
     font-size: 2rem;
     line-height: 1;
+}
+
+.chip-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.chip-content strong {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-strong);
+    word-break: normal;
+    overflow-wrap: normal;
+}
+
+.chip-content span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
 }
 
 .personal-hero-cta {

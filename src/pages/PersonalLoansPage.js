@@ -380,18 +380,6 @@ function PersonalLoansPage() {
             <div className="fees-value-modern">Charges</div>
           </div>
 
-          <div className="fees-row-modern">
-            <div className="fees-label-modern">
-              <span className="fees-icon-modern">📊</span>
-              <div>
-                <strong>Interest Rate</strong>
-                <p>Per annum</p>
-              </div>
-            </div>
-            <div className="fees-value-modern">
-              <strong>18% - 30% p.a.</strong>
-            </div>
-          </div>
 
           <div className="fees-row-modern">
             <div className="fees-label-modern">

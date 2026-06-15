@@ -623,6 +623,7 @@ export const NAV_STRUCTURE = [
       'solutions/payment-collection-merchant-settlement',
       'loans/instant-cash-loan',
       'loans/personal-loan',
+      'loans/payday-loan',
       'loans/loan-against-property',
       'loans/two-wheeler-loan',
       'loans/three-wheeler-loan',

@@ -202,7 +202,7 @@ function Header() {
                       <div className="card-text">
                         <h4>{item.label}</h4>
                         <p>{item.description}</p>
-                        {section.label === 'Our Products' && item.label !== 'Personal Loan' && (
+                        {section.label === 'Our Products' && item.label !== 'Personal Loan' && item.label !== 'Pay-day Loan' && (
                           <div className="coming-soon-animated">Coming Soon</div>
                         )}
                       </div>
@@ -230,6 +230,7 @@ function Header() {
         </nav>
 
         <div className="nav-actions">
+
           <a className="primary-btn" href="https://payday.efin.co.in/login">
             Login
           </a>
@@ -239,6 +240,11 @@ function Header() {
           <Link className="primary-btn" to="/repay">
             Repay
           </Link>
+          <div className="iso-badge-circle" style={{ marginLeft: '10px', marginRight: 0 }}>
+            <span className="iso-top">ISO</span>
+            <span className="iso-mid">9001:2007</span>
+            <span className="iso-bot">CERTIFIED</span>
+          </div>
         </div>
       </div>
     </header>
