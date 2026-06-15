@@ -226,11 +226,11 @@ function PersonalLoansPage() {
           </div>
         </div>
 
-        <div className="eligibility-cta">
+        {/* <div className="eligibility-cta">
           <Link to="/resources/eligibility-calculator" className="primary-btn">
             Check Your Eligibility →
           </Link>
-        </div>
+        </div> */}
       </section>
 
       {/* Documents Required */}
@@ -406,7 +406,7 @@ function PersonalLoansPage() {
             </div>
           </div>
 
-          <div className="fees-row-modern">
+          {/* <div className="fees-row-modern">
             <div className="fees-label-modern">
               <span className="fees-icon-modern">⚠️</span>
               <div>
@@ -417,7 +417,7 @@ function PersonalLoansPage() {
             <div className="fees-value-modern">
               <strong>₹20 per day</strong>
             </div>
-          </div>
+          </div> */}
 
           <div className="fees-row-modern">
             <div className="fees-label-modern">
@@ -465,8 +465,7 @@ function PersonalLoansPage() {
         </p>
       </section>
 
-      {/* CTA Section */}
-      <section className="personal-cta-section">
+      {/* <section className="personal-cta-section">
         <div className="personal-cta-card">
           <div className="cta-icon-large">💰</div>
           <h2>Ready to Get Your Personal Loan?</h2>
@@ -485,7 +484,7 @@ function PersonalLoansPage() {
             <span>✓ No Hidden Charges</span>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

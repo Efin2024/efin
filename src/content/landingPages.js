@@ -629,7 +629,7 @@ export const NAV_STRUCTURE = [
       'loans/three-wheeler-loan',
     ],
   },
-  {
+  /* {
     label: 'Loan Calculators',
     items: [
       'resources/personal-loan-emi-calculator',
@@ -637,7 +637,7 @@ export const NAV_STRUCTURE = [
       'resources/eligibility-calculator',
       'resources/check-credit-score',
     ],
-  },
+  }, */
   { label: 'About Us', items: ['about', 'about/careers', 'support/contact'] },
   {
     label: 'Policies',

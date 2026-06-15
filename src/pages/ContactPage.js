@@ -5,6 +5,7 @@ import { useLeadCapture } from '../hooks/useLeadCapture';
 
 function ContactPage() {
     const { captureLead, isLoading, isSuccess } = useLeadCapture();
+    const [localSuccess, setLocalSuccess] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -20,30 +21,47 @@ function ContactPage() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        await captureLead({
+
+        // Capture lead in backend DB (non-blocking)
+        captureLead({
             name: formData.name,
             email: formData.email,
             phone: formData.phone,
             source: 'Contact Page',
             message: `Subject: ${formData.subject}\n\n${formData.message}`,
             additionalData: { subject: formData.subject }
+        }).catch(err => console.error("Database lead capture error:", err));
+
+        // Show local success notification immediately
+        setLocalSuccess(true);
+
+        // Reset form
+        setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            subject: 'General Inquiry',
+            message: '',
         });
 
-        if (!isLoading) {
-            setFormData({
-                name: '',
-                email: '',
-                phone: '',
-                subject: 'General Inquiry',
-                message: '',
-            });
-        }
+        // Hide success message after 5 seconds
+        setTimeout(() => {
+            setLocalSuccess(false);
+        }, 5000);
     };
 
     return (
-        <div className="page contact-page-modern">
-            {/* Hero Section */}
-            <section className="contact-hero-modern">
+        <>
+            {/* Top Toast Notification */}
+            {(localSuccess || isSuccess) && (
+                <div className="contact-toast-top">
+                    <span className="toast-icon">✓</span>
+                    <p>Thank you! Your message has been sent to care@mlbsecurities.com. We'll get back to you soon.</p>
+                </div>
+            )}
+            <div className="page contact-page-modern">
+                {/* Hero Section */}
+                <section className="contact-hero-modern">
                 <div className="contact-hero-content">
                     <span className="contact-badge">📧 Get In Touch</span>
                     <h1>
@@ -79,7 +97,7 @@ function ContactPage() {
                                     <div className="method-icon-contact">✉️</div>
                                     <div className="method-details">
                                         <strong>Email</strong>
-                                        <a href="mailto:rahulsharma@efin.co.in">rahulsharma@efin.co.in</a>
+                                        <a href="mailto:care@mlbsecurities.com">care@mlbsecurities.com</a>
                                         <span className="method-note">We'll respond within 24 hours</span>
                                     </div>
                                 </div>
@@ -197,13 +215,6 @@ function ContactPage() {
                                 <button type="submit" className="contact-submit-btn" disabled={isLoading}>
                                     {isLoading ? 'Sending...' : 'Send Message →'}
                                 </button>
-
-                                {isSuccess && (
-                                    <div className="form-success-contact">
-                                        <span className="success-icon-contact">✓</span>
-                                        <p>Thank you! Your message has been sent successfully. We'll get back to you soon.</p>
-                                    </div>
-                                )}
                             </form>
                         </div>
                     </div>
@@ -254,6 +265,7 @@ function ContactPage() {
                 </div>
             </section>
         </div>
+        </>
     );
 }
 
