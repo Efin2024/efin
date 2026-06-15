@@ -8,7 +8,31 @@ function RepayPage() {
   const [otp, setOtp] = useState(['', '', '', '', '', '']);
   const [showOtpInput, setShowOtpInput] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [message, setMessage] = useState('');
+  const [generatedOtp, setGeneratedOtp] = useState('');
+  const [toastMessage, setToastMessage] = useState('');
+  const [showNoLoansPopup, setShowNoLoansPopup] = useState(false);
+
+  const showToast = (msg) => {
+    setToastMessage(msg);
+    setTimeout(() => setToastMessage(''), 2000);
+  };
+
+  const sendOtpSms = async (phone, otpCode) => {
+    try {
+      const url = new URL("https://bulksmsplans.com/api/verify");
+      url.searchParams.append("api_id", "API74MHaj82147462");
+      url.searchParams.append("api_password", "YBHXhk5P");
+      url.searchParams.append("sms_type", "Transactional");
+      url.searchParams.append("sms_encoding", "1");
+      url.searchParams.append("sender", "MLBFIN");
+      url.searchParams.append("number", phone);
+      url.searchParams.append("message", `Dear client your otp is ${otpCode}. Thanks Team efin Mlb Securities Private Limited`);
+
+      await fetch(url.toString(), { mode: 'no-cors' });
+    } catch (err) {
+      console.error("SMS API error", err);
+    }
+  };
 
   // Validate PAN format (e.g., ABCDE1234F)
   const isValidPan = (pan) => {
@@ -16,22 +40,23 @@ function RepayPage() {
     return panRegex.test(pan);
   };
 
-  const handleRequestOtp = (e) => {
+  const handleRequestOtp = async (e) => {
     e.preventDefault();
     if (isValidPan(panNumber) && phoneNumber.length === 10) {
       setIsLoading(true);
-      // Simulate API call to send OTP
-      setTimeout(() => {
-        setIsLoading(false);
-        setShowOtpInput(true);
-        // Simulate OTP sent
-        alert(`Development Mode: OTP has been sent to +91 ${phoneNumber} for PAN ${panNumber}`);
-      }, 1000);
+      
+      const newOtp = Math.floor(100000 + Math.random() * 900000).toString();
+      setGeneratedOtp(newOtp);
+      await sendOtpSms(phoneNumber, newOtp);
+
+      setIsLoading(false);
+      setShowOtpInput(true);
+      showToast(`OTP has been sent to +91 ${phoneNumber}`);
     } else {
       if (!isValidPan(panNumber)) {
-        alert('Please enter a valid PAN card number');
+        showToast('Please enter a valid PAN card number');
       } else {
-        alert('Please enter a valid mobile number');
+        showToast('Please enter a valid mobile number');
       }
     }
   };
@@ -54,20 +79,82 @@ function RepayPage() {
     const otpValue = otp.join('');
 
     if (otpValue.length === 6) {
+      if (otpValue !== generatedOtp) {
+        showToast('Invalid OTP. Please try again.');
+        return;
+      }
+
       setIsLoading(true);
       // Simulate API call to verify OTP and fetch loans
       setTimeout(() => {
         setIsLoading(false);
         // Show default message: No loans found
-        setMessage('You do not have any active loans');
+        setShowNoLoansPopup(true);
+        setShowOtpInput(false);
+        setPanNumber('');
+        setPhoneNumber('');
+        setOtp(['', '', '', '', '', '']);
       }, 1500);
     } else {
-      alert('Please enter a valid 6-digit OTP.');
+      showToast('Please enter a valid 6-digit OTP.');
     }
   };
 
   return (
-    <div className="login-page">
+    <>
+      {toastMessage && (
+        <div style={{
+          position: 'fixed',
+          top: '20px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          background: '#333',
+          color: '#fff',
+          padding: '12px 24px',
+          borderRadius: '8px',
+          zIndex: 9999,
+          boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+          fontSize: '14px',
+          fontWeight: '500'
+        }}>
+          {toastMessage}
+        </div>
+      )}
+
+      {showNoLoansPopup && (
+        <div style={{
+          position: 'fixed',
+          top: 0, left: 0, right: 0, bottom: 0,
+          backgroundColor: 'rgba(0,0,0,0.5)',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          zIndex: 10000
+        }}>
+          <div style={{
+            background: '#fff',
+            padding: '2.5rem',
+            borderRadius: '16px',
+            textAlign: 'center',
+            maxWidth: '400px',
+            width: '90%',
+            boxShadow: '0 10px 30px rgba(0,0,0,0.2)'
+          }}>
+            <h2 style={{ color: '#d32f2f', marginBottom: '1rem', marginTop: 0 }}>No Active Loans</h2>
+            <p style={{ color: '#555', marginBottom: '2rem', fontSize: '1.1rem', lineHeight: '1.5' }}>You do not have any active loans linked with this PAN number.</p>
+            <button
+              type="button"
+              onClick={() => setShowNoLoansPopup(false)}
+              className="submit-btn"
+              style={{ width: '100%' }}
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      )}
+
+      <div className="login-page">
       <div className="login-container">
         {/* Left Section - Repay Form */}
         <div className="login-form-section">
@@ -78,34 +165,14 @@ function RepayPage() {
           <div className="login-content">
             <h1>Repay Your Loan</h1>
             <p className="login-subtitle">
-              {message ? '' : showOtpInput
+              {showOtpInput
                 ? 'Enter the verification code sent to your registered mobile'
                 : 'Enter your PAN card number to check your active loans'}
             </p>
 
-            {message ? (
-              <div className="message-box" style={{ padding: '2rem', background: '#f8d7da', color: '#721c24', borderRadius: '12px', marginTop: '2rem', textAlign: 'center', border: '1px solid #f5c6cb' }}>
-                <h3 style={{ margin: 0 }}>{message}</h3>
-                <button
-                  type="button"
-                  className="submit-btn"
-                  style={{ marginTop: '2rem' }}
-                  onClick={() => {
-                    setMessage('');
-                    setShowOtpInput(false);
-                    setPanNumber('');
-                    setPhoneNumber('');
-                    setOtp(['', '', '', '', '', '']);
-                  }}
-                >
-                  Check Another PAN
-                </button>
-              </div>
-            ) : (
-              <>
-                {/* PAN Input Form */}
-                {!showOtpInput && (
-                  <form className="auth-form" onSubmit={handleRequestOtp} style={{ marginTop: '2rem' }}>
+            {/* PAN Input Form */}
+            {!showOtpInput && (
+              <form className="auth-form" onSubmit={handleRequestOtp}>
                     <div className="form-group">
                       <label htmlFor="pan">PAN Card Number</label>
                       <input
@@ -113,7 +180,9 @@ function RepayPage() {
                         type="text"
                         placeholder="Enter Pan Number"
                         value={panNumber}
-                        onChange={(e) => setPanNumber(e.target.value.toUpperCase())}
+                        onChange={(e) => {
+                          setPanNumber(e.target.value.toUpperCase());
+                        }}
                         maxLength="10"
                         required
                         style={{ textTransform: 'uppercase' }}
@@ -128,7 +197,9 @@ function RepayPage() {
                           type="tel"
                           placeholder="Enter mobile number"
                           value={phoneNumber}
-                          onChange={(e) => setPhoneNumber(e.target.value.replace(/\D/g, '').slice(0, 10))}
+                          onChange={(e) => {
+                            setPhoneNumber(e.target.value.replace(/\D/g, '').slice(0, 10));
+                          }}
                           maxLength="10"
                           required
                         />
@@ -177,7 +248,12 @@ function RepayPage() {
                       <button
                         type="button"
                         className="resend-btn"
-                        onClick={() => alert(`Development Mode: OTP has been resent to +91 ${phoneNumber} for PAN ${panNumber}`)}
+                        onClick={async () => {
+                          const newOtp = Math.floor(100000 + Math.random() * 900000).toString();
+                          setGeneratedOtp(newOtp);
+                          await sendOtpSms(phoneNumber, newOtp);
+                          showToast(`OTP has been resent to +91 ${phoneNumber}`);
+                        }}
                       >
                         Resend OTP
                       </button>
@@ -209,8 +285,6 @@ function RepayPage() {
                     </button>
                   </form>
                 )}
-              </>
-            )}
           </div>
         </div>
 
@@ -220,6 +294,7 @@ function RepayPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
