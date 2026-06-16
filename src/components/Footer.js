@@ -44,24 +44,9 @@ const footerNav = [
 
 const footerSocial = [
   {
-    label: 'Facebook',
-    href: 'https://www.facebook.com/',
-    icon: 'https://img.icons8.com/color/48/facebook.png',
-  },
-  {
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/',
     icon: 'https://img.icons8.com/color/48/linkedin.png',
-  },
-  {
-    label: 'Twitter',
-    href: 'https://twitter.com/',
-    icon: 'https://img.icons8.com/color/48/twitter--v1.png',
-  },
-  {
-    label: 'Instagram',
-    href: 'https://www.instagram.com/',
-    icon: 'https://img.icons8.com/color/48/instagram-new.png',
   },
   {
     label: 'WhatsApp',
