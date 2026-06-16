@@ -178,7 +178,12 @@ function Footer() {
                       className="footer-link"
                       onClick={() => handleFooterLinkClick(item.path)}
                     >
-                      {item.label}
+                      <div style={{ display: 'flex', flexDirection: 'column' }}>
+                        <span>{item.label}</span>
+                        {section.title === 'Loans' && item.label !== 'Personal Loan' && (
+                          <span className="coming-soon-animated" style={{ marginTop: '2px', fontSize: '0.65rem', textAlign: 'left' }}>COMING SOON</span>
+                        )}
+                      </div>
                     </Link>
                   ))}
                 </div>
