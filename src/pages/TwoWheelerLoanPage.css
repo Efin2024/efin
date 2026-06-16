@@ -3,7 +3,7 @@
 .two-wheeler-page {
     padding-top: 3rem;
     background: linear-gradient(to right, #eef5fb 0%, #d4e2ec 50%, #c4d4e0 100%);
-    background-attachment: fixed;
+    /* background-attachment: fixed removed — broken on iOS Safari */
     min-height: 100vh;
 }
 

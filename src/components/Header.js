@@ -1,5 +1,4 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { flushSync } from 'react-dom';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import landingPages, { NAV_STRUCTURE } from '../content/landingPages';
@@ -22,6 +21,16 @@ const NAV_LINKS = NAV_STRUCTURE.map((section) => ({
     .filter(Boolean),
 }));
 
+// ─── Scroll-lock helpers ─────────────────────────────────────
+function lockBodyScroll() {
+  document.body.classList.add('nav-open');
+}
+
+function unlockBodyScroll() {
+  document.body.classList.remove('nav-open');
+}
+// ────────────────────────────────────────────────────────────────────
+
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -31,68 +40,80 @@ function Header() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Close menu on any route/navigation change
+  // Close menu on route change
   useLayoutEffect(() => {
-    setMenuOpen(false);
-    setActiveDropdown(null);
-    document.body.classList.remove('nav-open');
+    closeMenu();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.key, location.pathname, location.search]);
 
+  // Scroll shadow on header
   useEffect(() => {
     const handleScroll = () => {
       if (headerRef.current) {
         headerRef.current.classList.toggle('has-shadow', window.scrollY > 10);
       }
     };
-
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Sync body scroll lock with menu state
+  // Body scroll lock with iOS fix
   useEffect(() => {
     if (menuOpen) {
-      document.body.classList.add('nav-open');
+      lockBodyScroll();
     } else {
-      document.body.classList.remove('nav-open');
+      unlockBodyScroll();
     }
-    return () => document.body.classList.remove('nav-open');
+    return () => unlockBodyScroll();
   }, [menuOpen]);
 
+  // Close when tapping outside the drawer
   useEffect(() => {
-    if (!menuOpen) {
-      return undefined;
-    }
+    if (!menuOpen) return undefined;
 
-    const handleOutsideInteraction = (event) => {
-      const target = event.target;
-
-      if (navRef.current?.contains(target) || toggleRef.current?.contains(target)) {
+    const handleOutside = (e) => {
+      if (
+        navRef.current?.contains(e.target) ||
+        toggleRef.current?.contains(e.target)
+      ) {
         return;
       }
-
       closeMenu();
     };
 
-    const handleEscape = (event) => {
-      if (event.key === 'Escape') {
-        closeMenu();
-      }
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') closeMenu();
     };
 
-    document.addEventListener('pointerdown', handleOutsideInteraction, true);
+    // Use touchstart for faster response on iOS
+    document.addEventListener('touchstart', handleOutside, { passive: true, capture: true });
+    document.addEventListener('pointerdown', handleOutside, true);
     document.addEventListener('keydown', handleEscape);
 
     return () => {
-      document.removeEventListener('pointerdown', handleOutsideInteraction, true);
+      document.removeEventListener('touchstart', handleOutside, { capture: true });
+      document.removeEventListener('pointerdown', handleOutside, true);
       document.removeEventListener('keydown', handleEscape);
     };
   }, [menuOpen]);
 
+  // ── Actions ─────────────────────────────────────────────────────
+
+  const openMenu = () => {
+    setActiveDropdown(null);
+    setMenuOpen(true);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+    setActiveDropdown(null);
+  };
+
   const toggleMenu = () => {
-    setMenuOpen((prev) => !prev);
-    if (!menuOpen) {
-      setActiveDropdown(null);
+    if (menuOpen) {
+      closeMenu();
+    } else {
+      openMenu();
     }
   };
 
@@ -100,39 +121,18 @@ function Header() {
     setActiveDropdown((prev) => (prev === label ? null : label));
   };
 
-  const closeMenu = () => {
-    setMenuOpen(false);
-    setActiveDropdown(null);
-    document.body.classList.remove('nav-open');
+  // Navigate then close — no flushSync needed, route change closes menu
+  const handleNavLinkClick = (to) => {
+    closeMenu();
+    navigate(to);
   };
 
-  const handleCloseMenuInteraction = (event) => {
-    event.preventDefault();
-    event.stopPropagation();
+  const handleOverlayClick = () => {
     closeMenu();
   };
 
-  const handleLinkClick = () => {
-    // Force close everything
-    setMenuOpen(false);
-    setActiveDropdown(null);
-    document.body.classList.remove('nav-open');
-    // Ensure scroll to top on navigation if needed, though ScrollToTop component exists
-  };
-
-  const closeMenuAndNavigate = (to) => {
-    flushSync(() => {
-      handleLinkClick();
-    });
-    requestAnimationFrame(() => {
-      navigate(to);
-    });
-  };
-
-  const handleFocusOut = (event) => {
-    if (headerRef.current && !headerRef.current.contains(event.relatedTarget)) {
-      setActiveDropdown(null);
-    }
+  const handleLogoClick = () => {
+    closeMenu();
   };
 
   const logoSrc = `${process.env.PUBLIC_URL || ''}/Png-01.png`;
@@ -140,15 +140,21 @@ function Header() {
   return (
     <header className="fibe-header" ref={headerRef}>
       <div className="header-shell">
-        <Link to="/loans/personal-loan" className="brand-mark" onClick={handleLinkClick}>
+        {/* ── Logo ── */}
+        <Link
+          to="/loans/personal-loan"
+          className="brand-mark"
+          onClick={handleLogoClick}
+        >
           <img src={logoSrc} alt="E-Fin" className="brand-logo" />
         </Link>
 
+        {/* ── Hamburger toggle ── */}
         <button
           ref={toggleRef}
           className={`nav-toggle${menuOpen ? ' is-active' : ''}`}
           type="button"
-          aria-label="Toggle navigation"
+          aria-label={menuOpen ? 'Close navigation' : 'Open navigation'}
           aria-expanded={menuOpen}
           onClick={toggleMenu}
         >
@@ -157,54 +163,56 @@ function Header() {
           <span />
         </button>
 
+        {/* ── Overlay ── */}
         <div
           className={`nav-overlay${menuOpen ? ' show' : ''}`}
-          onClick={handleCloseMenuInteraction}
+          onClick={handleOverlayClick}
+          aria-hidden="true"
         />
 
+        {/* ── Drawer / Desktop nav ── */}
         <nav
           ref={navRef}
           className={`primary-nav${menuOpen ? ' is-visible' : ''}`}
-          aria-label="Primary"
+          aria-label="Primary navigation"
         >
-          <button
-            type="button"
-            className="nav-drawer-close"
-            aria-label="Close navigation"
-            onClick={handleCloseMenuInteraction}
-            onPointerUp={handleCloseMenuInteraction}
-          >
-            ×
-          </button>
           <ul>
             {NAV_LINKS.map((section) => (
               <li
                 key={section.label}
-                onBlur={handleFocusOut}
                 className={activeDropdown === section.label ? 'expanded' : undefined}
               >
+                {/* Section heading button */}
                 <button
                   type="button"
                   className="nav-link"
                   onClick={() => toggleDropdown(section.label)}
+                  aria-expanded={activeDropdown === section.label}
                 >
                   {section.label}
-                  <span className="chevron" />
+                  <span className="chevron" aria-hidden="true" />
                 </button>
-                <div className={`mega-menu${activeDropdown === section.label ? ' show' : ''}`}>
+
+                {/* Dropdown / accordion */}
+                <div
+                  className={`mega-menu${activeDropdown === section.label ? ' show' : ''}`}
+                  aria-hidden={activeDropdown !== section.label}
+                >
                   {section.items.map((item) => (
                     <button
                       key={item.label}
                       type="button"
                       className="mega-card"
-                      onClick={() => closeMenuAndNavigate(item.to)}
+                      onClick={() => handleNavLinkClick(item.to)}
                     >
                       <div className="card-text">
                         <h4>{item.label}</h4>
                         <p>{item.description}</p>
-                        {section.label === 'Our Products' && item.label !== 'Personal Loan' && item.label !== 'Pay-day Loan' && (
-                          <div className="coming-soon-animated">Coming Soon</div>
-                        )}
+                        {section.label === 'Our Products' &&
+                          item.label !== 'Personal Loan' &&
+                          item.label !== 'Pay-day Loan' && (
+                            <div className="coming-soon-animated">Coming Soon</div>
+                          )}
                       </div>
                       <span aria-hidden="true">→</span>
                     </button>
@@ -213,24 +221,35 @@ function Header() {
               </li>
             ))}
           </ul>
+
+          {/* Drawer footer buttons (mobile only) */}
           <div className="drawer-actions">
-            <a className="primary-btn" href="https://payday.efin.co.in/login">
+            <a
+              className="primary-btn"
+              href="https://payday.efin.co.in/login"
+              onClick={closeMenu}
+            >
               Login
             </a>
-            <a className="primary-btn" href="https://payday.efin.co.in/login">
+            <a
+              className="primary-btn"
+              href="https://payday.efin.co.in/login"
+              onClick={closeMenu}
+            >
               Apply Now
             </a>
-            <Link className="primary-btn" to="/repay" onClick={(e) => {
-              e.preventDefault();
-              closeMenuAndNavigate('/repay');
-            }}>
+            <button
+              type="button"
+              className="primary-btn"
+              onClick={() => handleNavLinkClick('/repay')}
+            >
               Repay
-            </Link>
+            </button>
           </div>
         </nav>
 
+        {/* ── Desktop action buttons ── */}
         <div className="nav-actions">
-
           <a className="primary-btn" href="https://payday.efin.co.in/login">
             Login
           </a>
@@ -240,7 +259,6 @@ function Header() {
           <Link className="primary-btn" to="/repay">
             Repay
           </Link>
-
         </div>
       </div>
     </header>

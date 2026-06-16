@@ -267,7 +267,7 @@
 
 .business-features-bento {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
 }
 
@@ -473,6 +473,8 @@
     gap: 2rem;
     align-items: center;
     transition: background 0.2s ease;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .fees-row-business:hover {

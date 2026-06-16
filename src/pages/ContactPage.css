@@ -57,7 +57,7 @@
 
 .contact-container {
     display: grid;
-    grid-template-columns: 400px 1fr;
+    grid-template-columns: minmax(0, 400px) 1fr;
     gap: 3rem;
     align-items: start;
     width: 100%;

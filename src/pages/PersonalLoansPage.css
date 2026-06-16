@@ -273,7 +273,7 @@
 
 .personal-features-bento {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
 }
 
@@ -502,6 +502,17 @@
     align-items: center;
 }
 
+/* Mobile: collapse to single column */
+@media (max-width: 900px) {
+    .steps-modern-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .step-connector {
+        display: none;
+    }
+}
+
 .step-modern-card {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -585,6 +596,8 @@
     gap: 2rem;
     align-items: center;
     transition: background 0.2s ease;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .fees-row-modern:hover {
