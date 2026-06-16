@@ -635,7 +635,7 @@ body.nav-open {
   color: #ff5722;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  animation: pulse-coming-soon 1.5s infinite;
+  animation: pulse-coming-soon 3s infinite;
 }
 
 @keyframes pulse-coming-soon {
