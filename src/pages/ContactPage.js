@@ -120,7 +120,7 @@ function ContactPage() {
                                     <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                                         <img src="https://img.icons8.com/color/48/facebook.png" alt="Facebook" />
                                     </a>
-                                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7472556990527889409" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                                         <img src="https://img.icons8.com/color/48/linkedin.png" alt="LinkedIn" />
                                     </a>
                                     <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">

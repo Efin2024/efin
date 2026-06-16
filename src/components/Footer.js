@@ -45,7 +45,7 @@ const footerNav = [
 const footerSocial = [
   {
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/',
+    href: 'https://www.linkedin.com/feed/update/urn:li:activity:7472556990527889409',
     icon: 'https://img.icons8.com/color/48/linkedin.png',
   },
   {
