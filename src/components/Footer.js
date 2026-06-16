@@ -158,12 +158,24 @@ function Footer() {
               <span className="iso-mid">9001 & 27001</span>
               <span className="iso-bot">CERTIFIED</span>
             </div>
-            <div className="pci-dss-badge" style={{ marginTop: '1rem', marginLeft: '1rem', display: 'flex', alignItems: 'center' }}>
+            <div className="pci-dss-badge" style={{ marginTop: '1rem', marginLeft: '0', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '1rem' }}>
               <img
                 src="https://cdn.goinfinito.com/fm/4349/root/0c1718dc4148f986763371b4d839f735.png"
                 alt="PCI DSS Certified"
                 style={{ maxHeight: '55px', maxWidth: '100%', width: 'auto', height: 'auto', objectFit: 'contain' }}
               />
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginLeft: '-0.5rem' }}>
+                <img
+                  src={`${process.env.PUBLIC_URL || ''}/certi01.png`}
+                  alt="Certificate 1"
+                  style={{ maxHeight: '220px', maxWidth: '100%', width: 'auto', height: 'auto', objectFit: 'contain' }}
+                />
+                <img
+                  src={`${process.env.PUBLIC_URL || ''}/certi02.png`}
+                  alt="Certificate 2"
+                  style={{ maxHeight: '220px', maxWidth: '100%', width: 'auto', height: 'auto', objectFit: 'contain' }}
+                />
+              </div>
             </div>
           </div>
           <div className="footer-links">
