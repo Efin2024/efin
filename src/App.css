@@ -8082,3 +8082,20 @@ iframe {
   0% { transform: translateX(100vw); }
   100% { transform: translateX(-100%); }
 }
+
+/* Mobile Alternative: Stop the marquee, just center one 'Coming Soon' text */
+@media (max-width: 768px) {
+  .css-marquee-content {
+    animation: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    transform: none !important;
+  }
+  .css-marquee-content span {
+    margin: 0 !important;
+  }
+  .css-marquee-content span:not(:first-child) {
+    display: none;
+  }
+}
