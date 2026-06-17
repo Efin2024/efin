@@ -4,7 +4,7 @@ import './ContactPage.css';
 import { useLeadCapture } from '../hooks/useLeadCapture';
 
 function ContactPage() {
-    const { captureLead, isLoading, isSuccess } = useLeadCapture();
+    const { captureLead, isLoading } = useLeadCapture();
     const [localSuccess, setLocalSuccess] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
@@ -53,7 +53,7 @@ function ContactPage() {
     return (
         <>
             {/* Top Toast Notification */}
-            {(localSuccess || isSuccess) && (
+            {localSuccess && (
                 <div className="contact-toast-top">
                     <span className="toast-icon">✓</span>
                     <p>Thank you! Your message has been sent to care@mlbsecurities.com. We'll get back to you soon.</p>
