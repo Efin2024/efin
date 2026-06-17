@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const API_URL = process.env.NODE_ENV === 'production' ? '/api/leads/capture' : 'http://localhost:5003/api/leads/capture';
+const API_URL = window.location.hostname === 'localhost' ? 'http://localhost:5003/api/leads/capture' : '/api/leads/capture';
 
 export const useLeadCapture = () => {
     const [isLoading, setIsLoading] = useState(false);
