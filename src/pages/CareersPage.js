@@ -115,20 +115,7 @@ function CareersPage() {
             ))}
           </ul>
         </div>
-        <div className="contact-cta">
-          <div>
-            <h3>Ready to apply?</h3>
-            <p>Share your resume and a short note on how you plan to reshape inclusive credit.</p>
-          </div>
-          <div className="contact-buttons">
-            <a className="primary-btn" href="mailto:care@mlbsecurities.com">
-              Email care@mlbsecurities.com
-            </a>
-            <a className="ghost-btn" href="mailto:care@mlbsecurities.com">
-              Talk to People Ops
-            </a>
-          </div>
-        </div>
+
       </section>
 
       <section className="section">
