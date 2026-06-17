@@ -24,7 +24,7 @@ const PERKS = [
 ];
 
 function CareersPage() {
-  const { captureLead, isLoading, isSuccess } = useLeadCapture();
+  const { captureLead, isLoading } = useLeadCapture();
   const [localSuccess, setLocalSuccess] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
