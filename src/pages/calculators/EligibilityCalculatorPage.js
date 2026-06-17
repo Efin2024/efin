@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import EligibilityCalculator from '../../components/EligibilityCalculator';
 
 const quickFacts = [
-  { label: 'FOIR guardrail', value: '≤ 45%' },
+  { label: 'FOIR guardrail', value: '≤ 40%' },
   { label: 'Inputs', value: 'Income + EMIs + tenure' },
   { label: 'Output', value: 'Max eligible amount' },
 ];
@@ -15,7 +15,7 @@ const steps = [
 ];
 
 const guardrails = [
-  'FOIR capped at 45% of monthly income by default.',
+  'FOIR capped at 40% of monthly income by default.',
   'We subtract existing EMIs before suggesting the eligible EMI.',
   'Final approval still depends on bureau score and KYC verification.',
 ];
@@ -78,7 +78,7 @@ function EligibilityCalculatorPage() {
           <p className="calc-hero-note">We keep you under a healthy FOIR so rent, fuel, and bills stay comfortable.</p>
           <div className="hero-mini-stats">
             <div>
-              <strong>45%</strong>
+              <strong>40%</strong>
               <span>FOIR guardrail</span>
             </div>
             <div>

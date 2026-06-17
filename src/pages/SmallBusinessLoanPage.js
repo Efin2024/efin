@@ -395,18 +395,7 @@ function SmallBusinessLoanPage() {
                         <div className="fees-value-business">Charges</div>
                     </div>
 
-                    <div className="fees-row-business">
-                        <div className="fees-label-business">
-                            <span className="fees-icon-business">📊</span>
-                            <div>
-                                <strong>Interest Rate</strong>
-                                <p>Per annum</p>
-                            </div>
-                        </div>
-                        <div className="fees-value-business">
-                            <strong>12% - 30% p.a.</strong>
-                        </div>
-                    </div>
+
 
                     <div className="fees-row-business">
                         <div className="fees-label-business">
@@ -506,9 +495,7 @@ function SmallBusinessLoanPage() {
                         <Link to="/support/contact" className="primary-btn large">
                             Apply for Business Loan →
                         </Link>
-                        <Link to="/support" className="ghost-btn large">
-                            Talk to Business Advisor
-                        </Link>
+
                     </div>
                     <div className="cta-features-list-business">
                         <span>✓ No Collateral</span>

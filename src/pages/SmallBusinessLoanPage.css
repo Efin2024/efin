@@ -86,10 +86,10 @@
 }
 
 .business-highlights-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
 }
 
 .highlight-chip-business {
@@ -102,7 +102,9 @@
     border: 1px solid rgba(96, 121, 145, 0.14);
     transition: all 0.3s ease;
     box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
-    min-width: 0;
+    flex: 1 1 200px;
+    max-width: calc(50% - 0.5rem);
+    min-width: max-content;
 }
 
 .chip-content {
