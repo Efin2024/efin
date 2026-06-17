@@ -97,6 +97,25 @@ function Header() {
     };
   }, [menuOpen]);
 
+  // Close active dropdown when clicking outside the header
+  useEffect(() => {
+    if (!activeDropdown) return undefined;
+
+    const handleOutsideDropdown = (e) => {
+      if (headerRef.current && !headerRef.current.contains(e.target)) {
+        setActiveDropdown(null);
+      }
+    };
+
+    document.addEventListener('pointerdown', handleOutsideDropdown);
+    document.addEventListener('touchstart', handleOutsideDropdown, { passive: true });
+
+    return () => {
+      document.removeEventListener('pointerdown', handleOutsideDropdown);
+      document.removeEventListener('touchstart', handleOutsideDropdown);
+    };
+  }, [activeDropdown]);
+
   // ── Actions ─────────────────────────────────────────────────────
 
   const openMenu = () => {

@@ -22,11 +22,13 @@ const pool = mysql.createPool({
     queueLimit: 0
 });
 
+const tableName = process.env.DB_CONTACT_TABLE || 'leads';
+
 // Initialize Database Table
 const initDB = async () => {
     try {
         await pool.query(`
-            CREATE TABLE IF NOT EXISTS leads (
+            CREATE TABLE IF NOT EXISTS \`${tableName}\` (
                 id INT AUTO_INCREMENT PRIMARY KEY,
                 name VARCHAR(255) NOT NULL,
                 email VARCHAR(255),
@@ -38,7 +40,22 @@ const initDB = async () => {
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         `);
-        console.log('✅ Leads database initialized');
+        console.log(`✅ ${tableName} table initialized`);
+
+        // Initialize career table
+        await pool.query(`
+            CREATE TABLE IF NOT EXISTS \`career\` (
+                id INT AUTO_INCREMENT PRIMARY KEY,
+                name VARCHAR(255) NOT NULL,
+                email VARCHAR(255) NOT NULL,
+                phone VARCHAR(20) NOT NULL,
+                resume_file VARCHAR(255),
+                message TEXT,
+                status VARCHAR(50) DEFAULT 'new',
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+        `);
+        console.log(`✅ career table initialized`);
     } catch (err) {
         console.error('❌ Database initialization failed:', err.message);
     }
@@ -61,8 +78,47 @@ app.post('/api/leads/capture', async (req, res) => {
             });
         }
 
+        // Handle Career Application
+        if (source === 'Career Application') {
+            const resumeName = additionalData && additionalData.resumeFileName ? additionalData.resumeFileName : null;
+            const [result] = await pool.query(
+                `INSERT INTO \`career\` (name, email, phone, resume_file, message) VALUES (?, ?, ?, ?, ?)`,
+                [name, email, phone, resumeName, message]
+            );
+            return res.status(201).json({
+                success: true,
+                message: 'Career application captured successfully',
+                leadId: result.insertId
+            });
+        }
+
+        // Check if we are inserting into the specific contact table
+        if (tableName === 'contact' || source === 'Contact Page') {
+            const subjectStr = additionalData && additionalData.subject ? additionalData.subject : 'General Inquiry';
+            
+            // Extract clean message if it was prefixed with "Subject: " by the frontend
+            let cleanMessage = message || '';
+            if (cleanMessage.startsWith('Subject:')) {
+                const parts = cleanMessage.split('\n\n');
+                if (parts.length > 1) {
+                    cleanMessage = parts.slice(1).join('\n\n');
+                }
+            }
+
+            const [result] = await pool.query(
+                `INSERT INTO \`${tableName}\` (name, email, phone_no, subject, message) VALUES (?, ?, ?, ?, ?)`,
+                [name, email, phone, subjectStr, cleanMessage]
+            );
+
+            return res.status(201).json({
+                success: true,
+                message: 'Lead captured successfully',
+                leadId: result.insertId
+            });
+        }
+
         const [result] = await pool.query(
-            'INSERT INTO leads (name, email, phone, source, message, data) VALUES (?, ?, ?, ?, ?, ?)',
+            `INSERT INTO \`${tableName}\` (name, email, phone, source, message, data) VALUES (?, ?, ?, ?, ?, ?)`,
             [name, email, phone, source || 'Direct', message || null, JSON.stringify(additionalData || {})]
         );
 

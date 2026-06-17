@@ -173,9 +173,6 @@ function DisclaimerPage() {
                         <a href="mailto:care@mlbsecurities.com" className="primary-btn large">
                             Email Us →
                         </a>
-                        <Link to="/support" className="ghost-btn large">
-                            Support Center
-                        </Link>
                     </div>
                 </div>
             </section>

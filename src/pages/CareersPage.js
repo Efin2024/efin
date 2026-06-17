@@ -25,7 +25,7 @@ const PERKS = [
 
 function CareersPage() {
   const { captureLead, isLoading, isSuccess } = useLeadCapture();
-  const [formSubmitted, setFormSubmitted] = useState(false); // Keep existing state for now, though new handleSubmit doesn't update it
+  const [localSuccess, setLocalSuccess] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -55,16 +55,36 @@ function CareersPage() {
     if (formData.resume) {
       dataToSubmit.additionalData.resumeFileName = formData.resume.name;
     }
-    await captureLead(dataToSubmit);
-    if (!isLoading && isSuccess) {
+    
+    const result = await captureLead(dataToSubmit);
+    
+    if (result) {
+      // Clear form state
       setFormData({ name: '', email: '', phone: '', message: '', resume: null });
-      setFormSubmitted(true); // Update existing state if submission is successful
+      
+      // Clear file input visually
+      const fileInput = document.getElementById('career-resume');
+      if (fileInput) fileInput.value = '';
+
+      // Show toast
+      setLocalSuccess(true);
+      setTimeout(() => {
+        setLocalSuccess(false);
+      }, 5000);
     }
   };
 
   return (
-    <div className="page careers-page">
-      <section className="page-hero">
+    <>
+      {/* Top Toast Notification */}
+      {localSuccess && (
+          <div className="contact-toast-top" style={{ position: 'fixed', top: '20px', left: '50%', transform: 'translateX(-50%)', backgroundColor: '#4caf50', color: 'white', padding: '15px 30px', borderRadius: '8px', zIndex: 1000, display: 'flex', alignItems: 'center', gap: '10px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
+              <span className="toast-icon">✓</span>
+              <p style={{ margin: 0 }}>Application submitted successfully! Our team will reach out to you.</p>
+          </div>
+      )}
+      <div className="page careers-page">
+        <section className="page-hero">
         <div className="page-hero-body">
           <span className="badge">Careers @ E-Fin</span>
           <h1>Build credit products India trusts</h1>
@@ -179,11 +199,11 @@ function CareersPage() {
             <button type="submit" className="primary-btn" disabled={isLoading}>
               {isLoading ? 'Submitting...' : 'Submit application'}
             </button>
-            {formSubmitted && <p className="form-note success">Thanks! Our team will reach out shortly.</p>}
           </form>
         </div>
       </section>
     </div>
+    </>
   );
 }
 

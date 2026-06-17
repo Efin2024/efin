@@ -272,9 +272,6 @@ function GrievanceRedressalPage() {
                         <a href="mailto:care@mlbsecurities.com" className="primary-btn large">
                             Share Your Feedback →
                         </a>
-                        <Link to="/support" className="ghost-btn large">
-                            Contact Support
-                        </Link>
                     </div>
                 </div>
             </section>
