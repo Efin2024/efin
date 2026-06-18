@@ -63,13 +63,13 @@ const TEAM = [
     {
         initial: 'R',
         name: 'Ravi Shekhar',
-        role: 'CEO',
+        role: 'Product Head',
         focus: 'Business Strategy & Leadership',
     },
     {
         initial: 'S',
         name: 'Suraj Garg',
-        role: 'Chief Financial Officer',
+        role: 'Audit & Compliance Head',
         focus: 'Financial Management & Compliance',
     },
     {
