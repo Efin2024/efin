@@ -151,12 +151,12 @@ function Footer() {
               />
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginLeft: '-0.5rem' }}>
                 <img
-                  src={`${process.env.PUBLIC_URL || ''}/certi01.png`}
+                  src={`${process.env.PUBLIC_URL || ''}/certificate1.png`}
                   alt="Certificate 1"
                   style={{ maxHeight: '220px', maxWidth: '100%', width: 'auto', height: 'auto', objectFit: 'contain' }}
                 />
                 <img
-                  src={`${process.env.PUBLIC_URL || ''}/certi02.png`}
+                  src={`${process.env.PUBLIC_URL || ''}/certificate2.png`}
                   alt="Certificate 2"
                   style={{ maxHeight: '220px', maxWidth: '100%', width: 'auto', height: 'auto', objectFit: 'contain' }}
                 />
