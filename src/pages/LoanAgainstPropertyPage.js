@@ -416,7 +416,7 @@ function LoanAgainstPropertyPage() {
                         <div className="fees-value">Charges</div>
                     </div>
 
-                    <div className="fees-row">
+                    {/* <div className="fees-row">
                         <div className="fees-label">
                             <span className="fees-icon">📊</span>
                             <div>
@@ -427,7 +427,7 @@ function LoanAgainstPropertyPage() {
                         <div className="fees-value">
                             <strong>8.50% - 16% p.a.</strong>
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className="fees-row">
                         <div className="fees-label">
@@ -471,7 +471,7 @@ function LoanAgainstPropertyPage() {
                         </div>
                     </div>
 
-                    <div className="fees-row">
+                    {/* <div className="fees-row">
                         <div className="fees-label">
                             <span className="fees-icon">⚠️</span>
                             <div>
@@ -483,7 +483,7 @@ function LoanAgainstPropertyPage() {
                             <strong>₹500 - ₹2,000</strong>
                             <span>Per installment</span>
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className="fees-row">
                         <div className="fees-label">
@@ -529,9 +529,9 @@ function LoanAgainstPropertyPage() {
                         <a href="https://payday.efin.co.in/login" className="primary-btn large">
                             Apply Now →
                         </a>
-                        <Link to="/support" className="ghost-btn large">
+                        {/* <Link to="/support" className="ghost-btn large">
                             Talk to Expert
-                        </Link>
+                        </Link> */}
                     </div>
                     <div className="cta-assurance">
                         <span>✓ 100% Paperless Process</span>

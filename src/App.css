@@ -108,10 +108,8 @@ iframe {
 
 /* prevent very long words or unbroken content from causing horizontal scroll */
 * {
+  overflow-wrap: break-word;
   word-wrap: break-word;
-  -ms-word-break: break-word;
-  word-break: break-word;
-  hyphens: auto;
 }
 
 /* ===== Generic card/grid/container fixes (improve mobile layout) ===== */
@@ -4048,6 +4046,7 @@ blockquote cite {
 
 /* Responsive */
 @media (max-width: 768px) {
+
   .footer-location-picker,
   .footer-location-options {
     grid-template-columns: 1fr;
@@ -8018,6 +8017,7 @@ iframe {
   /* Prevent long placeholders or text from stretching containers */
   /* Note: removed catch-all * { max-width: 100% } — it breaks flex/grid children */
 }
+
 /* ============================================
    MOBILE PERFECT ALIGNMENT OVERRIDES 
    ============================================ */
@@ -8026,24 +8026,27 @@ iframe {
     text-align: center !important;
     padding: 2.5rem 1.25rem !important;
   }
+
   .hero-content {
     align-items: center !important;
     display: flex !important;
     flex-direction: column !important;
   }
-  .hero-content h1, 
+
+  .hero-content h1,
   .hero-content p {
     text-align: center !important;
     margin-left: auto !important;
     margin-right: auto !important;
     width: 100% !important;
   }
+
   .hero-cta {
     justify-content: center !important;
     align-items: center !important;
     width: 100% !important;
   }
-  
+
   .product-card {
     text-align: center !important;
     align-items: center !important;
@@ -8051,6 +8054,7 @@ iframe {
     flex-direction: column !important;
     padding: 2rem 1.5rem !important;
   }
+
   .product-content {
     align-items: center !important;
     text-align: center !important;
@@ -8058,15 +8062,18 @@ iframe {
     flex-direction: column !important;
     width: 100% !important;
   }
+
   .product-card img {
     margin: 0 auto 1.25rem !important;
   }
+
   .product-card h3,
   .product-card p {
     text-align: center !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
+
   .product-arrow {
     text-align: center !important;
     width: 100% !important;
@@ -8084,8 +8091,13 @@ iframe {
 }
 
 @keyframes marquee-scroll {
-  0% { transform: translateX(100vw); }
-  100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(100vw);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 /* Mobile Alternative: Stop the marquee, just center one 'Coming Soon' text */
@@ -8097,9 +8109,11 @@ iframe {
     width: 100%;
     transform: none !important;
   }
+
   .css-marquee-content span {
     margin: 0 !important;
   }
+
   .css-marquee-content span:not(:first-child) {
     display: none;
   }
