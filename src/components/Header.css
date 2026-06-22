@@ -192,29 +192,37 @@
 .mega-menu {
   position: absolute;
   top: calc(100% + 0.5rem);
-  left: 0;
+  left: 50%;
   display: grid;
-  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 0.75rem;
-  padding: 1rem;
+  padding: 1.25rem;
   border-radius: 18px;
   background: rgba(247, 251, 254, 0.98);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: translateY(-8px);
+  transform: translateX(-50%) translateY(-8px);
   transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
-  min-width: 480px;
+  width: 600px;
+  max-width: 90vw;
   border: 1px solid rgba(96, 121, 145, 0.16);
   z-index: 200;
+}
+
+@media (max-width: 1200px) {
+  .mega-menu {
+    width: 500px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .mega-menu.show {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transform: translateY(0);
+  transform: translateX(-50%) translateY(0);
 }
 
 /* =============================================
