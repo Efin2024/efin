@@ -205,6 +205,7 @@ function Footer() {
               Tower-B1, Spaze ITech Park, Sector-49, Sohna Road, Gurugram,<br />
               Haryana - 122018, India
               <span className="footer-address-divider" aria-hidden="true" />
+              MLB Securities Private Limited,
               Zon collabhub B wing First floor
               Indiana business Center
               Makwana road
