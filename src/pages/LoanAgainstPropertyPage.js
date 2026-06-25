@@ -71,7 +71,7 @@ function LoanAgainstPropertyPage() {
 
                         <div className="property-hero-cta">
                             <Link to="/support/contact" className="primary-btn large">
-                                Apply for LAP →
+                                Apply for Loan→
                             </Link>
                             <Link to="/resources/eligibility-calculator" className="ghost-btn large">
                                 Calculate EMI
@@ -115,7 +115,7 @@ function LoanAgainstPropertyPage() {
             {/* Key Features Section */}
             <section className="property-features-section">
                 <div className="section-heading">
-                    <span className="eyebrow">Why Choose LAP</span>
+                    <span className="eyebrow">Why Choose Loan Against Property</span>
                     <h2>Key Features & Benefits</h2>
                     <p>Unlock the potential of your property with our competitive loan offerings</p>
                 </div>
