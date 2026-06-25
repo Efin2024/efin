@@ -218,7 +218,7 @@ function Footer() {
               <span>+91-9997842548</span>
               <span>care@mlbsecurities.com</span>
             </div>
-            <a href="https://payday.efin.co.in/login" className="footer-cta">
+            <a href="https://loan.efin.co.in/login" className="footer-cta">
               Apply for a loan
             </a>
           </div>

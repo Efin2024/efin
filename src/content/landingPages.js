@@ -7,7 +7,7 @@ import eligibilityIcon from '../assets/offerings/eligibility.png';
 import creditCardIcon from '../assets/offerings/credit-card.png';
 
 const sharedCtas = {
-  apply: { label: 'Apply now', to: 'https://payday.efin.co.in/login' },
+  apply: { label: 'Apply now', to: 'https://loan.efin.co.in/login' },
   eligibility: { label: 'Check eligibility', to: '/support' },
   download: { label: 'Download the app', to: '/support/contact' },
 };

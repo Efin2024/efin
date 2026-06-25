@@ -346,7 +346,7 @@ function EVThreeWheelerPage() {
                     <h2>Ready to Drive Your Own EV Auto?</h2>
                     <p>Apply now and get on the road to success with your electric three-wheeler</p>
                     <div className="ev-cta-buttons">
-                        <a href="https://payday.efin.co.in/login" className="primary-btn">Apply Now</a>
+                        <a href="https://loan.efin.co.in/login" className="primary-btn">Apply Now</a>
                         <Link to="/support" className="ghost-btn">Contact Support</Link>
                     </div>
                 </div>

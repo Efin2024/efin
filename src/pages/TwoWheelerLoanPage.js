@@ -432,7 +432,7 @@ function TwoWheelerLoanPage() {
                     <h2>Ready to Ride Your Dream Bike?</h2>
                     <p>Apply now and get on the road with your new two-wheeler in no time</p>
                     <div className="tw-cta-buttons">
-                        <a href="https://payday.efin.co.in/login" className="primary-btn">Apply Now</a>
+                        <a href="https://loan.efin.co.in/login" className="primary-btn">Apply Now</a>
                         <Link to="/support" className="ghost-btn">Contact Support</Link>
                     </div>
                 </div>

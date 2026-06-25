@@ -526,7 +526,7 @@ function LoanAgainstPropertyPage() {
                     <h2>Ready to Unlock Your Property's Value?</h2>
                     <p>Get instant approval and competitive interest rates. Apply now or talk to our expert advisors.</p>
                     <div className="property-cta-buttons">
-                        <a href="https://payday.efin.co.in/login" className="primary-btn large">
+                        <a href="https://loan.efin.co.in/login" className="primary-btn large">
                             Apply Now →
                         </a>
                         {/* <Link to="/support" className="ghost-btn large">

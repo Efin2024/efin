@@ -245,14 +245,14 @@ function Header() {
           <div className="drawer-actions">
             <a
               className="primary-btn"
-              href="https://payday.efin.co.in/login"
+              href="https://loan.efin.co.in/login"
               onClick={closeMenu}
             >
               Login
             </a>
             <a
               className="primary-btn"
-              href="https://payday.efin.co.in/login"
+              href="https://loan.efin.co.in/login"
               onClick={closeMenu}
             >
               Apply Now
@@ -269,10 +269,10 @@ function Header() {
 
         {/* ── Desktop action buttons ── */}
         <div className="nav-actions">
-          <a className="primary-btn" href="https://payday.efin.co.in/login">
+          <a className="primary-btn" href="https://loan.efin.co.in/login">
             Login
           </a>
-          <a className="primary-btn" href="https://payday.efin.co.in/login">
+          <a className="primary-btn" href="https://loan.efin.co.in/login">
             Apply Now
           </a>
           <Link className="primary-btn" to="/repay">
