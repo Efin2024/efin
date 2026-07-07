@@ -108,13 +108,7 @@ const paymentGallery = [
 function PaymentCollectionPage() {
   return (
     <div className="page payments-solution-page">
-      <div style={{ backgroundColor: 'transparent', color: 'black', padding: '10px 0', fontWeight: 'bold', fontSize: '1.2rem', textTransform: 'uppercase', letterSpacing: '2px', width: '100%', maxWidth: '100%', margin: '0 0 3rem 0', zIndex: 10 }}>
-          <div className="css-marquee-content">
-              <span style={{ margin: '0 4rem' }}>Coming Soon</span>
-              <span style={{ margin: '0 4rem' }}>Coming Soon</span>
-              <span style={{ margin: '0 4rem' }}>Coming Soon</span>
-          </div>
-      </div>
+
       <section className="payments-hero">
         <div className="payments-hero-copy">
           <span className="payments-badge">Payment Infrastructure Solutions</span>

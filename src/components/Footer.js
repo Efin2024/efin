@@ -177,9 +177,6 @@ function Footer() {
                     >
                       <div style={{ display: 'flex', flexDirection: 'column' }}>
                         <span>{item.label}</span>
-                        {((section.title === 'Loans' && item.label !== 'Personal Loan') || section.title === 'Marketplace Solutions') && (
-                          <span className="coming-soon-animated" style={{ marginTop: '2px', fontSize: '0.65rem', textAlign: 'left' }}>COMING SOON</span>
-                        )}
                       </div>
                     </Link>
                   ))}

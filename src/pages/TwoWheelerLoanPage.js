@@ -5,13 +5,7 @@ import twoWheelerBike from '../assets/two-wheeler-bike.png';
 function TwoWheelerLoanPage() {
     return (
         <div className="page two-wheeler-page">
-            <div style={{ backgroundColor: 'transparent', color: 'black', padding: '10px 0', fontWeight: 'bold', fontSize: '1.2rem', textTransform: 'uppercase', letterSpacing: '2px', width: '100%', maxWidth: '100%', margin: '0 0 3rem 0', zIndex: 10 }}>
-                <div className="css-marquee-content">
-                    <span style={{ margin: '0 4rem' }}>Coming Soon</span>
-                    <span style={{ margin: '0 4rem' }}>Coming Soon</span>
-                    <span style={{ margin: '0 4rem' }}>Coming Soon</span>
-                </div>
-            </div>
+
             {/* Hero Section */}
             <section className="tw-hero">
                 <div className="tw-hero-content">
