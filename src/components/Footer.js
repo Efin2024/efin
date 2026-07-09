@@ -125,9 +125,9 @@ function Footer() {
         )}
         <div className="footer-content">
           <div className="footer-brand">
-            <div className="brand" aria-label="E-Fin">
+            <Link to="/loans/payday-loan" className="brand" aria-label="E-Fin" onClick={() => handleFooterLinkClick('/loans/payday-loan')}>
               <img className="brand-logo brand-logo--footer" src={logoSrc} alt="E-Fin logo" loading="lazy" decoding="async" />
-            </div>
+            </Link>
             <p>
               India's fastest growing lending platform. We serve the community when you borrow from us.
             </p>

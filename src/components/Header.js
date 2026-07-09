@@ -161,7 +161,7 @@ function Header() {
       <div className="header-shell">
         {/* ── Logo ── */}
         <Link
-          to="/loans/personal-loan"
+          to="/loans/payday-loan"
           className="brand-mark"
           onClick={handleLogoClick}
         >
