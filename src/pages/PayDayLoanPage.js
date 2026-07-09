@@ -299,9 +299,9 @@ function PayDayLoanPage() {
           <h2>Get quick funds with E-Fin before payday</h2>
           <p>Start your E-Fin application today and move ahead with a faster, simpler short-term loan journey.</p>
         </div>
-        <Link to="/support/contact" className="primary-btn large">
+        <a href="https://loan.efin.co.in/login" className="primary-btn large">
           Apply for E-Fin Payday Loan
-        </Link>
+        </a>
       </section>
     </div>
   );
