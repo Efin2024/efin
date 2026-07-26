@@ -61,9 +61,21 @@ const TEAM = [
         focus: 'Strategic Growth & Governance',
     },
     {
+        initial: 'K',
+        name: 'Kushal Madhogaria',
+        role: 'COO',
+        focus: 'Operations & Strategy',
+    },
+    {
         initial: 'R',
         name: 'Ravi Shekhar',
         role: 'Product Head',
+        focus: 'Business Strategy & Leadership',
+    },
+    {
+        initial: 'S',
+        name: 'Sanchit Tiwari',
+        role: 'Business Head',
         focus: 'Business Strategy & Leadership',
     },
     {
