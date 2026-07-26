@@ -55,27 +55,27 @@ const JOURNEY = [
 
 const TEAM = [
     {
+        initial: 'K',
+        name: 'Kushal Madhogaria',
+        role: 'Chief Operating Officer',
+        focus: 'Operations & Strategy',
+    },
+    {
+        initial: 'S',
+        name: 'Sanchit Tiwari',
+        role: 'Business Head',
+        focus: 'Business Strategy & Leadership',
+    },
+    {
         initial: 'R',
         name: 'Rahul Sharma',
         role: 'Promoter & Director',
         focus: 'Strategic Growth & Governance',
     },
     {
-        initial: 'K',
-        name: 'Kushal Madhogaria',
-        role: 'COO',
-        focus: 'Operations & Strategy',
-    },
-    {
         initial: 'R',
         name: 'Ravi Shekhar',
         role: 'Product Head',
-        focus: 'Business Strategy & Leadership',
-    },
-    {
-        initial: 'S',
-        name: 'Sanchit Tiwari',
-        role: 'Business Head',
         focus: 'Business Strategy & Leadership',
     },
     {
