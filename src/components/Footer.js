@@ -64,17 +64,17 @@ const officeLocations = [
     mapsUrl:
       'https://www.google.com/maps/dir/?api=1&destination=Plot%20No.%2088%2C%203rd%20Floor%2C%20BLK-B%20PKT-8%2C%20Rohini%20Sector%203%2C%20Near%20NDPL%2C%20New%20Delhi%20-%20110085&travelmode=driving',
   },
-  {
+  /* {
     label: 'Kolkata West Bengal Office',
     type: 'Branch Office',
     address:
       'MLB Securities Private Limited, 5th Floor, RDB Boulevard, Plot K1, Block EP & GP, Sector V, Bidhan Nagar, CK Market, North 24 Parganas, Salt Lake, Kolkata, West Bengal - 700019, India',
     mapsUrl:
       'https://www.google.com/maps/dir/?api=1&destination=MLB%20Securities%20Private%20Limited%2C%205th%20Floor%2C%20RDB%20Boulevard%2C%20Plot%20K1%2C%20Block%20EP%20%26%20GP%2C%20Sector%20V%2C%20Bidhan%20Nagar%2C%20CK%20Market%2C%20North%2024%20Parganas%2C%20Salt%20Lake%2C%20Kolkata%2C%20West%20Bengal%20-%20700019%2C%20India&travelmode=driving',
-  },
+  }, */
   {
     label: 'Gurugram Haryana Office',
-    type: 'Branch Office',
+    type: 'Corporate Office',
     address:
       'MLB Securities Private Limited, Unit No. 557, 5th Floor, Tower-B1, Spaze ITech Park, Sector-49, Sohna Road, Gurugram, Haryana - 122018, India',
     mapsUrl:
@@ -192,12 +192,13 @@ function Footer() {
               Rohini Sector 3, Near NDPL, New Delhi - 110085
               <br />
               <br />
-              <strong>Branch Office:</strong><br />
+              {/* <strong>Branch Office:</strong><br />
               MLB Securities Private Limited, 5th Floor, RDB Boulevard,<br />
               Plot K1, Block EP & GP, Sector V, Bidhan Nagar,<br />
               CK Market, North 24 Parganas, Salt Lake,<br />
-              Kolkata, West Bengal - 700019, India
+              Kolkata, West Bengal - 700019, India */}
               <span className="footer-address-divider" aria-hidden="true" />
+              <strong>Corporate Office: </strong><br />
               MLB Securities Private Limited, Unit No. 557, 5th Floor,
               Tower-B1, Spaze ITech Park, Sector-49, Sohna Road, Gurugram,<br />
               Haryana - 122018, India
