@@ -228,7 +228,7 @@ function ContactPage() {
                     <div className="map-container">
                         <iframe
                             title="E-Fin Office Location"
-                            src="https://www.google.com/maps?q=Plot%20No%2088,%203rd%20Floor,%20BLK-B%20PKT-8,%20Rohini%20Sector%203,%20Near%20NDPL,%20New%20Delhi%20110085&output=embed"
+                            src="https://www.google.com/maps?q=Second%20Floor,%20Plot%2015/2,%20Main%20Najafgarh%20Road,%20Rama%20Road,%20N.I.Area,%20West%20Delhi,%20New%20Delhi,%20Delhi,%20India,%20110015&output=embed"
                             loading="lazy"
                             allowFullScreen
                             referrerPolicy="no-referrer-when-downgrade"

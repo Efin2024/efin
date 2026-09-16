@@ -53,7 +53,7 @@ const PRODUCT_LINES = [
 const OFFICES = [
   {
     title: 'Office Address',
-    address: 'Plot No. 88, 3rd Floor, BLK-B PKT-8, Rohini Sector 3, Near NDPL, New Delhi - 110085',
+    address: 'Second Floor, Plot 15/2, Main Najafgarh Road, Rama Road, N.I.Area, West Delhi, New Delhi, Delhi, India, 110015',
   },
 ];
 

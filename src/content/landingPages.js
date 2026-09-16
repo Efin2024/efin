@@ -421,7 +421,7 @@ const LANDING_PAGES = {
       'E-Fin is the brand name of MLB Securities Private Limited, an RBI registered NBFC (COR 14.00526) incorporated in 1995. We began lending in 2025 to empower young professionals and small entrepreneurs.',
     bullets: [
       'CIN: U74899DL1995PTC067535',
-      'Office Address: Plot No. 88, 3rd Floor, BLK-B PKT-8, Rohini Sector 3, Near NDPL, New Delhi - 110085',
+      'Office Address: Second Floor, Plot 15/2, Main Najafgarh Road, Rama Road, N.I.Area, West Delhi, New Delhi, Delhi, India, 110015',
     ],
     stats: [
       { label: 'Customer focus', value: 'Young professionals & MSMEs' },

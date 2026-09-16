@@ -57,12 +57,12 @@ const footerSocial = [
 
 const officeLocations = [
   {
-    label: 'Delhi Rohini Office',
+    label: 'Delhi Office',
     type: 'Registered Office',
     address:
-      'Plot No. 88, 3rd Floor, BLK-B PKT-8, Rohini Sector 3, Near NDPL, New Delhi - 110085',
+      'Second Floor, Plot 15/2, Main Najafgarh Road, Rama Road, N.I.Area, West Delhi, New Delhi, Delhi, India, 110015',
     mapsUrl:
-      'https://www.google.com/maps/dir/?api=1&destination=Plot%20No.%2088%2C%203rd%20Floor%2C%20BLK-B%20PKT-8%2C%20Rohini%20Sector%203%2C%20Near%20NDPL%2C%20New%20Delhi%20-%20110085&travelmode=driving',
+      'https://www.google.com/maps/dir/?api=1&destination=Second%20Floor%2C%20Plot%2015%2F2%2C%20Main%20Najafgarh%20Road%2C%20Rama%20Road%2C%20N.I.Area%2C%20West%20Delhi%2C%20New%20Delhi%2C%20Delhi%2C%20India%2C%20110015&travelmode=driving',
   },
   /* {
     label: 'Kolkata West Bengal Office',
@@ -187,15 +187,8 @@ function Footer() {
           <div className="footer-visit">
             <h3>Visit E-Fin</h3>
             <p>
-              {/* <strong>Registered Office:</strong><br />
-              Plot No. 88, 3rd Floor, BLK-B PKT-8,<br />
-              Rohini Sector 3, Near NDPL, New Delhi - 110085
-              <br />
-              <br /> */}
-
-             <strong>Registered Office:</strong><br />
-             Second Floor, Plot 15/2, Main Najafgarh Road, Rama Road, N.I.Area, West Delhi,
-New Delhi, Delhi, India, 110015
+              <strong>Registered Office:</strong><br />
+              Second Floor, Plot 15/2, Main Najafgarh Road, Rama Road, N.I.Area, West Delhi, New Delhi, Delhi, India, 110015
               <br />
               <br />
               {/* <strong>Branch Office:</strong><br />
