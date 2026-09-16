@@ -187,9 +187,15 @@ function Footer() {
           <div className="footer-visit">
             <h3>Visit E-Fin</h3>
             <p>
-              <strong>Registered Office:</strong><br />
+              {/* <strong>Registered Office:</strong><br />
               Plot No. 88, 3rd Floor, BLK-B PKT-8,<br />
               Rohini Sector 3, Near NDPL, New Delhi - 110085
+              <br />
+              <br /> */}
+
+             <strong>Registered Office:</strong><br />
+             Second Floor, Plot 15/2, Main Najafgarh Road, Rama Road, N.I.Area, West Delhi,
+New Delhi, Delhi, India, 110015
               <br />
               <br />
               {/* <strong>Branch Office:</strong><br />
