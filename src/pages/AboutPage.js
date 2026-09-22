@@ -60,12 +60,12 @@ const TEAM = [
         role: 'Chief Operating Officer',
         focus: 'Operations & Strategy',
     },
-    {
-        initial: 'S',
-        name: 'Sanchit Tiwari',
-        role: 'Business Head',
-        focus: 'Business Strategy & Leadership',
-    },
+    // {
+    //     initial: 'S',
+    //     name: 'Sanchit Tiwari',
+    //     role: 'Business Head',
+    //     focus: 'Business Strategy & Leadership',
+    // },
     {
         initial: 'R',
         name: 'Rahul Sharma',

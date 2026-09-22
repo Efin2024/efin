@@ -201,7 +201,7 @@ function Footer() {
               MLB Securities Private Limited, Unit No. 557, 5th Floor,
               Tower-B1, Spaze ITech Park, Sector-49, Sohna Road, Gurugram,<br />
               Haryana - 122018, India
-              <span className="footer-address-divider" aria-hidden="true" />
+              {/* <span className="footer-address-divider" aria-hidden="true" />
               <strong>Correspondence Address:</strong><br />
               MLB Securities Private Limited,
               Zon collabhub B wing First floor
@@ -210,7 +210,7 @@ function Footer() {
               Marol
               Andheri East
               Mumbai
-              400059
+              400059 */}
             </p>
             <div className="footer-contact">
               <span>+91-9997842548</span>
