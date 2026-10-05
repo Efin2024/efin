@@ -42,13 +42,13 @@ const PRODUCT_CARDS = [
     icon: emiStoreIcon,
     amount: 'Up to ₹10 Cr',
   },
-  {
+  /* {
     title: 'Payment Collection & Settlement',
     description: 'API-led collections, automated reconciliation, and merchant payout support for digital businesses.',
     to: '/solutions/payment-collection-merchant-settlement',
     icon: creditCardIcon,
     amount: 'API Infrastructure',
-  },
+  }, */
 ];
 
 const TESTIMONIALS = [

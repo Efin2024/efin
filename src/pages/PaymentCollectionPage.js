@@ -1,3 +1,4 @@
+/* 
 import { Link } from 'react-router-dom';
 import './PaymentCollectionPage.css';
 
@@ -106,179 +107,15 @@ const paymentGallery = [
 ];
 
 function PaymentCollectionPage() {
-  return (
-    <div className="page payments-solution-page">
-
-      <section className="payments-hero">
-        <div className="payments-hero-copy">
-          <span className="payments-badge">Payment Infrastructure Solutions</span>
-          <h1>
-            Payment Collection &
-            <span> Merchant Settlement Solutions</span>
-          </h1>
-          <p>
-            Efin provides technology-enabled payment collection and merchant settlement solutions
-            for marketplaces, e-commerce platforms, and online businesses through API-based
-            infrastructure and partner-led banking rails.
-          </p>
-
-          <div className="payments-hero-cta">
-            <Link to="/support/contact" className="primary-btn large">
-              Talk to Our Team
-            </Link>
-            <Link to="/about" className="ghost-btn large">
-              Learn About Efin
-            </Link>
-          </div>
-
-          <div className="payments-trust-row">
-            <span>API-led collections</span>
-            <span>Automated reconciliation</span>
-            <span>Merchant settlement support</span>
-          </div>
-        </div>
-
-        <div className="payments-hero-visual" aria-hidden="true">
-          <div className="payments-hero-image-frame">
-            <img src="/paymentimage1.png" alt="Payment collection solution overview" />
-          </div>
-        </div>
-      </section>
-
-      <section className="payments-overview">
-        <div className="payments-overview-card">
-          <span className="eyebrow">What The Platform Supports</span>
-          <h2>Built to streamline digital collections and downstream merchant payouts</h2>
-          <p>
-            Through Efin&apos;s API-based infrastructure, businesses can facilitate customer
-            collections via digital payment modes while improving visibility across reconciliation,
-            settlement management, and vendor payout operations.
-          </p>
-          <div className="payments-mode-grid">
-            {collectionModes.map((mode) => (
-              <article key={mode.title} className="payments-mode-card">
-                <h3>{mode.title}</h3>
-                <p>{mode.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="payments-section">
-        <div className="section-heading payments-heading">
-          <span className="eyebrow">Solution Visuals</span>
-          <h2>See the payment collection ecosystem in action</h2>
-          <p>
-            A quick visual look at collection flows, merchant underwriting, AI-led payments, and
-            settlement operations.
-          </p>
-        </div>
-        <div className="payments-gallery-grid">
-          {paymentGallery.map((image) => (
-            <article key={image.src} className="payments-gallery-card">
-              <img src={image.src} alt={image.alt} loading="lazy" />
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="payments-section">
-        <div className="section-heading payments-heading">
-          <span className="eyebrow">How It Works</span>
-          <h2>A cleaner operating layer from collection to settlement</h2>
-          <p>
-            The solution is designed to reduce manual effort and improve operational confidence at
-            every stage of the payment lifecycle.
-          </p>
-        </div>
-
-        <div className="payments-steps-grid">
-          {workflowSteps.map((step) => (
-            <article key={step.number} className="payments-step-card">
-              <span className="payments-step-number">{step.number}</span>
-              <h3>{step.title}</h3>
-              <p>{step.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="payments-section payments-section-accent">
-        <div className="payments-capability-panel">
-          <div>
-            <span className="eyebrow">Core Capabilities</span>
-            <h2>Technology-enabled workflows for modern platforms</h2>
-          </div>
-          <div className="payments-capability-list">
-            {capabilities.map((item) => (
-              <div key={item} className="payments-capability-item">
-                <span>✓</span>
-                <p>{item}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="payments-section">
-        <div className="section-heading payments-heading">
-          <span className="eyebrow">Why Businesses Choose This</span>
-          <h2>Focused on transparency, efficiency, and operational control</h2>
-        </div>
-        <div className="payments-pillars-grid">
-          {trustPillars.map((pillar) => (
-            <article key={pillar.title} className="payments-pillar-card">
-              <h3>{pillar.title}</h3>
-              <p>{pillar.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="payments-section">
-        <div className="payments-disclaimer-card">
-          <span className="eyebrow">Important Disclosure</span>
-          <h2>Technology provider model</h2>
-          <p>
-            Efin acts strictly as a technology service provider and facilitates payment processing
-            and settlement workflows through its regulated banking and financial institution
-            partners.
-          </p>
-        </div>
-      </section>
-
-      <section className="payments-section">
-        <div className="section-heading payments-heading">
-          <span className="eyebrow">FAQs</span>
-          <h2>Quick answers for teams evaluating the solution</h2>
-        </div>
-        <div className="payments-faq-grid">
-          {faqs.map((item) => (
-            <article key={item.question} className="payments-faq-card">
-              <h3>{item.question}</h3>
-              <p>{item.answer}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="cta-section payments-cta">
-        <div className="cta-content">
-          <h2>Need payment collection and merchant settlement infrastructure?</h2>
-          <p>Let&apos;s help your team simplify collections, payouts, and settlement operations.</p>
-          <div className="cta-buttons">
-            <Link className="primary-btn large" to="/support/contact">
-              Contact Us
-            </Link>
-            <a className="ghost-btn large" href="https://login.efin.co.in/">
-              Merchant Login
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+  return null;
 }
 
 export default PaymentCollectionPage;
+*/
+
+function PaymentCollectionPage() {
+  return null;
+}
+
+export default PaymentCollectionPage;
+

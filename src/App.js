@@ -37,7 +37,7 @@ import AdminDashboardPage from './pages/AdminDashboardPage';
 import AdminDashboardLayout from './components/AdminDashboardLayout';
 import ProtectedAdminRoute from './components/ProtectedAdminRoute';
 import SuperAdminDashboardPage from './pages/SuperAdminDashboardPage';
-import PaymentCollectionPage from './pages/PaymentCollectionPage';
+// import PaymentCollectionPage from './pages/PaymentCollectionPage';
 
 
 function App() {
@@ -75,10 +75,10 @@ function App() {
           <Route path="loans/three-wheeler-loan" element={<EVThreeWheelerPage />} />
           <Route path="loans/two-wheeler-loan" element={<TwoWheelerLoanPage />} />
           <Route path="loans/loan-against-property" element={<LoanAgainstPropertyPage />} />
-          <Route
+          {/* <Route
             path="solutions/payment-collection-merchant-settlement"
             element={<PaymentCollectionPage />}
-          />
+          /> */}
           <Route path="policies/policies" element={<PoliciesPage />} />
           <Route path="policies/terms-and-conditions" element={<TermsAndConditionsPage />} />
           <Route path="policies/disclaimer" element={<DisclaimerPage />} />

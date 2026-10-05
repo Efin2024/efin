@@ -229,7 +229,7 @@ const LANDING_PAGES = {
     ctaPrimary: sharedCtas.apply,
     ctaSecondary: sharedCtas.eligibility,
   },
-  'solutions/payment-collection-merchant-settlement': {
+  /* 'solutions/payment-collection-merchant-settlement': {
     title: 'Payment Collection & Merchant Settlement',
     category: 'Solutions',
     excerpt: 'API-based collection, reconciliation, and merchant payout workflows for online businesses',
@@ -248,7 +248,7 @@ const LANDING_PAGES = {
     image: creditCardIcon,
     ctaPrimary: sharedCtas.apply,
     ctaSecondary: { label: 'View solution', to: '/solutions/payment-collection-merchant-settlement' },
-  },
+  }, */
   'offerings/fixed-deposit': {
     title: 'Fixed Deposit',
     category: 'Our Offerings',
@@ -620,7 +620,7 @@ export const NAV_STRUCTURE = [
   {
     label: 'Our Products',
     items: [
-      'solutions/payment-collection-merchant-settlement',
+      // 'solutions/payment-collection-merchant-settlement',
       'loans/instant-cash-loan',
       'loans/personal-loan',
       'loans/payday-loan',

@@ -9,13 +9,13 @@ const footerNav = [
       { path: '/loans/loan-against-property', label: 'Loan Against Property' },
       { path: '/loans/two-wheeler-loan', label: 'Two-Wheeler Loan' },
       { path: '/loans/three-wheeler-loan', label: 'Three-Wheeler Loan' },
-      {
+      /* {
         path: '/solutions/payment-collection-merchant-settlement',
         label: 'Payment Collection & Settlement',
-      },
+      }, */
     ],
   },
-  {
+  /* {
     title: 'Marketplace Solutions',
     links: [
       {
@@ -23,7 +23,7 @@ const footerNav = [
         label: 'Payment Collection & Settlement',
       },
     ],
-  },
+  }, */
   {
     title: 'Calculators',
     links: [
