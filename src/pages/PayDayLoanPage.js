@@ -108,6 +108,45 @@ const faqItems = [
   },
 ];
 
+const ourBrands = [
+  {
+    name: 'FinMudra Credit',
+    legalName: 'FinMudra Credit Pvt Ltd',
+    tagline: 'Small Loans. Big Possibilities.',
+    description:
+      'FinMudra provides quick and convenient short term personal loans to help you manage urgent financial needs with ease.',
+    url: 'https://www.finmudracredit.com',
+    domain: 'finmudracredit.com',
+    logo: '/brands/finmudra.png',
+    badge: 'Short-Term Loans',
+    highlights: ['Instant Approval', 'Flexible Repayment', 'Zero Collateral'],
+  },
+  {
+    name: 'Mr. Money',
+    legalName: 'Mr. Money',
+    tagline: 'Instant Short-Term Personal Loans',
+    description:
+      'Get quick, transparent personal micro-loans from ₹5,000 to ₹1,00,000 with 100% digital e-KYC, 0% foreclosure penalty, and fast approval.',
+    url: 'https://mistermoney.in',
+    domain: 'mistermoney.in',
+    logo: '/brands/mistermoney-logo.png',
+    badge: 'Micro Loans',
+    highlights: ['₹5,000 to ₹1,00,000', '100% Digital e-KYC', 'Fast Disbursal'],
+  },
+  {
+    name: 'Bharat Digital Finance',
+    legalName: 'Bharat Digital Finance',
+    tagline: 'Instant Short-Term Personal Loans',
+    description:
+      'Fast, transparent personal micro-loans with 100% digital e-KYC, zero foreclosure penalty, and direct bank disbursal built for your needs.',
+    url: 'https://bharatdigitalfinance.com',
+    domain: 'bharatdigitalfinance.com',
+    logo: '/brands/bharatdigitalfinance-logo.svg',
+    badge: 'Digital Finance',
+    highlights: ['100% Digital Process', 'Zero Hidden Fees', 'Quick Sanction'],
+  },
+];
+
 function PayDayLoanPage() {
   return (
     <div className="page payday-page payday-page--salaryadda">
@@ -211,6 +250,91 @@ function PayDayLoanPage() {
               <span className="payday-sa-feature-highlight">{item.highlight}</span>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="payday-sa-section payday-sa-brands-section" id="our-brands">
+        <div className="payday-sa-section-heading">
+          <span>OUR BRANDS</span>
+          <h2>Explore Our Associated Lending Brands</h2>
+          <p>
+            Connect with our trusted partner platforms offering fast, 100% digital, and accessible personal credit solutions.
+          </p>
+        </div>
+
+        <div className="payday-sa-brands-grid">
+          {ourBrands.map((brand) => (
+            <article key={brand.name} className="payday-sa-brand-card">
+              <div className="payday-sa-brand-card-header">
+                <div className="payday-sa-brand-logo-box">
+                  <img
+                    src={brand.logo}
+                    alt={`${brand.name} logo`}
+                    className="payday-sa-brand-logo"
+                    loading="lazy"
+                  />
+                </div>
+                <span className="payday-sa-brand-pill">{brand.badge}</span>
+              </div>
+
+              <div className="payday-sa-brand-card-body">
+                <div className="payday-sa-brand-title-group">
+                  <h3 className="payday-sa-brand-title">{brand.name}</h3>
+                  <span className="payday-sa-brand-tagline">{brand.tagline}</span>
+                </div>
+
+                <p className="payday-sa-brand-desc">{brand.description}</p>
+
+                <div className="payday-sa-brand-highlights">
+                  {brand.highlights.map((item) => (
+                    <span key={item} className="payday-sa-brand-highlight-tag">
+                      <svg
+                        width="13"
+                        height="13"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="payday-sa-brand-card-footer">
+                <a
+                  href={brand.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="payday-sa-brand-btn"
+                  aria-label={`Visit ${brand.name} official website`}
+                >
+                  <span>Visit {brand.domain}</span>
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                    className="payday-sa-brand-btn-icon"
+                  >
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg>
+                </a>
+              </div>
             </article>
           ))}
         </div>
